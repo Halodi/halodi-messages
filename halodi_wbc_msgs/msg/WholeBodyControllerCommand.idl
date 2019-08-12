@@ -7,19 +7,15 @@
 
 module halodi_wbc_msgs {
     module msg {
-        module dds
+        struct WholeBodyControllerCommand
         {
-            struct WholeBodyControllerCommand
-            {
                 long sequence_id;
                 
                 sequence<halodi_wbc_msgs::msg::TaskSpaceCommand, 5> task_space_commands;
                 sequence<halodi_wbc_msgs::msg::JointSpaceCommand, 25> joint_space_commands;
                 
                 sequence<halodi_wbc_msgs::msg::DrivingCommand, 20> driving_command;
-                sequence<geometry_msgs::msg::Vector3, 20> icp_command;
-                
-            };
+                sequence<geometry_msgs::msg::Vector3, 20> icp_command;                
         };
     };
 };
