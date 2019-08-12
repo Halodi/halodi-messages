@@ -1,0 +1,24 @@
+#include <geometry_msgs/msg/Vector3.idl>
+#include <geometry_msgs/msg/Quaternion.idl>
+
+
+module halodi_wbc_msgs {
+    module msg {
+    
+        module  RigidBody
+        {
+            const char LEFT_HAND = 0;
+            const char RIGHT_HAND = 1;
+            const char PELVIS = 2;
+            const char HEAD = 3;
+        };
+    
+        struct TaskSpaceCommand
+        {
+            char rigid_body;
+            geometry_msgs::msg::Quaternion rotation;
+            geometry_msgs::msg::Vector3 position;
+            
+        };
+    };
+};

@@ -1,0 +1,11 @@
+
+
+module halodi_wbc_msgs {
+    module msg {
+        struct DrivingCommand
+        {
+            double x_dot;
+            double omega_z;
+        };
+    };
+};
