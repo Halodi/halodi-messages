@@ -45,5 +45,5 @@ gradle publishToMavenLocal
 To upload to bintray, set `bintrayUsername` and `bintrayApiKey` in `~/.gradle/gradle.properties` and run
 
 ```
-gradle bintrayUPload
+gradle bintrayUpload
 ```
