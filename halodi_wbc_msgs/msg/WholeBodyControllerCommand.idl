@@ -4,18 +4,23 @@
 #include <halodi_wbc_msgs/msg/TaskSpaceCommand.idl>
 #include <halodi_wbc_msgs/msg/JointSpaceCommand.idl>
 #include <halodi_wbc_msgs/msg/DrivingCommand.idl>
+#include <halodi_wbc_msgs/msg/DisableWholeBodyBalance.idl>
 
 module halodi_wbc_msgs {
     module msg {
+    
+        @TypeCode(type="halodi_wbc_msgs::msg::dds_::WholeBodyControllerCommand_")
         struct WholeBodyControllerCommand
         {
                 long sequence_id;
+                
+                sequence<halodi_wbc_msgs::msg::DisableWholeBodyBalance, 1> disable_balance;
                 
                 sequence<halodi_wbc_msgs::msg::TaskSpaceCommand, 5> task_space_commands;
                 sequence<halodi_wbc_msgs::msg::JointSpaceCommand, 25> joint_space_commands;
                 
                 sequence<halodi_wbc_msgs::msg::DrivingCommand, 20> driving_command;
-                sequence<geometry_msgs::msg::Vector3, 20> icp_command;                
+                sequence<geometry_msgs::msg::Vector3, 20> icp_command;
         };
     };
 };

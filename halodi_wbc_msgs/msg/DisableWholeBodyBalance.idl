@@ -1,0 +1,29 @@
+module halodi_wbc_msgs {
+    module msg {
+    
+    
+        module DisableWholeBodyBalance_Constants
+        {
+            const uint8 ENABLE_WHOLE_BODY_BALANCE = 0;
+            const uint8 DISABLE_WHOLE_BODY_BALANCE = 84;
+        };
+    
+        /**
+         *
+         * Disable whole body control balance mode 
+         *
+         *
+         * Enable this only when the robot is supported by an overhead support system. Warranty will be voided for fall damage.
+         *
+         */
+        struct DisableWholeBodyBalance
+        {
+            /**
+             *
+             * Set to DISABLE_WHOLE_BODY_BALANCE to disable balance. Set to anything else to enable balance.
+             * 
+             */
+            uint8 disable_balance;
+        };
+    };
+};

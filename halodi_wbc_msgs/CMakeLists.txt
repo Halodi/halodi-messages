@@ -24,6 +24,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
 	"msg/SpatialAcceleration.idl"
 	"msg/FeedbackParametersSE3.idl"
 	"msg/FeedbackParameters3D.idl"
+	"msg/DisableWholeBodyBalance.idl"
 	DEPENDENCIES rcl_interfaces builtin_interfaces geometry_msgs halodi_definitions
 	ADD_LINTER_TESTS
 )
