@@ -1,0 +1,16 @@
+#include <geometry_msgs/msg/Vector3.idl>
+#include <halodi_wbc_msgs/msg/FeedbackParameters3D.idl>
+
+module halodi_wbc_msgs {
+    module msg {
+        /**
+         * Feedback parameters for a SE3 system, consisting of a linear and angular part.
+         *
+         */
+        struct FeedbackParametersSE3
+        {
+            halodi_wbc_msgs::msg::FeedbackParameters3D linear;
+            halodi_wbc_msgs::msg::FeedbackParameters3D angular;
+        };      
+    };
+};

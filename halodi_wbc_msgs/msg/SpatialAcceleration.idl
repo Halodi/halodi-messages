@@ -1,0 +1,12 @@
+#include <geometry_msgs/msg/Vector3.idl>
+
+
+module halodi_wbc_msgs {
+    module msg {
+        struct SpatialAcceleration
+        {
+            geometry_msgs::msg::Vector3 linear;
+            geometry_msgs::msg::Vector3 angular;
+        };
+    };
+};

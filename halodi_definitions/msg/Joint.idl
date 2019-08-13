@@ -1,0 +1,17 @@
+module halodi_definitions {
+    module msg {
+        
+        module JointName
+        {
+            const char HIP_ROLL = 0;
+            const char HIP_PITCH = 1;
+            const char HIP_YAW = 2;
+        };
+        
+
+        struct Joint
+        {   
+            char frame_id;
+        };
+    };
+};

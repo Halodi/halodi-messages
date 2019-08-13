@@ -1,19 +1,14 @@
 #include <geometry_msgs/msg/Vector3.idl>
 #include <geometry_msgs/msg/Quaternion.idl>
+#include <halodi_definitions/msg/Joint.idl>
 
 module halodi_wbc_msgs {
     module msg {
         
-        module Joint
-        {
-            const char HIP_ROLL = 0;
-            const char HIP_PITCH = 1;
-            const char HIP_YAW = 2;
-        };
     
         struct JointSpaceCommand
         {
-            char joint;
+            halodi_definitions::msg::Joint joint;
         
             double q_desired;
             double qd_desired;

@@ -1,0 +1,70 @@
+module halodi_definitions 
+{
+    module msg 
+    {
+
+        /**
+         *
+         *  List of Reference Frames in the controller
+         *
+         *
+        **/
+        module ReferenceFrame
+        {
+            
+            /**
+             * Robot world frame.
+             *
+             * Expressable in : YES
+             * Controllable : NO
+             */ 
+            const char WORLD = 0;
+            
+            /**
+             * Pelvis (torso) of the robot. Origin is the intersection of the hip roll, pitch and yaw axes.
+             *
+             * Expressable in : YES
+             * Controllable : Partial (z-height with respect to base expressed in world and orientation)
+             */
+            const char PELVIS = 1;
+            
+            /**
+             * Wheeled base frame of the robot. Origin is the intersection of the ankle roll and pitch axes.
+             *
+             * Expressable in : YES
+             * Controllable : NO
+             */
+            const char BASE = 2;
+            
+            /**
+             * Left hand frame. Origin is the intersection of the left wrist roll, pitch and yaw axes
+             *
+             * Expressable in : YES
+             * Controllable : YES
+             */
+            const char LEFT_HAND = 3;
+            
+            /**
+             * Left hand frame. Origin is the intersection of the right wrist roll, pitch and yaw axes
+             *
+             * Expressable in : YES
+             * Controllable : YES
+             */
+            const char RIGHT_HAND = 4;
+            
+            /**
+             * Left hand frame. Origin is the intersection of the left wrist roll, pitch and yaw axes
+             *
+             * Expressable in : YES
+             * Controllable : Partial (orientation pitch with respect to pelvis only)
+             */
+            const char HEAD = 5;
+        };
+        
+        struct ReferenceFrame
+        {
+            char frame_id;
+        };
+        
+    };
+};

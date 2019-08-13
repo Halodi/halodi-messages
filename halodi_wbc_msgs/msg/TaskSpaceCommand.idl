@@ -1,23 +1,84 @@
-#include <geometry_msgs/msg/Vector3.idl>
-#include <geometry_msgs/msg/Quaternion.idl>
+#include <geometry_msgs/msg/Pose.idl>
+#include <geometry_msgs/msg/Twist.idl>
 
+#include <halodi_wbc_msgs/msg/SpatialAcceleration.idl>
+#include <halodi_wbc_msgs/msg/FeedbackParametersSE3.idl>
+#include <halodi_wbc_msgs/msg/JointSpaceCommand.idl>
+#include <halodi_definitions/msg/ReferenceFrame.idl>
 
 module halodi_wbc_msgs {
     module msg {
     
-        module  RigidBody
-        {
-            const char LEFT_HAND = 0;
-            const char RIGHT_HAND = 1;
-            const char PELVIS = 2;
-            const char HEAD = 3;
-        };
+
+    
     
         struct TaskSpaceCommand
         {
-            char rigid_body;
-            geometry_msgs::msg::Quaternion rotation;
-            geometry_msgs::msg::Vector3 position;
+            /**
+             * Body Frame: The reference frame to control.
+             *
+             * Valid options are all frames that are "Controllable"
+             *
+             */
+            char body_frame;
+            
+            /**
+             * Base frame: The base frame of motion for the spatial motion vectors (Twist and Spatial Accelertion)
+             *
+             * See us.ihmc.mecano.spatial.interfaces.SpatialMotionBasics for a description how to use base_frame.
+             *
+             * Tip: Set base_frame to body_frame to allow setting linear and angular components instead of spatial motions
+             *
+             * Valid options are all frames that are "Expressable in"
+             *
+             */
+            char base_frame;
+            
+            /**
+             * Expressed in frame: Origin of the command.
+             *
+             * Valid options are all frames that are "Expressable in"
+             *
+             */
+            char expressed_in_frame;
+            
+            /**
+             * 
+             * Desired pose of the body frame
+             *
+             */
+            geometry_msgs::msg::Pose pose;
+            
+            /**
+             * Desired twist of the body frame.
+             *
+             * See us.ihmc.mecano.spatial.Twist for a description
+             *
+             */
+            geometry_msgs::msg::Twist twist;
+            
+            /**
+             * Desired spatial acceleration of the body frame
+             * 
+             * See us.ihmc.mecano.spatial.SpatialAcceleration
+             *
+             */
+            halodi_wbc_msgs::msg::SpatialAcceleration spatial_acceleration;
+            
+            
+            /**
+             *
+             * Feedback parameters
+             *
+             */
+            halodi_wbc_msgs::msg::FeedbackParametersSE3 feedback_parameters;
+            
+            
+            /**
+             * Nullspace joint configuration between current 
+             *
+             */
+            sequence<halodi_wbc_msgs::msg::JointSpaceCommand, 7> nullspace_command;
             
         };
     };

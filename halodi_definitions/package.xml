@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>halodi_wbc_msgs</name>
+  <name>halodi_definitions</name>
   <version>0.0.1</version>
-  <description>Messages and definitions for the Halodi Whole Body Controller.</description>
+  <description>Definitions for joint and frame names used in the Halodi controller.</description>
   <maintainer email="jesper@halodi.com">Jesper Smith</maintainer>
   <license>Apache License 2.0</license>
 
@@ -14,7 +14,6 @@
 
   <depend>builtin_interfaces</depend>
   <depend>geometry_msgs</depend>
-  <depend>halodi_definitions</depend>
 
   <exec_depend>rosidl_default_runtime</exec_depend>
 

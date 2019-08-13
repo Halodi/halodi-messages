@@ -1,0 +1,79 @@
+#include <geometry_msgs/msg/Vector3.idl>
+
+
+module halodi_wbc_msgs {
+    module msg {
+        
+        /**
+         *
+         * Feedback gains for a 3 dimensional system.
+         *
+         */
+        struct FeedbackParameters3D
+        {
+            /**
+             * Proportional gains (Kp, stiffness)
+             */
+            geometry_msgs::msg::Vector3 proportional;
+            
+            /**
+             * Integral gains (Ki)
+             * 
+             * Optional.
+             */
+            sequence<geometry_msgs::msg::Vector3, 1> integral;
+            
+            /**
+             * Derivative gains (Kd, damping)
+             */
+            geometry_msgs::msg::Vector3 derivative;
+            
+            
+            /**
+             * Maximum proportional error used for feedback control. 
+             * 
+             * The absolute proportional error is clamped to this value.
+             * 
+             * Optional
+             */
+            sequence<geometry_msgs::msg::Vector3, 1> maximum_proportial_error;
+            
+            /**
+             * Maximum integral windup
+             * 
+             * The absolute integral windup is clamped to this value
+             * 
+             * Optional
+             */
+            sequence<geometry_msgs::msg::Vector3, 1> maximum_integral_windup;
+            
+            /**
+             * Maximum derivative error used for feedback control. 
+             * 
+             * The absolute derivative error is clamped to this value.
+             * 
+             * Optional
+             */
+            sequence<geometry_msgs::msg::Vector3, 1> maximum_derivative_error;
+            
+            /**
+             * Maximum feedback rate.
+             * 
+             * The absolute value of the output of this feedback controller is clamped to this value
+             * 
+             * Optional
+             */
+            sequence<geometry_msgs::msg::Vector3, 1> maximum_feedback;
+            
+            /**
+             * Integral leakage 
+             * 
+             * Reduces the integral term by this value per second
+             * 
+             * Optional
+             */
+            sequence<geometry_msgs::msg::Vector3, 1> integral_leakage;
+        };
+
+    };
+};

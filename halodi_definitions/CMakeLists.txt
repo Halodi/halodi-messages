@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(halodi_wbc_msgs)
+project(halodi_definitions)
 
 if(NOT CMAKE_CXX_STANDARD)
   set(CMAKE_CXX_STANDARD 14)
@@ -14,17 +14,11 @@ find_package(rosidl_default_generators REQUIRED)
 find_package(rcl_interfaces REQUIRED)
 find_package(builtin_interfaces REQUIRED)
 find_package(geometry_msgs REQUIRED)
-find_package(halodi_definitions REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-        "msg/DrivingCommand.idl"
-        "msg/TaskSpaceCommand.idl"
-        "msg/JointSpaceCommand.idl"
-	"msg/WholeBodyControllerCommand.idl"
-	"msg/SpatialAcceleration.idl"
-	"msg/FeedbackParametersSE3.idl"
-	"msg/FeedbackParameters3D.idl"
-	DEPENDENCIES rcl_interfaces builtin_interfaces geometry_msgs halodi_definitions
+        "msg/ReferenceFrame.idl"
+        "msg/Joint.idl"
+	DEPENDENCIES rcl_interfaces builtin_interfaces geometry_msgs
 	ADD_LINTER_TESTS
 )
 
