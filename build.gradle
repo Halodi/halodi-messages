@@ -2,20 +2,147 @@ buildscript {
    repositories {
       mavenCentral()
       maven { url "http://dl.bintray.com/ihmcrobotics/maven-release" }
-      maven { url "http://dl.bintray.com/ihmcrobotics/maven-vendor" }
-      maven { url "https://plugins.gradle.org/m2/" }
       mavenLocal()
       jcenter()
    }
    
    dependencies {
       classpath "us.ihmc:ihmc-pub-sub-generator:0.10.3"
+      classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.+'
    }
+   
+
 }
+
+apply plugin: 'java'
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'maven'
+apply plugin: 'maven-publish'
+
+
+group = "com.halodi"
+version = "0.0.1"
+
+
+def outputDirectory = project.file("$buildDir/java-generated")
+
+repositories {
+    mavenCentral()
+    maven { url "http://dl.bintray.com/ihmcrobotics/maven-release" }
+    mavenLocal()
+    jcenter()
+}
+
+
+sourceSets {
+    main {
+        java {
+            srcDirs = [ outputDirectory ]
+        }
+    }
+}
+
+
+
+dependencies
+{
+    compile group: "us.ihmc", name: "euclid-geometry", version: "0.12.0"
+    compile group: "us.ihmc", name: "ihmc-pub-sub", version: "0.10.3"
+    compile group: "us.ihmc", name: "ros2-common-interfaces", version: "0.13.4"
+}
+
 
 task generateMessages(type: us.ihmc.idl.generator.IDLGeneratorTask) {
     idlFiles = fileTree(dir: "halodi_msgs/msg/")
     includeDirs = files(".", "java-typesupport")
-    targetDirectory = file("src/main/java-generated")
+    targetDirectory = outputDirectory
     packagePrefix = ""
+    
+    doFirst
+    {
+        mkdir outputDirectory
+    }
+    
+    doLast 
+    {
+        // Due to incompatiblity with how the java messages are generated and how the new .idl support is defined, we need to add ".dds" to the package name for all included files.
+    
+        def typesupportDirectories = file("java-typesupport")
+        def generated = fileTree(dir: outputDirectory)
+        typesupportDirectories.eachFile(groovy.io.FileType.DIRECTORIES) { 
+            def packageName = it.name
+            generated.each
+            {
+                def msgAdjusted = it.text.replaceAll(packageName + "\\." + "msg",  packageName + "\\." + "msg.dds")
+                def srvAdjusted = msgAdjusted.replaceAll(packageName + "\\." + "srv",  packageName + "\\." + "srv.dds")
+                it.text = srvAdjusted
+            } 
+            
+        }
+    }
+    
+}
+
+build.dependsOn generateMessages
+
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+
+// Create the pom configuration:
+def pomConfig = {
+    licenses {
+        license {
+            name "The Apache Software License, Version 2.0"
+            url "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            distribution "repo"
+        }
+    }
+    developers {
+        developer {
+            name "Jesper Smith"
+            email "jesper@halodi.com"
+        }
+    }
+    
+    scm {
+       url "https://github.com/yourgithubaccount/example"
+    }
+}
+
+// Create the publication with the pom configuration:
+publishing {
+    publications {
+        HalodiMessages(MavenPublication) {
+            from components.java
+            artifact sourcesJar
+            artifact javadocJar
+            groupId group
+            artifactId project.name
+            version version
+        }
+    }
+}
+
+
+
+bintray {   
+    user = project.hasProperty('bintrayUsername') ? project.property('bintrayUsername') : System.getenv('BINTRAY_USER')
+    key = project.hasProperty('bintrayApiKey') ? project.property('bintrayApiKey') : System.getenv('BINTRAY_API_KEY')
+    pkg {
+        repo = 'maven-release'
+        name = 'halodi-messages'
+        userOrg = 'halodirobotics'
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/Halodi/halodi-messages.git'
+    }
+    publications = ['HalodiMessages'] 
 }

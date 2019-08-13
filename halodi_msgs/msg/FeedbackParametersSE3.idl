@@ -1,3 +1,6 @@
+#ifndef __halodi_msgs__msg__FeedbackParametersSE3__idl__
+#define __halodi_msgs__msg__FeedbackParametersSE3__idl__
+
 #include <geometry_msgs/msg/Vector3.idl>
 #include <halodi_msgs/msg/FeedbackParameters3D.idl>
 
@@ -14,3 +17,5 @@ module halodi_msgs {
         };      
     };
 };
+
+#endif

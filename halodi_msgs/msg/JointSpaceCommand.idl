@@ -1,3 +1,7 @@
+#ifndef __halodi_msgs__msg__JointSpaceCommand__idl__
+#define __halodi_msgs__msg__JointSpaceCommand__idl__
+
+
 #include <geometry_msgs/msg/Vector3.idl>
 #include <geometry_msgs/msg/Quaternion.idl>
 #include <halodi_msgs/msg/Joint.idl>
@@ -19,3 +23,5 @@ module halodi_msgs {
         };
     };
 };
+
+#endif
