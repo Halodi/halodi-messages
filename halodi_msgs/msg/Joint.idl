@@ -3,37 +3,37 @@ module halodi_msgs {
         
         module Joint_Constants
         {
-            const uint8 HIP_YAW = 0;
-            const uint8 HIP_ROLL = 1;
-            const uint8 HIP_PITCH = 2;
-            const uint8 KNEE_PITCH = 3;
-            const uint8 ANKLE_ROLL = 4;
-            const uint8 ANKLE_PITCH = 5;
+            const octet HIP_YAW = 0;
+            const octet HIP_ROLL = 1;
+            const octet HIP_PITCH = 2;
+            const octet KNEE_PITCH = 3;
+            const octet ANKLE_ROLL = 4;
+            const octet ANKLE_PITCH = 5;
             
-            const uint8 LEFT_SHOULDER_PITCH = 6;
-            const uint8 LEFT_SHOULDER_ROLL = 7;
-            const uint8 LEFT_SHOULDER_YAW = 8;
-            const uint8 LEFT_ELBOW_PITCH = 9;
-            const uint8 LEFT_ELBOW_YAW = 10;
-            const uint8 LEFT_WRIST_PITCH = 11;
-            const uint8 LEFT_WRIST_ROLL = 12;
+            const octet LEFT_SHOULDER_PITCH = 6;
+            const octet LEFT_SHOULDER_ROLL = 7;
+            const octet LEFT_SHOULDER_YAW = 8;
+            const octet LEFT_ELBOW_PITCH = 9;
+            const octet LEFT_ELBOW_YAW = 10;
+            const octet LEFT_WRIST_PITCH = 11;
+            const octet LEFT_WRIST_ROLL = 12;
             
-            const uint8 RIGHT_SHOULDER_PITCH = 13;
-            const uint8 RIGHT_SHOULDER_ROLL = 14;
-            const uint8 RIGHT_SHOULDER_YAW = 15;
-            const uint8 RIGHT_ELBOW_PITCH = 16;
-            const uint8 RIGHT_ELBOW_YAW = 17;
-            const uint8 RIGHT_WRIST_PITCH = 18;
-            const uint8 RIGHT_WRIST_ROLL = 19;
+            const octet RIGHT_SHOULDER_PITCH = 13;
+            const octet RIGHT_SHOULDER_ROLL = 14;
+            const octet RIGHT_SHOULDER_YAW = 15;
+            const octet RIGHT_ELBOW_PITCH = 16;
+            const octet RIGHT_ELBOW_YAW = 17;
+            const octet RIGHT_WRIST_PITCH = 18;
+            const octet RIGHT_WRIST_ROLL = 19;
             
-            const uint8 NECK_PITCH = 20;
+            const octet NECK_PITCH = 20;
         };
         
 
         @TypeCode(type="halodi_msgs::msg::dds_::Joint_")
         struct Joint
         {   
-            uint8 joint_id;
+            octet joint_id;
         };
     };
 };

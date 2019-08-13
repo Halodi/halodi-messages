@@ -18,7 +18,7 @@ module halodi_msgs
              * Expressable in : YES
              * Controllable : NO
              */ 
-            const uint8 WORLD = 0;
+            const octet WORLD = 0;
             
             /**
              * Pelvis (torso) of the robot. Origin is the intersection of the hip roll, pitch and yaw axes.
@@ -26,7 +26,7 @@ module halodi_msgs
              * Expressable in : YES
              * Controllable : Partial (z-height with respect to base expressed in world and orientation)
              */
-            const uint8 PELVIS = 1;
+            const octet PELVIS = 1;
             
             /**
              * Wheeled base frame of the robot. Origin is the intersection of the ankle roll and pitch axes.
@@ -34,7 +34,7 @@ module halodi_msgs
              * Expressable in : YES
              * Controllable : NO
              */
-            const uint8 BASE = 2;
+            const octet BASE = 2;
             
             /**
              * Left hand frame. Origin is the intersection of the left wrist roll, pitch and yaw axes
@@ -42,7 +42,7 @@ module halodi_msgs
              * Expressable in : YES
              * Controllable : YES
              */
-            const uint8 LEFT_HAND = 3;
+            const octet LEFT_HAND = 3;
             
             /**
              * Left hand frame. Origin is the intersection of the right wrist roll, pitch and yaw axes
@@ -50,7 +50,7 @@ module halodi_msgs
              * Expressable in : YES
              * Controllable : YES
              */
-            const uint8 RIGHT_HAND = 4;
+            const octet RIGHT_HAND = 4;
             
             /**
              * Left hand frame. Origin is the intersection of the left wrist roll, pitch and yaw axes
@@ -58,13 +58,13 @@ module halodi_msgs
              * Expressable in : YES
              * Controllable : Partial (orientation pitch with respect to pelvis only)
              */
-            const uint8 HEAD = 5;
+            const octet HEAD = 5;
         };
        
         @TypeCode(type="halodi_msgs::msg::dds_::ReferenceFrame_")
         struct ReferenceFrame
         {
-            uint8 frame_id;
+            octet frame_id;
         };
         
     };

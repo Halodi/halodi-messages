@@ -1,7 +1,7 @@
 #include <geometry_msgs/msg/Pose.idl>
 #include <geometry_msgs/msg/Twist.idl>
+#include <geometry_msgs/msg/Accel.idl>
 
-#include <halodi_msgs/msg/SpatialAcceleration.idl>
 #include <halodi_msgs/msg/FeedbackParametersSE3.idl>
 #include <halodi_msgs/msg/JointSpaceCommand.idl>
 #include <halodi_msgs/msg/ReferenceFrame.idl>
@@ -18,7 +18,7 @@ module halodi_msgs {
              * Valid options are all frames that are "Controllable"
              *
              */
-            char body_frame;
+            octet body_frame;
             
             /**
              * Base frame: The base frame of motion for the spatial motion vectors (Twist and Spatial Accelertion)
@@ -30,7 +30,7 @@ module halodi_msgs {
              * Valid options are all frames that are "Expressable in"
              *
              */
-            char base_frame;
+            octet base_frame;
             
             /**
              * Expressed in frame: Origin of the command.
@@ -38,7 +38,7 @@ module halodi_msgs {
              * Valid options are all frames that are "Expressable in"
              *
              */
-            char expressed_in_frame;
+            octet expressed_in_frame;
             
             /**
              * 
@@ -50,7 +50,7 @@ module halodi_msgs {
             /**
              * Desired twist of the body frame.
              *
-             * See us.ihmc.mecano.spatial.Twist for a description
+             * See us.ihmc.mecano.spatial.Twist for a description how this relates to body_frame, base_frame and expressed_in_frame
              *
              */
             geometry_msgs::msg::Twist twist;
@@ -58,10 +58,10 @@ module halodi_msgs {
             /**
              * Desired spatial acceleration of the body frame
              * 
-             * See us.ihmc.mecano.spatial.SpatialAcceleration
+             * See us.ihmc.mecano.spatial.SpatialAcceleration for a description how this relates to body_frame, base_frame and expressed_in_frame
              *
              */
-            halodi_msgs::msg::SpatialAcceleration spatial_acceleration;
+            geometry_msgs::msg::Accel spatial_acceleration;
             
             
             /**

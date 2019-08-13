@@ -22,7 +22,6 @@ rosidl_generate_interfaces(${PROJECT_NAME}
         "msg/TaskSpaceCommand.idl"
         "msg/JointSpaceCommand.idl"
 	"msg/WholeBodyControllerCommand.idl"
-	"msg/SpatialAcceleration.idl"
 	"msg/FeedbackParametersSE3.idl"
 	"msg/FeedbackParameters3D.idl"
 	"msg/DisableWholeBodyBalance.idl"
