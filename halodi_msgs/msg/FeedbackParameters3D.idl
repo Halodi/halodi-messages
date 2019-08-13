@@ -1,7 +1,7 @@
 #include <geometry_msgs/msg/Vector3.idl>
 
 
-module halodi_wbc_msgs {
+module halodi_msgs {
     module msg {
         
         /**

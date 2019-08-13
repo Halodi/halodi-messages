@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(halodi_definitions)
+project(halodi_msgs)
 
 if(NOT CMAKE_CXX_STANDARD)
   set(CMAKE_CXX_STANDARD 14)
@@ -16,8 +16,16 @@ find_package(builtin_interfaces REQUIRED)
 find_package(geometry_msgs REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-        "msg/ReferenceFrame.idl"
         "msg/Joint.idl"
+        "msg/ReferenceFrame.idl"
+        "msg/DrivingCommand.idl"
+        "msg/TaskSpaceCommand.idl"
+        "msg/JointSpaceCommand.idl"
+	"msg/WholeBodyControllerCommand.idl"
+	"msg/SpatialAcceleration.idl"
+	"msg/FeedbackParametersSE3.idl"
+	"msg/FeedbackParameters3D.idl"
+	"msg/DisableWholeBodyBalance.idl"
 	DEPENDENCIES rcl_interfaces builtin_interfaces geometry_msgs
 	ADD_LINTER_TESTS
 )

@@ -1,17 +1,15 @@
 #include <geometry_msgs/msg/Pose.idl>
 #include <geometry_msgs/msg/Twist.idl>
 
-#include <halodi_wbc_msgs/msg/SpatialAcceleration.idl>
-#include <halodi_wbc_msgs/msg/FeedbackParametersSE3.idl>
-#include <halodi_wbc_msgs/msg/JointSpaceCommand.idl>
-#include <halodi_definitions/msg/ReferenceFrame.idl>
+#include <halodi_msgs/msg/SpatialAcceleration.idl>
+#include <halodi_msgs/msg/FeedbackParametersSE3.idl>
+#include <halodi_msgs/msg/JointSpaceCommand.idl>
+#include <halodi_msgs/msg/ReferenceFrame.idl>
 
-module halodi_wbc_msgs {
+module halodi_msgs {
     module msg {
     
-
-    
-    
+        @TypeCode(type="halodi_msgs::msg::dds_::TaskSpaceCommand_")
         struct TaskSpaceCommand
         {
             /**
@@ -63,7 +61,7 @@ module halodi_wbc_msgs {
              * See us.ihmc.mecano.spatial.SpatialAcceleration
              *
              */
-            halodi_wbc_msgs::msg::SpatialAcceleration spatial_acceleration;
+            halodi_msgs::msg::SpatialAcceleration spatial_acceleration;
             
             
             /**
@@ -71,14 +69,14 @@ module halodi_wbc_msgs {
              * Feedback parameters
              *
              */
-            halodi_wbc_msgs::msg::FeedbackParametersSE3 feedback_parameters;
+            halodi_msgs::msg::FeedbackParametersSE3 feedback_parameters;
             
             
             /**
              * Nullspace joint configuration between current 
              *
              */
-            sequence<halodi_wbc_msgs::msg::JointSpaceCommand, 7> nullspace_command;
+            sequence<halodi_msgs::msg::JointSpaceCommand, 7> nullspace_command;
             
         };
     };

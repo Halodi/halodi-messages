@@ -1,14 +1,14 @@
 #include <geometry_msgs/msg/Vector3.idl>
 #include <geometry_msgs/msg/Quaternion.idl>
-#include <halodi_definitions/msg/Joint.idl>
+#include <halodi_msgs/msg/Joint.idl>
 
-module halodi_wbc_msgs {
+module halodi_msgs {
     module msg {
         
     
         struct JointSpaceCommand
         {
-            halodi_definitions::msg::Joint joint;
+            halodi_msgs::msg::Joint joint;
         
             double q_desired;
             double qd_desired;

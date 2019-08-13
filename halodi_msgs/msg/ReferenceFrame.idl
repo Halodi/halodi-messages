@@ -1,4 +1,4 @@
-module halodi_definitions 
+module halodi_msgs 
 {
     module msg 
     {
@@ -61,7 +61,7 @@ module halodi_definitions
             const uint8 HEAD = 5;
         };
        
-        @TypeCode(type="halodi_definitions::msg::dds_::ReferenceFrame_")
+        @TypeCode(type="halodi_msgs::msg::dds_::ReferenceFrame_")
         struct ReferenceFrame
         {
             uint8 frame_id;

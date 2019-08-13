@@ -1,8 +1,10 @@
 #include <geometry_msgs/msg/Vector3.idl>
 
 
-module halodi_wbc_msgs {
+module halodi_msgs {
     module msg {
+    
+        @TypeCode(type="halodi_msgs::msg::dds_::SpatialAcceleration_")
         struct SpatialAcceleration
         {
             geometry_msgs::msg::Vector3 linear;

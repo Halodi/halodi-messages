@@ -1,4 +1,4 @@
-module halodi_definitions {
+module halodi_msgs {
     module msg {
         
         module Joint_Constants
@@ -30,7 +30,7 @@ module halodi_definitions {
         };
         
 
-        @TypeCode(type="halodi_definitions::msg::dds_::Joint_")
+        @TypeCode(type="halodi_msgs::msg::dds_::Joint_")
         struct Joint
         {   
             uint8 joint_id;

@@ -1,6 +1,6 @@
 
 
-module halodi_wbc_msgs {
+module halodi_msgs {
     module msg {
         struct DrivingCommand
         {
