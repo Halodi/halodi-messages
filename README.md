@@ -4,7 +4,7 @@ This repository contains custom ROS2/IDL messages from Halodi Robotics.
 
 ## Using with ROS2
 
-This repository is a valid ROS2 package. Checkout in the 'src/' folder of your ROS2 workspace to compile.
+This repository contains the halodi_msgs ROS2 package. Checkout this repository in the 'src/' folder of your ROS2 workspace to compile.
 
 ## Using with IHMC ROS2 Libraries
 
