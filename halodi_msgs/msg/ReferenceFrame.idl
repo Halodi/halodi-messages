@@ -1,5 +1,3 @@
-#ifndef __halodi_msgs__msg__ReferenceFrame__idl__
-#define __halodi_msgs__msg__ReferenceFrame__idl__
 
 
 module halodi_msgs 
@@ -74,4 +72,3 @@ module halodi_msgs
     };
 };
 
-#endif

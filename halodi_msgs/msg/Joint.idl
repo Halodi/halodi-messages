@@ -1,5 +1,4 @@
-#ifndef __halodi_msgs__msg__Joint__idl__
-#define __halodi_msgs__msg__Joint__idl__
+
 
 module halodi_msgs {
     module msg {
@@ -40,5 +39,3 @@ module halodi_msgs {
         };
     };
 };
-
-#endif
