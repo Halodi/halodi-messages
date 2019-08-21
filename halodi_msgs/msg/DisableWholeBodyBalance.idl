@@ -17,6 +17,7 @@ module halodi_msgs {
          * Enable this only when the robot is supported by an overhead support system. Warranty will be voided for fall damage.
          *
          */
+        @TypeCode(type="halodi_msgs::msg::dds_::DisableWholeBodyBalance_")
         struct DisableWholeBodyBalance
         {
             /**

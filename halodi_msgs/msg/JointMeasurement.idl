@@ -1,0 +1,25 @@
+
+#include <halodi_msgs/msg/Joint.idl>
+
+module halodi_msgs {
+    module msg {
+    
+        /**
+          * Measurements for a single joint
+          *
+          *
+          * Not using sensor_msgs::msg::JointState to avoid name lookups
+          * 
+          * Called JointMeasurement instead of JointState, to avoid confusing with sensor_msgs::msg::JointState.
+          *
+          */
+        @TypeCode(type="halodi_msgs::msg::dds_::JointMeasurement_")
+        struct JointMeasurement
+        {
+            halodi_msgs::msg::Joint joint;
+            double position;
+            double velocity;
+            double effort;
+        };
+    };
+};

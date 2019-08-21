@@ -14,6 +14,7 @@ find_package(rosidl_default_generators REQUIRED)
 find_package(rcl_interfaces REQUIRED)
 find_package(builtin_interfaces REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(std_msgs REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
         "msg/Joint.idl"
@@ -21,11 +22,15 @@ rosidl_generate_interfaces(${PROJECT_NAME}
         "msg/DrivingCommand.idl"
         "msg/TaskSpaceCommand.idl"
         "msg/JointSpaceCommand.idl"
-	"msg/WholeBodyControllerCommand.idl"
-	"msg/FeedbackParametersSE3.idl"
-	"msg/FeedbackParameters3D.idl"
-	"msg/DisableWholeBodyBalance.idl"
-	DEPENDENCIES rcl_interfaces builtin_interfaces geometry_msgs
+        "msg/WholeBodyControllerCommand.idl"
+        "msg/FeedbackParametersSE3.idl"
+        "msg/FeedbackParameters3D.idl"
+        "msg/DisableWholeBodyBalance.idl"
+        "msg/ImuMeasurement.idl"
+        "msg/ImuName.idl"
+        "msg/JointMeasurement.idl"
+        "msg/WholeBodyState.idl"
+	DEPENDENCIES rcl_interfaces builtin_interfaces geometry_msgs std_msgs
 	ADD_LINTER_TESTS
 )
 
