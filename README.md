@@ -29,7 +29,7 @@ dependencies {
     compile group: "us.ihmc", name: "euclid-geometry", version: "0.12.0"
     compile group: "us.ihmc", name: "ihmc-pub-sub", version: "0.10.3"
     compile group: "us.ihmc", name: "ros2-common-interfaces", version: "0.13.4"
-    compile group: "com.halodi", name: "halodi-messages", version: "0.0.1"
+    compile group: "com.halodi", name: "halodi-messages", version: "0.0.2"
 }
 ```
 

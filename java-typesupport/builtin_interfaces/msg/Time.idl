@@ -1,0 +1,17 @@
+#ifndef __builtin_interfaces__msg__Time__idl__
+#define __builtin_interfaces__msg__Time__idl__
+
+module builtin_interfaces
+{
+  module msg
+  {
+      @TypeCode(type="builtin_interfaces::msg::dds_::Time_")
+      struct Time
+      {
+        long sec;
+        unsigned long nanosec;
+      };
+  };
+};
+
+#endif
