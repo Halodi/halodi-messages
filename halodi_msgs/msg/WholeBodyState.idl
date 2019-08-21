@@ -39,7 +39,7 @@ module halodi_msgs {
               * Position of the root joint (pelvis) of the robot
               *
               */
-            geometry_msgs::msg::Quaternion position;
+            geometry_msgs::msg::Vector3 position;
             
             /**
               * Orientation of the root joint (pelvis) of the robot
