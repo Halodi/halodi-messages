@@ -84,6 +84,8 @@ task generateMessages(type: us.ihmc.idl.generator.IDLGeneratorTask) {
 }
 
 build.dependsOn generateMessages
+jar.dependsOn generateMessages
+
 
 
 task sourcesJar(type: Jar, dependsOn: classes) {
