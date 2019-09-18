@@ -29,6 +29,9 @@ module halodi_msgs {
             const octet RIGHT_WRIST_ROLL = 19;
             
             const octet NECK_PITCH = 20;
+            
+            const octet LEFT_WHEEL = 21;
+            const octet RIGHT_WHEEL = 22;
         };
         
 

@@ -33,7 +33,7 @@ module halodi_msgs {
             /**
               * The status of the balance module
               */
-            halodi_msgs::msg::DisableWholeBodyBalance balance_status;
+            string controller_state;
             
             /**
               * Position of the root joint (pelvis) of the robot

@@ -8,6 +8,12 @@ module halodi_msgs {
     module msg {
         
     
+        /**
+         *
+         * Joint space command for the whole body controller
+         *
+         */
+        @TypeCode(type="halodi_msgs::msg::dds_::JointSpaceCommand_")
         struct JointSpaceCommand
         {
             halodi_msgs::msg::Joint joint;
@@ -16,8 +22,54 @@ module halodi_msgs {
             double qd_desired;
             double qdd_desired;
             
+            /**
+             * Use sensible default gains as provided by the controller instead of custom gains.
+             * 
+             * Recommended to use for initial testing.
+             */
+            bool use_default_gains;
+            
+            /**
+             * Desired stiffness of the PD Controller for this joint. 
+             * 
+             * Unit: (rad/s^2)/rad
+             * The output of this controller is joint acceleration.
+             * Ignored when use_default_gains is set
+             */
             double stiffness;
+            
+            /**
+             * Desired damping of the PD Controller for this joint.
+             * 
+             * Unit: (rad/s^2)/rad
+             * The output of this controller is joint acceleration.
+             * Ignored when use_default_gains is set
+             */
             double damping;
+            
+            /**
+             * Maximum feedback term due to the stiffness.
+             * 
+             * Unit: rad/s^2
+             * Maximum acceleraton effected by the stiffness of this controller
+             * Ignored when use_default_gains is set
+             * 
+             * When set to 0, no feedback will be applied. 
+             * 
+             */
+            double max_stiffness_feedback;
+            
+            /**
+             * Maximum feedback term due to the damping.
+             * 
+             * Unit: rad/s^2
+             * Maximum acceleraton effected by the damping of this controller
+             * Ignored when use_default_gains is set
+             * 
+             * When set to 0, no feedback will be applied.
+             * 
+             */
+            double max_damping_feedback;
         };
     };
 };

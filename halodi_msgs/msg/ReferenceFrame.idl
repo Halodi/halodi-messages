@@ -47,7 +47,7 @@ module halodi_msgs
             const octet LEFT_HAND = 3;
             
             /**
-             * Left hand frame. Origin is the intersection of the right wrist roll, pitch and yaw axes
+             * Right hand frame. Origin is the intersection of the right wrist roll, pitch and yaw axes
              *
              * Expressable in : YES
              * Controllable : YES
@@ -55,12 +55,13 @@ module halodi_msgs
             const octet RIGHT_HAND = 4;
             
             /**
-             * Left hand frame. Origin is the intersection of the left wrist roll, pitch and yaw axes
+             * Head frame. Origin is the base of the head.
              *
              * Expressable in : YES
              * Controllable : Partial (orientation pitch with respect to pelvis only)
              */
             const octet HEAD = 5;
+             
         };
        
         @TypeCode(type="halodi_msgs::msg::dds_::ReferenceFrame_")

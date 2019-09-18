@@ -42,6 +42,18 @@ module halodi_msgs {
              */
             octet expressed_in_frame;
             
+            
+            /**
+             * Align the orientation of the expressed in frame such that z-axis points up. 
+             * 
+             * The heading (also known as yaw or the rotation around the z-axis) and position match the expressed_in_frame.
+             *
+             * This can be useful for keeping an end effector aligned with gravity while moving.
+             * 
+             */
+            bool express_in_z_up;
+            
+            
             /**
              * 
              * Desired pose of the body frame
