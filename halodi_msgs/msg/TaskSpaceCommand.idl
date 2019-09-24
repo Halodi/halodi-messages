@@ -51,7 +51,15 @@ module halodi_msgs {
              * This can be useful for keeping an end effector aligned with gravity while moving.
              * 
              */
-            bool express_in_z_up;
+            boolean express_in_z_up;
+            
+            /**
+             * Use sensible default gains provided by the controller instead of custom gains. 
+             *
+             * Recommended to use for initial testing 
+             *
+             */
+            boolean use_default_gains;
             
             
             /**
@@ -82,8 +90,10 @@ module halodi_msgs {
              *
              * Feedback parameters
              *
+             * Optional. When not provided, default values are used
+             *
              */
-            halodi_msgs::msg::FeedbackParametersSE3 feedback_parameters;
+            sequence<halodi_msgs::msg::FeedbackParametersSE3, 1> feedback_parameters;
             
             
             /**

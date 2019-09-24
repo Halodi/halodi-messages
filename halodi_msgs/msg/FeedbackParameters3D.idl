@@ -37,7 +37,7 @@ module halodi_msgs {
              * 
              * Optional
              */
-            sequence<geometry_msgs::msg::Vector3, 1> maximum_proportial_error;
+            sequence<double, 1> maximum_proportial_error;
             
             /**
              * Maximum integral windup
@@ -46,7 +46,7 @@ module halodi_msgs {
              * 
              * Optional
              */
-            sequence<geometry_msgs::msg::Vector3, 1> maximum_integral_windup;
+            sequence<double, 1> maximum_integral_windup;
             
             /**
              * Maximum derivative error used for feedback control. 
@@ -55,7 +55,7 @@ module halodi_msgs {
              * 
              * Optional
              */
-            sequence<geometry_msgs::msg::Vector3, 1> maximum_derivative_error;
+            sequence<double, 1> maximum_derivative_error;
             
             /**
              * Maximum feedback rate.
@@ -64,7 +64,7 @@ module halodi_msgs {
              * 
              * Optional
              */
-            sequence<geometry_msgs::msg::Vector3, 1> maximum_feedback;
+            sequence<double, 1> maximum_feedback;
             
             /**
              * Integral leakage 
@@ -73,7 +73,7 @@ module halodi_msgs {
              * 
              * Optional
              */
-            sequence<geometry_msgs::msg::Vector3, 1> integral_leakage;
+            sequence<double, 1> integral_leakage;
         };
 
     };

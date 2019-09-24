@@ -27,7 +27,7 @@ module halodi_msgs {
              * 
              * Recommended to use for initial testing.
              */
-            bool use_default_gains;
+            boolean use_default_gains;
             
             /**
              * Desired stiffness of the PD Controller for this joint. 
