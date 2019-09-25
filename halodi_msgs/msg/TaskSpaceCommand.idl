@@ -6,7 +6,7 @@
 
 #include <halodi_msgs/msg/FeedbackParametersSE3.idl>
 #include <halodi_msgs/msg/JointSpaceCommand.idl>
-#include <halodi_msgs/msg/ReferenceFrame.idl>
+#include <halodi_msgs/msg/ReferenceFrameName.idl>
 
 module halodi_msgs {
     module msg {
@@ -20,7 +20,7 @@ module halodi_msgs {
              * Valid options are all frames that are "Controllable"
              *
              */
-            octet body_frame;
+            halodi_msgs::msg::ReferenceFrameName body_frame;
             
             /**
              * Base frame: The base frame of motion for the spatial motion vectors (Twist and Spatial Accelertion)
@@ -32,7 +32,7 @@ module halodi_msgs {
              * Valid options are all frames that are "Expressable in"
              *
              */
-            octet base_frame;
+            halodi_msgs::msg::ReferenceFrameName base_frame;
             
             /**
              * Expressed in frame: Origin of the command.
@@ -40,7 +40,7 @@ module halodi_msgs {
              * Valid options are all frames that are "Expressable in"
              *
              */
-            octet expressed_in_frame;
+            halodi_msgs::msg::ReferenceFrameName expressed_in_frame;
             
             
             /**

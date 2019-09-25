@@ -11,7 +11,7 @@ module halodi_msgs
          *
          *
         **/
-        module ReferenceFrame_Constants
+        module ReferenceFrameName_Constants
         {
             
             /**
@@ -64,8 +64,8 @@ module halodi_msgs
              
         };
        
-        @TypeCode(type="halodi_msgs::msg::dds_::ReferenceFrame_")
-        struct ReferenceFrame
+        @TypeCode(type="halodi_msgs::msg::dds_::ReferenceFrameName_")
+        struct ReferenceFrameName
         {
             octet frame_id;
         };

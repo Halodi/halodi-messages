@@ -2,7 +2,7 @@
 
 #include <geometry_msgs/msg/Vector3.idl>
 #include <geometry_msgs/msg/Quaternion.idl>
-#include <halodi_msgs/msg/Joint.idl>
+#include <halodi_msgs/msg/JointName.idl>
 
 module halodi_msgs {
     module msg {
@@ -16,7 +16,7 @@ module halodi_msgs {
         @TypeCode(type="halodi_msgs::msg::dds_::JointSpaceCommand_")
         struct JointSpaceCommand
         {
-            halodi_msgs::msg::Joint joint;
+            halodi_msgs::msg::JointName joint;
         
             double q_desired;
             double qd_desired;

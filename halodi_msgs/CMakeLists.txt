@@ -17,8 +17,8 @@ find_package(geometry_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-        "msg/Joint.idl"
-        "msg/ReferenceFrame.idl"
+	"msg/JointName.idl"
+	"msg/ReferenceFrameName.idl"
         "msg/DrivingCommand.idl"
         "msg/TaskSpaceCommand.idl"
         "msg/JointSpaceCommand.idl"

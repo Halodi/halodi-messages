@@ -3,7 +3,7 @@
 module halodi_msgs {
     module msg {
         
-        module Joint_Constants
+        module JointName_Constants
         {
             const octet HIP_YAW = 0;
             const octet HIP_ROLL = 1;
@@ -35,8 +35,8 @@ module halodi_msgs {
         };
         
 
-        @TypeCode(type="halodi_msgs::msg::dds_::Joint_")
-        struct Joint
+        @TypeCode(type="halodi_msgs::msg::dds_::JointName_")
+        struct JointName
         {   
             octet joint_id;
         };
