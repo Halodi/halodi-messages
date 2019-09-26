@@ -19,6 +19,8 @@ module halodi_msgs {
             
             /**
              * Integral gains (Ki)
+             *
+             * NOTE: Not all controllers enable integrators
              * 
              * Optional.
              */
@@ -58,7 +60,7 @@ module halodi_msgs {
             sequence<double, 1> maximum_derivative_error;
             
             /**
-             * Maximum feedback rate.
+             * Maximum feedback.
              * 
              * The absolute value of the output of this feedback controller is clamped to this value
              * 
@@ -67,10 +69,21 @@ module halodi_msgs {
             sequence<double, 1> maximum_feedback;
             
             /**
+             * Maximum feedback rate.
+             * 
+             * The absolute value of the derivative of the output of this feedback controller is clamped to this value
+             * 
+             * Optional
+             */
+            sequence<double, 1> maximum_feedback_rate;
+            
+            /**
              * Integral leakage 
              * 
              * Reduces the integral term by this value per second
              * 
+             * NOTE: This functionality is currently not implemented by the controller
+             *
              * Optional
              */
             sequence<double, 1> integral_leakage;

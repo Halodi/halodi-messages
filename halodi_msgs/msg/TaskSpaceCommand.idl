@@ -53,14 +53,6 @@ module halodi_msgs {
              */
             boolean express_in_z_up;
             
-            /**
-             * Use sensible default gains provided by the controller instead of custom gains. 
-             *
-             * Recommended to use for initial testing 
-             *
-             */
-            boolean use_default_gains;
-            
             
             /**
              * 
