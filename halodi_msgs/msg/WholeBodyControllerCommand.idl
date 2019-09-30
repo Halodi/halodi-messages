@@ -16,7 +16,7 @@ module halodi_msgs {
         {
                 long sequence_id;
                 
-                sequence<halodi_msgs::msg::BalanceMode, 1> balance_mode;
+                halodi_msgs::msg::BalanceMode balance_mode;
                 
                 /**
                 * Task space commands
