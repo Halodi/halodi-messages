@@ -6,7 +6,7 @@
 #include <halodi_msgs/msg/TaskSpaceCommand.idl>
 #include <halodi_msgs/msg/JointSpaceCommand.idl>
 #include <halodi_msgs/msg/DrivingCommand.idl>
-#include <halodi_msgs/msg/DisableWholeBodyBalance.idl>
+#include <halodi_msgs/msg/BalanceMode.idl>
 
 module halodi_msgs {
     module msg {
@@ -16,7 +16,7 @@ module halodi_msgs {
         {
                 long sequence_id;
                 
-                sequence<halodi_msgs::msg::DisableWholeBodyBalance, 1> disable_balance;
+                sequence<halodi_msgs::msg::BalanceMode, 1> balance_mode;
                 
                 /**
                 * Task space commands

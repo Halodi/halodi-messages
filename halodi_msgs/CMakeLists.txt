@@ -25,7 +25,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
         "msg/WholeBodyControllerCommand.idl"
         "msg/FeedbackParametersSE3.idl"
         "msg/FeedbackParameters3D.idl"
-        "msg/DisableWholeBodyBalance.idl"
+        "msg/BalanceMode.idl"
         "msg/ImuMeasurement.idl"
         "msg/ImuName.idl"
         "msg/JointMeasurement.idl"

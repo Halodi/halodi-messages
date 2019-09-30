@@ -2,7 +2,6 @@
 #include <geometry_msgs/msg/Vector3.idl>
 #include <geometry_msgs/msg/Quaternion.idl>
 #include <geometry_msgs/msg/Twist.idl>
-#include <halodi_msgs/msg/DisableWholeBodyBalance.idl>
 #include <halodi_msgs/msg/ImuMeasurement.idl>
 #include <halodi_msgs/msg/JointMeasurement.idl>
 
@@ -31,9 +30,20 @@ module halodi_msgs {
             
             
             /**
-              * The status of the balance module
+              * The current state of the balance module
               */
             string controller_state;
+            
+            /**
+              * The status of the robot. Valid values are
+              * 
+              * diagnostic_msgs::msg:DiagnosticStatus::OK       (0)
+              * diagnostic_msgs::msg:DiagnosticStatus::WARN     (1)
+              * diagnostic_msgs::msg:DiagnosticStatus::ERROR    (2)
+              * diagnostic_msgs::msg:DiagnosticStatus::STALE    (3)
+              * 
+              */
+            octet robot_status;
             
             /**
               * Position of the root joint (pelvis) of the robot
