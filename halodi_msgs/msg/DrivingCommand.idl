@@ -3,8 +3,23 @@ module halodi_msgs {
     module msg {
         struct DrivingCommand
         {
-            double x_dot;
-            double omega_z;
+            /**
+              * Filter the desired x_dot and omega_z using a low pass filter 
+              * 
+              */
+            boolean filter_driving_commmand;
+            
+            /**
+              * Desired linear velocity
+              *
+              */
+            double linear_velocity;
+            
+            /**
+              *
+              *
+              */
+            double angular_velocity;
         };
     };
 };

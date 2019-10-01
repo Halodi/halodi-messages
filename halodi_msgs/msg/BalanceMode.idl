@@ -5,6 +5,7 @@ module halodi_msgs {
             const octet AUTOMATIC = 0;
             const octet DRIVING = 1;
             const octet FOLLOW_ME = 2;
+            const octet FORCE_STATIONARY = 3;
             const octet DISABLED = 84;
         };
         
