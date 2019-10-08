@@ -1,0 +1,64 @@
+#include <halodi_msgs/msg/TrajectoryInterpolation.idl>
+#include <halodi_msgs/msg/TaskSpaceTrajectoryPoint.idl>
+#include <builtin_interfaces/msg/Time.idl>
+
+
+module halodi_msgs {
+    module msg {
+    
+        /**
+          * Taskspace trajectory
+          *
+          * Contains a sequence of task space objectives to execute.
+          * 
+          */
+        struct TaskSpaceTrajectory
+        {
+        
+            /**
+              * (Optional) Time when to start executing this trajectory
+              *
+              *
+              * When ommitted, start_time depends on the value of append_trajectory
+              * - append_trajectory = true: start_time is the time for the last executed point. If the trajectory buffer is empty, start_time is now.
+              * - append_trajectory = false: start_time is now.
+              *
+              */
+            sequence<builtin_interfaces::msg::Time, 1> start_time;
+        
+        
+            /**
+              * Append this trajectory to the existing trajectory
+              * 
+              * If set to false, the existing trajectory is cancelled and this trajectory is immediatly executed.
+              * If set to false AND use_absolute_time is false, time is relative to now.
+              * 
+              * If set to true AND use_absolute_time is set to true, the time of the first point is required to be later than the last point in the buffer.
+              * If set to true AND use_absolute_time is false, the time is taken as relative to the latest point in the buffer. If the buffer is empty time is relative to now.
+              *
+              */
+            boolean append_trajectory;
+        
+        
+            /**
+              * Interpolation mode
+              * 
+              * Specifies how the trajectory is interpolated from the previous objective
+              *
+              */
+            halodi_msgs::msg::TrajectoryInterpolation interpolation_mode;
+            
+            
+            /**
+              *
+              * Sequence of trajectory points. 
+              * 
+              * Each trajectory point should contain the same set of task space commands.
+              *
+              */
+            sequence<halodi_msgs::msg::TaskSpaceTrajectoryPoint, 255> trajectory_points;
+            
+        };
+
+    };
+};

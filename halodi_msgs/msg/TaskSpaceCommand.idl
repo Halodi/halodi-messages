@@ -89,7 +89,7 @@ module halodi_msgs {
             
             
             /**
-             * Nullspace joint configuration between current 
+             * Nullspace joint configuration 
              *
              */
             sequence<halodi_msgs::msg::JointSpaceCommand, 7> nullspace_command;

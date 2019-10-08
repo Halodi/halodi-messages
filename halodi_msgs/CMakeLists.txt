@@ -30,6 +30,9 @@ rosidl_generate_interfaces(${PROJECT_NAME}
         "msg/ImuName.idl"
         "msg/JointMeasurement.idl"
         "msg/WholeBodyState.idl"
+        "msg/TaskSpaceTrajectory.idl"
+        "msg/TaskSpaceTrajectoryPoint.idl"
+        "msg/TrajectoryInterpolation.idl"
 	DEPENDENCIES rcl_interfaces builtin_interfaces geometry_msgs std_msgs
 	ADD_LINTER_TESTS
 )

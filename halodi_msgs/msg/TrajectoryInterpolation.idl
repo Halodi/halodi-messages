@@ -1,0 +1,28 @@
+module halodi_msgs {
+    module msg {
+    
+        module TrajectoryInterpolation_Constants
+        {
+            /**
+              * Use linear interpolation between two task space commands
+              * 
+              * Velocity and acceleration targets are ignored. Velocity will be constant.
+              *
+              */
+            const octet LINEAR = 0;
+            const octet MINIMUM_JERK = 1;
+
+        };
+
+        /**
+          *
+          * (Emulated) Enum how interpolate this trajectory
+          *
+          */
+        @TypeCode(type="halodi_msgs::msg::dds_::TrajectoryInterpolation_")
+        struct TrajectoryInterpolation
+        {
+            octet value;
+        };
+    };
+};
