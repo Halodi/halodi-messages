@@ -1,8 +1,8 @@
 
 
 #include <geometry_msgs/msg/Pose.idl>
-#include <geometry_msgs/msg/Twist.idl>
-#include <geometry_msgs/msg/Accel.idl>
+#include <geometry_msgs/msg/Vector3.idl>
+
 
 #include <halodi_msgs/msg/FeedbackParametersSE3.idl>
 #include <halodi_msgs/msg/JointSpaceCommand.idl>
@@ -22,17 +22,6 @@ module halodi_msgs {
              */
             halodi_msgs::msg::ReferenceFrameName body_frame;
             
-            /**
-             * Base frame: The base frame of motion for the spatial motion vectors (Twist and Spatial Accelertion)
-             *
-             * See us.ihmc.mecano.spatial.interfaces.SpatialMotionBasics for a description how to use base_frame.
-             *
-             * Tip: Set base_frame to body_frame to allow setting linear and angular components instead of spatial motions
-             *
-             * Valid options are all frames that are "Expressable in"
-             *
-             */
-            halodi_msgs::msg::ReferenceFrameName base_frame;
             
             /**
              * Expressed in frame: Origin of the command.
@@ -56,26 +45,40 @@ module halodi_msgs {
             
             /**
              * 
-             * Desired pose of the body frame
+             * Desired pose of the body frame, expressed in "expressed_in_frame"
              *
              */
             geometry_msgs::msg::Pose pose;
             
-            /**
-             * Desired twist of the body frame.
-             *
-             * See us.ihmc.mecano.spatial.Twist for a description how this relates to body_frame, base_frame and expressed_in_frame
-             *
-             */
-            geometry_msgs::msg::Twist twist;
             
             /**
-             * Desired spatial acceleration of the body frame
              * 
-             * See us.ihmc.mecano.spatial.SpatialAcceleration for a description how this relates to body_frame, base_frame and expressed_in_frame
+             * Desired linear velocity of the body frame, expressed in "expressed_in_frame"
              *
              */
-            geometry_msgs::msg::Accel spatial_acceleration;
+            geometry_msgs::msg::Vector3 linear_velocity;
+            
+            
+            /**
+             * 
+             * Desired angular velocity of the body frame, expressed in "expressed_in_frame"
+             *
+             */
+            geometry_msgs::msg::Vector3 angular_velocity;
+            
+            
+            /**
+             * Desired linear acceleration of the body frame, expressed in "expressed_in_frame"
+             *
+             */
+            geometry_msgs::msg::Vector3 linear_acceleration;
+            
+            
+            /**
+             * Desired angular acceleration of the body frame, expressed in "expressed_in_frame"
+             *
+             */
+            geometry_msgs::msg::Vector3 angular_acceleration;
             
             
             /**
