@@ -53,32 +53,29 @@ module halodi_msgs {
             
             /**
              * 
-             * Desired linear velocity of the body frame, expressed in "expressed_in_frame"
-             *
-             */
-            geometry_msgs::msg::Vector3 linear_velocity;
-            
-            
-            /**
-             * 
              * Desired angular velocity of the body frame, expressed in "expressed_in_frame"
              *
              */
             geometry_msgs::msg::Vector3 angular_velocity;
             
+            /**
+             * 
+             * Desired linear velocity of the body frame, expressed in "expressed_in_frame"
+             *
+             */
+            geometry_msgs::msg::Vector3 linear_velocity;
+         
+            /**
+             * Desired angular acceleration of the body frame, expressed in "expressed_in_frame"
+             *
+             */
+            geometry_msgs::msg::Vector3 angular_acceleration;
             
             /**
              * Desired linear acceleration of the body frame, expressed in "expressed_in_frame"
              *
              */
             geometry_msgs::msg::Vector3 linear_acceleration;
-            
-            
-            /**
-             * Desired angular acceleration of the body frame, expressed in "expressed_in_frame"
-             *
-             */
-            geometry_msgs::msg::Vector3 angular_acceleration;
             
             
             /**
