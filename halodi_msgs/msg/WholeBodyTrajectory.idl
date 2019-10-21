@@ -1,5 +1,5 @@
 #include <halodi_msgs/msg/TrajectoryInterpolation.idl>
-#include <halodi_msgs/msg/TaskSpaceTrajectoryPoint.idl>
+#include <halodi_msgs/msg/WholeBodyTrajectoryPoint.idl>
 #include <builtin_interfaces/msg/Time.idl>
 
 
@@ -12,7 +12,7 @@ module halodi_msgs {
           * Contains a sequence of task space objectives to execute.
           * 
           */
-        struct TaskSpaceTrajectory
+        struct WholeBodyTrajectory
         {
         
             /**
@@ -56,7 +56,7 @@ module halodi_msgs {
               * Each trajectory point should contain the same set of task space commands.
               *
               */
-            sequence<halodi_msgs::msg::TaskSpaceTrajectoryPoint, 255> trajectory_points;
+            sequence<halodi_msgs::msg::WholeBodyTrajectoryPoint, 255> trajectory_points;
             
         };
 

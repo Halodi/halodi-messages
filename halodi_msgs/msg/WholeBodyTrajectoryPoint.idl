@@ -11,7 +11,8 @@ module halodi_msgs {
           *
           * 
           */
-        struct TaskSpaceTrajectoryPoint
+        @TypeCode(type="halodi_msgs::msg::dds_::WholeBodyTrajectoryPoint_")
+        struct WholeBodyTrajectoryPoint
         {
             /**
               * Execution time for the trajectory, relative to the start time.
@@ -22,7 +23,7 @@ module halodi_msgs {
             
             sequence<halodi_msgs::msg::TaskSpaceCommand, 5> task_space_commands;
             
-            
+            sequence<halodi_msgs::msg::JointSpaceCommand, 25> joint_space_commands;
         };
     };
 };
