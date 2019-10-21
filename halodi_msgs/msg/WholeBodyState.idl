@@ -58,14 +58,17 @@ module halodi_msgs {
             geometry_msgs::msg::Quaternion orientation;
             
             /**
-              * Velocity of the root joint (pelvis) of the robot expressed as Twist
+              * Angular velocity of the root joint (pelvis) of the robot expressed in world frame
               * 
-              * Body frame: root joint (pelvis)
-              * Base frame: root joint (pelvis)
-              * Expressed in frame: World
-              *
               */
-            geometry_msgs::msg::Twist velocity;
+            geometry_msgs::msg::Vector3 angular_velocity;
+            
+            /**
+              * Linear velocity of the root joint (pelvis) of the robot expressed in world frame
+              * 
+              */
+            geometry_msgs::msg::Vector3 linear_velocity;
+            
             
             /**
               * Raw IMU Measurements for each IMU on the robot

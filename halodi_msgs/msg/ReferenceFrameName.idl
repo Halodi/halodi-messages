@@ -20,7 +20,7 @@ module halodi_msgs
              * Expressable in : YES
              * Controllable : NO
              */ 
-            const octet WORLD = 0;
+            const unsigned long WORLD = 0;
             
             /**
              * Pelvis (torso) of the robot. Origin is the intersection of the hip roll, pitch and yaw axes.
@@ -28,7 +28,7 @@ module halodi_msgs
              * Expressable in : YES
              * Controllable : Partial (z-height with respect to base expressed in world and orientation)
              */
-            const octet PELVIS = 1;
+            const unsigned long PELVIS = 1;
             
             /**
              * Wheeled base frame of the robot. Origin is the intersection of the ankle roll and pitch axes.
@@ -36,7 +36,7 @@ module halodi_msgs
              * Expressable in : YES
              * Controllable : NO
              */
-            const octet BASE = 2;
+            const unsigned long BASE = 2;
             
             /**
              * Left hand frame. Origin is the intersection of the left wrist roll, pitch and yaw axes
@@ -44,7 +44,7 @@ module halodi_msgs
              * Expressable in : YES
              * Controllable : YES
              */
-            const octet LEFT_HAND = 3;
+            const unsigned long LEFT_HAND = 3;
             
             /**
              * Right hand frame. Origin is the intersection of the right wrist roll, pitch and yaw axes
@@ -52,7 +52,7 @@ module halodi_msgs
              * Expressable in : YES
              * Controllable : YES
              */
-            const octet RIGHT_HAND = 4;
+            const unsigned long RIGHT_HAND = 4;
             
             /**
              * Head frame. Origin is the base of the head.
@@ -60,14 +60,14 @@ module halodi_msgs
              * Expressable in : YES
              * Controllable : Partial (orientation pitch with respect to pelvis only)
              */
-            const octet HEAD = 5;
+            const unsigned long HEAD = 5;
              
         };
        
         @TypeCode(type="halodi_msgs::msg::dds_::ReferenceFrameName_")
         struct ReferenceFrameName
         {
-            octet frame_id;
+            unsigned long frame_id;
         };
         
     };

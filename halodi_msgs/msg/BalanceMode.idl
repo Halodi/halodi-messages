@@ -2,11 +2,11 @@ module halodi_msgs {
     module msg {
         module BalanceMode_Constants
         {
-            const octet AUTOMATIC = 0;
-            const octet DRIVING = 1;
-            const octet FOLLOW_ME = 2;
-            const octet FORCE_STATIONARY = 3;
-            const octet DISABLED = 84;
+            const unsigned long AUTOMATIC = 0;
+            const unsigned long DRIVING = 1;
+            const unsigned long FOLLOW_ME = 2;
+            const unsigned long FORCE_STATIONARY = 3;
+            const unsigned long DISABLED = 84;
         };
         
         /**
@@ -21,7 +21,7 @@ module halodi_msgs {
         @TypeCode(type="halodi_msgs::msg::dds_::BalanceMode_")
         struct BalanceMode
         {
-            octet mode;
+            unsigned long mode;
         };
 
     
