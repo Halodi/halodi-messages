@@ -39,7 +39,7 @@ module halodi_msgs {
              * 
              * Optional
              */
-            sequence<double, 1> maximum_proportial_error;
+            sequence<double, 1> maximum_proportional_error;
             
             /**
              * Maximum integral windup
