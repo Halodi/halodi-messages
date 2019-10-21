@@ -46,16 +46,10 @@ module halodi_msgs {
             octet robot_status;
             
             /**
-              * Position of the root joint (pelvis) of the robot
+              * Pose of the root joint (pelvis) of the robot
               *
               */
-            geometry_msgs::msg::Vector3 position;
-            
-            /**
-              * Orientation of the root joint (pelvis) of the robot
-              *
-              */
-            geometry_msgs::msg::Quaternion orientation;
+            geometry_msgs::msg::Pose pose;
             
             /**
               * Angular velocity of the root joint (pelvis) of the robot expressed in world frame

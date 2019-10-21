@@ -12,6 +12,8 @@ module halodi_msgs {
           * Contains a sequence of task space objectives to execute.
           * 
           */
+          
+        @TypeCode(type="halodi_msgs::msg::dds_::WholeBodyTrajectory_")
         struct WholeBodyTrajectory
         {
         

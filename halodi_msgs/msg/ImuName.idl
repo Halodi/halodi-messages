@@ -2,13 +2,13 @@ module halodi_msgs {
     module msg {
         module ImuName_Constants
         {
-            unsigned long pelvis_imu = 0; 
+            const long pelvis_imu = 0; 
         };
     
         @TypeCode(type="halodi_msgs::msg::dds_::ImuName_")
         struct ImuName
         {
-            unsigned long imu_id;
+            long imu_id;
         };
     };
 };

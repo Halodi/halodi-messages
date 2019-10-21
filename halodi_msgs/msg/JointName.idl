@@ -5,40 +5,40 @@ module halodi_msgs {
         
         module JointName_Constants
         {
-            const unsigned long HIP_YAW = 0;
-            const unsigned long HIP_ROLL = 1;
-            const unsigned long HIP_PITCH = 2;
-            const unsigned long KNEE_PITCH = 3;
-            const unsigned long ANKLE_ROLL = 4;
-            const unsigned long ANKLE_PITCH = 5;
+            const long HIP_YAW = 0;
+            const long HIP_ROLL = 1;
+            const long HIP_PITCH = 2;
+            const long KNEE_PITCH = 3;
+            const long ANKLE_ROLL = 4;
+            const long ANKLE_PITCH = 5;
             
-            const unsigned long LEFT_SHOULDER_PITCH = 6;
-            const unsigned long LEFT_SHOULDER_ROLL = 7;
-            const unsigned long LEFT_SHOULDER_YAW = 8;
-            const unsigned long LEFT_ELBOW_PITCH = 9;
-            const unsigned long LEFT_ELBOW_YAW = 10;
-            const unsigned long LEFT_WRIST_PITCH = 11;
-            const unsigned long LEFT_WRIST_ROLL = 12;
+            const long LEFT_SHOULDER_PITCH = 6;
+            const long LEFT_SHOULDER_ROLL = 7;
+            const long LEFT_SHOULDER_YAW = 8;
+            const long LEFT_ELBOW_PITCH = 9;
+            const long LEFT_ELBOW_YAW = 10;
+            const long LEFT_WRIST_PITCH = 11;
+            const long LEFT_WRIST_ROLL = 12;
             
-            const unsigned long RIGHT_SHOULDER_PITCH = 13;
-            const unsigned long RIGHT_SHOULDER_ROLL = 14;
-            const unsigned long RIGHT_SHOULDER_YAW = 15;
-            const unsigned long RIGHT_ELBOW_PITCH = 16;
-            const unsigned long RIGHT_ELBOW_YAW = 17;
-            const unsigned long RIGHT_WRIST_PITCH = 18;
-            const unsigned long RIGHT_WRIST_ROLL = 19;
+            const long RIGHT_SHOULDER_PITCH = 13;
+            const long RIGHT_SHOULDER_ROLL = 14;
+            const long RIGHT_SHOULDER_YAW = 15;
+            const long RIGHT_ELBOW_PITCH = 16;
+            const long RIGHT_ELBOW_YAW = 17;
+            const long RIGHT_WRIST_PITCH = 18;
+            const long RIGHT_WRIST_ROLL = 19;
             
-            const unsigned long NECK_PITCH = 20;
+            const long NECK_PITCH = 20;
             
-            const unsigned long LEFT_WHEEL = 21;
-            const unsigned long RIGHT_WHEEL = 22;
+            const long LEFT_WHEEL = 21;
+            const long RIGHT_WHEEL = 22;
         };
         
 
         @TypeCode(type="halodi_msgs::msg::dds_::JointName_")
         struct JointName
         {   
-            unsigned long joint_id;
+            long joint_id;
         };
     };
 };
