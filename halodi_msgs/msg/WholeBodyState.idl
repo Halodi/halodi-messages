@@ -1,7 +1,6 @@
 #include <std_msgs/msg/Header.idl>
 #include <geometry_msgs/msg/Vector3.idl>
-#include <geometry_msgs/msg/Quaternion.idl>
-#include <geometry_msgs/msg/Twist.idl>
+#include <geometry_msgs/msg/Pose.idl>
 #include <halodi_msgs/msg/ImuMeasurement.idl>
 #include <halodi_msgs/msg/JointMeasurement.idl>
 
