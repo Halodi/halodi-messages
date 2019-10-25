@@ -5,7 +5,7 @@
 
 
 #include <halodi_msgs/msg/FeedbackParametersSE3.idl>
-#include <halodi_msgs/msg/JointSpaceCommand.idl>
+#include <halodi_msgs/msg/JointNullSpaceConfiguration.idl>
 #include <halodi_msgs/msg/ReferenceFrameName.idl>
 
 module halodi_msgs {
@@ -92,7 +92,7 @@ module halodi_msgs {
              * Nullspace joint configuration 
              *
              */
-            sequence<halodi_msgs::msg::JointSpaceCommand, 7> nullspace_command;
+            sequence<halodi_msgs::msg::JointNullSpaceConfiguration, 7> nullspace_command;
             
         };
     };

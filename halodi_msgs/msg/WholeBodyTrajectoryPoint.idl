@@ -1,5 +1,6 @@
 #include <builtin_interfaces/msg/Duration.idl>
 #include <halodi_msgs/msg/TaskSpaceCommand.idl>
+#include <halodi_msgs/msg/JointSpaceCommand.idl>
 #include <builtin_interfaces/msg/Time.idl>
 
 

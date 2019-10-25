@@ -1,7 +1,4 @@
 
-
-#include <geometry_msgs/msg/Vector3.idl>
-#include <geometry_msgs/msg/Quaternion.idl>
 #include <halodi_msgs/msg/JointName.idl>
 
 module halodi_msgs {
