@@ -21,7 +21,8 @@ apply plugin: 'maven-publish'
 
 
 group = "com.halodi"
-version = "0.1.2"
+version = "0.1.4"
+
 
 
 def outputDirectory = project.file("$buildDir/java-generated")

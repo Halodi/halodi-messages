@@ -1,3 +1,5 @@
+#include <halodi_msgs/msg/PursuitTrajectoryPoint.idl>
+
 module halodi_msgs {
     module msg {
     
