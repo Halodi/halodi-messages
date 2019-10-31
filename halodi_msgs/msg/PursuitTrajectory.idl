@@ -1,0 +1,14 @@
+module halodi_msgs {
+    module msg {
+    
+        @TypeCode(type="halodi_msgs::msg::dds_::PursuitTrajectory_")
+        struct PursuitTrajectory
+        {
+            double look_ahead_distance;
+            double K;
+                
+            sequence<halodi_msgs::msg::PursuitTrajectoryPoint> trajectory_points;
+        };
+    };
+};
+    

@@ -1,0 +1,15 @@
+module halodi_msgs {
+    module msg {
+    
+        @TypeCode(type="halodi_msgs::msg::dds_::PursuitTrajectoryPoint_")
+        struct PursuitTrajectoryPoint
+        {
+            double x;
+            double y;
+            double yaw;
+            
+            double desired_velocity;
+        };
+    };
+};
+    
