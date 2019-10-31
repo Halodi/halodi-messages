@@ -1,10 +1,13 @@
 
 module halodi_msgs {
     module msg {
+        @TypeCode(type="halodi_msgs::msg::dds_::DrivingCommand_")
         struct DrivingCommand
         {
             /**
               * Filter the desired x_dot and omega_z using a low pass filter 
+              * 
+              * Note: Commands sent to the "driving_command" will always be filtered
               * 
               */
             boolean filter_driving_commmand;
