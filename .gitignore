@@ -54,3 +54,6 @@ CATKIN_IGNORE
 .gradle/**
 bin/**
 classes/**
+/.gradle/
+.classpath
+.settings
