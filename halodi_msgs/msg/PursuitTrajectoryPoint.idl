@@ -8,7 +8,8 @@ module halodi_msgs {
             double y;
             double yaw;
             
-            double desired_velocity;
+            double desired_linear_velocity;
+            double desired_angular_velocity;
         };
     };
 };
