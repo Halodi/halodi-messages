@@ -18,16 +18,16 @@ module halodi_msgs {
               *
               *
               */
-            const octet MINIMUM_JERK = 1;
+            const octet MINIMUM_JERK_CONSTRAINED = 1;
             
             /**
               *
               * Use a quintic spline to interpolate over all points.
               * 
-              * Velocity and acceleration constraints are ignored, except for the final point
+              * Velocity and acceleration constraints are only considered for the first and last point in this message
               *
               */
-            const octet QUITNIC_SPLINE_UNCONSTRAINED = 2;
+            const octet MULTIPLE_WAYPOINT_SPLINE = 2;
 
         };
 
