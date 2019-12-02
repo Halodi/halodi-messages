@@ -1,8 +1,8 @@
 module halodi_msgs {
     module msg {
     
-        @TypeCode(type="halodi_msgs::msg::dds_::PursuitTrajectoryPoint_")
-        struct PursuitTrajectoryPoint
+        @TypeCode(type="halodi_msgs::msg::dds_::DrivingTrajectoryPoint_")
+        struct DrivingTrajectoryPoint
         {
             double x;
             double y;
