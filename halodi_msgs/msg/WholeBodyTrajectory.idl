@@ -2,6 +2,8 @@
 #include <halodi_msgs/msg/WholeBodyTrajectoryPoint.idl>
 #include <builtin_interfaces/msg/Time.idl>
 #include <unique_identifier_msgs/msg/UUID.idl>
+#include <halodi_msgs/msg/BalanceMode.idl>
+
 
 module halodi_msgs {
     module msg {
@@ -38,6 +40,18 @@ module halodi_msgs {
               *
               */
             sequence<builtin_interfaces::msg::Time, 1> start_time;
+            
+            
+            /**
+              *
+              * (Optional, default AUTOMATIC) Balance mode to use.
+              * 
+              * The balance mode stays active even after the trajectory is finished (!)
+              * 
+              * When set to disabled, it is possible to enable/disable contact points. However the robot will be very unstable when standing without extra support.
+              *
+              */
+            sequence<halodi_msgs::msg::BalanceMode, 1> balance_mode;
         
         
             /**
