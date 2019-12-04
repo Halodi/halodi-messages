@@ -3,7 +3,7 @@
 #include <geometry_msgs/msg/Pose.idl>
 #include <halodi_msgs/msg/ImuMeasurement.idl>
 #include <halodi_msgs/msg/JointMeasurement.idl>
-
+#include <halodi_msgs/msg/BalanceMode.idl>
 
 module halodi_msgs {
     module msg {
@@ -32,6 +32,12 @@ module halodi_msgs {
               * The current state of the balance module
               */
             string controller_state;
+            
+            
+            /**
+              * The current balance mode the controller is using
+              */
+            halodi_msgs::msg::BalanceMode current_balance_mode;
             
             /**
               * The status of the robot. Valid values are

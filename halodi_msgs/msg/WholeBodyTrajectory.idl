@@ -1,7 +1,7 @@
 #include <halodi_msgs/msg/TrajectoryInterpolation.idl>
 #include <halodi_msgs/msg/WholeBodyTrajectoryPoint.idl>
 #include <builtin_interfaces/msg/Time.idl>
-
+#include <unique_identifier_msgs/msg/UUID.idl>
 
 module halodi_msgs {
     module msg {
@@ -16,6 +16,17 @@ module halodi_msgs {
         @TypeCode(type="halodi_msgs::msg::dds_::WholeBodyTrajectory_")
         struct WholeBodyTrajectory
         {
+        
+            /**
+              * A unique identifier for this message.
+              *
+              * This id is used to generate action_msgs::msg::GoalInfo status updates about the trajectory.
+              *
+              * When set to zero, no goalinfo messages are generated
+              *
+              */
+            unique_identifier_msgs::msg::UUID trajectory_id;
+        
         
             /**
               * (Optional) Time when to start executing this trajectory
