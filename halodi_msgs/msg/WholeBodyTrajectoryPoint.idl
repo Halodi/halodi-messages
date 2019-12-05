@@ -2,6 +2,8 @@
 #include <halodi_msgs/msg/TaskSpaceCommand.idl>
 #include <halodi_msgs/msg/JointSpaceCommand.idl>
 #include <builtin_interfaces/msg/Time.idl>
+#include <halodi_msgs/msg/ContactPointCommand.idl>
+
 
 
 module halodi_msgs {
@@ -25,6 +27,12 @@ module halodi_msgs {
             sequence<halodi_msgs::msg::TaskSpaceCommand, 5> task_space_commands;
             
             sequence<halodi_msgs::msg::JointSpaceCommand, 25> joint_space_commands;
+            
+            /**
+              * Contact point state to apply at time_from_start
+              *
+              */
+            sequence<halodi_msgs::msg::ContactPointCommand, 5> contact_point_commands;
             
             sequence<geometry_msgs::msg::Vector3, 1> icp_offset_command;
         };
