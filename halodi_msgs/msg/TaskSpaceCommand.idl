@@ -4,7 +4,7 @@
 #include <geometry_msgs/msg/Vector3.idl>
 
 
-#include <halodi_msgs/msg/FeedbackParametersSE3.idl>
+#include <halodi_msgs/msg/FeedbackParameters3D.idl>
 #include <halodi_msgs/msg/JointNullSpaceConfiguration.idl>
 #include <halodi_msgs/msg/ReferenceFrameName.idl>
 
@@ -80,12 +80,21 @@ module halodi_msgs {
             
             /**
              *
-             * Feedback parameters
+             * Angular feedback parameters
              *
              * Optional. When not provided, default values are used
              *
              */
-            sequence<halodi_msgs::msg::FeedbackParametersSE3, 1> feedback_parameters;
+            sequence<halodi_msgs::msg::FeedbackParameters3D, 1> orientation_feedback_parameters; 
+            
+            /**
+             *
+             * Linear feedback parameters
+             *
+             * Optional. When not provided, default values are used
+             *
+             */
+            sequence<halodi_msgs::msg::FeedbackParameters3D, 1> position_feedback_parameters;
             
             
             /**
