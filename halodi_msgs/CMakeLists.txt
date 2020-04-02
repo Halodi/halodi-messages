@@ -15,6 +15,7 @@ find_package(rcl_interfaces REQUIRED)
 find_package(builtin_interfaces REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(unique_identifier_msgs REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
 	"msg/JointName.idl"
@@ -36,7 +37,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
         "msg/DrivingTrajectoryPoint.idl"
         "msg/DrivingTrajectory.idl"
         "msg/ContactPointCommand.idl"
-	DEPENDENCIES rcl_interfaces builtin_interfaces geometry_msgs std_msgs
+	DEPENDENCIES rcl_interfaces builtin_interfaces geometry_msgs std_msgs unique_identifier_msgs
 	ADD_LINTER_TESTS
 )
 
