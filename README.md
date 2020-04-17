@@ -1,10 +1,18 @@
 # Halodi-messages
 
-This repository contains custom ROS2/IDL messages from Halodi Robotics.
+This repository contains custom ROS2/IDL messages from Halodi Robotics. These form the main API for the Halodi controller.
+
+## API Quickstart
+
+[API Quickstart Guide](API.md)
+
 
 ## Using with ROS2
 
 This repository contains the halodi_msgs ROS2 package. Checkout this repository in the 'src/' folder of your ROS2 workspace to compile.
+
+For information to setup the halodi-controller in simulation, go to [halodi-controller](https://github.com/Halodi/halodi-controller).
+
 
 ## Using with IHMC ROS2 Libraries
 
