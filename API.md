@@ -20,7 +20,7 @@ STATUS_EXECUTING is published for every poin tin the trajectory.
 If no trajectory_id is set in the WholeBodyTrajectory, no feedback will be generated. 
 
 
-*/tf*
+#### /tf
 - Rate: 250Hz
 - Data type: [tf2_msgs/msg/TFMessage.msg](https://github.com/ros2/geometry2/blob/ros2/tf2_msgs/msg/TFMessage.msg)
 
@@ -47,7 +47,7 @@ To avoid large velocities, keep a reasonable minimum time between points.
 The maximum supported rate to send messages is 50Hz.
 
 
-#### /eve/driving_command(
+#### /eve/driving_command
 - Data rate: Minimum 10Hz
 - Data type: [halodi_msgs/msg/DrivingCommand.idl](halodi_msgs/msg/DrivingCommand.idl)
 
