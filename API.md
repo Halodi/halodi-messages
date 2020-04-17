@@ -1,16 +1,16 @@
 # API
 
-This document contains a brief introduction to the API. For more information about the datatypes, see the documentation inside the messages definitions(.idl) in the halodi_msgs/msg folder.
+This document contains a brief introduction to the API. For more information about the datatypes, see the documentation inside the messages definitions(.idl) in the [halodi_msgs/msg](halodi_msgs/msg) folder.
 
 ## Status messages
 
-*/eve/whole_body_state*
+#### /eve/whole_body_state
 - Rate: 250Hz
 - Data type: [halodi_msgs/msg/WholeBodyState.idl](halodi_msgs/msg/WholeBodyState.idl)
 
 This topic publishes the state of the robot. A custom data type is used to describe the whole state of the robot, to allow receiving an atomic state. 
 
-*/eve/whole_body_trajectory_status*
+#### /eve/whole_body_trajectory_status
 - Data type: [action_msgs/msg/GoalStatus.msg](https://github.com/ros2/rcl_interfaces/blob/master/action_msgs/msg/GoalStatus.msg)
 
 This topic is used to provide feedback of commands send to /eve/whole_body_trajectory. Note that it does not use the action API.
@@ -37,7 +37,7 @@ We recommend using the trajectory API, as this does not put realtime constraints
 The trajectory API is a high level API that can interpolate trajectories trough points in task space and joint space. The following topics are available:
 
 
-*/eve/whole_body_trajectory*
+#### /eve/whole_body_trajectory
 - Data type: [halodi_msgs/msg/WholeBodyTrajectory.idl](halodi_msgs/msg/WholeBodyTrajectory.idl)
 
 This topic is to send trajectories. It is recommended to keep the number of points in the trajectory to a reasonable number (~16 maximum) to avoid large messages that can get lost on the network.
@@ -47,7 +47,7 @@ To avoid large velocities, keep a reasonable minimum time between points.
 The maximum supported rate to send messages is 50Hz.
 
 
-*/eve/driving_command(
+#### /eve/driving_command(
 - Data rate: Minimum 10Hz
 - Data type: [halodi_msgs/msg/DrivingCommand.idl](halodi_msgs/msg/DrivingCommand.idl)
 
@@ -60,7 +60,7 @@ The realtime API allows the fastest control updates for the user, but the user i
 The realtime API is used by the trajectory manager, and therefore cannot be used if the trajectory manager is in use.
 
 Topics: 
-*/eve/whole_body_command*
+#### /eve/whole_body_command
 - Rate: 250Hz
 - [halodi_msgs/msg/WholeBodyControllerCommand.idl](halodi_msgs/msg/WholeBodyControllerCommand.idl)
 
