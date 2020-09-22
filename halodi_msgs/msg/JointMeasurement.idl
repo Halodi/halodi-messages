@@ -17,9 +17,40 @@ module halodi_msgs {
         struct JointMeasurement
         {
             halodi_msgs::msg::JointName joint;
+            
+            /**
+              * Current measured joint position (rad for revolute, meter for prismatic)
+              *
+              * Note: This is the processed position the whole body controller uses internally
+              *
+              */
             double position;
+            
+            /**
+              * Current measured joint velocity (rad/s for revolute, meter/s for prismatic)
+              *
+              * Note: This is the processed position the whole body controller uses internally
+              */
             double velocity;
-            double effort;
+
+            /**
+              *
+              * Current measured effort (Nm for revolute, N for prismatic)
+              * 
+              * Note: This measurement is quite noisy and currently not implemented for all joints. It is recommeded to use desiredEffort for haptic feedback applications.
+              *
+              */
+            double measuredEffort;
+            
+            
+            /**
+              *
+              * Current desired effort (Nm for revolute, N for prismatic)
+              *
+              * Note: This value has less noise than the measured effort and is recommeded to use for haptic feedback applications. With a low gear ratio, the desired and measured effort should be comparable.
+              *
+              */
+            double desiredEffort;
         };
     };
 };
