@@ -11,7 +11,7 @@ module halodi_msgs {
           * Extrinsic calibration data.
           *
           */
-        @TypeCode(type="halodi_msgs::msg::dds_::ExtrinsicCalibrationInfo")
+        @TypeCode(type="halodi_msgs::msg::dds_::ExtrinsicCalibrationInfo_")
         struct ExtrinsicCalibrationInfo
         {
             sensor_msgs::msg::CameraInfo camera_info;
