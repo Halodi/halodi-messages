@@ -1,0 +1,25 @@
+#include <sensor_msgs/msg/CameraInfo.idl>
+#include <geometry_msgs/msg/Pose.idl>
+
+#include <halodi_msgs/msg/RobotLinkCalibrationInfo.idl>
+#include <halodi_msgs/msg/RobotJointCalibrationInfo.idl>
+
+module halodi_msgs {
+    module msg {
+    
+        /**
+          * Extrinsic calibration data.
+          *
+          */
+        @TypeCode(type="halodi_msgs::msg::dds_::ExtrinsicCalibrationInfo")
+        struct ExtrinsicCalibrationInfo
+        {
+            sensor_msgs::msg::CameraInfo camera_info;
+            geometry_msgs::msg::Pose sensor_pose;
+
+            sequence<halodi_msgs::msg::RobotLinkCalibrationInfo, 255> links_info;
+            sequence<halodi_msgs::msg::RobotJointCalibrationInfo, 255> joints_info;
+        };
+        
+    };
+};
