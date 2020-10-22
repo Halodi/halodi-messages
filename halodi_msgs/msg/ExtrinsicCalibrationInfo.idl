@@ -17,8 +17,8 @@ module halodi_msgs {
             sequence<sensor_msgs::msg::CameraInfo, 255> camera_infos;
             sequence<geometry_msgs::msg::TransformStamped, 255> sensor_transforms;
 
-            sequence<halodi_msgs::msg::RobotLinkCalibrationInfo, 255> links_info;
-            sequence<halodi_msgs::msg::RobotJointCalibrationInfo, 255> joints_info;
+            sequence<halodi_msgs::msg::RobotLinkCalibrationInfo, 255> link_infos;
+            sequence<halodi_msgs::msg::RobotJointCalibrationInfo, 255> joint_infos;
         };
         
     };
