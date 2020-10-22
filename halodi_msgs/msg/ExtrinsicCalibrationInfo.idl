@@ -1,4 +1,3 @@
-#include <sensor_msgs/msg/CameraInfo.idl>
 #include <geometry_msgs/msg/TransformStamped.idl>
 
 #include <halodi_msgs/msg/RobotLinkCalibrationInfo.idl>
@@ -14,9 +13,7 @@ module halodi_msgs {
         @TypeCode(type="halodi_msgs::msg::dds_::ExtrinsicCalibrationInfo_")
         struct ExtrinsicCalibrationInfo
         {
-            sequence<sensor_msgs::msg::CameraInfo, 255> camera_infos;
             sequence<geometry_msgs::msg::TransformStamped, 255> sensor_transforms;
-
             sequence<halodi_msgs::msg::RobotLinkCalibrationInfo, 255> link_infos;
             sequence<halodi_msgs::msg::RobotJointCalibrationInfo, 255> joint_infos;
         };
