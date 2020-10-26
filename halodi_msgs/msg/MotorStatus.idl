@@ -54,6 +54,13 @@ module halodi_msgs {
              *
              */
             unsigned long driver_serial_number;
+            
+            /**
+             * Set to true when the motor is initialized and reporting data
+             *
+             */
+            boolean motor_initialized;
+            
         
             /**
              * Current temperature of the motor

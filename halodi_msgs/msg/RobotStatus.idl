@@ -1,3 +1,4 @@
+#include <std_msgs/msg/Header.idl>
 #include <halodi_msgs/msg/JointStatus.idl>
 #include <halodi_msgs/msg/MotorStatus.idl>
 #include <halodi_msgs/msg/BatteryStatus.idl>
@@ -14,6 +15,12 @@ module halodi_msgs {
         @TypeCode(type="halodi_msgs::msg::dds_::RobotStatus_")
         struct RobotStatus
         {
+        
+            /**
+             * Standard ROS header
+             */
+             std_msgs::msg::Header header;
+        
             
             /**
              * Current status level of the robot
@@ -22,6 +29,14 @@ module halodi_msgs {
              *
              */
             octet robot_status_level;
+            
+            
+            /**
+             *
+             * Status of the battery
+             *
+             */
+            halodi_msgs::msg::BatteryStatus battery_status;
             
             
             /**
@@ -40,6 +55,7 @@ module halodi_msgs {
              * If true, power can be applied to the motors
              *
              */
+             boolean wireless_estop_enabled;
             
             /**
              * Status of the joints on the robot
