@@ -1,0 +1,87 @@
+#include <halodi_msgs/msg/JointStatus.idl>
+#include <halodi_msgs/msg/MotorStatus.idl>
+#include <halodi_msgs/msg/BatteryStatus.idl>
+
+module halodi_msgs {
+    module msg {
+    
+        /**
+          * Status of a robot
+          *
+          * This message is a custom type instead of DiagnosticsArray, due to the overhead of String based values inside the controller
+          *
+          */
+        @TypeCode(type="halodi_msgs::msg::dds_::RobotStatus_")
+        struct RobotStatus
+        {
+            
+            /**
+             * Current status level of the robot
+             *
+             * As described in diagnostic_msgs/DiagnosticStatus
+             *
+             */
+            octet robot_status_level;
+            
+            
+            /**
+             *
+             * State of the estop on the backpack of the robot. 
+             * 
+             * If true, power can be applied to the motors
+             *
+             */
+            boolean backpack_estop_enabled;
+            
+            /**
+             *
+             * State of the wireless estop
+             * 
+             * If true, power can be applied to the motors
+             *
+             */
+            
+            /**
+             * Status of the joints on the robot
+             *
+             */
+            sequence<halodi_msgs::msg::JointStatus, 30> joint_status;
+            
+            /**
+             * Status of the motors on the robot
+             * 
+             * Note that motors are shared by multiple joints due to the differential drives, hence the split between motor and joint.
+             *
+             */
+            sequence<halodi_msgs::msg::MotorStatus, 30> motor_status;
+            
+            
+            /**
+             * The time the robot has been running since the controller was started.
+             *
+             * Unit: seconds
+             *
+             */
+            unsigned long runtime_since_start;
+            
+            /**
+             * The time the robot has been running in total
+             *
+             * Unit: seconds
+             *
+             */
+            unsigned long total_runtime;
+             
+             
+             /**
+              * The nubmer of times the controller has been started.
+              *
+              */
+             unsigned long numberOfRuns;
+            
+            
+        };
+        
+    };
+};
+ 
