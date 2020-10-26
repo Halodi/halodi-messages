@@ -1,0 +1,18 @@
+#include <geometry_msgs/msg/Pose.idl>
+
+module halodi_msgs {
+    module msg {
+    
+        /**
+          * Calibration information for a fixed link.
+          *
+          */
+        @TypeCode(type="halodi_msgs::msg::dds_::RobotLinkCalibrationInfo_")
+        struct RobotLinkCalibrationInfo
+        {
+            string frame_id;
+            geometry_msgs::msg::Pose transform;
+        };
+        
+    };
+};
