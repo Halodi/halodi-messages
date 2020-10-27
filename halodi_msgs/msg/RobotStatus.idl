@@ -57,6 +57,22 @@ module halodi_msgs {
              */
              boolean wireless_estop_enabled;
             
+            
+            /**
+             * True if one of the motors in the robot is overheating.
+             * 
+             * This data can be read from the individual motors, but is available as an easy check here.
+             *
+             */
+            boolean over_temperature;
+            
+            
+            /**
+             * True if due a fault, the wheels are disabled but the robot is still able to balance
+             *
+             */
+            boolean driving_disabled;
+            
             /**
              * Status of the joints on the robot
              *
