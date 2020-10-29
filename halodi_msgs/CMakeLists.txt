@@ -37,6 +37,14 @@ rosidl_generate_interfaces(${PROJECT_NAME}
         "msg/DrivingTrajectoryPoint.idl"
         "msg/DrivingTrajectory.idl"
         "msg/ContactPointCommand.idl"
+        "msg/ControllerData.idl"
+      	"msg/ModeSchedule.idl"
+      	"msg/MpcFlattenedController.idl"
+      	"msg/MpcInput.idl"
+      	"msg/MpcObservation.idl"
+      	"msg/MpcState.idl"
+      	"msg/MpcTargetTrajectories.idl"
+
 	DEPENDENCIES rcl_interfaces builtin_interfaces geometry_msgs std_msgs unique_identifier_msgs
 	ADD_LINTER_TESTS
 )

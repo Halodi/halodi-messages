@@ -1,0 +1,12 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from halodi_msgs/msg/MpcInput.msg
+// generated code does not contain a copyright notice
+
+
+module halodi_msgs {
+  module msg {
+    struct MpcInput {
+      sequence<float> value;
+    };
+  };
+};
