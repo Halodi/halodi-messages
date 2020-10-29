@@ -5,16 +5,10 @@
 
 module halodi_msgs {
   module msg {
-    @verbatim (language="comment", text=
-      " MPC mode sequence")
     struct ModeSchedule {
-      @verbatim (language="comment", text=
-        " event times: its size is equal to the size of phaseSequence minus one")
       sequence<float> event_times;
 
-      @verbatim (language="comment", text=
-        " mode sequence: e.g., for a quadrupedal robot, it is in the set {0, 1,..., 15}")
-      sequence<int8> mode_sequence;
+      sequence<long> mode_sequence;
     };
   };
 };

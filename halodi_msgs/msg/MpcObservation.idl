@@ -7,23 +7,13 @@
 
 module halodi_msgs {
   module msg {
-    @verbatim (language="comment", text=
-      " MPC observation")
     struct MpcObservation {
-      @verbatim (language="comment", text=
-        " Current time")
       float time;
 
-      @verbatim (language="comment", text=
-        " Current state")
       halodi_msgs::msg::MpcState state;
 
-      @verbatim (language="comment", text=
-        " Current input")
       halodi_msgs::msg::MpcInput input;
 
-      @verbatim (language="comment", text=
-        " Current subsystem")
       int8 subsystem;
     };
   };

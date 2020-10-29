@@ -7,19 +7,11 @@
 
 module halodi_msgs {
   module msg {
-    @verbatim (language="comment", text=
-      " MPC target trajectories")
     struct MpcTargetTrajectories {
-      @verbatim (language="comment", text=
-        " MPC target time trajectory")
       sequence<float> time_trajectory;
 
-      @verbatim (language="comment", text=
-        " MPC target state trajectory")
       sequence<halodi_msgs::msg::MpcState> state_trajectory;
 
-      @verbatim (language="comment", text=
-        " MPC target input trajectory")
       sequence<halodi_msgs::msg::MpcInput> input_trajectory;
     };
   };
