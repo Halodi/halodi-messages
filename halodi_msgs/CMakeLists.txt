@@ -44,7 +44,13 @@ rosidl_generate_interfaces(${PROJECT_NAME}
       	"msg/MpcObservation.idl"
       	"msg/MpcState.idl"
       	"msg/MpcTargetTrajectories.idl"
-
+        "msg/RobotJointCalibrationInfo.idl"
+        "msg/RobotLinkCalibrationInfo.idl"
+        "msg/ExtrinsicCalibrationInfo.idl"
+        "msg/RobotStatus.idl"
+        "msg/JointStatus.idl"
+        "msg/MotorStatus.idl"
+        "msg/BatteryStatus.idl"
 	DEPENDENCIES rcl_interfaces builtin_interfaces geometry_msgs std_msgs unique_identifier_msgs
 	ADD_LINTER_TESTS
 )
