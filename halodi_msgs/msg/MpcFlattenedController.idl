@@ -16,6 +16,8 @@ module halodi_msgs {
       const uint8 CONTROLLER_FEEDFORWARD = 1;
       const uint8 CONTROLLER_LINEAR = 2;
     };
+
+    @TypeCode(type="halodi_msgs::msg::dds_::MpcFlattenedController_")
     struct MpcFlattenedController {
       uint8 controller_type;
 
