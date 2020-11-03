@@ -1,0 +1,52 @@
+#include <halodi_msgs/msg/JointName.idl>
+
+
+module halodi_msgs {
+    module msg {
+    
+        /**
+          * Status of a joint
+          *
+          */
+        @TypeCode(type="halodi_msgs::msg::dds_::JointStatus_")
+        struct JointStatus
+        {
+            /**
+             * Unique identifier for the joint
+             * 
+             */
+            halodi_msgs::msg::JointName joint;
+            
+            /**
+             * Current status level of the joint
+             *
+             * As described in diagnostic_msgs/DiagnosticStatus
+             *
+             */
+            octet status_level;
+                        
+            /**
+             *
+             * True if the motor is critical for balance. A failure in this joint will lead to the robot falling.
+             *
+             */
+            boolean critical_for_balance;
+            
+            /**
+             *
+             * A fault has been detected in the output encoder and the joint is using the motor encoders as fallback
+             *
+             */
+            boolean output_encoder_fault;
+            
+            /**
+             * When true, the rope drives needs to be serviced and the ropes need to be tensioned.
+             *
+             */
+            boolean tension_ropes;
+
+        };
+        
+    };
+};
+ 

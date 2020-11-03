@@ -1,0 +1,88 @@
+#include <halodi_msgs/msg/JointName.idl>
+
+
+module halodi_msgs {
+    module msg {
+    
+        /**
+          * Status of a motor
+          *
+          * This message is a custom type instead of DiagnosticsArray, due to the overhead of String based values inside the controller
+          *
+          */
+        @TypeCode(type="halodi_msgs::msg::dds_::MotorStatus_")
+        struct MotorStatus
+        {
+            /**
+             * Current status level of the motor
+             *
+             * As described in diagnostic_msgs/DiagnosticStatus
+             *
+             */
+            octet status_level;
+            
+            /**
+             * Joints controlled by this motor
+             *
+             */
+            sequence<halodi_msgs::msg::JointName, 2> joints;
+            
+            /**
+             *
+             * Safe Torque Off (STO) enabled status.
+             *
+             * If STO is enabled, the motor driver is unable to turn on.
+             */
+            boolean sto_enabled;
+            
+            
+            /**
+             * If statusLevel == WARNING: The motor exceeds the warning temperature
+             * If statusLevel == ERROR: The motor exceeds the error temperature and has been shutdown.
+             */
+            boolean over_temperature;
+                        
+            /**
+             *
+             * Serial number of the motor.
+             *
+             */
+            unsigned long motor_serial_number;
+            
+            /**
+             * Serial number of the driver.
+             *
+             */
+            unsigned long driver_serial_number;
+            
+            /**
+             * Set to true when the motor is initialized and reporting data
+             *
+             */
+            boolean motor_initialized;
+            
+        
+            /**
+             * Current temperature of the motor
+             *
+             */
+            double motor_temperature;
+            
+            /**
+             * Current temperature of the motor driver
+             *
+             */
+            double driver_temperature;
+            
+            
+            /**
+             * Error state from the motor driver board.
+             *
+             */ 
+            octet motor_error;
+            
+        };
+        
+    };
+};
+ 
