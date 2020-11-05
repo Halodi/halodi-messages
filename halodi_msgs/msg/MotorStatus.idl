@@ -15,9 +15,10 @@ module halodi_msgs {
             const octet MISSED_DEADLINE = 2;
             const octet ENCODER_ERROR = 3;
             const octet OVER_TEMPERATURE = 4;
-            const octet UNDER_VOLTAGE = 5;
-            const octet ETHERCAT_FAULT = 6;
-            const octet INVALID_STATE_TRANSITION = 7;
+            const octet OVER_VOLTAGE = 5;
+            const octet UNDER_VOLTAGE = 6;
+            const octet ETHERCAT_FAULT = 7;
+            const octet INVALID_STATE_TRANSITION = 8;
             
         };
         
