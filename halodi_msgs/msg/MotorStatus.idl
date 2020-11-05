@@ -46,6 +46,14 @@ module halodi_msgs {
             sequence<halodi_msgs::msg::JointName, 2> joints;
             
             /**
+             * ID of the motor with respect to the transmission 
+             * 
+             * This is either 0 or 1
+             *
+             */
+            octet motor_id;
+            
+            /**
              *
              * Safe Torque Off (STO) enabled status.
              *
