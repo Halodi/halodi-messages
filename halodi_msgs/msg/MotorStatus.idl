@@ -13,13 +13,15 @@ module halodi_msgs {
             const octet NO_ERROR = 0;
             const octet FAULTED = 1;
             const octet MISSED_DEADLINE = 2;
-            const octet ENCODER_WARNING = 3;
-            const octet ENCODER_ERROR = 4;
-            const octet OVER_TEMPERATURE = 5;
-            const octet OVER_VOLTAGE = 6;
-            const octet UNDER_VOLTAGE = 7;
-            const octet ETHERCAT_FAULT = 8;
-            const octet INVALID_STATE_TRANSITION = 9;
+            const octet AUX_ENCODER_WARNING = 3;
+            const octet AUX_ENCODER_ERROR = 4;
+            const octet MOTOR_ENCODER_WARNING = 5;
+            const octet MOTOR_ENCODER_ERROR = 6;
+            const octet OVER_TEMPERATURE = 7;
+            const octet OVER_VOLTAGE = 8;
+            const octet UNDER_VOLTAGE = 9;
+            const octet ETHERCAT_FAULT = 10;
+            const octet INVALID_STATE_TRANSITION = 11;
             
         };
         
