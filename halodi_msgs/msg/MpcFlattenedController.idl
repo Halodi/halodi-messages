@@ -19,7 +19,7 @@ module halodi_msgs {
 
     @TypeCode(type="halodi_msgs::msg::dds_::MpcFlattenedController_")
     struct MpcFlattenedController {
-      uint8 controller_type;
+      octet controller_type;
 
       halodi_msgs::msg::MpcObservation init_observation;
 

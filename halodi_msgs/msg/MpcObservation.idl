@@ -16,7 +16,7 @@ module halodi_msgs {
 
       halodi_msgs::msg::MpcInput input;
 
-      int8 subsystem;
+      octet subsystem;
     };
   };
 };
