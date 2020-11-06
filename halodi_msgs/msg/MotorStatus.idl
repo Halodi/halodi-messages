@@ -3,6 +3,28 @@
 
 module halodi_msgs {
     module msg {
+        
+        /**
+         * Raw errors from the motor driver
+         *
+         */
+        module MotorStatus_Constants
+        {
+            const octet NO_ERROR = 0;
+            const octet FAULTED = 1;
+            const octet MISSED_DEADLINE = 2;
+            const octet AUX_ENCODER_WARNING = 3;
+            const octet AUX_ENCODER_ERROR = 4;
+            const octet MOTOR_ENCODER_WARNING = 5;
+            const octet MOTOR_ENCODER_ERROR = 6;
+            const octet OVER_TEMPERATURE = 7;
+            const octet OVER_VOLTAGE = 8;
+            const octet UNDER_VOLTAGE = 9;
+            const octet ETHERCAT_FAULT = 10;
+            const octet INVALID_STATE_TRANSITION = 11;
+            
+        };
+        
     
         /**
           * Status of a motor
@@ -26,6 +48,14 @@ module halodi_msgs {
              *
              */
             sequence<halodi_msgs::msg::JointName, 2> joints;
+            
+            /**
+             * ID of the motor with respect to the transmission 
+             * 
+             * This is either 0 or 1
+             *
+             */
+            octet motor_id;
             
             /**
              *
