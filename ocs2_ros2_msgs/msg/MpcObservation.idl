@@ -1,0 +1,18 @@
+#include "ocs2_ros2_msgs/msg/MpcInput.idl"
+#include "ocs2_ros2_msgs/msg/MpcState.idl"
+
+module ocs2_ros2_msgs {
+  module msg {
+
+    @TypeCode(type="ocs2_ros2_msgs::msg::dds_::MpcObservation_")
+    struct MpcObservation {
+      float time;
+
+      ocs2_ros2_msgs::msg::MpcState state;
+
+      ocs2_ros2_msgs::msg::MpcInput input;
+
+      octet subsystem;
+    };
+  };
+};
