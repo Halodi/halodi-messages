@@ -21,7 +21,7 @@ apply plugin: 'maven-publish'
 
 
 group = "com.halodi"
-version = "0.4.6"
+version = "0.4.5"
 
 
 
@@ -94,25 +94,6 @@ task generateMPCMessages(type: us.ihmc.idl.generator.IDLGeneratorTask) {
     {
         mkdir outputDirectory
     }
-
-    doLast 
-    {
-        // Due to incompatiblity with how the java messages are generated and how the new .idl support is defined, we need to add ".dds" to the package name for all included files.
-    
-        def typesupportDirectories = file("java-typesupport")
-        def generated = fileTree(dir: outputDirectory)
-        typesupportDirectories.eachFile(groovy.io.FileType.DIRECTORIES) { 
-            def packageName = it.name
-            generated.each
-            {
-                def msgAdjusted = it.text.replaceAll(packageName + "\\." + "msg",  packageName + "\\." + "msg.dds")
-                def srvAdjusted = msgAdjusted.replaceAll(packageName + "\\." + "srv",  packageName + "\\." + "srv.dds")
-                it.text = srvAdjusted
-            } 
-            
-        }
-    }
-    
 }
 
 build.dependsOn generateHalodiMessages
