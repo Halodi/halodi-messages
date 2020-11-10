@@ -38,12 +38,13 @@ rosidl_generate_interfaces(${PROJECT_NAME}
         "msg/DrivingTrajectory.idl"
         "msg/ContactPointCommand.idl"
         "msg/RobotJointCalibrationInfo.idl"
-        "msg/RobotLinkCalibrationInfo.idl"
         "msg/ExtrinsicCalibrationInfo.idl"
         "msg/RobotStatus.idl"
         "msg/JointStatus.idl"
         "msg/MotorStatus.idl"
         "msg/BatteryStatus.idl"
+        "msg/ARMarker.idl"
+        "msg/ARMarkers.idl"
 	DEPENDENCIES rcl_interfaces builtin_interfaces geometry_msgs std_msgs unique_identifier_msgs
 	ADD_LINTER_TESTS
 )

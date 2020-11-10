@@ -1,6 +1,4 @@
 #include <geometry_msgs/msg/TransformStamped.idl>
-
-#include <halodi_msgs/msg/RobotLinkCalibrationInfo.idl>
 #include <halodi_msgs/msg/RobotJointCalibrationInfo.idl>
 
 module halodi_msgs {
@@ -14,7 +12,7 @@ module halodi_msgs {
         struct ExtrinsicCalibrationInfo
         {
             sequence<geometry_msgs::msg::TransformStamped, 255> sensor_transforms;
-            sequence<halodi_msgs::msg::RobotLinkCalibrationInfo, 255> link_infos;
+            sequence<geometry_msgs::msg::TransformStamped, 255> link_infos;
             sequence<halodi_msgs::msg::RobotJointCalibrationInfo, 255> joint_infos;
         };
         
