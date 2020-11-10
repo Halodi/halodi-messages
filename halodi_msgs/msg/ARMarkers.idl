@@ -1,5 +1,5 @@
 #include <std_msgs/msg/Header.idl>
-#include <halodi_msgs/msg/ARMarkerPose.idl>
+#include <halodi_msgs/msg/ARMarker.idl>
 
 module halodi_msgs
 {
