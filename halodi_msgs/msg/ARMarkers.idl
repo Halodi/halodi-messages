@@ -1,0 +1,15 @@
+#include <std_msgs/msg/Header.idl>
+#include <halodi_msgs/msg/ARMarkerPose.idl>
+
+module halodi_msgs
+{
+    module msg
+    {
+        @TypeCode(type="halodi_msgs::msg::dds_::ARMarkers_")
+        struct ARMarkers
+        {
+            std_msgs::msg::Header header;
+            sequence<halodi_msgs::msg::ARMarker, 255> markers;
+        };
+    };
+};
