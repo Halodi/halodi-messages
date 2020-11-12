@@ -13,6 +13,4 @@ To add a common ROS2 type, you need to copy and slightly adjust the .idl generat
 
 1) Get the matching definition file from https://github.com/ihmcrobotics/ihmc-java-ros2-communication/tree/develop/ros2-common-interfaces/src/main/generated-idl 
 2) Create the matching folder in the java-typesupport (this) folder
-3) Place the definition file downloaded in step 1 in the folder created in step 2, removing the "_" at the end of the filename, before ".idl"
-4) Edit the definition file and remove the "module dds {" line and the corresponding closing tag "};"
-5) Remove trailing underscores at the end of the filenames, before ".idl", in the #include tags.
+3) Run 'gradle importRos2IDL' from the root directory

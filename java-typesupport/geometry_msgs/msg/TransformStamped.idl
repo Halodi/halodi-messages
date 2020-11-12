@@ -7,6 +7,7 @@ module geometry_msgs
 {
   module msg
   {
+    
 
       /**
        * This expresses a transform from coordinate frame header.frame_id
@@ -19,14 +20,15 @@ module geometry_msgs
       @TypeCode(type="geometry_msgs::msg::dds_::TransformStamped_")
       struct TransformStamped
       {
-        std_msgs::msg::dds::Header header;
+        std_msgs::msg::Header header;
         /**
          * the frame id of the child frame
          */
         string child_frame_id;
-        geometry_msgs::msg::dds::Transform transform;
+        geometry_msgs::msg::Transform transform;
       };
     };
-};
+  };
+
 
 #endif

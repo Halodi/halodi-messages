@@ -88,6 +88,32 @@ task generateMessages(type: us.ihmc.idl.generator.IDLGeneratorTask) {
     
 }
 
+task importRos2IDL(type: DefaultTask) {
+    doLast
+    {
+    
+        def typesupportDirectories = fileTree(dir: "java-typesupport", include: "**/*.idl")
+       
+       def generated = fileTree(dir: outputDirectory)
+        
+        typesupportDirectories.each { 
+            def newPath = it.absolutePath.replaceAll("_\\.idl\$", ".idl")
+            
+            def includeAdjusted = it.text.replaceAll(/#include "(.*)_\.idl"/, /#include "$1\.idl"/)
+            
+            def ddsAdjusted = includeAdjusted.replaceAll(/(?s)module dds(.*?)\{(.*)\};/, /$2/)
+            
+            def ddsRemoved = ddsAdjusted.replaceAll(/::dds::/, '::')
+            
+            it.text = ddsRemoved
+            
+            
+            println "Moving " + it.name + " to " + newPath
+            it.renameTo(newPath)
+        }
+    }
+}
+
 
 task generateCSharpMessages(type: com.halodi.idl.generator.IDLCSharpGeneratorTask) {
     idlFiles = fileTree(dir: "halodi_msgs/msg/")

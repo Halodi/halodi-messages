@@ -5,6 +5,8 @@ module unique_identifier_msgs
 {
   module msg
   {
+    
+
       /**
        * A universally unique identifier (UUID).
        * 
@@ -16,7 +18,8 @@ module unique_identifier_msgs
       {
         octet uuid[16];
       };
+    };
   };
-};
+
 
 #endif

@@ -5,13 +5,16 @@ module builtin_interfaces
 {
   module msg
   {
+    
+
       @TypeCode(type="builtin_interfaces::msg::dds_::Time_")
       struct Time
       {
         long sec;
         unsigned long nanosec;
       };
+    };
   };
-};
+
 
 #endif
