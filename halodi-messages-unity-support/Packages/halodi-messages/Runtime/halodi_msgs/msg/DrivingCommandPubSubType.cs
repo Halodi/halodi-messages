@@ -59,7 +59,7 @@ public class DrivingCommandPubSubType : Halodi.CDR.TopicDataType<halodi_msgs.msg
 
    public static void write(halodi_msgs.msg.DrivingCommand data, Halodi.CDR.CDRSerializer cdr)
    {
-      cdr.write_type_7(data.filter_driving_commmand);
+      cdr.write_type_7(data.filter_driving_command);
 
       cdr.write_type_6(data.linear_velocity);
 
@@ -69,7 +69,7 @@ public class DrivingCommandPubSubType : Halodi.CDR.TopicDataType<halodi_msgs.msg
 
    public static void read(halodi_msgs.msg.DrivingCommand data, Halodi.CDR.CDRDeserializer cdr)
    {
-      data.filter_driving_commmand=cdr.read_type_7();
+      data.filter_driving_command=cdr.read_type_7();
       	
       data.linear_velocity=cdr.read_type_6();
       	

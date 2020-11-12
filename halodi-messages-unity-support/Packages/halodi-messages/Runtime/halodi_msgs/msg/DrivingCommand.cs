@@ -12,7 +12,7 @@ public class DrivingCommand
                  * Note: Commands sent to the "driving_command" will always be filtered
                  * 
                  */
-   public bool filter_driving_commmand;
+   public bool filter_driving_command;
    /**
                  * Desired linear velocity
                  *
@@ -27,7 +27,7 @@ public class DrivingCommand
 
    public void Set(DrivingCommand other)
    {
-      filter_driving_commmand = other.filter_driving_commmand;
+      filter_driving_command = other.filter_driving_command;
 
       linear_velocity = other.linear_velocity;
 
@@ -42,8 +42,8 @@ public class DrivingCommand
       StringBuilder builder = new StringBuilder();
 
       builder.Append("DrivingCommand {");
-      builder.Append("filter_driving_commmand=");
-      builder.Append(this.filter_driving_commmand);      builder.Append(", ");
+      builder.Append("filter_driving_command=");
+      builder.Append(this.filter_driving_command);      builder.Append(", ");
       builder.Append("linear_velocity=");
       builder.Append(this.linear_velocity);      builder.Append(", ");
       builder.Append("angular_velocity=");

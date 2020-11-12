@@ -11,7 +11,9 @@
       "version": "file:halodi-messages",
       "depth": 0,
       "source": "embedded",
-      "dependencies": {}
+      "dependencies": {
+        "com.halodi.cdr": "0.11.25"
+      }
     },
     "com.halodi.halodi-unity-package-creator": {
       "version": "0.2.10",
