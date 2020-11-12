@@ -10,7 +10,6 @@ module geometry_msgs
     {
         
             @TypeCode(type="geometry_msgs::msg::dds_::Pose_")
-            @Abstract(type="us.ihmc.euclid.geometry.Pose3D", impl="new us.ihmc.ros2.rosidl.geometry_msgs.msg.dds.Pose3DPubSubTypeImpl()")
             struct Pose
             {
               geometry_msgs::msg::Point position;

@@ -28,7 +28,7 @@ version = "0.4.10"
 
 
 def outputDirectory = project.file("$buildDir/java-generated")
-def csOutputDirectory = project.file("$buildDir/csharp-generated")
+def csOutputDirectory = project.file("${project.projectDir}/halodi-messages-unity-support/Packages/halodi-messages/Runtime")
 
 repositories {
     mavenCentral()
@@ -117,7 +117,7 @@ task importRos2IDL(type: DefaultTask) {
 
 task generateCSharpMessages(type: com.halodi.idl.generator.IDLCSharpGeneratorTask) {
     idlFiles = fileTree(dir: "halodi_msgs/msg/")
-    //idlFiles += fileTree(dir: "java-typesupport/", include: '**/*.idl')
+    idlFiles += fileTree(dir: "java-typesupport/", include: '**/*.idl')
     includeDirs = files(".", "java-typesupport")
     targetDirectory = csOutputDirectory
     packagePrefix = ""
@@ -133,6 +133,9 @@ task generateCSharpMessages(type: com.halodi.idl.generator.IDLCSharpGeneratorTas
 
 build.dependsOn generateMessages
 jar.dependsOn generateMessages
+
+build.dependsOn generateCSharpMessages
+jar.dependsOn generateCSharpMessages
 
 
 
