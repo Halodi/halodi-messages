@@ -1,0 +1,25 @@
+#ifndef __geometry_msgs__msg__QuaternionStamped__idl__
+#define __geometry_msgs__msg__QuaternionStamped__idl__
+
+#include "geometry_msgs/msg/./Quaternion.idl"
+#include "std_msgs/msg/./Header.idl"
+module geometry_msgs
+{
+  module msg
+  {
+    
+
+      /**
+       * This represents an orientation with reference coordinate frame and timestamp.
+       */
+      @TypeCode(type="geometry_msgs::msg::dds_::QuaternionStamped_")
+      struct QuaternionStamped
+      {
+        std_msgs::msg::Header header;
+        geometry_msgs::msg::Quaternion quaternion;
+      };
+    };
+  };
+
+
+#endif

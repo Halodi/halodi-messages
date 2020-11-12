@@ -1,0 +1,27 @@
+#ifndef __nav_msgs__msg__GridCells__idl__
+#define __nav_msgs__msg__GridCells__idl__
+
+#include "geometry_msgs/msg/./Point.idl"
+#include "std_msgs/msg/./Header.idl"
+module nav_msgs
+{
+  module msg
+  {
+    
+
+      /**
+       * An array of cells in a 2D grid
+       */
+      @TypeCode(type="nav_msgs::msg::dds_::GridCells_")
+      struct GridCells
+      {
+        std_msgs::msg::Header header;
+        float cell_width;
+        float cell_height;
+        sequence<geometry_msgs::msg::Point> cells;
+      };
+    };
+  };
+
+
+#endif

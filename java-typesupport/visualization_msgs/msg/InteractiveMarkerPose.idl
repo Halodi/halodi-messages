@@ -1,0 +1,33 @@
+#ifndef __visualization_msgs__msg__InteractiveMarkerPose__idl__
+#define __visualization_msgs__msg__InteractiveMarkerPose__idl__
+
+#include "geometry_msgs/msg/./Pose.idl"
+#include "std_msgs/msg/./Header.idl"
+module visualization_msgs
+{
+  module msg
+  {
+    
+
+      @TypeCode(type="visualization_msgs::msg::dds_::InteractiveMarkerPose_")
+      struct InteractiveMarkerPose
+      {
+        /**
+         * Time/frame info.
+         */
+        std_msgs::msg::Header header;
+        /**
+         * Initial pose. Also, defines the pivot point for rotations.
+         */
+        geometry_msgs::msg::Pose pose;
+        /**
+         * Identifying string. Must be globally unique in
+         * the topic that this message is sent through.
+         */
+        string name;
+      };
+    };
+  };
+
+
+#endif
