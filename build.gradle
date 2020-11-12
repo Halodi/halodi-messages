@@ -2,12 +2,14 @@ buildscript {
    repositories {
       mavenCentral()
       maven { url "http://dl.bintray.com/ihmcrobotics/maven-release" }
+      maven { url "http://dl.bintray.com/halodirobotics/maven-release" }
       mavenLocal()
       jcenter()
    }
    
    dependencies {
       classpath "us.ihmc:ihmc-pub-sub-generator:0.14.0"
+      classpath 'com.halodi:halodi-csharp-pub-sub-generator:0.1.1'
       classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.+'
    }
    
@@ -26,10 +28,12 @@ version = "0.4.10"
 
 
 def outputDirectory = project.file("$buildDir/java-generated")
+def csOutputDirectory = project.file("$buildDir/csharp-generated")
 
 repositories {
     mavenCentral()
     maven { url "http://dl.bintray.com/ihmcrobotics/maven-release" }
+    maven { url "http://dl.bintray.com/halodirobotics/maven-release" }
     mavenLocal()
     jcenter()
 }
@@ -83,6 +87,23 @@ task generateMessages(type: us.ihmc.idl.generator.IDLGeneratorTask) {
     }
     
 }
+
+
+task generateCSharpMessages(type: com.halodi.idl.generator.IDLCSharpGeneratorTask) {
+    idlFiles = fileTree(dir: "halodi_msgs/msg/")
+    //idlFiles += fileTree(dir: "java-typesupport/", include: '**/*.idl')
+    includeDirs = files(".", "java-typesupport")
+    targetDirectory = csOutputDirectory
+    packagePrefix = ""
+    
+    doFirst
+    {
+        mkdir csOutputDirectory
+    }
+    
+    
+}
+
 
 build.dependsOn generateMessages
 jar.dependsOn generateMessages
