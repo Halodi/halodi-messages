@@ -4,8 +4,11 @@ namespace tf2_msgs.msg
 
 
 [System.Serializable]
-public class TF2Error
+public class TF2Error : Halodi.CDR.DataType<TF2Error>
 {
+
+	public Halodi.CDR.TopicDataType<TF2Error> Type => new TF2ErrorPubSubType();
+	
    public const byte NO_ERROR = (byte) 0;
    public const byte LOOKUP_ERROR = (byte) 1;
    public const byte CONNECTIVITY_ERROR = (byte) 2;

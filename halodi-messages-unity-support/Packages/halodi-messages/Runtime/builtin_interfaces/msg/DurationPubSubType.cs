@@ -10,7 +10,7 @@ namespace builtin_interfaces.msg
 * Do not update this file directly, edit Duration.idl instead.
 *
 */
-public class DurationPubSubType : Halodi.CDR.TopicDataType<builtin_interfaces.msg.Duration>
+public class DurationPubSubType : Halodi.CDR.TopicDataType<Duration>
 {
    public override string Name => "builtin_interfaces::msg::dds_::Duration_";
 

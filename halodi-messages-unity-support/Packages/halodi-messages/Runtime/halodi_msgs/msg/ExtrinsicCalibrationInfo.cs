@@ -8,8 +8,11 @@ namespace halodi_msgs.msg
           *
           */
 [System.Serializable]
-public class ExtrinsicCalibrationInfo
+public class ExtrinsicCalibrationInfo : Halodi.CDR.DataType<ExtrinsicCalibrationInfo>
 {
+
+	public Halodi.CDR.TopicDataType<ExtrinsicCalibrationInfo> Type => new ExtrinsicCalibrationInfoPubSubType();
+	
    public System.Collections.Generic.List<geometry_msgs.msg.TransformStamped> sensor_transforms;
    public System.Collections.Generic.List<geometry_msgs.msg.TransformStamped> link_infos;
    public System.Collections.Generic.List<halodi_msgs.msg.RobotJointCalibrationInfo> joint_infos;

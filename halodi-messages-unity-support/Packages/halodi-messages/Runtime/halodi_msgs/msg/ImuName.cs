@@ -4,8 +4,11 @@ namespace halodi_msgs.msg
 
 
 [System.Serializable]
-public class ImuName
+public class ImuName : Halodi.CDR.DataType<ImuName>
 {
+
+	public Halodi.CDR.TopicDataType<ImuName> Type => new ImuNamePubSubType();
+	
    public const int pelvis_imu = 0;
    public int imu_id;
 

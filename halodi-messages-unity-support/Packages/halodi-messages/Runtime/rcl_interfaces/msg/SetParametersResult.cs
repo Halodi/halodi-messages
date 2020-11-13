@@ -4,8 +4,11 @@ namespace rcl_interfaces.msg
 
 
 [System.Serializable]
-public class SetParametersResult
+public class SetParametersResult : Halodi.CDR.DataType<SetParametersResult>
 {
+
+	public Halodi.CDR.TopicDataType<SetParametersResult> Type => new SetParametersResultPubSubType();
+	
    /**
             * A true value of the same index indicates that the parameter was set successfully.
             * A false value indicates the change was rejected.

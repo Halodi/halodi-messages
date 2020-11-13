@@ -4,8 +4,11 @@ namespace diagnostic_msgs.msg
 
 
 [System.Serializable]
-public class KeyValue
+public class KeyValue : Halodi.CDR.DataType<KeyValue>
 {
+
+	public Halodi.CDR.TopicDataType<KeyValue> Type => new KeyValuePubSubType();
+	
    /**
             * What to label this value when viewing.
             */

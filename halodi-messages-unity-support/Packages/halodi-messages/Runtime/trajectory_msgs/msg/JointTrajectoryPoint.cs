@@ -9,8 +9,11 @@ namespace trajectory_msgs.msg
        * All specified values are in the same order as the joint names in JointTrajectory.msg.
        */
 [System.Serializable]
-public class JointTrajectoryPoint
+public class JointTrajectoryPoint : Halodi.CDR.DataType<JointTrajectoryPoint>
 {
+
+	public Halodi.CDR.TopicDataType<JointTrajectoryPoint> Type => new JointTrajectoryPointPubSubType();
+	
    public System.Collections.Generic.List<double> positions;
    public System.Collections.Generic.List<double> velocities;
    public System.Collections.Generic.List<double> accelerations;

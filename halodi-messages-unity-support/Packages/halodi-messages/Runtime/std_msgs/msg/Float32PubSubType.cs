@@ -10,7 +10,7 @@ namespace std_msgs.msg
 * Do not update this file directly, edit Float32.idl instead.
 *
 */
-public class Float32PubSubType : Halodi.CDR.TopicDataType<std_msgs.msg.Float32>
+public class Float32PubSubType : Halodi.CDR.TopicDataType<Float32>
 {
    public override string Name => "std_msgs::msg::dds_::Float32_";
 

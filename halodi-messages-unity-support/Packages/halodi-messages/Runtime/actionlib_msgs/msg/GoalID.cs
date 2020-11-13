@@ -4,8 +4,11 @@ namespace actionlib_msgs.msg
 
 
 [System.Serializable]
-public class GoalID
+public class GoalID : Halodi.CDR.DataType<GoalID>
 {
+
+	public Halodi.CDR.TopicDataType<GoalID> Type => new GoalIDPubSubType();
+	
    /**
             * The stamp should store the time at which this goal was requested.
             * It is used by an action server when it tries to preempt all

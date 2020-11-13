@@ -10,7 +10,7 @@ namespace geometry_msgs.msg
 * Do not update this file directly, edit TwistWithCovariance.idl instead.
 *
 */
-public class TwistWithCovariancePubSubType : Halodi.CDR.TopicDataType<geometry_msgs.msg.TwistWithCovariance>
+public class TwistWithCovariancePubSubType : Halodi.CDR.TopicDataType<TwistWithCovariance>
 {
    public override string Name => "geometry_msgs::msg::dds_::TwistWithCovariance_";
 

@@ -10,7 +10,7 @@ namespace geometry_msgs.msg
 * Do not update this file directly, edit InertiaStamped.idl instead.
 *
 */
-public class InertiaStampedPubSubType : Halodi.CDR.TopicDataType<geometry_msgs.msg.InertiaStamped>
+public class InertiaStampedPubSubType : Halodi.CDR.TopicDataType<InertiaStamped>
 {
    public override string Name => "geometry_msgs::msg::dds_::InertiaStamped_";
 

@@ -10,7 +10,7 @@ namespace std_msgs.msg
 * Do not update this file directly, edit Float64MultiArray.idl instead.
 *
 */
-public class Float64MultiArrayPubSubType : Halodi.CDR.TopicDataType<std_msgs.msg.Float64MultiArray>
+public class Float64MultiArrayPubSubType : Halodi.CDR.TopicDataType<Float64MultiArray>
 {
    public override string Name => "std_msgs::msg::dds_::Float64MultiArray_";
 

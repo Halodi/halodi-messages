@@ -10,7 +10,7 @@ namespace sensor_msgs.msg
 * Do not update this file directly, edit PointCloud2.idl instead.
 *
 */
-public class PointCloud2PubSubType : Halodi.CDR.TopicDataType<sensor_msgs.msg.PointCloud2>
+public class PointCloud2PubSubType : Halodi.CDR.TopicDataType<PointCloud2>
 {
    public override string Name => "sensor_msgs::msg::dds_::PointCloud2_";
 

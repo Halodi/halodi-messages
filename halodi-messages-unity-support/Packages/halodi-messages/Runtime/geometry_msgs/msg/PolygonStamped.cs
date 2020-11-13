@@ -7,8 +7,11 @@ namespace geometry_msgs.msg
        * This represents a Polygon with reference coordinate frame and timestamp
        */
 [System.Serializable]
-public class PolygonStamped
+public class PolygonStamped : Halodi.CDR.DataType<PolygonStamped>
 {
+
+	public Halodi.CDR.TopicDataType<PolygonStamped> Type => new PolygonStampedPubSubType();
+	
    public std_msgs.msg.Header header;
    public geometry_msgs.msg.Polygon polygon;
 

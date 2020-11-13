@@ -4,8 +4,11 @@ namespace std_msgs.msg
 
 
 [System.Serializable]
-public class UInt16
+public class UInt16 : Halodi.CDR.DataType<UInt16>
 {
+
+	public Halodi.CDR.TopicDataType<UInt16> Type => new UInt16PubSubType();
+	
    public ushort data;
 
 

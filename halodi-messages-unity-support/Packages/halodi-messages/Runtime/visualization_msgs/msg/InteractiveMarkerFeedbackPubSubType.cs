@@ -10,7 +10,7 @@ namespace visualization_msgs.msg
 * Do not update this file directly, edit InteractiveMarkerFeedback.idl instead.
 *
 */
-public class InteractiveMarkerFeedbackPubSubType : Halodi.CDR.TopicDataType<visualization_msgs.msg.InteractiveMarkerFeedback>
+public class InteractiveMarkerFeedbackPubSubType : Halodi.CDR.TopicDataType<InteractiveMarkerFeedback>
 {
    public override string Name => "visualization_msgs::msg::dds_::InteractiveMarkerFeedback_";
 

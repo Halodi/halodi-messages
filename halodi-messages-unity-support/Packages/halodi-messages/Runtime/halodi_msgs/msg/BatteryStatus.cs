@@ -8,8 +8,11 @@ namespace halodi_msgs.msg
           *
           */
 [System.Serializable]
-public class BatteryStatus
+public class BatteryStatus : Halodi.CDR.DataType<BatteryStatus>
 {
+
+	public Halodi.CDR.TopicDataType<BatteryStatus> Type => new BatteryStatusPubSubType();
+	
    /**
                 * Charge status of the battery
                 * 

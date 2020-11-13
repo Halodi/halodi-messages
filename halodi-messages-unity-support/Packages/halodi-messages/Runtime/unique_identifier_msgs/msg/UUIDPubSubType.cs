@@ -10,7 +10,7 @@ namespace unique_identifier_msgs.msg
 * Do not update this file directly, edit UUID.idl instead.
 *
 */
-public class UUIDPubSubType : Halodi.CDR.TopicDataType<unique_identifier_msgs.msg.UUID>
+public class UUIDPubSubType : Halodi.CDR.TopicDataType<UUID>
 {
    public override string Name => "unique_identifier_msgs::msg::dds_::UUID_";
 

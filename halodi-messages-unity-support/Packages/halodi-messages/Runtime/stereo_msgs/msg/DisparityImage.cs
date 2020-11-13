@@ -4,8 +4,11 @@ namespace stereo_msgs.msg
 
 
 [System.Serializable]
-public class DisparityImage
+public class DisparityImage : Halodi.CDR.DataType<DisparityImage>
 {
+
+	public Halodi.CDR.TopicDataType<DisparityImage> Type => new DisparityImagePubSubType();
+	
    /**
             * Separate header for compatibility with current TimeSynchronizer.
             * Likely to be removed in a later release, use image.header instead.

@@ -9,8 +9,11 @@ namespace nav_msgs.msg
        * The twist in this message should be specified in the coordinate frame given by the child_frame_id
        */
 [System.Serializable]
-public class Odometry
+public class Odometry : Halodi.CDR.DataType<Odometry>
 {
+
+	public Halodi.CDR.TopicDataType<Odometry> Type => new OdometryPubSubType();
+	
    public std_msgs.msg.Header header;
    public string child_frame_id;
    public geometry_msgs.msg.PoseWithCovariance pose;

@@ -4,8 +4,11 @@ namespace halodi_msgs.msg
 
 
 [System.Serializable]
-public class TaskSpaceCommand
+public class TaskSpaceCommand : Halodi.CDR.DataType<TaskSpaceCommand>
 {
+
+	public Halodi.CDR.TopicDataType<TaskSpaceCommand> Type => new TaskSpaceCommandPubSubType();
+	
    /**
                 * Body Frame: The reference frame to control.
                 *

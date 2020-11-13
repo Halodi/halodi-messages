@@ -10,7 +10,7 @@ namespace nav_msgs.msg
 * Do not update this file directly, edit Path.idl instead.
 *
 */
-public class PathPubSubType : Halodi.CDR.TopicDataType<nav_msgs.msg.Path>
+public class PathPubSubType : Halodi.CDR.TopicDataType<Path>
 {
    public override string Name => "nav_msgs::msg::dds_::Path_";
 

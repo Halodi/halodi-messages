@@ -10,7 +10,7 @@ namespace geometry_msgs.msg
 * Do not update this file directly, edit Quaternion.idl instead.
 *
 */
-public class QuaternionPubSubType : Halodi.CDR.TopicDataType<geometry_msgs.msg.Quaternion>
+public class QuaternionPubSubType : Halodi.CDR.TopicDataType<Quaternion>
 {
    public override string Name => "geometry_msgs::msg::dds_::Quaternion_";
 

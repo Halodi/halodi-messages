@@ -10,7 +10,7 @@ namespace sensor_msgs.msg
 * Do not update this file directly, edit MultiEchoLaserScan.idl instead.
 *
 */
-public class MultiEchoLaserScanPubSubType : Halodi.CDR.TopicDataType<sensor_msgs.msg.MultiEchoLaserScan>
+public class MultiEchoLaserScanPubSubType : Halodi.CDR.TopicDataType<MultiEchoLaserScan>
 {
    public override string Name => "sensor_msgs::msg::dds_::MultiEchoLaserScan_";
 

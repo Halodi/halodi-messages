@@ -9,8 +9,11 @@ namespace halodi_msgs.msg
           *
           */
 [System.Serializable]
-public class TrajectoryInterpolation
+public class TrajectoryInterpolation : Halodi.CDR.DataType<TrajectoryInterpolation>
 {
+
+	public Halodi.CDR.TopicDataType<TrajectoryInterpolation> Type => new TrajectoryInterpolationPubSubType();
+	
    /**
                  * Use linear interpolation between points
                  * 

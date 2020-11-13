@@ -10,7 +10,7 @@ namespace geometry_msgs.msg
 * Do not update this file directly, edit Transform.idl instead.
 *
 */
-public class TransformPubSubType : Halodi.CDR.TopicDataType<geometry_msgs.msg.Transform>
+public class TransformPubSubType : Halodi.CDR.TopicDataType<Transform>
 {
    public override string Name => "geometry_msgs::msg::dds_::Transform_";
 

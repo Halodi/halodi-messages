@@ -10,7 +10,7 @@ namespace sensor_msgs.msg
 * Do not update this file directly, edit FluidPressure.idl instead.
 *
 */
-public class FluidPressurePubSubType : Halodi.CDR.TopicDataType<sensor_msgs.msg.FluidPressure>
+public class FluidPressurePubSubType : Halodi.CDR.TopicDataType<FluidPressure>
 {
    public override string Name => "sensor_msgs::msg::dds_::FluidPressure_";
 

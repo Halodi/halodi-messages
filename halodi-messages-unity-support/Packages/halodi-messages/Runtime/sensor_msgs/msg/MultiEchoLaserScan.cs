@@ -16,8 +16,11 @@ namespace sensor_msgs.msg
        * with zero angle being forward along the x axis
        */
 [System.Serializable]
-public class MultiEchoLaserScan
+public class MultiEchoLaserScan : Halodi.CDR.DataType<MultiEchoLaserScan>
 {
+
+	public Halodi.CDR.TopicDataType<MultiEchoLaserScan> Type => new MultiEchoLaserScanPubSubType();
+	
    /**
             * timestamp in the header is the acquisition time of
             */

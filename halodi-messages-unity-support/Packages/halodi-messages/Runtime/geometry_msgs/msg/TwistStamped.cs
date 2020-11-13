@@ -7,8 +7,11 @@ namespace geometry_msgs.msg
        * A twist with reference coordinate frame and timestamp
        */
 [System.Serializable]
-public class TwistStamped
+public class TwistStamped : Halodi.CDR.DataType<TwistStamped>
 {
+
+	public Halodi.CDR.TopicDataType<TwistStamped> Type => new TwistStampedPubSubType();
+	
    public std_msgs.msg.Header header;
    public geometry_msgs.msg.Twist twist;
 

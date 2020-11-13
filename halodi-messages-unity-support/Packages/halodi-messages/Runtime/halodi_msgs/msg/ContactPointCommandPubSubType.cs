@@ -10,7 +10,7 @@ namespace halodi_msgs.msg
 * Do not update this file directly, edit ContactPointCommand.idl instead.
 *
 */
-public class ContactPointCommandPubSubType : Halodi.CDR.TopicDataType<halodi_msgs.msg.ContactPointCommand>
+public class ContactPointCommandPubSubType : Halodi.CDR.TopicDataType<ContactPointCommand>
 {
    public override string Name => "halodi_msgs::msg::dds_::ContactPointCommand_";
 

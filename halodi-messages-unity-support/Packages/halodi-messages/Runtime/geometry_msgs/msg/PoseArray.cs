@@ -7,8 +7,11 @@ namespace geometry_msgs.msg
        * An array of poses with a header for global reference.
        */
 [System.Serializable]
-public class PoseArray
+public class PoseArray : Halodi.CDR.DataType<PoseArray>
 {
+
+	public Halodi.CDR.TopicDataType<PoseArray> Type => new PoseArrayPubSubType();
+	
    public std_msgs.msg.Header header;
    public System.Collections.Generic.List<geometry_msgs.msg.Pose> poses;
 

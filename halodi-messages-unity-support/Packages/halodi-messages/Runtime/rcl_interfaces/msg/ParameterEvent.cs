@@ -9,8 +9,11 @@ namespace rcl_interfaces.msg
        * A specific parameter name can only be in one of the three sets.
        */
 [System.Serializable]
-public class ParameterEvent
+public class ParameterEvent : Halodi.CDR.DataType<ParameterEvent>
 {
+
+	public Halodi.CDR.TopicDataType<ParameterEvent> Type => new ParameterEventPubSubType();
+	
    public builtin_interfaces.msg.Time stamp;
    /**
             * Fully qualified ROS path to node

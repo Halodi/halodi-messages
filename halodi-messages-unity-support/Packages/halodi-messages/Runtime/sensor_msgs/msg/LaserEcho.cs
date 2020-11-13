@@ -8,8 +8,11 @@ namespace sensor_msgs.msg
        * to be used separately.
        */
 [System.Serializable]
-public class LaserEcho
+public class LaserEcho : Halodi.CDR.DataType<LaserEcho>
 {
+
+	public Halodi.CDR.TopicDataType<LaserEcho> Type => new LaserEchoPubSubType();
+	
    /**
             * Multiple values of ranges or intensities.
             */

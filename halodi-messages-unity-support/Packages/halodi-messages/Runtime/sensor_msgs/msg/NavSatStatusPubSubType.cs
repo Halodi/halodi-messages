@@ -10,7 +10,7 @@ namespace sensor_msgs.msg
 * Do not update this file directly, edit NavSatStatus.idl instead.
 *
 */
-public class NavSatStatusPubSubType : Halodi.CDR.TopicDataType<sensor_msgs.msg.NavSatStatus>
+public class NavSatStatusPubSubType : Halodi.CDR.TopicDataType<NavSatStatus>
 {
    public override string Name => "sensor_msgs::msg::dds_::NavSatStatus_";
 

@@ -10,7 +10,7 @@ namespace geometry_msgs.msg
 * Do not update this file directly, edit Pose2D.idl instead.
 *
 */
-public class Pose2DPubSubType : Halodi.CDR.TopicDataType<geometry_msgs.msg.Pose2D>
+public class Pose2DPubSubType : Halodi.CDR.TopicDataType<Pose2D>
 {
    public override string Name => "geometry_msgs::msg::dds_::Pose2D_";
 

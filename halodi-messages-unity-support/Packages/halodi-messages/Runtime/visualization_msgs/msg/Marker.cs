@@ -11,8 +11,11 @@ namespace visualization_msgs.msg
        * for more information on using this message with rviz.
        */
 [System.Serializable]
-public class Marker
+public class Marker : Halodi.CDR.DataType<Marker>
 {
+
+	public Halodi.CDR.TopicDataType<Marker> Type => new MarkerPubSubType();
+	
    public const byte ARROW = (byte) 0;
    public const byte CUBE = (byte) 1;
    public const byte SPHERE = (byte) 2;

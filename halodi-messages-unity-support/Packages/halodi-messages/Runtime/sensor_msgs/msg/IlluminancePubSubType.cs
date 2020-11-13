@@ -10,7 +10,7 @@ namespace sensor_msgs.msg
 * Do not update this file directly, edit Illuminance.idl instead.
 *
 */
-public class IlluminancePubSubType : Halodi.CDR.TopicDataType<sensor_msgs.msg.Illuminance>
+public class IlluminancePubSubType : Halodi.CDR.TopicDataType<Illuminance>
 {
    public override string Name => "sensor_msgs::msg::dds_::Illuminance_";
 

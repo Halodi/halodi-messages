@@ -8,8 +8,11 @@ namespace sensor_msgs.msg
        * information about each point.
        */
 [System.Serializable]
-public class PointCloud
+public class PointCloud : Halodi.CDR.DataType<PointCloud>
 {
+
+	public Halodi.CDR.TopicDataType<PointCloud> Type => new PointCloudPubSubType();
+	
    /**
             * Time of sensor data acquisition, coordinate frame ID.
             */

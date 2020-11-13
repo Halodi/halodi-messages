@@ -10,7 +10,7 @@ namespace halodi_msgs.msg
 * Do not update this file directly, edit ReferenceFrameName.idl instead.
 *
 */
-public class ReferenceFrameNamePubSubType : Halodi.CDR.TopicDataType<halodi_msgs.msg.ReferenceFrameName>
+public class ReferenceFrameNamePubSubType : Halodi.CDR.TopicDataType<ReferenceFrameName>
 {
    public override string Name => "halodi_msgs::msg::dds_::ReferenceFrameName_";
 

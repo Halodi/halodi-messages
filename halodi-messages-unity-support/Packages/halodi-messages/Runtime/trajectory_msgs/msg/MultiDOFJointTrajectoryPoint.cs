@@ -4,8 +4,11 @@ namespace trajectory_msgs.msg
 
 
 [System.Serializable]
-public class MultiDOFJointTrajectoryPoint
+public class MultiDOFJointTrajectoryPoint : Halodi.CDR.DataType<MultiDOFJointTrajectoryPoint>
 {
+
+	public Halodi.CDR.TopicDataType<MultiDOFJointTrajectoryPoint> Type => new MultiDOFJointTrajectoryPointPubSubType();
+	
    /**
             * Each multi-dof joint can specify a transform (up to 6 DOF).
             */

@@ -4,8 +4,11 @@ namespace action_msgs.msg
 
 
 [System.Serializable]
-public class GoalInfo
+public class GoalInfo : Halodi.CDR.DataType<GoalInfo>
 {
+
+	public Halodi.CDR.TopicDataType<GoalInfo> Type => new GoalInfoPubSubType();
+	
    /**
             * Goal ID
             */

@@ -10,8 +10,11 @@ namespace trajectory_msgs.msg
        * the joint names array.
        */
 [System.Serializable]
-public class MultiDOFJointTrajectory
+public class MultiDOFJointTrajectory : Halodi.CDR.DataType<MultiDOFJointTrajectory>
 {
+
+	public Halodi.CDR.TopicDataType<MultiDOFJointTrajectory> Type => new MultiDOFJointTrajectoryPubSubType();
+	
    /**
             * The header is used to specify the coordinate frame and the reference time for the trajectory durations
             */

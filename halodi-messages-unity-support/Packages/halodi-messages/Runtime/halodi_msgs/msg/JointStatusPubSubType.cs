@@ -10,7 +10,7 @@ namespace halodi_msgs.msg
 * Do not update this file directly, edit JointStatus.idl instead.
 *
 */
-public class JointStatusPubSubType : Halodi.CDR.TopicDataType<halodi_msgs.msg.JointStatus>
+public class JointStatusPubSubType : Halodi.CDR.TopicDataType<JointStatus>
 {
    public override string Name => "halodi_msgs::msg::dds_::JointStatus_";
 

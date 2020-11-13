@@ -10,7 +10,7 @@ namespace std_msgs.msg
 * Do not update this file directly, edit Header.idl instead.
 *
 */
-public class HeaderPubSubType : Halodi.CDR.TopicDataType<std_msgs.msg.Header>
+public class HeaderPubSubType : Halodi.CDR.TopicDataType<Header>
 {
    public override string Name => "std_msgs::msg::dds_::Header_";
 

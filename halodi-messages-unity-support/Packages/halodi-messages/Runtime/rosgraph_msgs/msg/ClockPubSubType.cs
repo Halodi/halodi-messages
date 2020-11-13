@@ -10,7 +10,7 @@ namespace rosgraph_msgs.msg
 * Do not update this file directly, edit Clock.idl instead.
 *
 */
-public class ClockPubSubType : Halodi.CDR.TopicDataType<rosgraph_msgs.msg.Clock>
+public class ClockPubSubType : Halodi.CDR.TopicDataType<Clock>
 {
    public override string Name => "rosgraph_msgs::msg::dds_::Clock_";
 

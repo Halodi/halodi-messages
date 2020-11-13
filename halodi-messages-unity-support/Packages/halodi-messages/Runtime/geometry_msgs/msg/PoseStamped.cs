@@ -7,8 +7,11 @@ namespace geometry_msgs.msg
        * A Pose with reference coordinate frame and timestamp
        */
 [System.Serializable]
-public class PoseStamped
+public class PoseStamped : Halodi.CDR.DataType<PoseStamped>
 {
+
+	public Halodi.CDR.TopicDataType<PoseStamped> Type => new PoseStampedPubSubType();
+	
    public std_msgs.msg.Header header;
    public geometry_msgs.msg.Pose pose;
 

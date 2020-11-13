@@ -10,7 +10,7 @@ namespace std_msgs.msg
 * Do not update this file directly, edit Int16MultiArray.idl instead.
 *
 */
-public class Int16MultiArrayPubSubType : Halodi.CDR.TopicDataType<std_msgs.msg.Int16MultiArray>
+public class Int16MultiArrayPubSubType : Halodi.CDR.TopicDataType<Int16MultiArray>
 {
    public override string Name => "std_msgs::msg::dds_::Int16MultiArray_";
 

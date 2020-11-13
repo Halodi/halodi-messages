@@ -4,8 +4,11 @@ namespace rcl_interfaces.msg
 
 
 [System.Serializable]
-public class Log
+public class Log : Halodi.CDR.DataType<Log>
 {
+
+	public Halodi.CDR.TopicDataType<Log> Type => new LogPubSubType();
+	
    /**
           * #
           * # Severity level constants

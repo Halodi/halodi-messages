@@ -10,7 +10,7 @@ namespace halodi_msgs.msg
 * Do not update this file directly, edit TaskSpaceCommand.idl instead.
 *
 */
-public class TaskSpaceCommandPubSubType : Halodi.CDR.TopicDataType<halodi_msgs.msg.TaskSpaceCommand>
+public class TaskSpaceCommandPubSubType : Halodi.CDR.TopicDataType<TaskSpaceCommand>
 {
    public override string Name => "halodi_msgs::msg::dds_::TaskSpaceCommand_";
 

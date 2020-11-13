@@ -4,8 +4,11 @@ namespace sensor_msgs.msg
 
 
 [System.Serializable]
-public class JoyFeedbackArray
+public class JoyFeedbackArray : Halodi.CDR.DataType<JoyFeedbackArray>
 {
+
+	public Halodi.CDR.TopicDataType<JoyFeedbackArray> Type => new JoyFeedbackArrayPubSubType();
+	
    /**
             * This message publishes values for multiple feedback at once.
             */

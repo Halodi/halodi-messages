@@ -10,7 +10,7 @@ namespace halodi_msgs.msg
 * Do not update this file directly, edit RobotStatus.idl instead.
 *
 */
-public class RobotStatusPubSubType : Halodi.CDR.TopicDataType<halodi_msgs.msg.RobotStatus>
+public class RobotStatusPubSubType : Halodi.CDR.TopicDataType<RobotStatus>
 {
    public override string Name => "halodi_msgs::msg::dds_::RobotStatus_";
 

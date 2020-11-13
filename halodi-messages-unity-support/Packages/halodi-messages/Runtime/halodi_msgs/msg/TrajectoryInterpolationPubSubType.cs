@@ -10,7 +10,7 @@ namespace halodi_msgs.msg
 * Do not update this file directly, edit TrajectoryInterpolation.idl instead.
 *
 */
-public class TrajectoryInterpolationPubSubType : Halodi.CDR.TopicDataType<halodi_msgs.msg.TrajectoryInterpolation>
+public class TrajectoryInterpolationPubSubType : Halodi.CDR.TopicDataType<TrajectoryInterpolation>
 {
    public override string Name => "halodi_msgs::msg::dds_::TrajectoryInterpolation_";
 

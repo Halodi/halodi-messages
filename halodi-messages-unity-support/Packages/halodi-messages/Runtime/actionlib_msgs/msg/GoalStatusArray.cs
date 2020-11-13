@@ -4,8 +4,11 @@ namespace actionlib_msgs.msg
 
 
 [System.Serializable]
-public class GoalStatusArray
+public class GoalStatusArray : Halodi.CDR.DataType<GoalStatusArray>
 {
+
+	public Halodi.CDR.TopicDataType<GoalStatusArray> Type => new GoalStatusArrayPubSubType();
+	
    /**
             * Stores the statuses for goals that are currently being tracked
             * by an action server

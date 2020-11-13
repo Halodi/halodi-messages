@@ -4,8 +4,11 @@ namespace sensor_msgs.msg
 
 
 [System.Serializable]
-public class PointField
+public class PointField : Halodi.CDR.DataType<PointField>
 {
+
+	public Halodi.CDR.TopicDataType<PointField> Type => new PointFieldPubSubType();
+	
    /**
           * This message holds the description of one point entry in the
           * PointCloud2 message format.

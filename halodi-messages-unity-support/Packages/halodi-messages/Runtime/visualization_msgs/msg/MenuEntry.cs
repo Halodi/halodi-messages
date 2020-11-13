@@ -36,8 +36,11 @@ namespace visualization_msgs.msg
        * - turtle
        */
 [System.Serializable]
-public class MenuEntry
+public class MenuEntry : Halodi.CDR.DataType<MenuEntry>
 {
+
+	public Halodi.CDR.TopicDataType<MenuEntry> Type => new MenuEntryPubSubType();
+	
    /**
           * Command_type stores the type of response desired when this menu
           * entry is clicked.

@@ -4,8 +4,11 @@ namespace visualization_msgs.msg
 
 
 [System.Serializable]
-public class InteractiveMarkerPose
+public class InteractiveMarkerPose : Halodi.CDR.DataType<InteractiveMarkerPose>
 {
+
+	public Halodi.CDR.TopicDataType<InteractiveMarkerPose> Type => new InteractiveMarkerPosePubSubType();
+	
    /**
             * Time/frame info.
             */

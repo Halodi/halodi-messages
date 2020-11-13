@@ -10,7 +10,7 @@ namespace halodi_msgs.msg
 * Do not update this file directly, edit RobotJointCalibrationInfo.idl instead.
 *
 */
-public class RobotJointCalibrationInfoPubSubType : Halodi.CDR.TopicDataType<halodi_msgs.msg.RobotJointCalibrationInfo>
+public class RobotJointCalibrationInfoPubSubType : Halodi.CDR.TopicDataType<RobotJointCalibrationInfo>
 {
    public override string Name => "halodi_msgs::msg::dds_::RobotJointCalibrationInfo_";
 

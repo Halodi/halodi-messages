@@ -4,8 +4,11 @@ namespace std_msgs.msg
 
 
 [System.Serializable]
-public class UInt32
+public class UInt32 : Halodi.CDR.DataType<UInt32>
 {
+
+	public Halodi.CDR.TopicDataType<UInt32> Type => new UInt32PubSubType();
+	
    public uint data;
 
 

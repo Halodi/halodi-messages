@@ -57,8 +57,11 @@ namespace sensor_msgs.msg
        * ######################################################################
        */
 [System.Serializable]
-public class CameraInfo
+public class CameraInfo : Halodi.CDR.DataType<CameraInfo>
 {
+
+	public Halodi.CDR.TopicDataType<CameraInfo> Type => new CameraInfoPubSubType();
+	
    /**
             * Time of image acquisition, camera coordinate frame ID
             * Header timestamp should be acquisition time of image

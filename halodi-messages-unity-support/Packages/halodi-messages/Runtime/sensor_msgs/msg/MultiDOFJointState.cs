@@ -25,8 +25,11 @@ namespace sensor_msgs.msg
        * states.
        */
 [System.Serializable]
-public class MultiDOFJointState
+public class MultiDOFJointState : Halodi.CDR.DataType<MultiDOFJointState>
 {
+
+	public Halodi.CDR.TopicDataType<MultiDOFJointState> Type => new MultiDOFJointStatePubSubType();
+	
    public std_msgs.msg.Header header;
    public System.Collections.Generic.List<string> joint_names;
    public System.Collections.Generic.List<geometry_msgs.msg.Transform> transforms;

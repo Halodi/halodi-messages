@@ -10,7 +10,7 @@ namespace visualization_msgs.msg
 * Do not update this file directly, edit Marker.idl instead.
 *
 */
-public class MarkerPubSubType : Halodi.CDR.TopicDataType<visualization_msgs.msg.Marker>
+public class MarkerPubSubType : Halodi.CDR.TopicDataType<Marker>
 {
    public override string Name => "visualization_msgs::msg::dds_::Marker_";
 

@@ -7,8 +7,11 @@ namespace shape_msgs.msg
        * Definition of a triangle's vertices.
        */
 [System.Serializable]
-public class MeshTriangle
+public class MeshTriangle : Halodi.CDR.DataType<MeshTriangle>
 {
+
+	public Halodi.CDR.TopicDataType<MeshTriangle> Type => new MeshTrianglePubSubType();
+	
 
 
    public void Set(MeshTriangle other)

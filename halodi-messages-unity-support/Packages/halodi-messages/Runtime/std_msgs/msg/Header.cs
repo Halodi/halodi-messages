@@ -9,8 +9,11 @@ namespace std_msgs.msg
        * in a particular coordinate frame.
        */
 [System.Serializable]
-public class Header
+public class Header : Halodi.CDR.DataType<Header>
 {
+
+	public Halodi.CDR.TopicDataType<Header> Type => new HeaderPubSubType();
+	
    /**
             * Two-integer timestamp that is expressed as seconds and nanoseconds.
             */

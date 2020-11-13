@@ -4,8 +4,11 @@ namespace std_msgs.msg
 
 
 [System.Serializable]
-public class Empty
+public class Empty : Halodi.CDR.DataType<Empty>
 {
+
+	public Halodi.CDR.TopicDataType<Empty> Type => new EmptyPubSubType();
+	
    public bool unused_placeholder_field;
 
 

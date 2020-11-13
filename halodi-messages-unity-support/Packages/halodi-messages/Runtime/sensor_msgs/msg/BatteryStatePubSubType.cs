@@ -10,7 +10,7 @@ namespace sensor_msgs.msg
 * Do not update this file directly, edit BatteryState.idl instead.
 *
 */
-public class BatteryStatePubSubType : Halodi.CDR.TopicDataType<sensor_msgs.msg.BatteryState>
+public class BatteryStatePubSubType : Halodi.CDR.TopicDataType<BatteryState>
 {
    public override string Name => "sensor_msgs::msg::dds_::BatteryState_";
 

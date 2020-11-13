@@ -10,7 +10,7 @@ namespace shape_msgs.msg
 * Do not update this file directly, edit Plane.idl instead.
 *
 */
-public class PlanePubSubType : Halodi.CDR.TopicDataType<shape_msgs.msg.Plane>
+public class PlanePubSubType : Halodi.CDR.TopicDataType<Plane>
 {
    public override string Name => "shape_msgs::msg::dds_::Plane_";
 

@@ -7,8 +7,11 @@ namespace geometry_msgs.msg
        * This expresses an estimated pose with a reference coordinate frame and timestamp
        */
 [System.Serializable]
-public class PoseWithCovarianceStamped
+public class PoseWithCovarianceStamped : Halodi.CDR.DataType<PoseWithCovarianceStamped>
 {
+
+	public Halodi.CDR.TopicDataType<PoseWithCovarianceStamped> Type => new PoseWithCovarianceStampedPubSubType();
+	
    public std_msgs.msg.Header header;
    public geometry_msgs.msg.PoseWithCovariance pose;
 

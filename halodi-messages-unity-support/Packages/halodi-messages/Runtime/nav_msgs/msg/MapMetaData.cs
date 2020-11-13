@@ -7,8 +7,11 @@ namespace nav_msgs.msg
        * This hold basic information about the characterists of the OccupancyGrid
        */
 [System.Serializable]
-public class MapMetaData
+public class MapMetaData : Halodi.CDR.DataType<MapMetaData>
 {
+
+	public Halodi.CDR.TopicDataType<MapMetaData> Type => new MapMetaDataPubSubType();
+	
    /**
             * The time at which the map was loaded
             */

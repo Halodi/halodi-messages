@@ -10,7 +10,7 @@ namespace halodi_msgs.msg
 * Do not update this file directly, edit DrivingTrajectory.idl instead.
 *
 */
-public class DrivingTrajectoryPubSubType : Halodi.CDR.TopicDataType<halodi_msgs.msg.DrivingTrajectory>
+public class DrivingTrajectoryPubSubType : Halodi.CDR.TopicDataType<DrivingTrajectory>
 {
    public override string Name => "halodi_msgs::msg::dds_::DrivingTrajectory_";
 

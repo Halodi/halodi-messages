@@ -13,8 +13,11 @@ namespace halodi_msgs.msg
           *
           */
 [System.Serializable]
-public class JointMeasurement
+public class JointMeasurement : Halodi.CDR.DataType<JointMeasurement>
 {
+
+	public Halodi.CDR.TopicDataType<JointMeasurement> Type => new JointMeasurementPubSubType();
+	
    public halodi_msgs.msg.JointName joint;
    /**
                  * Current measured joint position (rad for revolute, meter for prismatic)

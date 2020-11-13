@@ -10,7 +10,7 @@ namespace geometry_msgs.msg
 * Do not update this file directly, edit PoseWithCovariance.idl instead.
 *
 */
-public class PoseWithCovariancePubSubType : Halodi.CDR.TopicDataType<geometry_msgs.msg.PoseWithCovariance>
+public class PoseWithCovariancePubSubType : Halodi.CDR.TopicDataType<PoseWithCovariance>
 {
    public override string Name => "geometry_msgs::msg::dds_::PoseWithCovariance_";
 

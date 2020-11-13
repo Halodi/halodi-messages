@@ -10,8 +10,11 @@ namespace rcl_interfaces.msg
        * them apply to this parameter.
        */
 [System.Serializable]
-public class ParameterDescriptor
+public class ParameterDescriptor : Halodi.CDR.DataType<ParameterDescriptor>
 {
+
+	public Halodi.CDR.TopicDataType<ParameterDescriptor> Type => new ParameterDescriptorPubSubType();
+	
    public string name;
    /**
             * Enum values are defined in the `ParameterType.msg` message.

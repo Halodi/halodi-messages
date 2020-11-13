@@ -10,7 +10,7 @@ namespace shape_msgs.msg
 * Do not update this file directly, edit SolidPrimitive.idl instead.
 *
 */
-public class SolidPrimitivePubSubType : Halodi.CDR.TopicDataType<shape_msgs.msg.SolidPrimitive>
+public class SolidPrimitivePubSubType : Halodi.CDR.TopicDataType<SolidPrimitive>
 {
    public override string Name => "shape_msgs::msg::dds_::SolidPrimitive_";
 

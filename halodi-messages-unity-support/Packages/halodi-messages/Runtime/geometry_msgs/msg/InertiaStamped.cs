@@ -4,8 +4,11 @@ namespace geometry_msgs.msg
 
 
 [System.Serializable]
-public class InertiaStamped
+public class InertiaStamped : Halodi.CDR.DataType<InertiaStamped>
 {
+
+	public Halodi.CDR.TopicDataType<InertiaStamped> Type => new InertiaStampedPubSubType();
+	
    public std_msgs.msg.Header header;
    public geometry_msgs.msg.Inertia inertia;
 

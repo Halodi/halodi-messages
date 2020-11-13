@@ -4,8 +4,11 @@ namespace rcl_interfaces.msg
 
 
 [System.Serializable]
-public class ListParametersResult
+public class ListParametersResult : Halodi.CDR.DataType<ListParametersResult>
 {
+
+	public Halodi.CDR.TopicDataType<ListParametersResult> Type => new ListParametersResultPubSubType();
+	
    /**
             * All parameters under the given prefixes.
             */

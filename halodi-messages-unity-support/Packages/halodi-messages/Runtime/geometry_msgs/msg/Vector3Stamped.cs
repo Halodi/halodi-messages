@@ -7,8 +7,11 @@ namespace geometry_msgs.msg
        * This represents a Vector3 with reference coordinate frame and timestamp
        */
 [System.Serializable]
-public class Vector3Stamped
+public class Vector3Stamped : Halodi.CDR.DataType<Vector3Stamped>
 {
+
+	public Halodi.CDR.TopicDataType<Vector3Stamped> Type => new Vector3StampedPubSubType();
+	
    public std_msgs.msg.Header header;
    public geometry_msgs.msg.Vector3 vector;
 

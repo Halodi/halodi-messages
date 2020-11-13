@@ -10,7 +10,7 @@ namespace sensor_msgs.msg
 * Do not update this file directly, edit CompressedImage.idl instead.
 *
 */
-public class CompressedImagePubSubType : Halodi.CDR.TopicDataType<sensor_msgs.msg.CompressedImage>
+public class CompressedImagePubSubType : Halodi.CDR.TopicDataType<CompressedImage>
 {
    public override string Name => "sensor_msgs::msg::dds_::CompressedImage_";
 

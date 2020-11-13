@@ -10,7 +10,7 @@ namespace std_msgs.msg
 * Do not update this file directly, edit Empty.idl instead.
 *
 */
-public class EmptyPubSubType : Halodi.CDR.TopicDataType<std_msgs.msg.Empty>
+public class EmptyPubSubType : Halodi.CDR.TopicDataType<Empty>
 {
    public override string Name => "std_msgs::msg::dds_::Empty_";
 

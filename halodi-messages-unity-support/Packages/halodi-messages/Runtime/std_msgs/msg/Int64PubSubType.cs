@@ -10,7 +10,7 @@ namespace std_msgs.msg
 * Do not update this file directly, edit Int64.idl instead.
 *
 */
-public class Int64PubSubType : Halodi.CDR.TopicDataType<std_msgs.msg.Int64>
+public class Int64PubSubType : Halodi.CDR.TopicDataType<Int64>
 {
    public override string Name => "std_msgs::msg::dds_::Int64_";
 

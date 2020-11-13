@@ -10,7 +10,7 @@ namespace halodi_msgs.msg
 * Do not update this file directly, edit DrivingCommand.idl instead.
 *
 */
-public class DrivingCommandPubSubType : Halodi.CDR.TopicDataType<halodi_msgs.msg.DrivingCommand>
+public class DrivingCommandPubSubType : Halodi.CDR.TopicDataType<DrivingCommand>
 {
    public override string Name => "halodi_msgs::msg::dds_::DrivingCommand_";
 

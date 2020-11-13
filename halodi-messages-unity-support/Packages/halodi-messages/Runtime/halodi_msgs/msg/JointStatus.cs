@@ -8,8 +8,11 @@ namespace halodi_msgs.msg
           *
           */
 [System.Serializable]
-public class JointStatus
+public class JointStatus : Halodi.CDR.DataType<JointStatus>
 {
+
+	public Halodi.CDR.TopicDataType<JointStatus> Type => new JointStatusPubSubType();
+	
    /**
                 * Unique identifier for the joint
                 * 

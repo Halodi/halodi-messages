@@ -14,8 +14,11 @@ namespace sensor_msgs.msg
        * such as stereo or time-of-flight.
        */
 [System.Serializable]
-public class PointCloud2
+public class PointCloud2 : Halodi.CDR.DataType<PointCloud2>
 {
+
+	public Halodi.CDR.TopicDataType<PointCloud2> Type => new PointCloud2PubSubType();
+	
    /**
             * Time of sensor data acquisition, and the coordinate frame ID (for 3d points).
             */

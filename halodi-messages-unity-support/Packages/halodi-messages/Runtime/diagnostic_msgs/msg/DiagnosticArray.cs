@@ -4,8 +4,11 @@ namespace diagnostic_msgs.msg
 
 
 [System.Serializable]
-public class DiagnosticArray
+public class DiagnosticArray : Halodi.CDR.DataType<DiagnosticArray>
 {
+
+	public Halodi.CDR.TopicDataType<DiagnosticArray> Type => new DiagnosticArrayPubSubType();
+	
    /**
             * This message is used to send diagnostic information about the state of the robot.
             * for timestamp

@@ -10,7 +10,7 @@ namespace trajectory_msgs.msg
 * Do not update this file directly, edit MultiDOFJointTrajectory.idl instead.
 *
 */
-public class MultiDOFJointTrajectoryPubSubType : Halodi.CDR.TopicDataType<trajectory_msgs.msg.MultiDOFJointTrajectory>
+public class MultiDOFJointTrajectoryPubSubType : Halodi.CDR.TopicDataType<MultiDOFJointTrajectory>
 {
    public override string Name => "trajectory_msgs::msg::dds_::MultiDOFJointTrajectory_";
 

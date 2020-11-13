@@ -10,7 +10,7 @@ namespace action_msgs.msg
 * Do not update this file directly, edit GoalStatus.idl instead.
 *
 */
-public class GoalStatusPubSubType : Halodi.CDR.TopicDataType<action_msgs.msg.GoalStatus>
+public class GoalStatusPubSubType : Halodi.CDR.TopicDataType<GoalStatus>
 {
    public override string Name => "action_msgs::msg::dds_::GoalStatus_";
 

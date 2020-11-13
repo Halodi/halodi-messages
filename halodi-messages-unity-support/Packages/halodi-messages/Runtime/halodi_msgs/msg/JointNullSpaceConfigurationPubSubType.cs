@@ -10,7 +10,7 @@ namespace halodi_msgs.msg
 * Do not update this file directly, edit JointNullSpaceConfiguration.idl instead.
 *
 */
-public class JointNullSpaceConfigurationPubSubType : Halodi.CDR.TopicDataType<halodi_msgs.msg.JointNullSpaceConfiguration>
+public class JointNullSpaceConfigurationPubSubType : Halodi.CDR.TopicDataType<JointNullSpaceConfiguration>
 {
    public override string Name => "halodi_msgs::msg::dds_::JointNullSpaceConfiguration_";
 

@@ -10,7 +10,7 @@ namespace lifecycle_msgs.msg
 * Do not update this file directly, edit Transition.idl instead.
 *
 */
-public class TransitionPubSubType : Halodi.CDR.TopicDataType<lifecycle_msgs.msg.Transition>
+public class TransitionPubSubType : Halodi.CDR.TopicDataType<Transition>
 {
    public override string Name => "lifecycle_msgs::msg::dds_::Transition_";
 

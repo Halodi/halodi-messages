@@ -10,7 +10,7 @@ namespace std_msgs.msg
 * Do not update this file directly, edit ByteMultiArray.idl instead.
 *
 */
-public class ByteMultiArrayPubSubType : Halodi.CDR.TopicDataType<std_msgs.msg.ByteMultiArray>
+public class ByteMultiArrayPubSubType : Halodi.CDR.TopicDataType<ByteMultiArray>
 {
    public override string Name => "std_msgs::msg::dds_::ByteMultiArray_";
 

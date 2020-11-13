@@ -4,8 +4,11 @@ namespace rcl_interfaces.msg
 
 
 [System.Serializable]
-public class ParameterType
+public class ParameterType : Halodi.CDR.DataType<ParameterType>
 {
+
+	public Halodi.CDR.TopicDataType<ParameterType> Type => new ParameterTypePubSubType();
+	
    public const byte PARAMETER_NOT_SET = (byte) 0;
    public const byte PARAMETER_BOOL = (byte) 1;
    public const byte PARAMETER_INTEGER = (byte) 2;

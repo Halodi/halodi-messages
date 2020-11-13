@@ -10,7 +10,7 @@ namespace geometry_msgs.msg
 * Do not update this file directly, edit Accel.idl instead.
 *
 */
-public class AccelPubSubType : Halodi.CDR.TopicDataType<geometry_msgs.msg.Accel>
+public class AccelPubSubType : Halodi.CDR.TopicDataType<Accel>
 {
    public override string Name => "geometry_msgs::msg::dds_::Accel_";
 

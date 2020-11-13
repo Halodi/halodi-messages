@@ -7,8 +7,11 @@ namespace nav_msgs.msg
        * An array of cells in a 2D grid
        */
 [System.Serializable]
-public class GridCells
+public class GridCells : Halodi.CDR.DataType<GridCells>
 {
+
+	public Halodi.CDR.TopicDataType<GridCells> Type => new GridCellsPubSubType();
+	
    public std_msgs.msg.Header header;
    public float cell_width;
    public float cell_height;

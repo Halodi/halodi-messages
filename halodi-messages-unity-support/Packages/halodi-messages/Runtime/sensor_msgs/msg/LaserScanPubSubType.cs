@@ -10,7 +10,7 @@ namespace sensor_msgs.msg
 * Do not update this file directly, edit LaserScan.idl instead.
 *
 */
-public class LaserScanPubSubType : Halodi.CDR.TopicDataType<sensor_msgs.msg.LaserScan>
+public class LaserScanPubSubType : Halodi.CDR.TopicDataType<LaserScan>
 {
    public override string Name => "sensor_msgs::msg::dds_::LaserScan_";
 

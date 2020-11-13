@@ -10,7 +10,7 @@ namespace geometry_msgs.msg
 * Do not update this file directly, edit Point32.idl instead.
 *
 */
-public class Point32PubSubType : Halodi.CDR.TopicDataType<geometry_msgs.msg.Point32>
+public class Point32PubSubType : Halodi.CDR.TopicDataType<Point32>
 {
    public override string Name => "geometry_msgs::msg::dds_::Point32_";
 

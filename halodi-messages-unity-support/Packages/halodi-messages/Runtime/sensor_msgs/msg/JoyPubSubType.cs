@@ -10,7 +10,7 @@ namespace sensor_msgs.msg
 * Do not update this file directly, edit Joy.idl instead.
 *
 */
-public class JoyPubSubType : Halodi.CDR.TopicDataType<sensor_msgs.msg.Joy>
+public class JoyPubSubType : Halodi.CDR.TopicDataType<Joy>
 {
    public override string Name => "sensor_msgs::msg::dds_::Joy_";
 

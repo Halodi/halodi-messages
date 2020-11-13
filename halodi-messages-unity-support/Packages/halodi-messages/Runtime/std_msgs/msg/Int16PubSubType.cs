@@ -10,7 +10,7 @@ namespace std_msgs.msg
 * Do not update this file directly, edit Int16.idl instead.
 *
 */
-public class Int16PubSubType : Halodi.CDR.TopicDataType<std_msgs.msg.Int16>
+public class Int16PubSubType : Halodi.CDR.TopicDataType<Int16>
 {
    public override string Name => "std_msgs::msg::dds_::Int16_";
 

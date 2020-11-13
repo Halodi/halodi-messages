@@ -10,7 +10,7 @@ namespace stereo_msgs.msg
 * Do not update this file directly, edit DisparityImage.idl instead.
 *
 */
-public class DisparityImagePubSubType : Halodi.CDR.TopicDataType<stereo_msgs.msg.DisparityImage>
+public class DisparityImagePubSubType : Halodi.CDR.TopicDataType<DisparityImage>
 {
    public override string Name => "stereo_msgs::msg::dds_::DisparityImage_";
 

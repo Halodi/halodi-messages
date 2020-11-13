@@ -10,7 +10,7 @@ namespace rcl_interfaces.msg
 * Do not update this file directly, edit FloatingPointRange.idl instead.
 *
 */
-public class FloatingPointRangePubSubType : Halodi.CDR.TopicDataType<rcl_interfaces.msg.FloatingPointRange>
+public class FloatingPointRangePubSubType : Halodi.CDR.TopicDataType<FloatingPointRange>
 {
    public override string Name => "rcl_interfaces::msg::dds_::FloatingPointRange_";
 

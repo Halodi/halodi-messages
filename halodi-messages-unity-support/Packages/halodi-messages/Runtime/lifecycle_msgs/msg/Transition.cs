@@ -9,8 +9,11 @@ namespace lifecycle_msgs.msg
        * http://design.ros2.org/articles/node_lifecycle.html
        */
 [System.Serializable]
-public class Transition
+public class Transition : Halodi.CDR.DataType<Transition>
 {
+
+	public Halodi.CDR.TopicDataType<Transition> Type => new TransitionPubSubType();
+	
    /**
           * Externally available transitions.
           * When a node is in one of these primary states,

@@ -16,8 +16,11 @@ namespace shape_msgs.msg
        * is pointing up, along +Z axis.
        */
 [System.Serializable]
-public class SolidPrimitive
+public class SolidPrimitive : Halodi.CDR.DataType<SolidPrimitive>
 {
+
+	public Halodi.CDR.TopicDataType<SolidPrimitive> Type => new SolidPrimitivePubSubType();
+	
    public const byte BOX = (byte) 1;
    public const byte SPHERE = (byte) 2;
    public const byte CYLINDER = (byte) 3;

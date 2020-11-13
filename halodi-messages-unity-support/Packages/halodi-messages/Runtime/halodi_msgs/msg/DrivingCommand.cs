@@ -4,8 +4,11 @@ namespace halodi_msgs.msg
 
 
 [System.Serializable]
-public class DrivingCommand
+public class DrivingCommand : Halodi.CDR.DataType<DrivingCommand>
 {
+
+	public Halodi.CDR.TopicDataType<DrivingCommand> Type => new DrivingCommandPubSubType();
+	
    /**
                  * Filter the desired x_dot and omega_z using a low pass filter 
                  * 

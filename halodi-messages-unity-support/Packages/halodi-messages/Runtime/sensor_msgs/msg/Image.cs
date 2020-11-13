@@ -20,8 +20,11 @@ namespace sensor_msgs.msg
        * taken from the list of strings in include/sensor_msgs/image_encodings.hpp
        */
 [System.Serializable]
-public class Image
+public class Image : Halodi.CDR.DataType<Image>
 {
+
+	public Halodi.CDR.TopicDataType<Image> Type => new ImagePubSubType();
+	
    /**
             * Header timestamp should be acquisition time of image
             */

@@ -9,8 +9,11 @@ namespace lifecycle_msgs.msg
        * http://design.ros2.org/articles/node_lifecycle.html
        */
 [System.Serializable]
-public class State
+public class State : Halodi.CDR.DataType<State>
 {
+
+	public Halodi.CDR.TopicDataType<State> Type => new StatePubSubType();
+	
    /**
           * These are the primary states
           * State changes can only be requested

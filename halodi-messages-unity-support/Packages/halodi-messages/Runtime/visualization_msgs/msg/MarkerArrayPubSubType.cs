@@ -10,7 +10,7 @@ namespace visualization_msgs.msg
 * Do not update this file directly, edit MarkerArray.idl instead.
 *
 */
-public class MarkerArrayPubSubType : Halodi.CDR.TopicDataType<visualization_msgs.msg.MarkerArray>
+public class MarkerArrayPubSubType : Halodi.CDR.TopicDataType<MarkerArray>
 {
    public override string Name => "visualization_msgs::msg::dds_::MarkerArray_";
 

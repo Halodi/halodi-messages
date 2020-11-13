@@ -12,8 +12,11 @@ namespace halodi_msgs.msg
          *
          */
 [System.Serializable]
-public class ContactPointCommand
+public class ContactPointCommand : Halodi.CDR.DataType<ContactPointCommand>
 {
+
+	public Halodi.CDR.TopicDataType<ContactPointCommand> Type => new ContactPointCommandPubSubType();
+	
    /**
                 *
                 * Joint to which this contact point is attached. 

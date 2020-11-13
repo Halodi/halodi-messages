@@ -10,7 +10,7 @@ namespace sensor_msgs.msg
 * Do not update this file directly, edit ChannelFloat32.idl instead.
 *
 */
-public class ChannelFloat32PubSubType : Halodi.CDR.TopicDataType<sensor_msgs.msg.ChannelFloat32>
+public class ChannelFloat32PubSubType : Halodi.CDR.TopicDataType<ChannelFloat32>
 {
    public override string Name => "sensor_msgs::msg::dds_::ChannelFloat32_";
 

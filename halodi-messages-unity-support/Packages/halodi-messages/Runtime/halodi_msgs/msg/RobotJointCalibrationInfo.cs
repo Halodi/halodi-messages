@@ -8,8 +8,11 @@ namespace halodi_msgs.msg
           *
           */
 [System.Serializable]
-public class RobotJointCalibrationInfo
+public class RobotJointCalibrationInfo : Halodi.CDR.DataType<RobotJointCalibrationInfo>
 {
+
+	public Halodi.CDR.TopicDataType<RobotJointCalibrationInfo> Type => new RobotJointCalibrationInfoPubSubType();
+	
    public string frame_id;
    public double transmission_ratio;
    public double measurement_offset;

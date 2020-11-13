@@ -9,8 +9,11 @@ namespace halodi_msgs.msg
          *
          */
 [System.Serializable]
-public class FeedbackParameters3D
+public class FeedbackParameters3D : Halodi.CDR.DataType<FeedbackParameters3D>
 {
+
+	public Halodi.CDR.TopicDataType<FeedbackParameters3D> Type => new FeedbackParameters3DPubSubType();
+	
    /**
                 * Proportional gains (Kp, stiffness)
                 */

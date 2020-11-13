@@ -10,7 +10,7 @@ namespace std_msgs.msg
 * Do not update this file directly, edit MultiArrayLayout.idl instead.
 *
 */
-public class MultiArrayLayoutPubSubType : Halodi.CDR.TopicDataType<std_msgs.msg.MultiArrayLayout>
+public class MultiArrayLayoutPubSubType : Halodi.CDR.TopicDataType<MultiArrayLayout>
 {
    public override string Name => "std_msgs::msg::dds_::MultiArrayLayout_";
 

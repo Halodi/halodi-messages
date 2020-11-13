@@ -7,8 +7,11 @@ namespace geometry_msgs.msg
        * This expresses velocity in free space broken into its linear and angular parts.
        */
 [System.Serializable]
-public class Twist
+public class Twist : Halodi.CDR.DataType<Twist>
 {
+
+	public Halodi.CDR.TopicDataType<Twist> Type => new TwistPubSubType();
+	
    public geometry_msgs.msg.Vector3 linear;
    public geometry_msgs.msg.Vector3 angular;
 

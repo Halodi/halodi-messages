@@ -10,7 +10,7 @@ namespace geometry_msgs.msg
 * Do not update this file directly, edit Point.idl instead.
 *
 */
-public class PointPubSubType : Halodi.CDR.TopicDataType<geometry_msgs.msg.Point>
+public class PointPubSubType : Halodi.CDR.TopicDataType<Point>
 {
    public override string Name => "geometry_msgs::msg::dds_::Point_";
 

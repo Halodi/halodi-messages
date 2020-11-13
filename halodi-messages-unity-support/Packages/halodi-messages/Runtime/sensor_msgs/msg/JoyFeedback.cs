@@ -4,8 +4,11 @@ namespace sensor_msgs.msg
 
 
 [System.Serializable]
-public class JoyFeedback
+public class JoyFeedback : Halodi.CDR.DataType<JoyFeedback>
 {
+
+	public Halodi.CDR.TopicDataType<JoyFeedback> Type => new JoyFeedbackPubSubType();
+	
    /**
           * Declare of the type of feedback
           */

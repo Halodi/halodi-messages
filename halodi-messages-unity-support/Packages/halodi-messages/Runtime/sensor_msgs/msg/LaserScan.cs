@@ -16,8 +16,11 @@ namespace sensor_msgs.msg
        * with zero angle being forward along the x axis
        */
 [System.Serializable]
-public class LaserScan
+public class LaserScan : Halodi.CDR.DataType<LaserScan>
 {
+
+	public Halodi.CDR.TopicDataType<LaserScan> Type => new LaserScanPubSubType();
+	
    /**
             * timestamp in the header is the acquisition time of
             */

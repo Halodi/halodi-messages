@@ -8,8 +8,11 @@ namespace std_msgs.msg
        * documentation on all multiarrays.
        */
 [System.Serializable]
-public class Int16MultiArray
+public class Int16MultiArray : Halodi.CDR.DataType<Int16MultiArray>
 {
+
+	public Halodi.CDR.TopicDataType<Int16MultiArray> Type => new Int16MultiArrayPubSubType();
+	
    /**
             * specification of data layout
             */

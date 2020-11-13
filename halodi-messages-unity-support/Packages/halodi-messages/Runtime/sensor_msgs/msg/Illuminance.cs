@@ -20,8 +20,11 @@ namespace sensor_msgs.msg
        * frame_id is the location and direction of the reading
        */
 [System.Serializable]
-public class Illuminance
+public class Illuminance : Halodi.CDR.DataType<Illuminance>
 {
+
+	public Halodi.CDR.TopicDataType<Illuminance> Type => new IlluminancePubSubType();
+	
    /**
             * timestamp is the time the illuminance was measured
             */

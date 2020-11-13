@@ -127,6 +127,26 @@ task generateCSharpMessages(type: com.halodi.idl.generator.IDLCSharpGeneratorTas
         mkdir csOutputDirectory
     }
     
+    doLast
+    {
+                def typesupportDirectories = file(csOutputDirectory)
+        def generated = fileTree(dir: outputDirectory)
+        
+        def constantDirectories = []
+        typesupportDirectories.eachFileRecurse(groovy.io.FileType.DIRECTORIES) { 
+        
+            if(it.name.endsWith("_Constants"))
+            {
+                constantDirectories.add(it)
+            }
+        }
+        
+        constantDirectories.each() {
+            it.deleteDir()
+        }
+
+    }
+    
     
 }
 

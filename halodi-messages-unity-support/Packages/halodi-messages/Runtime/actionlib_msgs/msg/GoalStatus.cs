@@ -7,8 +7,11 @@ namespace actionlib_msgs.msg
        * be sent over the wire by an action server.
        */
 [System.Serializable]
-public class GoalStatus
+public class GoalStatus : Halodi.CDR.DataType<GoalStatus>
 {
+
+	public Halodi.CDR.TopicDataType<GoalStatus> Type => new GoalStatusPubSubType();
+	
    /**
           * The goal has yet to be processed by the action server.
           */

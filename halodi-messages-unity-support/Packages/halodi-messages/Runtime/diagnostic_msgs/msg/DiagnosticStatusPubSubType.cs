@@ -10,7 +10,7 @@ namespace diagnostic_msgs.msg
 * Do not update this file directly, edit DiagnosticStatus.idl instead.
 *
 */
-public class DiagnosticStatusPubSubType : Halodi.CDR.TopicDataType<diagnostic_msgs.msg.DiagnosticStatus>
+public class DiagnosticStatusPubSubType : Halodi.CDR.TopicDataType<DiagnosticStatus>
 {
    public override string Name => "diagnostic_msgs::msg::dds_::DiagnosticStatus_";
 

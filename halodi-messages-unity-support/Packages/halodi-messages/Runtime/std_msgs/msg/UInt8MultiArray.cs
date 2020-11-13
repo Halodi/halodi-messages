@@ -8,8 +8,11 @@ namespace std_msgs.msg
        * documentation on all multiarrays.
        */
 [System.Serializable]
-public class UInt8MultiArray
+public class UInt8MultiArray : Halodi.CDR.DataType<UInt8MultiArray>
 {
+
+	public Halodi.CDR.TopicDataType<UInt8MultiArray> Type => new UInt8MultiArrayPubSubType();
+	
    /**
             * specification of data layout
             */

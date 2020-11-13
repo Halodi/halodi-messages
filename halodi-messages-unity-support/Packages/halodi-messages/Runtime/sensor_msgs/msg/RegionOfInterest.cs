@@ -12,8 +12,11 @@ namespace sensor_msgs.msg
        * indicates that the full resolution image was captured.
        */
 [System.Serializable]
-public class RegionOfInterest
+public class RegionOfInterest : Halodi.CDR.DataType<RegionOfInterest>
 {
+
+	public Halodi.CDR.TopicDataType<RegionOfInterest> Type => new RegionOfInterestPubSubType();
+	
    /**
             * Leftmost pixel of the ROI
             */

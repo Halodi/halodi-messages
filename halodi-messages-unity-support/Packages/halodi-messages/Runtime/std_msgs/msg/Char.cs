@@ -4,8 +4,11 @@ namespace std_msgs.msg
 
 
 [System.Serializable]
-public class Char
+public class Char : Halodi.CDR.DataType<Char>
 {
+
+	public Halodi.CDR.TopicDataType<Char> Type => new CharPubSubType();
+	
    public char data;
 
 

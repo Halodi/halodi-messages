@@ -10,7 +10,7 @@ namespace trajectory_msgs.msg
 * Do not update this file directly, edit JointTrajectoryPoint.idl instead.
 *
 */
-public class JointTrajectoryPointPubSubType : Halodi.CDR.TopicDataType<trajectory_msgs.msg.JointTrajectoryPoint>
+public class JointTrajectoryPointPubSubType : Halodi.CDR.TopicDataType<JointTrajectoryPoint>
 {
    public override string Name => "trajectory_msgs::msg::dds_::JointTrajectoryPoint_";
 

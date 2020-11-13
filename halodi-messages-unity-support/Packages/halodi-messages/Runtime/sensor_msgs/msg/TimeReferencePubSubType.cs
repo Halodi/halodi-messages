@@ -10,7 +10,7 @@ namespace sensor_msgs.msg
 * Do not update this file directly, edit TimeReference.idl instead.
 *
 */
-public class TimeReferencePubSubType : Halodi.CDR.TopicDataType<sensor_msgs.msg.TimeReference>
+public class TimeReferencePubSubType : Halodi.CDR.TopicDataType<TimeReference>
 {
    public override string Name => "sensor_msgs::msg::dds_::TimeReference_";
 

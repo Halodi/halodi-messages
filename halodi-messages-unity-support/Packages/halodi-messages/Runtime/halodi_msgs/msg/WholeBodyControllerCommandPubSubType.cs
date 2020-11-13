@@ -10,7 +10,7 @@ namespace halodi_msgs.msg
 * Do not update this file directly, edit WholeBodyControllerCommand.idl instead.
 *
 */
-public class WholeBodyControllerCommandPubSubType : Halodi.CDR.TopicDataType<halodi_msgs.msg.WholeBodyControllerCommand>
+public class WholeBodyControllerCommandPubSubType : Halodi.CDR.TopicDataType<WholeBodyControllerCommand>
 {
    public override string Name => "halodi_msgs::msg::dds_::WholeBodyControllerCommand_";
 

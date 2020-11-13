@@ -7,8 +7,11 @@ namespace geometry_msgs.msg
        * This expresses velocity in free space with uncertainty.
        */
 [System.Serializable]
-public class TwistWithCovariance
+public class TwistWithCovariance : Halodi.CDR.DataType<TwistWithCovariance>
 {
+
+	public Halodi.CDR.TopicDataType<TwistWithCovariance> Type => new TwistWithCovariancePubSubType();
+	
    public geometry_msgs.msg.Twist twist;
    /**
             * Row-major representation of the 6x6 covariance matrix

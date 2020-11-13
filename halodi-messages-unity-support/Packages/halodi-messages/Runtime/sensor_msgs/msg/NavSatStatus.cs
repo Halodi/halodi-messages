@@ -13,8 +13,11 @@ namespace sensor_msgs.msg
        * used by the receiver.
        */
 [System.Serializable]
-public class NavSatStatus
+public class NavSatStatus : Halodi.CDR.DataType<NavSatStatus>
 {
+
+	public Halodi.CDR.TopicDataType<NavSatStatus> Type => new NavSatStatusPubSubType();
+	
    /**
           * unable to fix position
           */

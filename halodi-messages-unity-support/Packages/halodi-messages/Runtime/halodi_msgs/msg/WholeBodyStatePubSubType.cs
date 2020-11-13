@@ -10,7 +10,7 @@ namespace halodi_msgs.msg
 * Do not update this file directly, edit WholeBodyState.idl instead.
 *
 */
-public class WholeBodyStatePubSubType : Halodi.CDR.TopicDataType<halodi_msgs.msg.WholeBodyState>
+public class WholeBodyStatePubSubType : Halodi.CDR.TopicDataType<WholeBodyState>
 {
    public override string Name => "halodi_msgs::msg::dds_::WholeBodyState_";
 

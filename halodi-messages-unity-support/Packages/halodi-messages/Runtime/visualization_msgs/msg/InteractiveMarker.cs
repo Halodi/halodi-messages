@@ -4,8 +4,11 @@ namespace visualization_msgs.msg
 
 
 [System.Serializable]
-public class InteractiveMarker
+public class InteractiveMarker : Halodi.CDR.DataType<InteractiveMarker>
 {
+
+	public Halodi.CDR.TopicDataType<InteractiveMarker> Type => new InteractiveMarkerPubSubType();
+	
    /**
             * Time/frame info.
             * If header.time is set to 0, the marker will be retransformed into

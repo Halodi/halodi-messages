@@ -10,7 +10,7 @@ namespace std_msgs.msg
 * Do not update this file directly, edit Char.idl instead.
 *
 */
-public class CharPubSubType : Halodi.CDR.TopicDataType<std_msgs.msg.Char>
+public class CharPubSubType : Halodi.CDR.TopicDataType<Char>
 {
    public override string Name => "std_msgs::msg::dds_::Char_";
 

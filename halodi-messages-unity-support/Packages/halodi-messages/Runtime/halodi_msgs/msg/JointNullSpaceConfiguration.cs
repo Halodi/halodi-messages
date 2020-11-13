@@ -9,8 +9,11 @@ namespace halodi_msgs.msg
          *
          */
 [System.Serializable]
-public class JointNullSpaceConfiguration
+public class JointNullSpaceConfiguration : Halodi.CDR.DataType<JointNullSpaceConfiguration>
 {
+
+	public Halodi.CDR.TopicDataType<JointNullSpaceConfiguration> Type => new JointNullSpaceConfigurationPubSubType();
+	
    /**
                 * Name of joint, required.
                 */

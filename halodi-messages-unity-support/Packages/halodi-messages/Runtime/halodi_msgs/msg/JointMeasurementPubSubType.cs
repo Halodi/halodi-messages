@@ -10,7 +10,7 @@ namespace halodi_msgs.msg
 * Do not update this file directly, edit JointMeasurement.idl instead.
 *
 */
-public class JointMeasurementPubSubType : Halodi.CDR.TopicDataType<halodi_msgs.msg.JointMeasurement>
+public class JointMeasurementPubSubType : Halodi.CDR.TopicDataType<JointMeasurement>
 {
    public override string Name => "halodi_msgs::msg::dds_::JointMeasurement_";
 

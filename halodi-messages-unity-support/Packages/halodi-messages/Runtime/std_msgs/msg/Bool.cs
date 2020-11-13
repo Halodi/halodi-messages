@@ -4,8 +4,11 @@ namespace std_msgs.msg
 
 
 [System.Serializable]
-public class Bool
+public class Bool : Halodi.CDR.DataType<Bool>
 {
+
+	public Halodi.CDR.TopicDataType<Bool> Type => new BoolPubSubType();
+	
    public bool data;
 
 

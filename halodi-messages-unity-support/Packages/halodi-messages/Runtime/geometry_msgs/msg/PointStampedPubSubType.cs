@@ -10,7 +10,7 @@ namespace geometry_msgs.msg
 * Do not update this file directly, edit PointStamped.idl instead.
 *
 */
-public class PointStampedPubSubType : Halodi.CDR.TopicDataType<geometry_msgs.msg.PointStamped>
+public class PointStampedPubSubType : Halodi.CDR.TopicDataType<PointStamped>
 {
    public override string Name => "geometry_msgs::msg::dds_::PointStamped_";
 

@@ -10,8 +10,11 @@ namespace halodi_msgs.msg
           *
           */
 [System.Serializable]
-public class RobotStatus
+public class RobotStatus : Halodi.CDR.DataType<RobotStatus>
 {
+
+	public Halodi.CDR.TopicDataType<RobotStatus> Type => new RobotStatusPubSubType();
+	
    /**
                 * Standard ROS header
                 */

@@ -7,8 +7,11 @@ namespace geometry_msgs.msg
        * This represents an orientation with reference coordinate frame and timestamp.
        */
 [System.Serializable]
-public class QuaternionStamped
+public class QuaternionStamped : Halodi.CDR.DataType<QuaternionStamped>
 {
+
+	public Halodi.CDR.TopicDataType<QuaternionStamped> Type => new QuaternionStampedPubSubType();
+	
    public std_msgs.msg.Header header;
    public geometry_msgs.msg.Quaternion quaternion;
 

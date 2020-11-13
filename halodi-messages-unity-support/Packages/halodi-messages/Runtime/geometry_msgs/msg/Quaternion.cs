@@ -4,8 +4,11 @@ namespace geometry_msgs.msg
 
 
 [System.Serializable]
-public class Quaternion
+public class Quaternion : Halodi.CDR.DataType<Quaternion>
 {
+
+	public Halodi.CDR.TopicDataType<Quaternion> Type => new QuaternionPubSubType();
+	
    public double x;
    public double y;
    public double z;

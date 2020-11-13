@@ -4,8 +4,11 @@ namespace lifecycle_msgs.msg
 
 
 [System.Serializable]
-public class TransitionEvent
+public class TransitionEvent : Halodi.CDR.DataType<TransitionEvent>
 {
+
+	public Halodi.CDR.TopicDataType<TransitionEvent> Type => new TransitionEventPubSubType();
+	
    public ulong timestamp;
    public lifecycle_msgs.msg.Transition transition;
    public lifecycle_msgs.msg.State start_state;

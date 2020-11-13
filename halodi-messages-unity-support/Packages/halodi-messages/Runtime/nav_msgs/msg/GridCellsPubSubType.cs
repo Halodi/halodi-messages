@@ -10,7 +10,7 @@ namespace nav_msgs.msg
 * Do not update this file directly, edit GridCells.idl instead.
 *
 */
-public class GridCellsPubSubType : Halodi.CDR.TopicDataType<nav_msgs.msg.GridCells>
+public class GridCellsPubSubType : Halodi.CDR.TopicDataType<GridCells>
 {
    public override string Name => "nav_msgs::msg::dds_::GridCells_";
 

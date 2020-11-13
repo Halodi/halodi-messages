@@ -4,8 +4,11 @@ namespace std_msgs.msg
 
 
 [System.Serializable]
-public class MultiArrayDimension
+public class MultiArrayDimension : Halodi.CDR.DataType<MultiArrayDimension>
 {
+
+	public Halodi.CDR.TopicDataType<MultiArrayDimension> Type => new MultiArrayDimensionPubSubType();
+	
    /**
             * label of given dimension
             */

@@ -19,8 +19,11 @@ namespace sensor_msgs.msg
        * covariance matrix, and disregard the associated estimate.
        */
 [System.Serializable]
-public class Imu
+public class Imu : Halodi.CDR.DataType<Imu>
 {
+
+	public Halodi.CDR.TopicDataType<Imu> Type => new ImuPubSubType();
+	
    public std_msgs.msg.Header header;
    public geometry_msgs.msg.Quaternion orientation;
    /**

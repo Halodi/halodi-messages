@@ -10,7 +10,7 @@ namespace sensor_msgs.msg
 * Do not update this file directly, edit Imu.idl instead.
 *
 */
-public class ImuPubSubType : Halodi.CDR.TopicDataType<sensor_msgs.msg.Imu>
+public class ImuPubSubType : Halodi.CDR.TopicDataType<Imu>
 {
    public override string Name => "sensor_msgs::msg::dds_::Imu_";
 

@@ -8,8 +8,11 @@ namespace visualization_msgs.msg
        * when the status of an interactive marker was modified by the user.
        */
 [System.Serializable]
-public class InteractiveMarkerFeedback
+public class InteractiveMarkerFeedback : Halodi.CDR.DataType<InteractiveMarkerFeedback>
 {
+
+	public Halodi.CDR.TopicDataType<InteractiveMarkerFeedback> Type => new InteractiveMarkerFeedbackPubSubType();
+	
    /**
           * Type of the event
           * KEEP_ALIVE: sent while dragging to keep up control of the marker

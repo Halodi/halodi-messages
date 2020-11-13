@@ -7,8 +7,11 @@ namespace geometry_msgs.msg
        * A wrench with reference coordinate frame and timestamp
        */
 [System.Serializable]
-public class WrenchStamped
+public class WrenchStamped : Halodi.CDR.DataType<WrenchStamped>
 {
+
+	public Halodi.CDR.TopicDataType<WrenchStamped> Type => new WrenchStampedPubSubType();
+	
    public std_msgs.msg.Header header;
    public geometry_msgs.msg.Wrench wrench;
 

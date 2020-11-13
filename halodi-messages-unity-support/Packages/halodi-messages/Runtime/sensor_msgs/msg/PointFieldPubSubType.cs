@@ -10,7 +10,7 @@ namespace sensor_msgs.msg
 * Do not update this file directly, edit PointField.idl instead.
 *
 */
-public class PointFieldPubSubType : Halodi.CDR.TopicDataType<sensor_msgs.msg.PointField>
+public class PointFieldPubSubType : Halodi.CDR.TopicDataType<PointField>
 {
    public override string Name => "sensor_msgs::msg::dds_::PointField_";
 

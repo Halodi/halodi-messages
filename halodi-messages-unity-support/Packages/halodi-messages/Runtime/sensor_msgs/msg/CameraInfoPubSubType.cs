@@ -10,7 +10,7 @@ namespace sensor_msgs.msg
 * Do not update this file directly, edit CameraInfo.idl instead.
 *
 */
-public class CameraInfoPubSubType : Halodi.CDR.TopicDataType<sensor_msgs.msg.CameraInfo>
+public class CameraInfoPubSubType : Halodi.CDR.TopicDataType<CameraInfo>
 {
    public override string Name => "sensor_msgs::msg::dds_::CameraInfo_";
 

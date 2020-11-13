@@ -10,7 +10,7 @@ namespace rcl_interfaces.msg
 * Do not update this file directly, edit IntraProcessMessage.idl instead.
 *
 */
-public class IntraProcessMessagePubSubType : Halodi.CDR.TopicDataType<rcl_interfaces.msg.IntraProcessMessage>
+public class IntraProcessMessagePubSubType : Halodi.CDR.TopicDataType<IntraProcessMessage>
 {
    public override string Name => "rcl_interfaces::msg::dds_::IntraProcessMessage_";
 

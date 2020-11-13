@@ -10,7 +10,7 @@ namespace geometry_msgs.msg
 * Do not update this file directly, edit Twist.idl instead.
 *
 */
-public class TwistPubSubType : Halodi.CDR.TopicDataType<geometry_msgs.msg.Twist>
+public class TwistPubSubType : Halodi.CDR.TopicDataType<Twist>
 {
    public override string Name => "geometry_msgs::msg::dds_::Twist_";
 

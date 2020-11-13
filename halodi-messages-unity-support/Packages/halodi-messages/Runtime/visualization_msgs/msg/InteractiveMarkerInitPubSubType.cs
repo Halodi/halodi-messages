@@ -10,7 +10,7 @@ namespace visualization_msgs.msg
 * Do not update this file directly, edit InteractiveMarkerInit.idl instead.
 *
 */
-public class InteractiveMarkerInitPubSubType : Halodi.CDR.TopicDataType<visualization_msgs.msg.InteractiveMarkerInit>
+public class InteractiveMarkerInitPubSubType : Halodi.CDR.TopicDataType<InteractiveMarkerInit>
 {
    public override string Name => "visualization_msgs::msg::dds_::InteractiveMarkerInit_";
 

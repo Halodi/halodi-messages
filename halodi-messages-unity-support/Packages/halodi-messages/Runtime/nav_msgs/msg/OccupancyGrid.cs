@@ -7,8 +7,11 @@ namespace nav_msgs.msg
        * This represents a 2-D grid map, in which each cell represents the probability of occupancy.
        */
 [System.Serializable]
-public class OccupancyGrid
+public class OccupancyGrid : Halodi.CDR.DataType<OccupancyGrid>
 {
+
+	public Halodi.CDR.TopicDataType<OccupancyGrid> Type => new OccupancyGridPubSubType();
+	
    public std_msgs.msg.Header header;
    /**
             * MetaData for the map

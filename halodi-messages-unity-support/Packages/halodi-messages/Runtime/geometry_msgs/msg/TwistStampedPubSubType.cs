@@ -10,7 +10,7 @@ namespace geometry_msgs.msg
 * Do not update this file directly, edit TwistStamped.idl instead.
 *
 */
-public class TwistStampedPubSubType : Halodi.CDR.TopicDataType<geometry_msgs.msg.TwistStamped>
+public class TwistStampedPubSubType : Halodi.CDR.TopicDataType<TwistStamped>
 {
    public override string Name => "geometry_msgs::msg::dds_::TwistStamped_";
 

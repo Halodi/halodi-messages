@@ -7,8 +7,11 @@ namespace geometry_msgs.msg
        * This represents force in free space, separated into its linear and angular parts.
        */
 [System.Serializable]
-public class Wrench
+public class Wrench : Halodi.CDR.DataType<Wrench>
 {
+
+	public Halodi.CDR.TopicDataType<Wrench> Type => new WrenchPubSubType();
+	
    public geometry_msgs.msg.Vector3 force;
    public geometry_msgs.msg.Vector3 torque;
 

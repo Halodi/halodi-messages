@@ -10,7 +10,7 @@ namespace halodi_msgs.msg
 * Do not update this file directly, edit JointSpaceCommand.idl instead.
 *
 */
-public class JointSpaceCommandPubSubType : Halodi.CDR.TopicDataType<halodi_msgs.msg.JointSpaceCommand>
+public class JointSpaceCommandPubSubType : Halodi.CDR.TopicDataType<JointSpaceCommand>
 {
    public override string Name => "halodi_msgs::msg::dds_::JointSpaceCommand_";
 

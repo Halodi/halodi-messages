@@ -4,8 +4,11 @@ namespace geometry_msgs.msg
 
 
 [System.Serializable]
-public class Pose
+public class Pose : Halodi.CDR.DataType<Pose>
 {
+
+	public Halodi.CDR.TopicDataType<Pose> Type => new PosePubSubType();
+	
    public geometry_msgs.msg.Point position;
    public geometry_msgs.msg.Quaternion orientation;
 

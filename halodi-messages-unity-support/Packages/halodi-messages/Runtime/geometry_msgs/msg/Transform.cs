@@ -4,8 +4,11 @@ namespace geometry_msgs.msg
 
 
 [System.Serializable]
-public class Transform
+public class Transform : Halodi.CDR.DataType<Transform>
 {
+
+	public Halodi.CDR.TopicDataType<Transform> Type => new TransformPubSubType();
+	
    public geometry_msgs.msg.Vector3 translation;
    public geometry_msgs.msg.Quaternion rotation;
 

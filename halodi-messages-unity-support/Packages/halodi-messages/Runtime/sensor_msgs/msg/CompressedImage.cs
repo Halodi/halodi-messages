@@ -14,8 +14,11 @@ namespace sensor_msgs.msg
        * jpeg, png
        */
 [System.Serializable]
-public class CompressedImage
+public class CompressedImage : Halodi.CDR.DataType<CompressedImage>
 {
+
+	public Halodi.CDR.TopicDataType<CompressedImage> Type => new CompressedImagePubSubType();
+	
    /**
             * Header timestamp should be acquisition time of image
             */

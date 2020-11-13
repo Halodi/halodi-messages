@@ -4,8 +4,11 @@ namespace std_msgs.msg
 
 
 [System.Serializable]
-public class Int16
+public class Int16 : Halodi.CDR.DataType<Int16>
 {
+
+	public Halodi.CDR.TopicDataType<Int16> Type => new Int16PubSubType();
+	
    public short data;
 
 

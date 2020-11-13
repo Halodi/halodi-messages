@@ -4,8 +4,11 @@ namespace halodi_msgs.msg
 
 
 [System.Serializable]
-public class JointName
+public class JointName : Halodi.CDR.DataType<JointName>
 {
+
+	public Halodi.CDR.TopicDataType<JointName> Type => new JointNamePubSubType();
+	
    public const int HIP_YAW = 0;
    public const int HIP_ROLL = 1;
    public const int HIP_PITCH = 2;

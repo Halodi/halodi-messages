@@ -10,7 +10,7 @@ namespace sensor_msgs.msg
 * Do not update this file directly, edit LaserEcho.idl instead.
 *
 */
-public class LaserEchoPubSubType : Halodi.CDR.TopicDataType<sensor_msgs.msg.LaserEcho>
+public class LaserEchoPubSubType : Halodi.CDR.TopicDataType<LaserEcho>
 {
    public override string Name => "sensor_msgs::msg::dds_::LaserEcho_";
 

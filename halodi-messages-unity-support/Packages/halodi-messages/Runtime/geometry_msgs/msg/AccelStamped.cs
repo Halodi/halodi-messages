@@ -4,8 +4,11 @@ namespace geometry_msgs.msg
 
 
 [System.Serializable]
-public class AccelStamped
+public class AccelStamped : Halodi.CDR.DataType<AccelStamped>
 {
+
+	public Halodi.CDR.TopicDataType<AccelStamped> Type => new AccelStampedPubSubType();
+	
    /**
             * An accel with reference coordinate frame and timestamp
             */

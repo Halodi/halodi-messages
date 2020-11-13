@@ -4,8 +4,11 @@ namespace builtin_interfaces.msg
 
 
 [System.Serializable]
-public class Time
+public class Time : Halodi.CDR.DataType<Time>
 {
+
+	public Halodi.CDR.TopicDataType<Time> Type => new TimePubSubType();
+	
    public int sec;
    public uint nanosec;
 

@@ -10,7 +10,7 @@ namespace rcl_interfaces.msg
 * Do not update this file directly, edit Log.idl instead.
 *
 */
-public class LogPubSubType : Halodi.CDR.TopicDataType<rcl_interfaces.msg.Log>
+public class LogPubSubType : Halodi.CDR.TopicDataType<Log>
 {
    public override string Name => "rcl_interfaces::msg::dds_::Log_";
 

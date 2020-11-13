@@ -10,7 +10,7 @@ namespace visualization_msgs.msg
 * Do not update this file directly, edit MenuEntry.idl instead.
 *
 */
-public class MenuEntryPubSubType : Halodi.CDR.TopicDataType<visualization_msgs.msg.MenuEntry>
+public class MenuEntryPubSubType : Halodi.CDR.TopicDataType<MenuEntry>
 {
    public override string Name => "visualization_msgs::msg::dds_::MenuEntry_";
 

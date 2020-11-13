@@ -10,7 +10,7 @@ namespace sensor_msgs.msg
 * Do not update this file directly, edit MultiDOFJointState.idl instead.
 *
 */
-public class MultiDOFJointStatePubSubType : Halodi.CDR.TopicDataType<sensor_msgs.msg.MultiDOFJointState>
+public class MultiDOFJointStatePubSubType : Halodi.CDR.TopicDataType<MultiDOFJointState>
 {
    public override string Name => "sensor_msgs::msg::dds_::MultiDOFJointState_";
 

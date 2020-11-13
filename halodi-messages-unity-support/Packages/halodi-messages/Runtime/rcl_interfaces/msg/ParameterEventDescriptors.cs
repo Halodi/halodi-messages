@@ -9,8 +9,11 @@ namespace rcl_interfaces.msg
        * A specific parameter name can only be in one of the three sets.
        */
 [System.Serializable]
-public class ParameterEventDescriptors
+public class ParameterEventDescriptors : Halodi.CDR.DataType<ParameterEventDescriptors>
 {
+
+	public Halodi.CDR.TopicDataType<ParameterEventDescriptors> Type => new ParameterEventDescriptorsPubSubType();
+	
    public System.Collections.Generic.List<rcl_interfaces.msg.ParameterDescriptor> new_parameters;
    public System.Collections.Generic.List<rcl_interfaces.msg.ParameterDescriptor> changed_parameters;
    public System.Collections.Generic.List<rcl_interfaces.msg.ParameterDescriptor> deleted_parameters;

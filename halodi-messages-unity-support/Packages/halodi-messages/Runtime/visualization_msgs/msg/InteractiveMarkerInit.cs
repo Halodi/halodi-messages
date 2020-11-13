@@ -4,8 +4,11 @@ namespace visualization_msgs.msg
 
 
 [System.Serializable]
-public class InteractiveMarkerInit
+public class InteractiveMarkerInit : Halodi.CDR.DataType<InteractiveMarkerInit>
 {
+
+	public Halodi.CDR.TopicDataType<InteractiveMarkerInit> Type => new InteractiveMarkerInitPubSubType();
+	
    /**
             * Identifying string. Must be unique in the topic namespace
             * that this server works on.

@@ -10,7 +10,7 @@ namespace sensor_msgs.msg
 * Do not update this file directly, edit JointState.idl instead.
 *
 */
-public class JointStatePubSubType : Halodi.CDR.TopicDataType<sensor_msgs.msg.JointState>
+public class JointStatePubSubType : Halodi.CDR.TopicDataType<JointState>
 {
    public override string Name => "sensor_msgs::msg::dds_::JointState_";
 

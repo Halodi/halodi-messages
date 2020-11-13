@@ -8,8 +8,11 @@ namespace std_msgs.msg
        * documentation on all multiarrays.
        */
 [System.Serializable]
-public class Float32MultiArray
+public class Float32MultiArray : Halodi.CDR.DataType<Float32MultiArray>
 {
+
+	public Halodi.CDR.TopicDataType<Float32MultiArray> Type => new Float32MultiArrayPubSubType();
+	
    /**
             * specification of data layout
             */

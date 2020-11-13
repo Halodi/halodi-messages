@@ -4,8 +4,11 @@ namespace halodi_msgs.msg
 
 
 [System.Serializable]
-public class WholeBodyControllerCommand
+public class WholeBodyControllerCommand : Halodi.CDR.DataType<WholeBodyControllerCommand>
 {
+
+	public Halodi.CDR.TopicDataType<WholeBodyControllerCommand> Type => new WholeBodyControllerCommandPubSubType();
+	
    public int sequence_id;
    public halodi_msgs.msg.BalanceMode balance_mode;
    /**

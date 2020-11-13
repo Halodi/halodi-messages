@@ -12,8 +12,11 @@ namespace sensor_msgs.msg
        * frame_id is the location of the pressure sensor
        */
 [System.Serializable]
-public class FluidPressure
+public class FluidPressure : Halodi.CDR.DataType<FluidPressure>
 {
+
+	public Halodi.CDR.TopicDataType<FluidPressure> Type => new FluidPressurePubSubType();
+	
    /**
             * timestamp of the measurement
             */

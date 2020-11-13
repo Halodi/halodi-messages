@@ -10,7 +10,7 @@ namespace tf2_msgs.msg
 * Do not update this file directly, edit TF2Error.idl instead.
 *
 */
-public class TF2ErrorPubSubType : Halodi.CDR.TopicDataType<tf2_msgs.msg.TF2Error>
+public class TF2ErrorPubSubType : Halodi.CDR.TopicDataType<TF2Error>
 {
    public override string Name => "tf2_msgs::msg::dds_::TF2Error_";
 

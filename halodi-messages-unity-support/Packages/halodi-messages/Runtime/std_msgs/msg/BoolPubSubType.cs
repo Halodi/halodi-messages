@@ -10,7 +10,7 @@ namespace std_msgs.msg
 * Do not update this file directly, edit Bool.idl instead.
 *
 */
-public class BoolPubSubType : Halodi.CDR.TopicDataType<std_msgs.msg.Bool>
+public class BoolPubSubType : Halodi.CDR.TopicDataType<Bool>
 {
    public override string Name => "std_msgs::msg::dds_::Bool_";
 

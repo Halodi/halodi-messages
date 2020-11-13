@@ -9,8 +9,11 @@ namespace halodi_msgs.msg
           * 
           */
 [System.Serializable]
-public class WholeBodyTrajectoryPoint
+public class WholeBodyTrajectoryPoint : Halodi.CDR.DataType<WholeBodyTrajectoryPoint>
 {
+
+	public Halodi.CDR.TopicDataType<WholeBodyTrajectoryPoint> Type => new WholeBodyTrajectoryPointPubSubType();
+	
    /**
                  * Execution time for the trajectory, relative to the start time.
                  *

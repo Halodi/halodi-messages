@@ -10,7 +10,7 @@ namespace std_msgs.msg
 * Do not update this file directly, edit ColorRGBA.idl instead.
 *
 */
-public class ColorRGBAPubSubType : Halodi.CDR.TopicDataType<std_msgs.msg.ColorRGBA>
+public class ColorRGBAPubSubType : Halodi.CDR.TopicDataType<ColorRGBA>
 {
    public override string Name => "std_msgs::msg::dds_::ColorRGBA_";
 

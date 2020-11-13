@@ -7,8 +7,11 @@ namespace geometry_msgs.msg
        * A specification of a polygon where the first and last points are assumed to be connected
        */
 [System.Serializable]
-public class Polygon
+public class Polygon : Halodi.CDR.DataType<Polygon>
 {
+
+	public Halodi.CDR.TopicDataType<Polygon> Type => new PolygonPubSubType();
+	
    public System.Collections.Generic.List<geometry_msgs.msg.Point32> points;
 
 

@@ -4,8 +4,11 @@ namespace geometry_msgs.msg
 
 
 [System.Serializable]
-public class Vector3
+public class Vector3 : Halodi.CDR.DataType<Vector3>
 {
+
+	public Halodi.CDR.TopicDataType<Vector3> Type => new Vector3PubSubType();
+	
    public double x;
    public double y;
    public double z;

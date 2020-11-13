@@ -7,8 +7,11 @@ namespace rcl_interfaces.msg
        * Represents bounds and a step value for an integer typed parameter.
        */
 [System.Serializable]
-public class IntegerRange
+public class IntegerRange : Halodi.CDR.DataType<IntegerRange>
 {
+
+	public Halodi.CDR.TopicDataType<IntegerRange> Type => new IntegerRangePubSubType();
+	
    /**
             * Start value for valid values, inclusive.
             */

@@ -7,8 +7,11 @@ namespace diagnostic_msgs.msg
        * This message holds the status of an individual component of the robot.
        */
 [System.Serializable]
-public class DiagnosticStatus
+public class DiagnosticStatus : Halodi.CDR.DataType<DiagnosticStatus>
 {
+
+	public Halodi.CDR.TopicDataType<DiagnosticStatus> Type => new DiagnosticStatusPubSubType();
+	
    /**
           * Possible levels of operations.
           */

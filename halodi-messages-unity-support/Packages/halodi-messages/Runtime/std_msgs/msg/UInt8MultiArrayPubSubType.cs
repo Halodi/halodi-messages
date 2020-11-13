@@ -10,7 +10,7 @@ namespace std_msgs.msg
 * Do not update this file directly, edit UInt8MultiArray.idl instead.
 *
 */
-public class UInt8MultiArrayPubSubType : Halodi.CDR.TopicDataType<std_msgs.msg.UInt8MultiArray>
+public class UInt8MultiArrayPubSubType : Halodi.CDR.TopicDataType<UInt8MultiArray>
 {
    public override string Name => "std_msgs::msg::dds_::UInt8MultiArray_";
 

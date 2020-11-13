@@ -10,7 +10,7 @@ namespace geometry_msgs.msg
 * Do not update this file directly, edit Vector3Stamped.idl instead.
 *
 */
-public class Vector3StampedPubSubType : Halodi.CDR.TopicDataType<geometry_msgs.msg.Vector3Stamped>
+public class Vector3StampedPubSubType : Halodi.CDR.TopicDataType<Vector3Stamped>
 {
    public override string Name => "geometry_msgs::msg::dds_::Vector3Stamped_";
 

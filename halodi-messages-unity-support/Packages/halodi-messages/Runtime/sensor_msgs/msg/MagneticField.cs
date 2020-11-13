@@ -20,8 +20,11 @@ namespace sensor_msgs.msg
        * put NaNs in the components not reported.
        */
 [System.Serializable]
-public class MagneticField
+public class MagneticField : Halodi.CDR.DataType<MagneticField>
 {
+
+	public Halodi.CDR.TopicDataType<MagneticField> Type => new MagneticFieldPubSubType();
+	
    /**
             * timestamp is the time the
             */

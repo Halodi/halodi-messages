@@ -10,7 +10,7 @@ namespace geometry_msgs.msg
 * Do not update this file directly, edit AccelStamped.idl instead.
 *
 */
-public class AccelStampedPubSubType : Halodi.CDR.TopicDataType<geometry_msgs.msg.AccelStamped>
+public class AccelStampedPubSubType : Halodi.CDR.TopicDataType<AccelStamped>
 {
    public override string Name => "geometry_msgs::msg::dds_::AccelStamped_";
 

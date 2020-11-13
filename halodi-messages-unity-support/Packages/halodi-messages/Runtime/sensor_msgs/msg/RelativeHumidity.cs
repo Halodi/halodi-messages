@@ -13,8 +13,11 @@ namespace sensor_msgs.msg
        * 1.0 represents partial pressure of saturation
        */
 [System.Serializable]
-public class RelativeHumidity
+public class RelativeHumidity : Halodi.CDR.DataType<RelativeHumidity>
 {
+
+	public Halodi.CDR.TopicDataType<RelativeHumidity> Type => new RelativeHumidityPubSubType();
+	
    /**
             * timestamp of the measurement
             */

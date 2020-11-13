@@ -10,7 +10,7 @@ namespace nav_msgs.msg
 * Do not update this file directly, edit OccupancyGrid.idl instead.
 *
 */
-public class OccupancyGridPubSubType : Halodi.CDR.TopicDataType<nav_msgs.msg.OccupancyGrid>
+public class OccupancyGridPubSubType : Halodi.CDR.TopicDataType<OccupancyGrid>
 {
    public override string Name => "nav_msgs::msg::dds_::OccupancyGrid_";
 

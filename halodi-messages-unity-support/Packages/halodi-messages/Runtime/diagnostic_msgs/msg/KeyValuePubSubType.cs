@@ -10,7 +10,7 @@ namespace diagnostic_msgs.msg
 * Do not update this file directly, edit KeyValue.idl instead.
 *
 */
-public class KeyValuePubSubType : Halodi.CDR.TopicDataType<diagnostic_msgs.msg.KeyValue>
+public class KeyValuePubSubType : Halodi.CDR.TopicDataType<KeyValue>
 {
    public override string Name => "diagnostic_msgs::msg::dds_::KeyValue_";
 

@@ -10,7 +10,7 @@ namespace std_msgs.msg
 * Do not update this file directly, edit Int8.idl instead.
 *
 */
-public class Int8PubSubType : Halodi.CDR.TopicDataType<std_msgs.msg.Int8>
+public class Int8PubSubType : Halodi.CDR.TopicDataType<Int8>
 {
    public override string Name => "std_msgs::msg::dds_::Int8_";
 

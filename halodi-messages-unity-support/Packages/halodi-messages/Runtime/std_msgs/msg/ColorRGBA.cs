@@ -4,8 +4,11 @@ namespace std_msgs.msg
 
 
 [System.Serializable]
-public class ColorRGBA
+public class ColorRGBA : Halodi.CDR.DataType<ColorRGBA>
 {
+
+	public Halodi.CDR.TopicDataType<ColorRGBA> Type => new ColorRGBAPubSubType();
+	
    public float r;
    public float g;
    public float b;

@@ -4,8 +4,11 @@ namespace action_msgs.msg
 
 
 [System.Serializable]
-public class GoalStatusArray
+public class GoalStatusArray : Halodi.CDR.DataType<GoalStatusArray>
 {
+
+	public Halodi.CDR.TopicDataType<GoalStatusArray> Type => new GoalStatusArrayPubSubType();
+	
    /**
             * An array of goal statuses
             */

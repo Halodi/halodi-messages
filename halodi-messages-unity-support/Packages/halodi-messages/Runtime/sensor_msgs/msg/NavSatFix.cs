@@ -13,8 +13,11 @@ namespace sensor_msgs.msg
        * estimate an approximate covariance from that.
        */
 [System.Serializable]
-public class NavSatFix
+public class NavSatFix : Halodi.CDR.DataType<NavSatFix>
 {
+
+	public Halodi.CDR.TopicDataType<NavSatFix> Type => new NavSatFixPubSubType();
+	
    public const byte COVARIANCE_TYPE_UNKNOWN = (byte) 0;
    public const byte COVARIANCE_TYPE_APPROXIMATED = (byte) 1;
    public const byte COVARIANCE_TYPE_DIAGONAL_KNOWN = (byte) 2;

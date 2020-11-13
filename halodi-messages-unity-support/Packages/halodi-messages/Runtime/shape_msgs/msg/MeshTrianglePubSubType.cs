@@ -10,7 +10,7 @@ namespace shape_msgs.msg
 * Do not update this file directly, edit MeshTriangle.idl instead.
 *
 */
-public class MeshTrianglePubSubType : Halodi.CDR.TopicDataType<shape_msgs.msg.MeshTriangle>
+public class MeshTrianglePubSubType : Halodi.CDR.TopicDataType<MeshTriangle>
 {
    public override string Name => "shape_msgs::msg::dds_::MeshTriangle_";
 

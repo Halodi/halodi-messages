@@ -10,7 +10,7 @@ namespace halodi_msgs.msg
 * Do not update this file directly, edit BalanceMode.idl instead.
 *
 */
-public class BalanceModePubSubType : Halodi.CDR.TopicDataType<halodi_msgs.msg.BalanceMode>
+public class BalanceModePubSubType : Halodi.CDR.TopicDataType<BalanceMode>
 {
    public override string Name => "halodi_msgs::msg::dds_::BalanceMode_";
 

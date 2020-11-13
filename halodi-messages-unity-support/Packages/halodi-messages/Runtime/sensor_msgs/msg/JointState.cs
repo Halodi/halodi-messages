@@ -24,8 +24,11 @@ namespace sensor_msgs.msg
        * states.
        */
 [System.Serializable]
-public class JointState
+public class JointState : Halodi.CDR.DataType<JointState>
 {
+
+	public Halodi.CDR.TopicDataType<JointState> Type => new JointStatePubSubType();
+	
    public std_msgs.msg.Header header;
    public System.Collections.Generic.List<string> name;
    public System.Collections.Generic.List<double> position;

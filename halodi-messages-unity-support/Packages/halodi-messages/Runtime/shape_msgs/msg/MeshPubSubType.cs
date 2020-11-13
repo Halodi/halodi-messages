@@ -10,7 +10,7 @@ namespace shape_msgs.msg
 * Do not update this file directly, edit Mesh.idl instead.
 *
 */
-public class MeshPubSubType : Halodi.CDR.TopicDataType<shape_msgs.msg.Mesh>
+public class MeshPubSubType : Halodi.CDR.TopicDataType<Mesh>
 {
    public override string Name => "shape_msgs::msg::dds_::Mesh_";
 

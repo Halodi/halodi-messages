@@ -7,8 +7,11 @@ namespace nav_msgs.msg
        * An array of poses that represents a Path for a robot to follow.
        */
 [System.Serializable]
-public class Path
+public class Path : Halodi.CDR.DataType<Path>
 {
+
+	public Halodi.CDR.TopicDataType<Path> Type => new PathPubSubType();
+	
    public std_msgs.msg.Header header;
    public System.Collections.Generic.List<geometry_msgs.msg.PoseStamped> poses;
 

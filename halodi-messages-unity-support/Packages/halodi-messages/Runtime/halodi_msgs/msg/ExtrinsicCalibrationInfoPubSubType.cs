@@ -10,7 +10,7 @@ namespace halodi_msgs.msg
 * Do not update this file directly, edit ExtrinsicCalibrationInfo.idl instead.
 *
 */
-public class ExtrinsicCalibrationInfoPubSubType : Halodi.CDR.TopicDataType<halodi_msgs.msg.ExtrinsicCalibrationInfo>
+public class ExtrinsicCalibrationInfoPubSubType : Halodi.CDR.TopicDataType<ExtrinsicCalibrationInfo>
 {
    public override string Name => "halodi_msgs::msg::dds_::ExtrinsicCalibrationInfo_";
 

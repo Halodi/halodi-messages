@@ -10,7 +10,7 @@ namespace halodi_msgs.msg
 * Do not update this file directly, edit ARMarker.idl instead.
 *
 */
-public class ARMarkerPubSubType : Halodi.CDR.TopicDataType<halodi_msgs.msg.ARMarker>
+public class ARMarkerPubSubType : Halodi.CDR.TopicDataType<ARMarker>
 {
    public override string Name => "halodi_msgs::msg::dds_::ARMarker_";
 

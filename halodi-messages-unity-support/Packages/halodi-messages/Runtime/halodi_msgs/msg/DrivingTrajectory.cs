@@ -4,8 +4,11 @@ namespace halodi_msgs.msg
 
 
 [System.Serializable]
-public class DrivingTrajectory
+public class DrivingTrajectory : Halodi.CDR.DataType<DrivingTrajectory>
 {
+
+	public Halodi.CDR.TopicDataType<DrivingTrajectory> Type => new DrivingTrajectoryPubSubType();
+	
    public double look_ahead_distance;
    public double K;
    public System.Collections.Generic.List<halodi_msgs.msg.DrivingTrajectoryPoint> trajectory_points;

@@ -4,8 +4,11 @@ namespace action_msgs.msg
 
 
 [System.Serializable]
-public class GoalStatus
+public class GoalStatus : Halodi.CDR.DataType<GoalStatus>
 {
+
+	public Halodi.CDR.TopicDataType<GoalStatus> Type => new GoalStatusPubSubType();
+	
    /**
           * An action goal can be in one of these states after it is accepted by an action server.
           * For more information, see http://design.ros2.org/articles/actions.html

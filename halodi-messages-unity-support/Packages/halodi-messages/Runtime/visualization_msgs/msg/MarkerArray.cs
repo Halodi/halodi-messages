@@ -4,8 +4,11 @@ namespace visualization_msgs.msg
 
 
 [System.Serializable]
-public class MarkerArray
+public class MarkerArray : Halodi.CDR.DataType<MarkerArray>
 {
+
+	public Halodi.CDR.TopicDataType<MarkerArray> Type => new MarkerArrayPubSubType();
+	
    public System.Collections.Generic.List<visualization_msgs.msg.Marker> markers;
 
 

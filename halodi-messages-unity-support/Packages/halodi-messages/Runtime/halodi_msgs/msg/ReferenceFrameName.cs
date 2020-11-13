@@ -4,8 +4,11 @@ namespace halodi_msgs.msg
 
 
 [System.Serializable]
-public class ReferenceFrameName
+public class ReferenceFrameName : Halodi.CDR.DataType<ReferenceFrameName>
 {
+
+	public Halodi.CDR.TopicDataType<ReferenceFrameName> Type => new ReferenceFrameNamePubSubType();
+	
    /**
                 * Robot world frame.
                 *

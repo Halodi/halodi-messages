@@ -4,8 +4,11 @@ namespace lifecycle_msgs.msg
 
 
 [System.Serializable]
-public class TransitionDescription
+public class TransitionDescription : Halodi.CDR.DataType<TransitionDescription>
 {
+
+	public Halodi.CDR.TopicDataType<TransitionDescription> Type => new TransitionDescriptionPubSubType();
+	
    public lifecycle_msgs.msg.Transition transition;
    public lifecycle_msgs.msg.State start_state;
    public lifecycle_msgs.msg.State goal_state;

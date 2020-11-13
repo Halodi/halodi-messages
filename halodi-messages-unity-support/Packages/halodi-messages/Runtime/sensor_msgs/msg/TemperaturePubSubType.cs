@@ -10,7 +10,7 @@ namespace sensor_msgs.msg
 * Do not update this file directly, edit Temperature.idl instead.
 *
 */
-public class TemperaturePubSubType : Halodi.CDR.TopicDataType<sensor_msgs.msg.Temperature>
+public class TemperaturePubSubType : Halodi.CDR.TopicDataType<Temperature>
 {
    public override string Name => "sensor_msgs::msg::dds_::Temperature_";
 

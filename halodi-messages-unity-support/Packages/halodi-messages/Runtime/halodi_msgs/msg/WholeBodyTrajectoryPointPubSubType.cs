@@ -10,7 +10,7 @@ namespace halodi_msgs.msg
 * Do not update this file directly, edit WholeBodyTrajectoryPoint.idl instead.
 *
 */
-public class WholeBodyTrajectoryPointPubSubType : Halodi.CDR.TopicDataType<halodi_msgs.msg.WholeBodyTrajectoryPoint>
+public class WholeBodyTrajectoryPointPubSubType : Halodi.CDR.TopicDataType<WholeBodyTrajectoryPoint>
 {
    public override string Name => "halodi_msgs::msg::dds_::WholeBodyTrajectoryPoint_";
 

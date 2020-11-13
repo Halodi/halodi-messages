@@ -4,8 +4,11 @@ namespace geometry_msgs.msg
 
 
 [System.Serializable]
-public class Inertia
+public class Inertia : Halodi.CDR.DataType<Inertia>
 {
+
+	public Halodi.CDR.TopicDataType<Inertia> Type => new InertiaPubSubType();
+	
    /**
             * Mass [kg]
             */

@@ -7,8 +7,11 @@ namespace geometry_msgs.msg
        * This expresses acceleration in free space with uncertainty.
        */
 [System.Serializable]
-public class AccelWithCovariance
+public class AccelWithCovariance : Halodi.CDR.DataType<AccelWithCovariance>
 {
+
+	public Halodi.CDR.TopicDataType<AccelWithCovariance> Type => new AccelWithCovariancePubSubType();
+	
    public geometry_msgs.msg.Accel accel;
    /**
             * Row-major representation of the 6x6 covariance matrix

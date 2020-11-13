@@ -9,8 +9,11 @@ namespace halodi_msgs.msg
          *
          */
 [System.Serializable]
-public class JointSpaceCommand
+public class JointSpaceCommand : Halodi.CDR.DataType<JointSpaceCommand>
 {
+
+	public Halodi.CDR.TopicDataType<JointSpaceCommand> Type => new JointSpaceCommandPubSubType();
+	
    public halodi_msgs.msg.JointName joint;
    /**
                 * Desired joint angle

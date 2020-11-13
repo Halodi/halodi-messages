@@ -4,8 +4,11 @@ namespace geometry_msgs.msg
 
 
 [System.Serializable]
-public class Point32
+public class Point32 : Halodi.CDR.DataType<Point32>
 {
+
+	public Halodi.CDR.TopicDataType<Point32> Type => new Point32PubSubType();
+	
    public float x;
    public float y;
    public float z;

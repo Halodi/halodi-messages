@@ -7,8 +7,11 @@ namespace visualization_msgs.msg
        * Represents a control that is to be displayed together with an interactive marker
        */
 [System.Serializable]
-public class InteractiveMarkerControl
+public class InteractiveMarkerControl : Halodi.CDR.DataType<InteractiveMarkerControl>
 {
+
+	public Halodi.CDR.TopicDataType<InteractiveMarkerControl> Type => new InteractiveMarkerControlPubSubType();
+	
    /**
           * Orientation mode: controls how orientation changes.
           * INHERIT: Follow orientation of interactive marker

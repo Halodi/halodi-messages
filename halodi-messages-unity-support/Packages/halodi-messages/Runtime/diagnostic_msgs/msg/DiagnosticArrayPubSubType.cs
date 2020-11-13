@@ -10,7 +10,7 @@ namespace diagnostic_msgs.msg
 * Do not update this file directly, edit DiagnosticArray.idl instead.
 *
 */
-public class DiagnosticArrayPubSubType : Halodi.CDR.TopicDataType<diagnostic_msgs.msg.DiagnosticArray>
+public class DiagnosticArrayPubSubType : Halodi.CDR.TopicDataType<DiagnosticArray>
 {
    public override string Name => "diagnostic_msgs::msg::dds_::DiagnosticArray_";
 

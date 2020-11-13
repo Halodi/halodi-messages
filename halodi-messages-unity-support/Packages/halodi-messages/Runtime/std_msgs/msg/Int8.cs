@@ -4,8 +4,11 @@ namespace std_msgs.msg
 
 
 [System.Serializable]
-public class Int8
+public class Int8 : Halodi.CDR.DataType<Int8>
 {
+
+	public Halodi.CDR.TopicDataType<Int8> Type => new Int8PubSubType();
+	
    public byte data;
 
 

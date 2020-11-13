@@ -10,8 +10,11 @@ namespace rcl_interfaces.msg
        * Values are enumerated in ParameterType.msg
        */
 [System.Serializable]
-public class ParameterValue
+public class ParameterValue : Halodi.CDR.DataType<ParameterValue>
 {
+
+	public Halodi.CDR.TopicDataType<ParameterValue> Type => new ParameterValuePubSubType();
+	
    public byte type;
    /**
             * "Variant" style storage of the parameter value.

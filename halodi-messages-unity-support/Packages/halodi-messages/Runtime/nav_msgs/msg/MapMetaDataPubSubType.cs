@@ -10,7 +10,7 @@ namespace nav_msgs.msg
 * Do not update this file directly, edit MapMetaData.idl instead.
 *
 */
-public class MapMetaDataPubSubType : Halodi.CDR.TopicDataType<nav_msgs.msg.MapMetaData>
+public class MapMetaDataPubSubType : Halodi.CDR.TopicDataType<MapMetaData>
 {
    public override string Name => "nav_msgs::msg::dds_::MapMetaData_";
 

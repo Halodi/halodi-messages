@@ -7,8 +7,11 @@ namespace geometry_msgs.msg
        * This represents an estimated twist with reference coordinate frame and timestamp.
        */
 [System.Serializable]
-public class TwistWithCovarianceStamped
+public class TwistWithCovarianceStamped : Halodi.CDR.DataType<TwistWithCovarianceStamped>
 {
+
+	public Halodi.CDR.TopicDataType<TwistWithCovarianceStamped> Type => new TwistWithCovarianceStampedPubSubType();
+	
    public std_msgs.msg.Header header;
    public geometry_msgs.msg.TwistWithCovariance twist;
 

@@ -4,8 +4,11 @@ namespace visualization_msgs.msg
 
 
 [System.Serializable]
-public class ImageMarker
+public class ImageMarker : Halodi.CDR.DataType<ImageMarker>
 {
+
+	public Halodi.CDR.TopicDataType<ImageMarker> Type => new ImageMarkerPubSubType();
+	
    public const byte CIRCLE = (byte) 0;
    public const byte LINE_STRIP = (byte) 1;
    public const byte LINE_LIST = (byte) 2;

@@ -10,7 +10,7 @@ namespace sensor_msgs.msg
 * Do not update this file directly, edit Image.idl instead.
 *
 */
-public class ImagePubSubType : Halodi.CDR.TopicDataType<sensor_msgs.msg.Image>
+public class ImagePubSubType : Halodi.CDR.TopicDataType<Image>
 {
    public override string Name => "sensor_msgs::msg::dds_::Image_";
 

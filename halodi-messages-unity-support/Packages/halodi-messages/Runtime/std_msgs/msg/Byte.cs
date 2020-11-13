@@ -4,8 +4,11 @@ namespace std_msgs.msg
 
 
 [System.Serializable]
-public class Byte
+public class Byte : Halodi.CDR.DataType<Byte>
 {
+
+	public Halodi.CDR.TopicDataType<Byte> Type => new BytePubSubType();
+	
    public byte data;
 
 

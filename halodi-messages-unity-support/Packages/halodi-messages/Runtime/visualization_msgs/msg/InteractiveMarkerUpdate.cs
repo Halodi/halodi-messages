@@ -8,8 +8,11 @@ namespace visualization_msgs.msg
        * Contents must be kept consistent by sender.
        */
 [System.Serializable]
-public class InteractiveMarkerUpdate
+public class InteractiveMarkerUpdate : Halodi.CDR.DataType<InteractiveMarkerUpdate>
 {
+
+	public Halodi.CDR.TopicDataType<InteractiveMarkerUpdate> Type => new InteractiveMarkerUpdatePubSubType();
+	
    /**
           * Type holds the purpose of this message.  It must be one of UPDATE or KEEP_ALIVE.
           * UPDATE: Incremental update to previous state.

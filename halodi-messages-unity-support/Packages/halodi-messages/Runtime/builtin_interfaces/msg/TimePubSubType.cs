@@ -10,7 +10,7 @@ namespace builtin_interfaces.msg
 * Do not update this file directly, edit Time.idl instead.
 *
 */
-public class TimePubSubType : Halodi.CDR.TopicDataType<builtin_interfaces.msg.Time>
+public class TimePubSubType : Halodi.CDR.TopicDataType<Time>
 {
    public override string Name => "builtin_interfaces::msg::dds_::Time_";
 

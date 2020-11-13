@@ -10,8 +10,11 @@ namespace unique_identifier_msgs.msg
        * http://tools.ietf.org/html/rfc4122.html
        */
 [System.Serializable]
-public class UUID
+public class UUID : Halodi.CDR.DataType<UUID>
 {
+
+	public Halodi.CDR.TopicDataType<UUID> Type => new UUIDPubSubType();
+	
    public readonly byte[] uuid = new byte[16];
 
    public void Set(UUID other)

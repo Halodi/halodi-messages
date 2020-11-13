@@ -10,7 +10,7 @@ namespace tf2_msgs.msg
 * Do not update this file directly, edit TFMessage.idl instead.
 *
 */
-public class TFMessagePubSubType : Halodi.CDR.TopicDataType<tf2_msgs.msg.TFMessage>
+public class TFMessagePubSubType : Halodi.CDR.TopicDataType<TFMessage>
 {
    public override string Name => "tf2_msgs::msg::dds_::TFMessage_";
 

@@ -10,7 +10,7 @@ namespace nav_msgs.msg
 * Do not update this file directly, edit Odometry.idl instead.
 *
 */
-public class OdometryPubSubType : Halodi.CDR.TopicDataType<nav_msgs.msg.Odometry>
+public class OdometryPubSubType : Halodi.CDR.TopicDataType<Odometry>
 {
    public override string Name => "nav_msgs::msg::dds_::Odometry_";
 

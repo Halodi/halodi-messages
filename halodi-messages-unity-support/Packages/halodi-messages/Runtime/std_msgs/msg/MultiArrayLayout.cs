@@ -29,8 +29,11 @@ namespace std_msgs.msg
        * multiarray(i,j,k) refers to the ith row, jth column, and kth channel.
        */
 [System.Serializable]
-public class MultiArrayLayout
+public class MultiArrayLayout : Halodi.CDR.DataType<MultiArrayLayout>
 {
+
+	public Halodi.CDR.TopicDataType<MultiArrayLayout> Type => new MultiArrayLayoutPubSubType();
+	
    /**
             * Array of dimension properties
             */

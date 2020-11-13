@@ -10,7 +10,7 @@ namespace rcl_interfaces.msg
 * Do not update this file directly, edit ParameterType.idl instead.
 *
 */
-public class ParameterTypePubSubType : Halodi.CDR.TopicDataType<rcl_interfaces.msg.ParameterType>
+public class ParameterTypePubSubType : Halodi.CDR.TopicDataType<ParameterType>
 {
    public override string Name => "rcl_interfaces::msg::dds_::ParameterType_";
 

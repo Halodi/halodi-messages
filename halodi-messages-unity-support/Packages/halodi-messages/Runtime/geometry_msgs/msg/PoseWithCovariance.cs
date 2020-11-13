@@ -7,8 +7,11 @@ namespace geometry_msgs.msg
        * This represents a pose in free space with uncertainty.
        */
 [System.Serializable]
-public class PoseWithCovariance
+public class PoseWithCovariance : Halodi.CDR.DataType<PoseWithCovariance>
 {
+
+	public Halodi.CDR.TopicDataType<PoseWithCovariance> Type => new PoseWithCovariancePubSubType();
+	
    public geometry_msgs.msg.Pose pose;
    /**
             * Row-major representation of the 6x6 covariance matrix

@@ -10,8 +10,11 @@ namespace halodi_msgs.msg
           *
           */
 [System.Serializable]
-public class MotorStatus
+public class MotorStatus : Halodi.CDR.DataType<MotorStatus>
 {
+
+	public Halodi.CDR.TopicDataType<MotorStatus> Type => new MotorStatusPubSubType();
+	
    public const byte NO_ERROR = (byte) 0;
    public const byte FAULTED = (byte) 1;
    public const byte MISSED_DEADLINE = (byte) 2;

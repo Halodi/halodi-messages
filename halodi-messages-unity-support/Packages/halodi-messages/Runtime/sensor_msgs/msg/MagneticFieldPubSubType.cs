@@ -10,7 +10,7 @@ namespace sensor_msgs.msg
 * Do not update this file directly, edit MagneticField.idl instead.
 *
 */
-public class MagneticFieldPubSubType : Halodi.CDR.TopicDataType<sensor_msgs.msg.MagneticField>
+public class MagneticFieldPubSubType : Halodi.CDR.TopicDataType<MagneticField>
 {
    public override string Name => "sensor_msgs::msg::dds_::MagneticField_";
 

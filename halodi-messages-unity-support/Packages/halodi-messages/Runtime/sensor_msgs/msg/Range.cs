@@ -23,8 +23,11 @@ namespace sensor_msgs.msg
        * Fixed distance rangers require min_range==max_range
        */
 [System.Serializable]
-public class Range
+public class Range : Halodi.CDR.DataType<Range>
 {
+
+	public Halodi.CDR.TopicDataType<Range> Type => new RangePubSubType();
+	
    /**
           * Radiation type enums
           * If you want a value added to this list, send an email to the ros-users list

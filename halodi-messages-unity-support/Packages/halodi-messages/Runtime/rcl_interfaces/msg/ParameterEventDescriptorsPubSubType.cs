@@ -10,7 +10,7 @@ namespace rcl_interfaces.msg
 * Do not update this file directly, edit ParameterEventDescriptors.idl instead.
 *
 */
-public class ParameterEventDescriptorsPubSubType : Halodi.CDR.TopicDataType<rcl_interfaces.msg.ParameterEventDescriptors>
+public class ParameterEventDescriptorsPubSubType : Halodi.CDR.TopicDataType<ParameterEventDescriptors>
 {
    public override string Name => "rcl_interfaces::msg::dds_::ParameterEventDescriptors_";
 

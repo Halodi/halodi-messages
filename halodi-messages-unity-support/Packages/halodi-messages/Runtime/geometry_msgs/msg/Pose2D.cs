@@ -4,8 +4,11 @@ namespace geometry_msgs.msg
 
 
 [System.Serializable]
-public class Pose2D
+public class Pose2D : Halodi.CDR.DataType<Pose2D>
 {
+
+	public Halodi.CDR.TopicDataType<Pose2D> Type => new Pose2DPubSubType();
+	
    public double x;
    public double y;
    public double theta;

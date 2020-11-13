@@ -4,8 +4,11 @@ namespace rcl_interfaces.msg
 
 
 [System.Serializable]
-public class IntraProcessMessage
+public class IntraProcessMessage : Halodi.CDR.DataType<IntraProcessMessage>
 {
+
+	public Halodi.CDR.TopicDataType<IntraProcessMessage> Type => new IntraProcessMessagePubSubType();
+	
    public ulong publisher_id;
    public ulong message_sequence;
 

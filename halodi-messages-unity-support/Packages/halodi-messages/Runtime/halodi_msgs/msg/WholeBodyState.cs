@@ -8,8 +8,11 @@ namespace halodi_msgs.msg
           *
           */
 [System.Serializable]
-public class WholeBodyState
+public class WholeBodyState : Halodi.CDR.DataType<WholeBodyState>
 {
+
+	public Halodi.CDR.TopicDataType<WholeBodyState> Type => new WholeBodyStatePubSubType();
+	
    /**
                  * Header including the timestamp of the robot when this measurement was taken
                  *

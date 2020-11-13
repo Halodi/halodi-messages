@@ -10,7 +10,7 @@ namespace geometry_msgs.msg
 * Do not update this file directly, edit WrenchStamped.idl instead.
 *
 */
-public class WrenchStampedPubSubType : Halodi.CDR.TopicDataType<geometry_msgs.msg.WrenchStamped>
+public class WrenchStampedPubSubType : Halodi.CDR.TopicDataType<WrenchStamped>
 {
    public override string Name => "geometry_msgs::msg::dds_::WrenchStamped_";
 

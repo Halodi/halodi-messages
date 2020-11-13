@@ -4,8 +4,11 @@ namespace geometry_msgs.msg
 
 
 [System.Serializable]
-public class Accel
+public class Accel : Halodi.CDR.DataType<Accel>
 {
+
+	public Halodi.CDR.TopicDataType<Accel> Type => new AccelPubSubType();
+	
    /**
             * This expresses acceleration in free space broken into its linear and angular parts.
             */

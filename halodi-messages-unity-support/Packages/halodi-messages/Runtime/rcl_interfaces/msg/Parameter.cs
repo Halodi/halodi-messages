@@ -8,8 +8,11 @@ namespace rcl_interfaces.msg
        * It is an open struct with an enum in the descriptor to select which value is active.
        */
 [System.Serializable]
-public class Parameter
+public class Parameter : Halodi.CDR.DataType<Parameter>
 {
+
+	public Halodi.CDR.TopicDataType<Parameter> Type => new ParameterPubSubType();
+	
    public string name;
    public rcl_interfaces.msg.ParameterValue value;
 

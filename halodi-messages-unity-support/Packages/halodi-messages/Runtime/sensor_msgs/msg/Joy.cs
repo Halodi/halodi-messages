@@ -7,8 +7,11 @@ namespace sensor_msgs.msg
        * Reports the state of a joystick's axes and buttons.
        */
 [System.Serializable]
-public class Joy
+public class Joy : Halodi.CDR.DataType<Joy>
 {
+
+	public Halodi.CDR.TopicDataType<Joy> Type => new JoyPubSubType();
+	
    /**
             * The timestamp is the time at which data is received from the joystick.
             */

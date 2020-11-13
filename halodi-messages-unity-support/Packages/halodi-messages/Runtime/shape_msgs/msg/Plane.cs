@@ -4,8 +4,11 @@ namespace shape_msgs.msg
 
 
 [System.Serializable]
-public class Plane
+public class Plane : Halodi.CDR.DataType<Plane>
 {
+
+	public Halodi.CDR.TopicDataType<Plane> Type => new PlanePubSubType();
+	
    /**
             * Representation of a plane, using the plane equation ax + by + cz + d = 0.
             * 

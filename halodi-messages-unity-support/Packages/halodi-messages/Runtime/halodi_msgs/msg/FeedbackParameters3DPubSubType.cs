@@ -10,7 +10,7 @@ namespace halodi_msgs.msg
 * Do not update this file directly, edit FeedbackParameters3D.idl instead.
 *
 */
-public class FeedbackParameters3DPubSubType : Halodi.CDR.TopicDataType<halodi_msgs.msg.FeedbackParameters3D>
+public class FeedbackParameters3DPubSubType : Halodi.CDR.TopicDataType<FeedbackParameters3D>
 {
    public override string Name => "halodi_msgs::msg::FeedbackParameters3D";
 

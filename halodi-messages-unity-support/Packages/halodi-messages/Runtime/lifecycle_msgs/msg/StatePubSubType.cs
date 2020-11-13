@@ -10,7 +10,7 @@ namespace lifecycle_msgs.msg
 * Do not update this file directly, edit State.idl instead.
 *
 */
-public class StatePubSubType : Halodi.CDR.TopicDataType<lifecycle_msgs.msg.State>
+public class StatePubSubType : Halodi.CDR.TopicDataType<State>
 {
    public override string Name => "lifecycle_msgs::msg::dds_::State_";
 

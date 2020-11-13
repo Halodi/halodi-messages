@@ -10,7 +10,7 @@ namespace halodi_msgs.msg
 * Do not update this file directly, edit ImuMeasurement.idl instead.
 *
 */
-public class ImuMeasurementPubSubType : Halodi.CDR.TopicDataType<halodi_msgs.msg.ImuMeasurement>
+public class ImuMeasurementPubSubType : Halodi.CDR.TopicDataType<ImuMeasurement>
 {
    public override string Name => "halodi_msgs::msg::dds_::ImuMeasurement_";
 

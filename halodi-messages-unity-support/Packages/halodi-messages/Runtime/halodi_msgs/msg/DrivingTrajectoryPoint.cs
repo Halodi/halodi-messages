@@ -4,8 +4,11 @@ namespace halodi_msgs.msg
 
 
 [System.Serializable]
-public class DrivingTrajectoryPoint
+public class DrivingTrajectoryPoint : Halodi.CDR.DataType<DrivingTrajectoryPoint>
 {
+
+	public Halodi.CDR.TopicDataType<DrivingTrajectoryPoint> Type => new DrivingTrajectoryPointPubSubType();
+	
    public double x;
    public double y;
    public double yaw;

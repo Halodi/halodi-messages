@@ -7,8 +7,11 @@ namespace shape_msgs.msg
        * Definition of a mesh.
        */
 [System.Serializable]
-public class Mesh
+public class Mesh : Halodi.CDR.DataType<Mesh>
 {
+
+	public Halodi.CDR.TopicDataType<Mesh> Type => new MeshPubSubType();
+	
    /**
             * List of triangles; the index values refer to positions in vertices[].
             */

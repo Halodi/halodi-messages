@@ -22,8 +22,11 @@ namespace sensor_msgs.msg
        * "distance"
        */
 [System.Serializable]
-public class ChannelFloat32
+public class ChannelFloat32 : Halodi.CDR.DataType<ChannelFloat32>
 {
+
+	public Halodi.CDR.TopicDataType<ChannelFloat32> Type => new ChannelFloat32PubSubType();
+	
    /**
             * The channel name should give semantics of the channel (e.g.
             * "intensity" instead of "value").

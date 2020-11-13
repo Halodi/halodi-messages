@@ -4,8 +4,11 @@ namespace halodi_msgs.msg
 
 
 [System.Serializable]
-public class ARMarkers
+public class ARMarkers : Halodi.CDR.DataType<ARMarkers>
 {
+
+	public Halodi.CDR.TopicDataType<ARMarkers> Type => new ARMarkersPubSubType();
+	
    public std_msgs.msg.Header header;
    public System.Collections.Generic.List<halodi_msgs.msg.ARMarker> markers;
 

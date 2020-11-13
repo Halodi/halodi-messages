@@ -10,7 +10,7 @@ namespace std_msgs.msg
 * Do not update this file directly, edit String.idl instead.
 *
 */
-public class StringPubSubType : Halodi.CDR.TopicDataType<std_msgs.msg.String>
+public class StringPubSubType : Halodi.CDR.TopicDataType<String>
 {
    public override string Name => "std_msgs::msg::dds_::String_";
 

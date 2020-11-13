@@ -10,7 +10,7 @@ namespace geometry_msgs.msg
 * Do not update this file directly, edit Vector3.idl instead.
 *
 */
-public class Vector3PubSubType : Halodi.CDR.TopicDataType<geometry_msgs.msg.Vector3>
+public class Vector3PubSubType : Halodi.CDR.TopicDataType<Vector3>
 {
    public override string Name => "geometry_msgs::msg::dds_::Vector3_";
 

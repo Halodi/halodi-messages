@@ -7,8 +7,11 @@ namespace geometry_msgs.msg
        * This represents a Point with reference coordinate frame and timestamp
        */
 [System.Serializable]
-public class PointStamped
+public class PointStamped : Halodi.CDR.DataType<PointStamped>
 {
+
+	public Halodi.CDR.TopicDataType<PointStamped> Type => new PointStampedPubSubType();
+	
    public std_msgs.msg.Header header;
    public geometry_msgs.msg.Point point;
 

@@ -10,7 +10,7 @@ namespace std_msgs.msg
 * Do not update this file directly, edit UInt64.idl instead.
 *
 */
-public class UInt64PubSubType : Halodi.CDR.TopicDataType<std_msgs.msg.UInt64>
+public class UInt64PubSubType : Halodi.CDR.TopicDataType<UInt64>
 {
    public override string Name => "std_msgs::msg::dds_::UInt64_";
 

@@ -10,7 +10,7 @@ namespace rcl_interfaces.msg
 * Do not update this file directly, edit IntegerRange.idl instead.
 *
 */
-public class IntegerRangePubSubType : Halodi.CDR.TopicDataType<rcl_interfaces.msg.IntegerRange>
+public class IntegerRangePubSubType : Halodi.CDR.TopicDataType<IntegerRange>
 {
    public override string Name => "rcl_interfaces::msg::dds_::IntegerRange_";
 

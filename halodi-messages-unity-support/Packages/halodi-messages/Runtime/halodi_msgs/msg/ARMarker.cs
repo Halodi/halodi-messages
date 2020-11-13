@@ -4,8 +4,11 @@ namespace halodi_msgs.msg
 
 
 [System.Serializable]
-public class ARMarker
+public class ARMarker : Halodi.CDR.DataType<ARMarker>
 {
+
+	public Halodi.CDR.TopicDataType<ARMarker> Type => new ARMarkerPubSubType();
+	
    public string data;
    public System.Collections.Generic.List<geometry_msgs.msg.Point> points;
    public geometry_msgs.msg.PoseStamped pose;

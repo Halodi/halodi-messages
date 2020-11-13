@@ -4,8 +4,11 @@ namespace std_msgs.msg
 
 
 [System.Serializable]
-public class UInt64
+public class UInt64 : Halodi.CDR.DataType<UInt64>
 {
+
+	public Halodi.CDR.TopicDataType<UInt64> Type => new UInt64PubSubType();
+	
    public ulong data;
 
 

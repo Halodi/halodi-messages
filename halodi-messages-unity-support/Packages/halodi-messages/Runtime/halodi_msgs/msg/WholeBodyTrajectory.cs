@@ -10,8 +10,11 @@ namespace halodi_msgs.msg
           * 
           */
 [System.Serializable]
-public class WholeBodyTrajectory
+public class WholeBodyTrajectory : Halodi.CDR.DataType<WholeBodyTrajectory>
 {
+
+	public Halodi.CDR.TopicDataType<WholeBodyTrajectory> Type => new WholeBodyTrajectoryPubSubType();
+	
    /**
                  * A unique identifier for this message.
                  *

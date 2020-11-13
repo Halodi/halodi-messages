@@ -8,8 +8,11 @@ namespace sensor_msgs.msg
        * frame_id is not used
        */
 [System.Serializable]
-public class TimeReference
+public class TimeReference : Halodi.CDR.DataType<TimeReference>
 {
+
+	public Halodi.CDR.TopicDataType<TimeReference> Type => new TimeReferencePubSubType();
+	
    /**
             * stamp is system time for which measurement was valid
             */

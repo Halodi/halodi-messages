@@ -4,8 +4,11 @@ namespace std_msgs.msg
 
 
 [System.Serializable]
-public class Float32
+public class Float32 : Halodi.CDR.DataType<Float32>
 {
+
+	public Halodi.CDR.TopicDataType<Float32> Type => new Float32PubSubType();
+	
    public float data;
 
 

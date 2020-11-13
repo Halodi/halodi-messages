@@ -8,8 +8,11 @@ namespace sensor_msgs.msg
        * frame_id is the location of the temperature reading
        */
 [System.Serializable]
-public class Temperature
+public class Temperature : Halodi.CDR.DataType<Temperature>
 {
+
+	public Halodi.CDR.TopicDataType<Temperature> Type => new TemperaturePubSubType();
+	
    /**
             * timestamp is the time the temperature was measured
             */

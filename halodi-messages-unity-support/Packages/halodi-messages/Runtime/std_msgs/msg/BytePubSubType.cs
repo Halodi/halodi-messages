@@ -10,7 +10,7 @@ namespace std_msgs.msg
 * Do not update this file directly, edit Byte.idl instead.
 *
 */
-public class BytePubSubType : Halodi.CDR.TopicDataType<std_msgs.msg.Byte>
+public class BytePubSubType : Halodi.CDR.TopicDataType<Byte>
 {
    public override string Name => "std_msgs::msg::dds_::Byte_";
 

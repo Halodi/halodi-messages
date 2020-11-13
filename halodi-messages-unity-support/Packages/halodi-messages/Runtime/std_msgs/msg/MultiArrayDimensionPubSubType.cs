@@ -10,7 +10,7 @@ namespace std_msgs.msg
 * Do not update this file directly, edit MultiArrayDimension.idl instead.
 *
 */
-public class MultiArrayDimensionPubSubType : Halodi.CDR.TopicDataType<std_msgs.msg.MultiArrayDimension>
+public class MultiArrayDimensionPubSubType : Halodi.CDR.TopicDataType<MultiArrayDimension>
 {
    public override string Name => "std_msgs::msg::dds_::MultiArrayDimension_";
 

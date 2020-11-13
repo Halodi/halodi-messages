@@ -8,8 +8,11 @@ namespace halodi_msgs.msg
           *
           */
 [System.Serializable]
-public class ImuMeasurement
+public class ImuMeasurement : Halodi.CDR.DataType<ImuMeasurement>
 {
+
+	public Halodi.CDR.TopicDataType<ImuMeasurement> Type => new ImuMeasurementPubSubType();
+	
    public halodi_msgs.msg.ImuName imu;
    public geometry_msgs.msg.Quaternion orientation;
    public geometry_msgs.msg.Vector3 angular_velocity;

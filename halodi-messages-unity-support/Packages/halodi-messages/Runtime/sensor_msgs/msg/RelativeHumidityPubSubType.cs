@@ -10,7 +10,7 @@ namespace sensor_msgs.msg
 * Do not update this file directly, edit RelativeHumidity.idl instead.
 *
 */
-public class RelativeHumidityPubSubType : Halodi.CDR.TopicDataType<sensor_msgs.msg.RelativeHumidity>
+public class RelativeHumidityPubSubType : Halodi.CDR.TopicDataType<RelativeHumidity>
 {
    public override string Name => "sensor_msgs::msg::dds_::RelativeHumidity_";
 

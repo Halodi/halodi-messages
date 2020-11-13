@@ -4,8 +4,11 @@ namespace tf2_msgs.msg
 
 
 [System.Serializable]
-public class TFMessage
+public class TFMessage : Halodi.CDR.DataType<TFMessage>
 {
+
+	public Halodi.CDR.TopicDataType<TFMessage> Type => new TFMessagePubSubType();
+	
    public System.Collections.Generic.List<geometry_msgs.msg.TransformStamped> transforms;
 
 

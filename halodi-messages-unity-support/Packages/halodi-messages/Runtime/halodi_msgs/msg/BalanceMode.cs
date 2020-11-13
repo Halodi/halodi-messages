@@ -13,8 +13,11 @@ namespace halodi_msgs.msg
           *
           */
 [System.Serializable]
-public class BalanceMode
+public class BalanceMode : Halodi.CDR.DataType<BalanceMode>
 {
+
+	public Halodi.CDR.TopicDataType<BalanceMode> Type => new BalanceModePubSubType();
+	
    public const int AUTOMATIC = 0;
    public const int DRIVING = 1;
    public const int FOLLOW_ME = 2;

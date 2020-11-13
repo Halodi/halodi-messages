@@ -7,8 +7,11 @@ namespace rcl_interfaces.msg
        * Represents bounds and a step value for a floating point typed parameter.
        */
 [System.Serializable]
-public class FloatingPointRange
+public class FloatingPointRange : Halodi.CDR.DataType<FloatingPointRange>
 {
+
+	public Halodi.CDR.TopicDataType<FloatingPointRange> Type => new FloatingPointRangePubSubType();
+	
    /**
             * Start value for valid values, inclusive.
             */

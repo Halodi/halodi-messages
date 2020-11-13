@@ -10,7 +10,7 @@ namespace halodi_msgs.msg
 * Do not update this file directly, edit JointName.idl instead.
 *
 */
-public class JointNamePubSubType : Halodi.CDR.TopicDataType<halodi_msgs.msg.JointName>
+public class JointNamePubSubType : Halodi.CDR.TopicDataType<JointName>
 {
    public override string Name => "halodi_msgs::msg::dds_::JointName_";
 

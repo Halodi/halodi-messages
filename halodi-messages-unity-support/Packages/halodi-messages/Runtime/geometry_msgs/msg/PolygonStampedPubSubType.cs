@@ -10,7 +10,7 @@ namespace geometry_msgs.msg
 * Do not update this file directly, edit PolygonStamped.idl instead.
 *
 */
-public class PolygonStampedPubSubType : Halodi.CDR.TopicDataType<geometry_msgs.msg.PolygonStamped>
+public class PolygonStampedPubSubType : Halodi.CDR.TopicDataType<PolygonStamped>
 {
    public override string Name => "geometry_msgs::msg::dds_::PolygonStamped_";
 

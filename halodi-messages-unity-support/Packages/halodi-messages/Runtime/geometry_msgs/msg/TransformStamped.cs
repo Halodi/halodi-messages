@@ -12,8 +12,11 @@ namespace geometry_msgs.msg
        * See its documentation for more information.
        */
 [System.Serializable]
-public class TransformStamped
+public class TransformStamped : Halodi.CDR.DataType<TransformStamped>
 {
+
+	public Halodi.CDR.TopicDataType<TransformStamped> Type => new TransformStampedPubSubType();
+	
    public std_msgs.msg.Header header;
    /**
             * the frame id of the child frame

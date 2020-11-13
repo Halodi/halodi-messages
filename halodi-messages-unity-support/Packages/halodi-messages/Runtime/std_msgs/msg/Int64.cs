@@ -4,8 +4,11 @@ namespace std_msgs.msg
 
 
 [System.Serializable]
-public class Int64
+public class Int64 : Halodi.CDR.DataType<Int64>
 {
+
+	public Halodi.CDR.TopicDataType<Int64> Type => new Int64PubSubType();
+	
    public long data;
 
 

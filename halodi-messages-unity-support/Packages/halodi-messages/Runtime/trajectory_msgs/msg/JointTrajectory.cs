@@ -4,8 +4,11 @@ namespace trajectory_msgs.msg
 
 
 [System.Serializable]
-public class JointTrajectory
+public class JointTrajectory : Halodi.CDR.DataType<JointTrajectory>
 {
+
+	public Halodi.CDR.TopicDataType<JointTrajectory> Type => new JointTrajectoryPubSubType();
+	
    public std_msgs.msg.Header header;
    public System.Collections.Generic.List<string> joint_names;
    public System.Collections.Generic.List<trajectory_msgs.msg.JointTrajectoryPoint> points;

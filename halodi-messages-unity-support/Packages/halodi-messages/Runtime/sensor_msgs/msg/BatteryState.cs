@@ -10,8 +10,11 @@ namespace sensor_msgs.msg
        * all uppercase not mixed case.
        */
 [System.Serializable]
-public class BatteryState
+public class BatteryState : Halodi.CDR.DataType<BatteryState>
 {
+
+	public Halodi.CDR.TopicDataType<BatteryState> Type => new BatteryStatePubSubType();
+	
    /**
           * Power supply status constants
           */
