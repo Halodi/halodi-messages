@@ -44,6 +44,18 @@ module halodi_msgs {
             
             
             /**
+             * If true, the feedback controller controls the force acting on the end effector.
+             * If false, the feedback controller controls the acceleration acting on the end effector.
+             *
+             * This could be used to implement force feedback control using an haptic actuator.
+             * 
+             * Note: Controlling acceleration results in a linear response with respect to the gains and is recommonded for normal use.
+             *
+             */
+            boolean use_force_feedback;
+            
+            
+            /**
              * 
              * Desired pose of the body frame, expressed in "expressed_in_frame"
              *
@@ -66,17 +78,31 @@ module halodi_msgs {
             geometry_msgs::msg::Vector3 linear_velocity;
          
             /**
-             * Desired angular acceleration of the body frame, expressed in "expressed_in_frame"
+             * Desired angular feedfordward term applied to the body frame, expressed in "expressed_in_frame"
+             *
+             * If use_force_feedback is false, this is feedforward angular acceleration (rad/s^2).
+             * If use_force_feedback is true, this is feedforward torque (Nm).
              *
              */
-            geometry_msgs::msg::Vector3 angular_acceleration;
+            geometry_msgs::msg::Vector3 angular_feedforward;
             
             /**
-             * Desired linear acceleration of the body frame, expressed in "expressed_in_frame"
+             * Desired linear feedfordward term applied to the body frame, expressed in "expressed_in_frame"
+             *
+             * If use_force_feedback is false, this is feedforward linear acceleration  (rad/s^2).
+             * If use_force_feedback is true, this is feedforward force (N).
              *
              */
-            geometry_msgs::msg::Vector3 linear_acceleration;
+            geometry_msgs::msg::Vector3 linear_feedforward;
             
+            
+            /**
+             * (Optional) Energy input to the passivity layer.
+             *
+             * If not set, the passivity layer will be disabled.
+             *
+             */
+            sequence<double, 1> energy_input;
             
             /**
              *

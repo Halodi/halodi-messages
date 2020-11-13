@@ -4,6 +4,7 @@
 #include <halodi_msgs/msg/ImuMeasurement.idl>
 #include <halodi_msgs/msg/JointMeasurement.idl>
 #include <halodi_msgs/msg/BalanceMode.idl>
+#include <halodi_msgs/msg/TaskSpaceFeedback.idl>
 
 module halodi_msgs {
     module msg {
@@ -80,6 +81,15 @@ module halodi_msgs {
               *
               */
             sequence<halodi_msgs::msg::JointMeasurement, 25> joint_states;
+            
+            
+            /**
+             * Output of the task space controllers. 
+             * 
+             * Useful for force feedback applications.
+             *
+             */
+             sequence<halodi_msgs::msg::TaskSpaceFeedback, 5> taskspace_feedback;
             
         };
     };
