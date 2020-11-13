@@ -51,15 +51,22 @@ public class TaskSpaceCommandPubSubType : Halodi.CDR.TopicDataType<TaskSpaceComm
       current_alignment += 1 + Halodi.CDR.CDRCommon.alignment(current_alignment, 1);
 
 
+      current_alignment += 1 + Halodi.CDR.CDRCommon.alignment(current_alignment, 1);
+
+
       current_alignment += geometry_msgs.msg.PosePubSubType.getCdrSerializedSize(data.pose, current_alignment);
 
       current_alignment += geometry_msgs.msg.Vector3PubSubType.getCdrSerializedSize(data.angular_velocity, current_alignment);
 
       current_alignment += geometry_msgs.msg.Vector3PubSubType.getCdrSerializedSize(data.linear_velocity, current_alignment);
 
-      current_alignment += geometry_msgs.msg.Vector3PubSubType.getCdrSerializedSize(data.angular_acceleration, current_alignment);
+      current_alignment += geometry_msgs.msg.Vector3PubSubType.getCdrSerializedSize(data.angular_feedforward, current_alignment);
 
-      current_alignment += geometry_msgs.msg.Vector3PubSubType.getCdrSerializedSize(data.linear_acceleration, current_alignment);
+      current_alignment += geometry_msgs.msg.Vector3PubSubType.getCdrSerializedSize(data.linear_feedforward, current_alignment);
+
+      current_alignment += 4 + Halodi.CDR.CDRCommon.alignment(current_alignment, 4);
+      current_alignment += (data.energy_input.Count * 8) + Halodi.CDR.CDRCommon.alignment(current_alignment, 8);
+
 
       current_alignment += 4 + Halodi.CDR.CDRCommon.alignment(current_alignment, 4);
       for(int i0 = 0; i0 < data.orientation_feedback_parameters.Count; ++i0)
@@ -88,16 +95,32 @@ public class TaskSpaceCommandPubSubType : Halodi.CDR.TopicDataType<TaskSpaceComm
 
       cdr.write_type_7(data.express_in_z_up);
 
+      cdr.write_type_7(data.use_force_feedback);
+
       geometry_msgs.msg.PosePubSubType.write(data.pose, cdr);
 
       geometry_msgs.msg.Vector3PubSubType.write(data.angular_velocity, cdr);
 
       geometry_msgs.msg.Vector3PubSubType.write(data.linear_velocity, cdr);
 
-      geometry_msgs.msg.Vector3PubSubType.write(data.angular_acceleration, cdr);
+      geometry_msgs.msg.Vector3PubSubType.write(data.angular_feedforward, cdr);
 
-      geometry_msgs.msg.Vector3PubSubType.write(data.linear_acceleration, cdr);
+      geometry_msgs.msg.Vector3PubSubType.write(data.linear_feedforward, cdr);
 
+      	if(data.energy_input == null)
+      	{
+      		cdr.write_type_2(0);
+      	}
+      	else
+      	{
+
+      	  int energy_input_length = data.energy_input.Count;
+            cdr.write_type_2(energy_input_length);
+            for (int i0 = 0; i0 < energy_input_length; i0++)
+            {
+      			cdr.write_type_6(data.energy_input[i0]);
+            }
+        }
       	if(data.orientation_feedback_parameters == null)
       	{
       		cdr.write_type_2(0);
@@ -149,6 +172,8 @@ public class TaskSpaceCommandPubSubType : Halodi.CDR.TopicDataType<TaskSpaceComm
       	
       data.express_in_z_up=cdr.read_type_7();
       	
+      data.use_force_feedback=cdr.read_type_7();
+      	
       data.pose = geometry_msgs.msg.PosePubSubType.Create();
       geometry_msgs.msg.PosePubSubType.read(data.pose, cdr);
       	
@@ -158,11 +183,22 @@ public class TaskSpaceCommandPubSubType : Halodi.CDR.TopicDataType<TaskSpaceComm
       data.linear_velocity = geometry_msgs.msg.Vector3PubSubType.Create();
       geometry_msgs.msg.Vector3PubSubType.read(data.linear_velocity, cdr);
       	
-      data.angular_acceleration = geometry_msgs.msg.Vector3PubSubType.Create();
-      geometry_msgs.msg.Vector3PubSubType.read(data.angular_acceleration, cdr);
+      data.angular_feedforward = geometry_msgs.msg.Vector3PubSubType.Create();
+      geometry_msgs.msg.Vector3PubSubType.read(data.angular_feedforward, cdr);
       	
-      data.linear_acceleration = geometry_msgs.msg.Vector3PubSubType.Create();
-      geometry_msgs.msg.Vector3PubSubType.read(data.linear_acceleration, cdr);
+      data.linear_feedforward = geometry_msgs.msg.Vector3PubSubType.Create();
+      geometry_msgs.msg.Vector3PubSubType.read(data.linear_feedforward, cdr);
+      	
+
+      int energy_input_length = cdr.read_type_2();
+      data.energy_input = new System.Collections.Generic.List<double>(energy_input_length);
+      for(int i = 0; i < energy_input_length; i++)
+      {
+      	data.energy_input.Add(cdr.read_type_6());
+      	
+      	
+      }
+
       	
 
       int orientation_feedback_parameters_length = cdr.read_type_2();
