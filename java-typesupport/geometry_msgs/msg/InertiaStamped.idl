@@ -1,0 +1,22 @@
+#ifndef __geometry_msgs__msg__InertiaStamped__idl__
+#define __geometry_msgs__msg__InertiaStamped__idl__
+
+#include "geometry_msgs/msg/./Inertia.idl"
+#include "std_msgs/msg/./Header.idl"
+module geometry_msgs
+{
+  module msg
+  {
+    
+
+      @TypeCode(type="geometry_msgs::msg::dds_::InertiaStamped_")
+      struct InertiaStamped
+      {
+        std_msgs::msg::Header header;
+        geometry_msgs::msg::Inertia inertia;
+      };
+    };
+  };
+
+
+#endif

@@ -1,0 +1,11 @@
+{
+    "name": "com.halodi.halodi-messages.Editor",
+    "references": [
+        "com.halodi.halodi-messages.Runtime"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "optionalUnityReferences": []
+}

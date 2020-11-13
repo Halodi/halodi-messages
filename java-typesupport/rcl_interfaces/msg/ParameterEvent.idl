@@ -1,0 +1,33 @@
+#ifndef __rcl_interfaces__msg__ParameterEvent__idl__
+#define __rcl_interfaces__msg__ParameterEvent__idl__
+
+#include "builtin_interfaces/msg/./Time.idl"
+#include "rcl_interfaces/msg/./Parameter.idl"
+module rcl_interfaces
+{
+  module msg
+  {
+    
+
+      /**
+       * This message contains a parameter event.
+       * It was an atomic update.
+       * A specific parameter name can only be in one of the three sets.
+       */
+      @TypeCode(type="rcl_interfaces::msg::dds_::ParameterEvent_")
+      struct ParameterEvent
+      {
+        builtin_interfaces::msg::Time stamp;
+        /**
+         * Fully qualified ROS path to node
+         */
+        string node;
+        sequence<rcl_interfaces::msg::Parameter> new_parameters;
+        sequence<rcl_interfaces::msg::Parameter> changed_parameters;
+        sequence<rcl_interfaces::msg::Parameter> deleted_parameters;
+      };
+    };
+  };
+
+
+#endif

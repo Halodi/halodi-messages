@@ -5,6 +5,7 @@ module sensor_msgs
 {
   module msg
   {
+    
 
       /**
        * This message is used to specify a region of interest within an image.
@@ -44,6 +45,7 @@ module sensor_msgs
         boolean do_rectify;
       };
     };
-};
+  };
+
 
 #endif

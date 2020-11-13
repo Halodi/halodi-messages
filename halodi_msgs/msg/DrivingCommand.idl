@@ -10,7 +10,7 @@ module halodi_msgs {
               * Note: Commands sent to the "driving_command" will always be filtered
               * 
               */
-            boolean filter_driving_commmand;
+            boolean filter_driving_command;
             
             /**
               * Desired linear velocity

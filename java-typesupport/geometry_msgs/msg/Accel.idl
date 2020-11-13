@@ -6,6 +6,7 @@ module geometry_msgs
 {
   module msg
   {
+    
 
       @TypeCode(type="geometry_msgs::msg::dds_::Accel_")
       struct Accel
@@ -13,10 +14,11 @@ module geometry_msgs
         /**
          * This expresses acceleration in free space broken into its linear and angular parts.
          */
-        geometry_msgs::msg::dds::Vector3 linear;
-        geometry_msgs::msg::dds::Vector3 angular;
+        geometry_msgs::msg::Vector3 linear;
+        geometry_msgs::msg::Vector3 angular;
       };
+    };
   };
-};
+
 
 #endif

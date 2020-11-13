@@ -1,0 +1,23 @@
+#ifndef __sensor_msgs__msg__JoyFeedbackArray__idl__
+#define __sensor_msgs__msg__JoyFeedbackArray__idl__
+
+#include "sensor_msgs/msg/./JoyFeedback.idl"
+module sensor_msgs
+{
+  module msg
+  {
+    
+
+      @TypeCode(type="sensor_msgs::msg::dds_::JoyFeedbackArray_")
+      struct JoyFeedbackArray
+      {
+        /**
+         * This message publishes values for multiple feedback at once.
+         */
+        sequence<sensor_msgs::msg::JoyFeedback> array;
+      };
+    };
+  };
+
+
+#endif

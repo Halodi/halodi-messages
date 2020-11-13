@@ -1,0 +1,25 @@
+#ifndef __geometry_msgs__msg__TwistWithCovarianceStamped__idl__
+#define __geometry_msgs__msg__TwistWithCovarianceStamped__idl__
+
+#include "geometry_msgs/msg/./TwistWithCovariance.idl"
+#include "std_msgs/msg/./Header.idl"
+module geometry_msgs
+{
+  module msg
+  {
+    
+
+      /**
+       * This represents an estimated twist with reference coordinate frame and timestamp.
+       */
+      @TypeCode(type="geometry_msgs::msg::dds_::TwistWithCovarianceStamped_")
+      struct TwistWithCovarianceStamped
+      {
+        std_msgs::msg::Header header;
+        geometry_msgs::msg::TwistWithCovariance twist;
+      };
+    };
+  };
+
+
+#endif
