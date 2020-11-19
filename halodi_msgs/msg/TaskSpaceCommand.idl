@@ -8,6 +8,8 @@
 #include <halodi_msgs/msg/JointNullSpaceConfiguration.idl>
 #include <halodi_msgs/msg/ReferenceFrameName.idl>
 
+#include <halodi_msgs/msg/PassivityData.idl>
+
 module halodi_msgs {
     module msg {
     
@@ -42,19 +44,7 @@ module halodi_msgs {
              */
             boolean express_in_z_up;
             
-            
-            /**
-             * If true, the feedback controller controls the force acting on the end effector.
-             * If false, the feedback controller controls the acceleration acting on the end effector.
-             *
-             * This could be used to implement force feedback control using an haptic actuator.
-             * 
-             * Note: Controlling acceleration results in a linear response with respect to the gains and is recommonded for normal use.
-             *
-             */
-            boolean use_force_feedback;
-            
-            
+                        
             /**
              * 
              * Desired pose of the body frame, expressed in "expressed_in_frame"
@@ -78,31 +68,25 @@ module halodi_msgs {
             geometry_msgs::msg::Vector3 linear_velocity;
          
             /**
-             * Desired angular feedfordward term applied to the body frame, expressed in "expressed_in_frame"
-             *
-             * If use_force_feedback is false, this is feedforward angular acceleration (rad/s^2).
-             * If use_force_feedback is true, this is feedforward torque (Nm).
+             * Desired angular acceleration of the body frame, expressed in "expressed_in_frame"
              *
              */
-            geometry_msgs::msg::Vector3 angular_feedforward;
+            geometry_msgs::msg::Vector3 angular_acceleration;
             
             /**
-             * Desired linear feedfordward term applied to the body frame, expressed in "expressed_in_frame"
-             *
-             * If use_force_feedback is false, this is feedforward linear acceleration  (rad/s^2).
-             * If use_force_feedback is true, this is feedforward force (N).
+             * Desired linear acceleration of the body frame, expressed in "expressed_in_frame"
              *
              */
-            geometry_msgs::msg::Vector3 linear_feedforward;
+            geometry_msgs::msg::Vector3 linear_acceleration;
             
             
             /**
-             * (Optional) Energy input to the passivity layer.
+             * (Optional) Input for the passivity layer. Internal use, keep disabled.
              *
              * If not set, the passivity layer will be disabled.
              *
              */
-            sequence<double, 1> energy_input;
+            sequence<halodi_msgs::msg::PassivityData, 1> passivity_input;
             
             /**
              *

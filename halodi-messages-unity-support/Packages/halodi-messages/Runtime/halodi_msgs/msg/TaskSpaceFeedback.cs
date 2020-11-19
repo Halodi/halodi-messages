@@ -33,41 +33,26 @@ public class TaskSpaceFeedback : Halodi.CDR.DataType<TaskSpaceFeedback>
                 */
    public bool express_in_z_up;
    /**
-                 *
-                 * If true, the feedback controller controls the force acting on the end effector. 
-                 * If false, the feedback controller controls acceleration.
-                 *
-                 */
-   public bool using_force_feedback;
-   /**
-                * Desired angular effort applied on the body frame, expressed in "expressed_in_frame"
+                * Desired angular acceleration (rad/s^2) applied on the body frame, expressed in "expressed_in_frame"
                 *
-                * If using_force_feedback is false, this is angular acceleration (rad/s^2).
-                * If using_force_feedback is true, this is torque (Nm).
+                * Note: This is the desired from the angular acceleration PD controller, not achieved from the QP.
                 *
                 */
-   public geometry_msgs.msg.Vector3 angular_effort;
+   public geometry_msgs.msg.Vector3 angular_acceleration;
    /**
-                * Desired linear effort applied on the body frame, expressed in "expressed_in_frame"
+                * Desired linear acceleration (rad/s^2) applied on the body frame, expressed in "expressed_in_frame"
                 *
-                * If using_force_feedback is false, this is linear acceleration (rad/s^2).
-                * If using_force_feedback is true, this is force (N).
+                * Note: This is the desired from the linear acceleration PD controller, not achieved from the QP.
                 *
                 */
-   public geometry_msgs.msg.Vector3 linear_effort;
-   /** 
-                * (Optional) Energy output from passivity layer
-                * 
-                * If not set, the passivity layer is disabled. 
+   public geometry_msgs.msg.Vector3 linear_acceleration;
+   /**
+                * (Optional) Output of the passivity layer. Internal use, keep disabled.
+                *
+                * If not set, the passivity layer will be disabled.
                 *
                 */
-   public System.Collections.Generic.List<double> energy_output;
-   /**
-                 * (Optional) Tank level from the passivity layer.
-                 *
-                 * If not set, the passivity layer is disabled. 
-                 */
-   public System.Collections.Generic.List<double> energy_tank_level;
+   public System.Collections.Generic.List<halodi_msgs.msg.PassivityData> passivity_output;
 
 
    public void Set(TaskSpaceFeedback other)
@@ -78,37 +63,30 @@ public class TaskSpaceFeedback : Halodi.CDR.DataType<TaskSpaceFeedback>
 
       express_in_z_up = other.express_in_z_up;
 
-      using_force_feedback = other.using_force_feedback;
+      geometry_msgs.msg.Vector3PubSubType.Copy(other.angular_acceleration, angular_acceleration);
 
-      geometry_msgs.msg.Vector3PubSubType.Copy(other.angular_effort, angular_effort);
-
-      geometry_msgs.msg.Vector3PubSubType.Copy(other.linear_effort, linear_effort);
+      geometry_msgs.msg.Vector3PubSubType.Copy(other.linear_acceleration, linear_acceleration);
 
 
-      if(other.energy_output == null)
+      if(other.passivity_output == null)
       {
-      	energy_output = null;
+      	passivity_output = null;
       }
       else
       {
-      	energy_output = new System.Collections.Generic.List<double>(other.energy_output.Count);
-      	for(int i1 = 0; i1 < other.energy_output.Count; i1++)
+      	passivity_output = new System.Collections.Generic.List<halodi_msgs.msg.PassivityData>(other.passivity_output.Count);
+      	for(int i1 = 0; i1 < other.passivity_output.Count; i1++)
       	{
-         		energy_output.Add(other.energy_output[i1]);
-      	}
-      }
-
-      if(other.energy_tank_level == null)
-      {
-      	energy_tank_level = null;
-      }
-      else
-      {
-      	energy_tank_level = new System.Collections.Generic.List<double>(other.energy_tank_level.Count);
-      	for(int i2 = 0; i2 < other.energy_tank_level.Count; i2++)
-      	{
-         		energy_tank_level.Add(other.energy_tank_level[i2]);
-      	}
+      		if(other.passivity_output[i1] == null)
+      		{
+      			passivity_output.Add(null);
+      		}
+      		else
+      		{
+      			halodi_msgs.msg.PassivityData newElement = halodi_msgs.msg.PassivityDataPubSubType.Create();
+      	   		halodi_msgs.msg.PassivityDataPubSubType.Copy(other.passivity_output[i1], newElement);
+      	   		passivity_output.Add(newElement);
+      		}	}
       }
    }
 
@@ -125,16 +103,12 @@ public class TaskSpaceFeedback : Halodi.CDR.DataType<TaskSpaceFeedback>
       builder.Append(this.expressed_in_frame);      builder.Append(", ");
       builder.Append("express_in_z_up=");
       builder.Append(this.express_in_z_up);      builder.Append(", ");
-      builder.Append("using_force_feedback=");
-      builder.Append(this.using_force_feedback);      builder.Append(", ");
-      builder.Append("angular_effort=");
-      builder.Append(this.angular_effort);      builder.Append(", ");
-      builder.Append("linear_effort=");
-      builder.Append(this.linear_effort);      builder.Append(", ");
-      builder.Append("energy_output=");
-      builder.Append(this.energy_output);      builder.Append(", ");
-      builder.Append("energy_tank_level=");
-      builder.Append(this.energy_tank_level);
+      builder.Append("angular_acceleration=");
+      builder.Append(this.angular_acceleration);      builder.Append(", ");
+      builder.Append("linear_acceleration=");
+      builder.Append(this.linear_acceleration);      builder.Append(", ");
+      builder.Append("passivity_output=");
+      builder.Append(this.passivity_output);
       builder.Append("}");
       return builder.ToString();
    }

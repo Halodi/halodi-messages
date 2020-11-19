@@ -51,20 +51,14 @@ public class TaskSpaceFeedbackPubSubType : Halodi.CDR.TopicDataType<TaskSpaceFee
       current_alignment += 1 + Halodi.CDR.CDRCommon.alignment(current_alignment, 1);
 
 
-      current_alignment += 1 + Halodi.CDR.CDRCommon.alignment(current_alignment, 1);
+      current_alignment += geometry_msgs.msg.Vector3PubSubType.getCdrSerializedSize(data.angular_acceleration, current_alignment);
 
-
-      current_alignment += geometry_msgs.msg.Vector3PubSubType.getCdrSerializedSize(data.angular_effort, current_alignment);
-
-      current_alignment += geometry_msgs.msg.Vector3PubSubType.getCdrSerializedSize(data.linear_effort, current_alignment);
+      current_alignment += geometry_msgs.msg.Vector3PubSubType.getCdrSerializedSize(data.linear_acceleration, current_alignment);
 
       current_alignment += 4 + Halodi.CDR.CDRCommon.alignment(current_alignment, 4);
-      current_alignment += (data.energy_output.Count * 8) + Halodi.CDR.CDRCommon.alignment(current_alignment, 8);
-
-
-      current_alignment += 4 + Halodi.CDR.CDRCommon.alignment(current_alignment, 4);
-      current_alignment += (data.energy_tank_level.Count * 8) + Halodi.CDR.CDRCommon.alignment(current_alignment, 8);
-
+      for(int i0 = 0; i0 < data.passivity_output.Count; ++i0)
+      {
+          current_alignment += halodi_msgs.msg.PassivityDataPubSubType.getCdrSerializedSize(data.passivity_output[i0], current_alignment);}
 
 
       return current_alignment - initial_alignment;
@@ -78,39 +72,22 @@ public class TaskSpaceFeedbackPubSubType : Halodi.CDR.TopicDataType<TaskSpaceFee
 
       cdr.write_type_7(data.express_in_z_up);
 
-      cdr.write_type_7(data.using_force_feedback);
+      geometry_msgs.msg.Vector3PubSubType.write(data.angular_acceleration, cdr);
 
-      geometry_msgs.msg.Vector3PubSubType.write(data.angular_effort, cdr);
+      geometry_msgs.msg.Vector3PubSubType.write(data.linear_acceleration, cdr);
 
-      geometry_msgs.msg.Vector3PubSubType.write(data.linear_effort, cdr);
-
-      	if(data.energy_output == null)
+      	if(data.passivity_output == null)
       	{
       		cdr.write_type_2(0);
       	}
       	else
       	{
 
-      	  int energy_output_length = data.energy_output.Count;
-            cdr.write_type_2(energy_output_length);
-            for (int i0 = 0; i0 < energy_output_length; i0++)
+      	  int passivity_output_length = data.passivity_output.Count;
+            cdr.write_type_2(passivity_output_length);
+            for (int i0 = 0; i0 < passivity_output_length; i0++)
             {
-      			cdr.write_type_6(data.energy_output[i0]);
-            }
-        }
-      	if(data.energy_tank_level == null)
-      	{
-      		cdr.write_type_2(0);
-      	}
-      	else
-      	{
-
-      	  int energy_tank_level_length = data.energy_tank_level.Count;
-            cdr.write_type_2(energy_tank_level_length);
-            for (int i0 = 0; i0 < energy_tank_level_length; i0++)
-            {
-      			cdr.write_type_6(data.energy_tank_level[i0]);
-            }
+      			halodi_msgs.msg.PassivityDataPubSubType.write(data.passivity_output[i0], cdr);	      }
         }
    }
 
@@ -124,32 +101,20 @@ public class TaskSpaceFeedbackPubSubType : Halodi.CDR.TopicDataType<TaskSpaceFee
       	
       data.express_in_z_up=cdr.read_type_7();
       	
-      data.using_force_feedback=cdr.read_type_7();
+      data.angular_acceleration = geometry_msgs.msg.Vector3PubSubType.Create();
+      geometry_msgs.msg.Vector3PubSubType.read(data.angular_acceleration, cdr);
       	
-      data.angular_effort = geometry_msgs.msg.Vector3PubSubType.Create();
-      geometry_msgs.msg.Vector3PubSubType.read(data.angular_effort, cdr);
-      	
-      data.linear_effort = geometry_msgs.msg.Vector3PubSubType.Create();
-      geometry_msgs.msg.Vector3PubSubType.read(data.linear_effort, cdr);
+      data.linear_acceleration = geometry_msgs.msg.Vector3PubSubType.Create();
+      geometry_msgs.msg.Vector3PubSubType.read(data.linear_acceleration, cdr);
       	
 
-      int energy_output_length = cdr.read_type_2();
-      data.energy_output = new System.Collections.Generic.List<double>(energy_output_length);
-      for(int i = 0; i < energy_output_length; i++)
+      int passivity_output_length = cdr.read_type_2();
+      data.passivity_output = new System.Collections.Generic.List<halodi_msgs.msg.PassivityData>(passivity_output_length);
+      for(int i = 0; i < passivity_output_length; i++)
       {
-      	data.energy_output.Add(cdr.read_type_6());
-      	
-      	
-      }
-
-      	
-
-      int energy_tank_level_length = cdr.read_type_2();
-      data.energy_tank_level = new System.Collections.Generic.List<double>(energy_tank_level_length);
-      for(int i = 0; i < energy_tank_level_length; i++)
-      {
-      	data.energy_tank_level.Add(cdr.read_type_6());
-      	
+      	halodi_msgs.msg.PassivityData new_passivity_output = halodi_msgs.msg.PassivityDataPubSubType.Create(); 
+      	halodi_msgs.msg.PassivityDataPubSubType.read(new_passivity_output, cdr);
+      	data.passivity_output.Add(new_passivity_output);	
       	
       }
 

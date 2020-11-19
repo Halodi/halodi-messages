@@ -33,16 +33,6 @@ public class TaskSpaceCommand : Halodi.CDR.DataType<TaskSpaceCommand>
                 */
    public bool express_in_z_up;
    /**
-                * If true, the feedback controller controls the force acting on the end effector.
-                * If false, the feedback controller controls the acceleration acting on the end effector.
-                *
-                * This could be used to implement force feedback control using an haptic actuator.
-                * 
-                * Note: Controlling acceleration results in a linear response with respect to the gains and is recommonded for normal use.
-                *
-                */
-   public bool use_force_feedback;
-   /**
                 * 
                 * Desired pose of the body frame, expressed in "expressed_in_frame"
                 *
@@ -61,28 +51,22 @@ public class TaskSpaceCommand : Halodi.CDR.DataType<TaskSpaceCommand>
                 */
    public geometry_msgs.msg.Vector3 linear_velocity;
    /**
-                * Desired angular feedfordward term applied to the body frame, expressed in "expressed_in_frame"
-                *
-                * If use_force_feedback is false, this is feedforward angular acceleration (rad/s^2).
-                * If use_force_feedback is true, this is feedforward torque (Nm).
+                * Desired angular acceleration of the body frame, expressed in "expressed_in_frame"
                 *
                 */
-   public geometry_msgs.msg.Vector3 angular_feedforward;
+   public geometry_msgs.msg.Vector3 angular_acceleration;
    /**
-                * Desired linear feedfordward term applied to the body frame, expressed in "expressed_in_frame"
-                *
-                * If use_force_feedback is false, this is feedforward linear acceleration  (rad/s^2).
-                * If use_force_feedback is true, this is feedforward force (N).
+                * Desired linear acceleration of the body frame, expressed in "expressed_in_frame"
                 *
                 */
-   public geometry_msgs.msg.Vector3 linear_feedforward;
+   public geometry_msgs.msg.Vector3 linear_acceleration;
    /**
-                * (Optional) Energy input to the passivity layer.
+                * (Optional) Input for the passivity layer. Internal use, keep disabled.
                 *
                 * If not set, the passivity layer will be disabled.
                 *
                 */
-   public System.Collections.Generic.List<double> energy_input;
+   public System.Collections.Generic.List<halodi_msgs.msg.PassivityData> passivity_input;
    /**
                 *
                 * Angular feedback parameters
@@ -114,30 +98,36 @@ public class TaskSpaceCommand : Halodi.CDR.DataType<TaskSpaceCommand>
 
       express_in_z_up = other.express_in_z_up;
 
-      use_force_feedback = other.use_force_feedback;
-
       geometry_msgs.msg.PosePubSubType.Copy(other.pose, pose);
 
       geometry_msgs.msg.Vector3PubSubType.Copy(other.angular_velocity, angular_velocity);
 
       geometry_msgs.msg.Vector3PubSubType.Copy(other.linear_velocity, linear_velocity);
 
-      geometry_msgs.msg.Vector3PubSubType.Copy(other.angular_feedforward, angular_feedforward);
+      geometry_msgs.msg.Vector3PubSubType.Copy(other.angular_acceleration, angular_acceleration);
 
-      geometry_msgs.msg.Vector3PubSubType.Copy(other.linear_feedforward, linear_feedforward);
+      geometry_msgs.msg.Vector3PubSubType.Copy(other.linear_acceleration, linear_acceleration);
 
 
-      if(other.energy_input == null)
+      if(other.passivity_input == null)
       {
-      	energy_input = null;
+      	passivity_input = null;
       }
       else
       {
-      	energy_input = new System.Collections.Generic.List<double>(other.energy_input.Count);
-      	for(int i1 = 0; i1 < other.energy_input.Count; i1++)
+      	passivity_input = new System.Collections.Generic.List<halodi_msgs.msg.PassivityData>(other.passivity_input.Count);
+      	for(int i1 = 0; i1 < other.passivity_input.Count; i1++)
       	{
-         		energy_input.Add(other.energy_input[i1]);
-      	}
+      		if(other.passivity_input[i1] == null)
+      		{
+      			passivity_input.Add(null);
+      		}
+      		else
+      		{
+      			halodi_msgs.msg.PassivityData newElement = halodi_msgs.msg.PassivityDataPubSubType.Create();
+      	   		halodi_msgs.msg.PassivityDataPubSubType.Copy(other.passivity_input[i1], newElement);
+      	   		passivity_input.Add(newElement);
+      		}	}
       }
 
       if(other.orientation_feedback_parameters == null)
@@ -217,20 +207,18 @@ public class TaskSpaceCommand : Halodi.CDR.DataType<TaskSpaceCommand>
       builder.Append(this.expressed_in_frame);      builder.Append(", ");
       builder.Append("express_in_z_up=");
       builder.Append(this.express_in_z_up);      builder.Append(", ");
-      builder.Append("use_force_feedback=");
-      builder.Append(this.use_force_feedback);      builder.Append(", ");
       builder.Append("pose=");
       builder.Append(this.pose);      builder.Append(", ");
       builder.Append("angular_velocity=");
       builder.Append(this.angular_velocity);      builder.Append(", ");
       builder.Append("linear_velocity=");
       builder.Append(this.linear_velocity);      builder.Append(", ");
-      builder.Append("angular_feedforward=");
-      builder.Append(this.angular_feedforward);      builder.Append(", ");
-      builder.Append("linear_feedforward=");
-      builder.Append(this.linear_feedforward);      builder.Append(", ");
-      builder.Append("energy_input=");
-      builder.Append(this.energy_input);      builder.Append(", ");
+      builder.Append("angular_acceleration=");
+      builder.Append(this.angular_acceleration);      builder.Append(", ");
+      builder.Append("linear_acceleration=");
+      builder.Append(this.linear_acceleration);      builder.Append(", ");
+      builder.Append("passivity_input=");
+      builder.Append(this.passivity_input);      builder.Append(", ");
       builder.Append("orientation_feedback_parameters=");
       builder.Append(this.orientation_feedback_parameters);      builder.Append(", ");
       builder.Append("position_feedback_parameters=");
