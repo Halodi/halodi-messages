@@ -45,6 +45,9 @@ rosidl_generate_interfaces(${PROJECT_NAME}
         "msg/BatteryStatus.idl"
         "msg/ARMarker.idl"
         "msg/ARMarkers.idl"
+        
+    "srv/GetStampedTF.srv"
+        
 	DEPENDENCIES rcl_interfaces builtin_interfaces geometry_msgs std_msgs unique_identifier_msgs
 	ADD_LINTER_TESTS
 )
