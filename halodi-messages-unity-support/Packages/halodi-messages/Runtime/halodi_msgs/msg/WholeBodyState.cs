@@ -66,6 +66,13 @@ public class WholeBodyState : Halodi.CDR.DataType<WholeBodyState>
                  *
                  */
    public System.Collections.Generic.List<halodi_msgs.msg.JointMeasurement> joint_states;
+   /**
+                * Output of the task space controllers. 
+                * 
+                * Useful for force feedback applications.
+                *
+                */
+   public System.Collections.Generic.List<halodi_msgs.msg.TaskSpaceFeedback> taskspace_feedback;
 
 
    public void Set(WholeBodyState other)
@@ -128,6 +135,27 @@ public class WholeBodyState : Halodi.CDR.DataType<WholeBodyState>
       	   		joint_states.Add(newElement);
       		}	}
       }
+
+      if(other.taskspace_feedback == null)
+      {
+      	taskspace_feedback = null;
+      }
+      else
+      {
+      	taskspace_feedback = new System.Collections.Generic.List<halodi_msgs.msg.TaskSpaceFeedback>(other.taskspace_feedback.Count);
+      	for(int i3 = 0; i3 < other.taskspace_feedback.Count; i3++)
+      	{
+      		if(other.taskspace_feedback[i3] == null)
+      		{
+      			taskspace_feedback.Add(null);
+      		}
+      		else
+      		{
+      			halodi_msgs.msg.TaskSpaceFeedback newElement = halodi_msgs.msg.TaskSpaceFeedbackPubSubType.Create();
+      	   		halodi_msgs.msg.TaskSpaceFeedbackPubSubType.Copy(other.taskspace_feedback[i3], newElement);
+      	   		taskspace_feedback.Add(newElement);
+      		}	}
+      }
    }
 
 
@@ -156,7 +184,9 @@ public class WholeBodyState : Halodi.CDR.DataType<WholeBodyState>
       builder.Append("imu_measurements=");
       builder.Append(this.imu_measurements);      builder.Append(", ");
       builder.Append("joint_states=");
-      builder.Append(this.joint_states);
+      builder.Append(this.joint_states);      builder.Append(", ");
+      builder.Append("taskspace_feedback=");
+      builder.Append(this.taskspace_feedback);
       builder.Append("}");
       return builder.ToString();
    }

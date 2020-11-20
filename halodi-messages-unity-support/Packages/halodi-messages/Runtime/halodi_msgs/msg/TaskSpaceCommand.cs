@@ -61,6 +61,13 @@ public class TaskSpaceCommand : Halodi.CDR.DataType<TaskSpaceCommand>
                 */
    public geometry_msgs.msg.Vector3 linear_acceleration;
    /**
+                * (Optional) Input for the passivity layer. Internal use, keep disabled.
+                *
+                * If not set, the passivity layer will be disabled.
+                *
+                */
+   public System.Collections.Generic.List<halodi_msgs.msg.PassivityData> passivity_input;
+   /**
                 *
                 * Angular feedback parameters
                 *
@@ -102,6 +109,27 @@ public class TaskSpaceCommand : Halodi.CDR.DataType<TaskSpaceCommand>
       geometry_msgs.msg.Vector3PubSubType.Copy(other.linear_acceleration, linear_acceleration);
 
 
+      if(other.passivity_input == null)
+      {
+      	passivity_input = null;
+      }
+      else
+      {
+      	passivity_input = new System.Collections.Generic.List<halodi_msgs.msg.PassivityData>(other.passivity_input.Count);
+      	for(int i1 = 0; i1 < other.passivity_input.Count; i1++)
+      	{
+      		if(other.passivity_input[i1] == null)
+      		{
+      			passivity_input.Add(null);
+      		}
+      		else
+      		{
+      			halodi_msgs.msg.PassivityData newElement = halodi_msgs.msg.PassivityDataPubSubType.Create();
+      	   		halodi_msgs.msg.PassivityDataPubSubType.Copy(other.passivity_input[i1], newElement);
+      	   		passivity_input.Add(newElement);
+      		}	}
+      }
+
       if(other.orientation_feedback_parameters == null)
       {
       	orientation_feedback_parameters = null;
@@ -109,16 +137,16 @@ public class TaskSpaceCommand : Halodi.CDR.DataType<TaskSpaceCommand>
       else
       {
       	orientation_feedback_parameters = new System.Collections.Generic.List<halodi_msgs.msg.FeedbackParameters3D>(other.orientation_feedback_parameters.Count);
-      	for(int i1 = 0; i1 < other.orientation_feedback_parameters.Count; i1++)
+      	for(int i2 = 0; i2 < other.orientation_feedback_parameters.Count; i2++)
       	{
-      		if(other.orientation_feedback_parameters[i1] == null)
+      		if(other.orientation_feedback_parameters[i2] == null)
       		{
       			orientation_feedback_parameters.Add(null);
       		}
       		else
       		{
       			halodi_msgs.msg.FeedbackParameters3D newElement = halodi_msgs.msg.FeedbackParameters3DPubSubType.Create();
-      	   		halodi_msgs.msg.FeedbackParameters3DPubSubType.Copy(other.orientation_feedback_parameters[i1], newElement);
+      	   		halodi_msgs.msg.FeedbackParameters3DPubSubType.Copy(other.orientation_feedback_parameters[i2], newElement);
       	   		orientation_feedback_parameters.Add(newElement);
       		}	}
       }
@@ -130,16 +158,16 @@ public class TaskSpaceCommand : Halodi.CDR.DataType<TaskSpaceCommand>
       else
       {
       	position_feedback_parameters = new System.Collections.Generic.List<halodi_msgs.msg.FeedbackParameters3D>(other.position_feedback_parameters.Count);
-      	for(int i2 = 0; i2 < other.position_feedback_parameters.Count; i2++)
+      	for(int i3 = 0; i3 < other.position_feedback_parameters.Count; i3++)
       	{
-      		if(other.position_feedback_parameters[i2] == null)
+      		if(other.position_feedback_parameters[i3] == null)
       		{
       			position_feedback_parameters.Add(null);
       		}
       		else
       		{
       			halodi_msgs.msg.FeedbackParameters3D newElement = halodi_msgs.msg.FeedbackParameters3DPubSubType.Create();
-      	   		halodi_msgs.msg.FeedbackParameters3DPubSubType.Copy(other.position_feedback_parameters[i2], newElement);
+      	   		halodi_msgs.msg.FeedbackParameters3DPubSubType.Copy(other.position_feedback_parameters[i3], newElement);
       	   		position_feedback_parameters.Add(newElement);
       		}	}
       }
@@ -151,16 +179,16 @@ public class TaskSpaceCommand : Halodi.CDR.DataType<TaskSpaceCommand>
       else
       {
       	nullspace_command = new System.Collections.Generic.List<halodi_msgs.msg.JointNullSpaceConfiguration>(other.nullspace_command.Count);
-      	for(int i3 = 0; i3 < other.nullspace_command.Count; i3++)
+      	for(int i4 = 0; i4 < other.nullspace_command.Count; i4++)
       	{
-      		if(other.nullspace_command[i3] == null)
+      		if(other.nullspace_command[i4] == null)
       		{
       			nullspace_command.Add(null);
       		}
       		else
       		{
       			halodi_msgs.msg.JointNullSpaceConfiguration newElement = halodi_msgs.msg.JointNullSpaceConfigurationPubSubType.Create();
-      	   		halodi_msgs.msg.JointNullSpaceConfigurationPubSubType.Copy(other.nullspace_command[i3], newElement);
+      	   		halodi_msgs.msg.JointNullSpaceConfigurationPubSubType.Copy(other.nullspace_command[i4], newElement);
       	   		nullspace_command.Add(newElement);
       		}	}
       }
@@ -189,6 +217,8 @@ public class TaskSpaceCommand : Halodi.CDR.DataType<TaskSpaceCommand>
       builder.Append(this.angular_acceleration);      builder.Append(", ");
       builder.Append("linear_acceleration=");
       builder.Append(this.linear_acceleration);      builder.Append(", ");
+      builder.Append("passivity_input=");
+      builder.Append(this.passivity_input);      builder.Append(", ");
       builder.Append("orientation_feedback_parameters=");
       builder.Append(this.orientation_feedback_parameters);      builder.Append(", ");
       builder.Append("position_feedback_parameters=");
