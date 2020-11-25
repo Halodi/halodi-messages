@@ -62,6 +62,11 @@ public class TaskSpaceCommandPubSubType : Halodi.CDR.TopicDataType<TaskSpaceComm
       current_alignment += geometry_msgs.msg.Vector3PubSubType.getCdrSerializedSize(data.linear_acceleration, current_alignment);
 
       current_alignment += 4 + Halodi.CDR.CDRCommon.alignment(current_alignment, 4);
+      for(int i0 = 0; i0 < data.passivity_input.Count; ++i0)
+      {
+          current_alignment += halodi_msgs.msg.PassivityDataPubSubType.getCdrSerializedSize(data.passivity_input[i0], current_alignment);}
+
+      current_alignment += 4 + Halodi.CDR.CDRCommon.alignment(current_alignment, 4);
       for(int i0 = 0; i0 < data.orientation_feedback_parameters.Count; ++i0)
       {
           current_alignment += halodi_msgs.msg.FeedbackParameters3DPubSubType.getCdrSerializedSize(data.orientation_feedback_parameters[i0], current_alignment);}
@@ -98,6 +103,19 @@ public class TaskSpaceCommandPubSubType : Halodi.CDR.TopicDataType<TaskSpaceComm
 
       geometry_msgs.msg.Vector3PubSubType.write(data.linear_acceleration, cdr);
 
+      	if(data.passivity_input == null)
+      	{
+      		cdr.write_type_2(0);
+      	}
+      	else
+      	{
+
+      	  int passivity_input_length = data.passivity_input.Count;
+            cdr.write_type_2(passivity_input_length);
+            for (int i0 = 0; i0 < passivity_input_length; i0++)
+            {
+      			halodi_msgs.msg.PassivityDataPubSubType.write(data.passivity_input[i0], cdr);	      }
+        }
       	if(data.orientation_feedback_parameters == null)
       	{
       		cdr.write_type_2(0);
@@ -163,6 +181,18 @@ public class TaskSpaceCommandPubSubType : Halodi.CDR.TopicDataType<TaskSpaceComm
       	
       data.linear_acceleration = geometry_msgs.msg.Vector3PubSubType.Create();
       geometry_msgs.msg.Vector3PubSubType.read(data.linear_acceleration, cdr);
+      	
+
+      int passivity_input_length = cdr.read_type_2();
+      data.passivity_input = new System.Collections.Generic.List<halodi_msgs.msg.PassivityData>(passivity_input_length);
+      for(int i = 0; i < passivity_input_length; i++)
+      {
+      	halodi_msgs.msg.PassivityData new_passivity_input = halodi_msgs.msg.PassivityDataPubSubType.Create(); 
+      	halodi_msgs.msg.PassivityDataPubSubType.read(new_passivity_input, cdr);
+      	data.passivity_input.Add(new_passivity_input);	
+      	
+      }
+
       	
 
       int orientation_feedback_parameters_length = cdr.read_type_2();

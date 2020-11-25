@@ -72,6 +72,11 @@ public class WholeBodyStatePubSubType : Halodi.CDR.TopicDataType<WholeBodyState>
       {
           current_alignment += halodi_msgs.msg.JointMeasurementPubSubType.getCdrSerializedSize(data.joint_states[i0], current_alignment);}
 
+      current_alignment += 4 + Halodi.CDR.CDRCommon.alignment(current_alignment, 4);
+      for(int i0 = 0; i0 < data.taskspace_feedback.Count; ++i0)
+      {
+          current_alignment += halodi_msgs.msg.TaskSpaceFeedbackPubSubType.getCdrSerializedSize(data.taskspace_feedback[i0], current_alignment);}
+
 
       return current_alignment - initial_alignment;
    }
@@ -120,6 +125,19 @@ public class WholeBodyStatePubSubType : Halodi.CDR.TopicDataType<WholeBodyState>
             {
       			halodi_msgs.msg.JointMeasurementPubSubType.write(data.joint_states[i0], cdr);	      }
         }
+      	if(data.taskspace_feedback == null)
+      	{
+      		cdr.write_type_2(0);
+      	}
+      	else
+      	{
+
+      	  int taskspace_feedback_length = data.taskspace_feedback.Count;
+            cdr.write_type_2(taskspace_feedback_length);
+            for (int i0 = 0; i0 < taskspace_feedback_length; i0++)
+            {
+      			halodi_msgs.msg.TaskSpaceFeedbackPubSubType.write(data.taskspace_feedback[i0], cdr);	      }
+        }
    }
 
    public static void read(halodi_msgs.msg.WholeBodyState data, Halodi.CDR.CDRDeserializer cdr)
@@ -164,6 +182,18 @@ public class WholeBodyStatePubSubType : Halodi.CDR.TopicDataType<WholeBodyState>
       	halodi_msgs.msg.JointMeasurement new_joint_states = halodi_msgs.msg.JointMeasurementPubSubType.Create(); 
       	halodi_msgs.msg.JointMeasurementPubSubType.read(new_joint_states, cdr);
       	data.joint_states.Add(new_joint_states);	
+      	
+      }
+
+      	
+
+      int taskspace_feedback_length = cdr.read_type_2();
+      data.taskspace_feedback = new System.Collections.Generic.List<halodi_msgs.msg.TaskSpaceFeedback>(taskspace_feedback_length);
+      for(int i = 0; i < taskspace_feedback_length; i++)
+      {
+      	halodi_msgs.msg.TaskSpaceFeedback new_taskspace_feedback = halodi_msgs.msg.TaskSpaceFeedbackPubSubType.Create(); 
+      	halodi_msgs.msg.TaskSpaceFeedbackPubSubType.read(new_taskspace_feedback, cdr);
+      	data.taskspace_feedback.Add(new_taskspace_feedback);	
       	
       }
 

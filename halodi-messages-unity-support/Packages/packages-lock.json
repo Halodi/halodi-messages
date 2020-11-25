@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "com.halodi.cdr": {
-      "version": "0.11.25",
+      "version": "0.12.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
@@ -12,7 +12,7 @@
       "depth": 0,
       "source": "embedded",
       "dependencies": {
-        "com.halodi.cdr": "0.11.25"
+        "com.halodi.cdr": "0.12.1"
       }
     },
     "com.halodi.halodi-unity-package-creator": {
@@ -58,7 +58,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.visualstudio": {
-      "version": "2.0.2",
+      "version": "2.0.5",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
