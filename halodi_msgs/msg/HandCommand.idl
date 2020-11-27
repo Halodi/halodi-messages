@@ -18,12 +18,12 @@ module halodi_msgs {
             double closure;
             
             /**
-              * (optional) Maximum relative velocity to move with. 
+              * (optional) Maximum relative speed to move with. 
               * 
               * Range: 0.0 - 1.0
               *
               */
-            double velocity;
+            double speed;
             
             /**
               * (optional) Maximum relative force to apply.

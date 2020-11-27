@@ -21,12 +21,12 @@ public class HandCommand : Halodi.CDR.DataType<HandCommand>
                  */
    public double closure;
    /**
-                 * (optional) Maximum relative velocity to move with. 
+                 * (optional) Maximum relative speed to move with. 
                  * 
                  * Range: 0.0 - 1.0
                  *
                  */
-   public double velocity;
+   public double speed;
    /**
                  * (optional) Maximum relative force to apply.
                  * 
@@ -40,7 +40,7 @@ public class HandCommand : Halodi.CDR.DataType<HandCommand>
    {
       closure = other.closure;
 
-      velocity = other.velocity;
+      speed = other.speed;
 
       force = other.force;
 
@@ -55,8 +55,8 @@ public class HandCommand : Halodi.CDR.DataType<HandCommand>
       builder.Append("HandCommand {");
       builder.Append("closure=");
       builder.Append(this.closure);      builder.Append(", ");
-      builder.Append("velocity=");
-      builder.Append(this.velocity);      builder.Append(", ");
+      builder.Append("speed=");
+      builder.Append(this.speed);      builder.Append(", ");
       builder.Append("force=");
       builder.Append(this.force);
       builder.Append("}");

@@ -61,7 +61,7 @@ public class HandCommandPubSubType : Halodi.CDR.TopicDataType<HandCommand>
    {
       cdr.write_type_6(data.closure);
 
-      cdr.write_type_6(data.velocity);
+      cdr.write_type_6(data.speed);
 
       cdr.write_type_6(data.force);
 
@@ -71,7 +71,7 @@ public class HandCommandPubSubType : Halodi.CDR.TopicDataType<HandCommand>
    {
       data.closure=cdr.read_type_6();
       	
-      data.velocity=cdr.read_type_6();
+      data.speed=cdr.read_type_6();
       	
       data.force=cdr.read_type_6();
       	
