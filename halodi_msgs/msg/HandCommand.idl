@@ -1,0 +1,39 @@
+
+module halodi_msgs {
+    module msg {
+    
+        /**
+          * Command to send to a hand
+          *
+          */
+        @TypeCode(type="halodi_msgs::msg::dds_::HandCommand_")
+        struct HandCommand
+        {
+            /**
+              * Closure ratio. 
+              * 
+              * Range: 0.0 - 1.0
+              *
+              */
+            double closure;
+            
+            /**
+              * (optional) Maximum relative velocity to move with. 
+              * 
+              * Range: 0.0 - 1.0
+              *
+              */
+            double velocity;
+            
+            /**
+              * (optional) Maximum relative force to apply.
+              * 
+              * Range: 0.0 - 1.0
+              *
+              */
+            double force;
+        };
+        
+    };
+};
+  
