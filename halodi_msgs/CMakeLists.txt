@@ -47,6 +47,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
         "msg/ARMarkers.idl"
         "msg/TaskSpaceFeedback.idl"
         "msg/PassivityData.idl"
+        "msg/HandCommand.idl"
 	DEPENDENCIES rcl_interfaces builtin_interfaces geometry_msgs std_msgs unique_identifier_msgs
 	ADD_LINTER_TESTS
 )
