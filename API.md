@@ -5,13 +5,15 @@ This document contains a brief introduction to the API. For more information abo
 ## Status messages
 
 #### /eve/whole_body_state
-- Rate: 250Hz
+- Rate: 500Hz
 - Data type: [halodi_msgs/msg/WholeBodyState.idl](halodi_msgs/msg/WholeBodyState.idl)
+- Reliability QOS: Best Effort
 
 This topic publishes the state of the robot. A custom data type is used to describe the whole state of the robot, to allow receiving an atomic state. 
 
 #### /eve/whole_body_trajectory_status
 - Data type: [action_msgs/msg/GoalStatus.msg](https://github.com/ros2/rcl_interfaces/blob/master/action_msgs/msg/GoalStatus.msg)
+- Reliability QOS: Reliable
 
 This topic is used to provide feedback of commands send to /eve/whole_body_trajectory. Note that it does not use the action API.
 
@@ -20,9 +22,27 @@ STATUS_EXECUTING is published for every poin tin the trajectory.
 If no trajectory_id is set in the WholeBodyTrajectory, no feedback will be generated. 
 
 
+#### /eve/status
+- Rate: 5Hz
+- Data type: [halodi_msgs/msg/RobotStatus.idl](https://github.com/Halodi/halodi-messages/blob/master/halodi_msgs/msg/RobotStatus.idl)
+- Reliablity: Best Effort
+
+This topic provides the system status of the robot and includes
+- E-Stop status
+- Battery status
+- Motor status and temperature
+
+#### /clock
+- Rate: 500Hz
+- Data type: [rosgraph_msgs/msg/Clock.msg](https://github.com/ros2/rcl_interfaces/blob/master/rosgraph_msgs/msg/Clock.msg)
+- Reliablity QOS: Best effort
+
+THis topic provides the ROS clock.
+
 #### /tf
-- Rate: 250Hz
+- Rate: 500Hz
 - Data type: [tf2_msgs/msg/TFMessage.msg](https://github.com/ros2/geometry2/blob/ros2/tf2_msgs/msg/TFMessage.msg)
+- Reliability QOS: Best Effort
 
 This topic publishes standard TF2 information. The root transform is called "World".
 
@@ -39,6 +59,7 @@ The trajectory API is a high level API that can interpolate trajectories trough 
 
 #### /eve/whole_body_trajectory
 - Data type: [halodi_msgs/msg/WholeBodyTrajectory.idl](halodi_msgs/msg/WholeBodyTrajectory.idl)
+- Reliablility QOS: Reliable
 
 This topic is to send trajectories. It is recommended to keep the number of points in the trajectory to a reasonable number (~16 maximum) to avoid large messages that can get lost on the network.
 
@@ -50,6 +71,7 @@ The maximum supported rate to send messages is 50Hz.
 #### /eve/driving_command
 - Data rate: Minimum 10Hz
 - Data type: [halodi_msgs/msg/DrivingCommand.idl](halodi_msgs/msg/DrivingCommand.idl)
+- Reliablility QOS: Reliable
 
 Send linear and angular velocities to the controller. A timeout of about 100ms (robot time/simulation time) is implemented to avoid the robot driving uncontrollable if communication gets lost.
 
@@ -61,8 +83,9 @@ The realtime API is used by the trajectory manager, and therefore cannot be used
 
 Topics: 
 #### /eve/whole_body_command
-- Rate: 250Hz
+- Rate: 500Hz
 - [halodi_msgs/msg/WholeBodyControllerCommand.idl](halodi_msgs/msg/WholeBodyControllerCommand.idl)
+- Reliablility QOS: Best effort
 
 The recommended implementation is to block on /eve/whole_body_trajectory_status and publish a command every time a new whole_body_trajectory_status is received. 
 
