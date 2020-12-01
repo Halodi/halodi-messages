@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.halodi.cdr": "0.12.1",
+    "com.halodi.cdr": "0.12.6",
     "com.halodi.halodi-unity-package-creator": "0.2.10",
     "com.halodi.halodi-unity-package-registry-manager": "https://github.com/Halodi/halodi-unity-package-registry-manager.git",
     "com.unity.collab-proxy": "1.3.9",

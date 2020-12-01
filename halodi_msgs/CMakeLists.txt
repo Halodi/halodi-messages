@@ -18,7 +18,6 @@ find_package(std_msgs REQUIRED)
 find_package(unique_identifier_msgs REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-    "msg/JointName.idl"
     "msg/ReferenceFrameName.idl"
     "msg/DrivingCommand.idl"
     "msg/TaskSpaceCommand.idl"
@@ -47,8 +46,9 @@ rosidl_generate_interfaces(${PROJECT_NAME}
     "msg/ARMarkers.idl"
     "msg/TaskSpaceFeedback.idl"
     "msg/PassivityData.idl"
-        
-    "srv/GetStampedTF.srv"        
+    "msg/HandCommand.idl"
+    
+    "srv/GetStampedTF.srv" 
 
 	DEPENDENCIES rcl_interfaces builtin_interfaces geometry_msgs std_msgs unique_identifier_msgs
 	ADD_LINTER_TESTS
