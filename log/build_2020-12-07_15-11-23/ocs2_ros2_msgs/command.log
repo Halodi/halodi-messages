@@ -1,0 +1,1 @@
+Invoking command in '/home/james/eloquent_ws/src/halodi-messages/build/ocs2_ros2_msgs': /usr/local/bin/cmake /home/james/eloquent_ws/src/halodi-messages/ocs2_ros2_msgs -DCMAKE_INSTALL_PREFIX=/home/james/eloquent_ws/src/halodi-messages/install/ocs2_ros2_msgs

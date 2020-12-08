@@ -1,0 +1,25 @@
+#ifndef __geometry_msgs__msg__PoseStamped__idl__
+#define __geometry_msgs__msg__PoseStamped__idl__
+
+#include "geometry_msgs/msg/./Pose.idl"
+#include "std_msgs/msg/./Header.idl"
+module geometry_msgs
+{
+  module msg
+  {
+    
+
+      /**
+       * A Pose with reference coordinate frame and timestamp
+       */
+      @TypeCode(type="geometry_msgs::msg::dds_::PoseStamped_")
+      struct PoseStamped
+      {
+        std_msgs::msg::Header header;
+        geometry_msgs::msg::Pose pose;
+      };
+    };
+  };
+
+
+#endif

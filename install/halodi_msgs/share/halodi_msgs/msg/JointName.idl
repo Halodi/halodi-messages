@@ -1,0 +1,44 @@
+
+
+module halodi_msgs {
+    module msg {
+        
+        module JointName_Constants
+        {
+            const long HIP_YAW = 0;
+            const long HIP_ROLL = 1;
+            const long HIP_PITCH = 2;
+            const long KNEE_PITCH = 3;
+            const long ANKLE_ROLL = 4;
+            const long ANKLE_PITCH = 5;
+            
+            const long LEFT_SHOULDER_PITCH = 6;
+            const long LEFT_SHOULDER_ROLL = 7;
+            const long LEFT_SHOULDER_YAW = 8;
+            const long LEFT_ELBOW_PITCH = 9;
+            const long LEFT_ELBOW_YAW = 10;
+            const long LEFT_WRIST_PITCH = 11;
+            const long LEFT_WRIST_ROLL = 12;
+            
+            const long RIGHT_SHOULDER_PITCH = 13;
+            const long RIGHT_SHOULDER_ROLL = 14;
+            const long RIGHT_SHOULDER_YAW = 15;
+            const long RIGHT_ELBOW_PITCH = 16;
+            const long RIGHT_ELBOW_YAW = 17;
+            const long RIGHT_WRIST_PITCH = 18;
+            const long RIGHT_WRIST_ROLL = 19;
+            
+            const long NECK_PITCH = 20;
+            
+            const long LEFT_WHEEL = 21;
+            const long RIGHT_WHEEL = 22;
+        };
+        
+
+        @TypeCode(type="halodi_msgs::msg::dds_::JointName_")
+        struct JointName
+        {   
+            long joint_id;
+        };
+    };
+};

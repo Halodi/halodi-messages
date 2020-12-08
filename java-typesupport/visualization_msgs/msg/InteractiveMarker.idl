@@ -1,0 +1,56 @@
+#ifndef __visualization_msgs__msg__InteractiveMarker__idl__
+#define __visualization_msgs__msg__InteractiveMarker__idl__
+
+#include "geometry_msgs/msg/./Pose.idl"
+#include "std_msgs/msg/./Header.idl"
+#include "visualization_msgs/msg/./InteractiveMarkerControl.idl"
+#include "visualization_msgs/msg/./MenuEntry.idl"
+module visualization_msgs
+{
+  module msg
+  {
+    
+
+      @TypeCode(type="visualization_msgs::msg::dds_::InteractiveMarker_")
+      struct InteractiveMarker
+      {
+        /**
+         * Time/frame info.
+         * If header.time is set to 0, the marker will be retransformed into
+         * its frame on each timestep. You will receive the pose feedback
+         * in the same frame.
+         * Otherwise, you might receive feedback in a different frame.
+         * For rviz, this will be the current 'fixed frame' set by the user.
+         */
+        std_msgs::msg::Header header;
+        /**
+         * Initial pose. Also, defines the pivot point for rotations.
+         */
+        geometry_msgs::msg::Pose pose;
+        /**
+         * Identifying string. Must be globally unique in
+         * the topic that this message is sent through.
+         */
+        string name;
+        /**
+         * Short description (< 40 characters).
+         */
+        string description;
+        /**
+         * Scale to be used for default controls (default=1).
+         */
+        float scale;
+        /**
+         * All menu and submenu entries associated with this marker.
+         */
+        sequence<visualization_msgs::msg::MenuEntry> menu_entries;
+        /**
+         * List of controls displayed for this marker.
+         */
+        sequence<visualization_msgs::msg::InteractiveMarkerControl> controls;
+      };
+    };
+  };
+
+
+#endif

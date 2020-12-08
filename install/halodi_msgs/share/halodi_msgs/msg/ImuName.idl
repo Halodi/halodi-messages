@@ -1,0 +1,14 @@
+module halodi_msgs {
+    module msg {
+        module ImuName_Constants
+        {
+            const long pelvis_imu = 0; 
+        };
+    
+        @TypeCode(type="halodi_msgs::msg::dds_::ImuName_")
+        struct ImuName
+        {
+            long imu_id;
+        };
+    };
+};

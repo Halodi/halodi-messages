@@ -1,0 +1,17 @@
+#include <geometry_msgs/msg/PoseStamped.idl>
+#include <geometry_msgs/msg/Point.idl>
+
+module halodi_msgs
+{
+    module msg
+    {
+        @TypeCode(type="halodi_msgs::msg::dds_::ARMarker_")
+        struct ARMarker
+        {
+            string data;
+            sequence<geometry_msgs::msg::Point, 4> points;
+            
+            geometry_msgs::msg::PoseStamped pose;
+        };
+    };
+};

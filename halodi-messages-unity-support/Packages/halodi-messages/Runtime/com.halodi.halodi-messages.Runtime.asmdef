@@ -1,0 +1,15 @@
+{
+    "name": "com.halodi.halodi-messages.Runtime",
+    "references": [
+        "com.halodi.cdr.Runtime"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

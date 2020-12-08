@@ -2,12 +2,14 @@ buildscript {
    repositories {
       mavenCentral()
       maven { url "http://dl.bintray.com/ihmcrobotics/maven-release" }
+      maven { url "http://dl.bintray.com/halodirobotics/maven-release" }
       mavenLocal()
       jcenter()
    }
    
    dependencies {
       classpath "us.ihmc:ihmc-pub-sub-generator:0.14.0"
+      classpath 'com.halodi:halodi-csharp-pub-sub-generator:0.1.1'
       classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.+'
    }
    
@@ -21,15 +23,17 @@ apply plugin: 'maven-publish'
 
 
 group = "com.halodi"
-version = "0.4.5"
+version = "1.5.3"
 
 
 
 def outputDirectory = project.file("$buildDir/java-generated")
+def csOutputDirectory = project.file("${project.projectDir}/halodi-messages-unity-support/Packages/halodi-messages/Runtime")
 
 repositories {
     mavenCentral()
     maven { url "http://dl.bintray.com/ihmcrobotics/maven-release" }
+    maven { url "http://dl.bintray.com/halodirobotics/maven-release" }
     mavenLocal()
     jcenter()
 }
@@ -55,6 +59,7 @@ dependencies
 
 task generateHalodiMessages(type: us.ihmc.idl.generator.IDLGeneratorTask) {
     idlFiles = fileTree(dir: "halodi_msgs/msg/")
+    idlFiles += fileTree(dir: "ocs2_ros2_msgs/msg/")
     includeDirs = files(".", "java-typesupport")
     targetDirectory = outputDirectory
     packagePrefix = ""
@@ -84,23 +89,76 @@ task generateHalodiMessages(type: us.ihmc.idl.generator.IDLGeneratorTask) {
     
 }
 
-task generateMPCMessages(type: us.ihmc.idl.generator.IDLGeneratorTask) {
-    idlFiles = fileTree(dir: "ocs2_ros2_msgs/msg/")
+task importRos2IDL(type: DefaultTask) {
+    doLast
+    {
+    
+        def typesupportDirectories = fileTree(dir: "java-typesupport", include: "**/*.idl")
+       
+       def generated = fileTree(dir: outputDirectory)
+        
+        typesupportDirectories.each { 
+            def newPath = it.absolutePath.replaceAll("_\\.idl\$", ".idl")
+            
+            def includeAdjusted = it.text.replaceAll(/#include "(.*)_\.idl"/, /#include "$1\.idl"/)
+            
+            def ddsAdjusted = includeAdjusted.replaceAll(/(?s)module dds(.*?)\{(.*)\};/, /$2/)
+            
+            def ddsRemoved = ddsAdjusted.replaceAll(/::dds::/, '::')
+            
+            it.text = ddsRemoved
+            
+            
+            println "Moving " + it.name + " to " + newPath
+            it.renameTo(newPath)
+        }
+    }
+}
+
+
+task generateCSharpMessages(type: com.halodi.idl.generator.IDLCSharpGeneratorTask) {
+    idlFiles = fileTree(dir: "halodi_msgs/msg/")
+    idlFiles += fileTree(dir: "ocs2_ros2_msgs/msg/")
+    idlFiles += fileTree(dir: "java-typesupport/", include: '**/*.idl')
     includeDirs = files(".", "java-typesupport")
-    targetDirectory = outputDirectory
+    targetDirectory = csOutputDirectory
+
     packagePrefix = ""
     
     doFirst
     {
-        mkdir outputDirectory
+        mkdir csOutputDirectory
     }
+    
+    doLast
+    {
+                def typesupportDirectories = file(csOutputDirectory)
+        def generated = fileTree(dir: outputDirectory)
+        
+        def constantDirectories = []
+        typesupportDirectories.eachFileRecurse(groovy.io.FileType.DIRECTORIES) { 
+        
+            if(it.name.endsWith("_Constants"))
+            {
+                constantDirectories.add(it)
+            }
+        }
+        
+        constantDirectories.each() {
+            it.deleteDir()
+        }
+
+    }
+    
+    
 }
+
 
 build.dependsOn generateHalodiMessages
 jar.dependsOn generateHalodiMessages
 
-build.dependsOn generateMPCMessages
-jar.dependsOn generateMPCMessages
+build.dependsOn generateCSharpMessages
+jar.dependsOn generateCSharpMessages
 
 
 

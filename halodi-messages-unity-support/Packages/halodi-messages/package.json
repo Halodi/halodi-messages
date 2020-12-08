@@ -1,0 +1,21 @@
+{
+  "name": "com.halodi.halodi-messages",
+  "version": "1.5.3",
+  "displayName": "Halodi ROS2 Messages",
+  "description": "C# compiled version of the ROS2 messages from halodi",
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "registry": "https://npm.halodi.com"
+  },
+  "author": {
+    "name": "Halodi",
+    "email": "jesper@halodi.com",
+    "url": "http://www.halodi.com"
+  },
+  "samples": [],
+  "type": "library",
+  "hideInEditor": false,
+  "dependencies": {
+    "com.halodi.cdr": "0.12.6"
+  }
+}

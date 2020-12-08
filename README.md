@@ -42,16 +42,32 @@ dependencies {
 ```
 
 
+### Increasing version number
+
+Before building and publishing the Java and C# libraries, increase the version in the following files
+
+- `build.gradle`
+- `halodi-messages-unity-support/Packages/halodi-messages/package.json`
+
+
 ### Building and publishing Java libraries
 
 To compile and publishing to your local maven repository, run
 
 ```
+rm -r build
+gradle jar
 gradle publishToMavenLocal
 ```
 
-To upload to bintray, set `bintrayUsername` and `bintrayApiKey` in `~/.gradle/gradle.properties` and run
+To upload to bintray, set `bintrayUsername` and `bintrayApiKey` in `~/.gradle/gradle.properties` and run instead of `gradle publishToMavenLocal`:
 
 ```
 gradle bintrayUpload
 ```
+
+### Building and publishing C#/Unity libraries
+
+First, publish the Java library. This regenerates the C# messages.
+
+After that, open the Unity project `halodi-messages-unity-support` in Unity. Go to `Packages` -> `Manage packages in project` and select Publish.

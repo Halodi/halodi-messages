@@ -1,0 +1,1271 @@
+[0.116s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.116s] DEBUG:colcon:Parsed command line arguments: Namespace(ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f1834339390>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=16, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f1834339390>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f1834339710>)
+[0.128s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.128s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.128s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.128s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.128s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.129s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.129s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/james/eloquent_ws/src/halodi-messages'
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.129s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.137s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support) by extensions ['ignore', 'ignore_ament_install']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support) by extension 'ignore'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support) by extension 'ignore_ament_install'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support) by extensions ['colcon_pkg']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support) by extension 'colcon_pkg'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support) by extensions ['colcon_meta']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support) by extension 'colcon_meta'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support) by extensions ['ros']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support) by extension 'ros'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support) by extensions ['cmake', 'python']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support) by extension 'cmake'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support) by extension 'python'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support) by extensions ['python_setup_py']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support) by extension 'python_setup_py'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Assets) by extensions ['ignore', 'ignore_ament_install']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Assets) by extension 'ignore'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Assets) by extension 'ignore_ament_install'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Assets) by extensions ['colcon_pkg']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Assets) by extension 'colcon_pkg'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Assets) by extensions ['colcon_meta']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Assets) by extension 'colcon_meta'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Assets) by extensions ['ros']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Assets) by extension 'ros'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Assets) by extensions ['cmake', 'python']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Assets) by extension 'cmake'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Assets) by extension 'python'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Assets) by extensions ['python_setup_py']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Assets) by extension 'python_setup_py'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Assets/Scenes) by extensions ['ignore', 'ignore_ament_install']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Assets/Scenes) by extension 'ignore'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Assets/Scenes) by extension 'ignore_ament_install'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Assets/Scenes) by extensions ['colcon_pkg']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Assets/Scenes) by extension 'colcon_pkg'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Assets/Scenes) by extensions ['colcon_meta']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Assets/Scenes) by extension 'colcon_meta'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Assets/Scenes) by extensions ['ros']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Assets/Scenes) by extension 'ros'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Assets/Scenes) by extensions ['cmake', 'python']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Assets/Scenes) by extension 'cmake'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Assets/Scenes) by extension 'python'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Assets/Scenes) by extensions ['python_setup_py']
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Assets/Scenes) by extension 'python_setup_py'
+[0.139s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages) by extensions ['ignore', 'ignore_ament_install']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages) by extension 'ignore'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages) by extension 'ignore_ament_install'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages) by extensions ['colcon_pkg']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages) by extension 'colcon_pkg'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages) by extensions ['colcon_meta']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages) by extension 'colcon_meta'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages) by extensions ['ros']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages) by extension 'ros'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages) by extensions ['cmake', 'python']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages) by extension 'cmake'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages) by extension 'python'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages) by extensions ['python_setup_py']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages) by extension 'python_setup_py'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages) by extensions ['ignore', 'ignore_ament_install']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages) by extension 'ignore'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages) by extension 'ignore_ament_install'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages) by extensions ['colcon_pkg']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages) by extension 'colcon_pkg'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages) by extensions ['colcon_meta']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages) by extension 'colcon_meta'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages) by extensions ['ros']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages) by extension 'ros'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages) by extensions ['cmake', 'python']
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages) by extension 'cmake'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages) by extension 'python'
+[0.140s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages) by extensions ['python_setup_py']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages) by extension 'python_setup_py'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Editor) by extensions ['ignore', 'ignore_ament_install']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Editor) by extension 'ignore'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Editor) by extension 'ignore_ament_install'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Editor) by extensions ['colcon_pkg']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Editor) by extension 'colcon_pkg'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Editor) by extensions ['colcon_meta']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Editor) by extension 'colcon_meta'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Editor) by extensions ['ros']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Editor) by extension 'ros'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Editor) by extensions ['cmake', 'python']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Editor) by extension 'cmake'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Editor) by extension 'python'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Editor) by extensions ['python_setup_py']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Editor) by extension 'python_setup_py'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime) by extensions ['ignore', 'ignore_ament_install']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime) by extension 'ignore'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime) by extension 'ignore_ament_install'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime) by extensions ['colcon_pkg']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime) by extension 'colcon_pkg'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime) by extensions ['colcon_meta']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime) by extension 'colcon_meta'
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime) by extensions ['ros']
+[0.141s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime) by extension 'ros'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime) by extensions ['cmake', 'python']
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime) by extension 'cmake'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime) by extension 'python'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime) by extensions ['python_setup_py']
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime) by extension 'python_setup_py'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/action_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/action_msgs) by extension 'ignore'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/action_msgs) by extension 'ignore_ament_install'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/action_msgs) by extensions ['colcon_pkg']
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/action_msgs) by extension 'colcon_pkg'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/action_msgs) by extensions ['colcon_meta']
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/action_msgs) by extension 'colcon_meta'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/action_msgs) by extensions ['ros']
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/action_msgs) by extension 'ros'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/action_msgs) by extensions ['cmake', 'python']
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/action_msgs) by extension 'cmake'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/action_msgs) by extension 'python'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/action_msgs) by extensions ['python_setup_py']
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/action_msgs) by extension 'python_setup_py'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/action_msgs/msg) by extensions ['ignore', 'ignore_ament_install']
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/action_msgs/msg) by extension 'ignore'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/action_msgs/msg) by extension 'ignore_ament_install'
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/action_msgs/msg) by extensions ['colcon_pkg']
+[0.142s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/action_msgs/msg) by extension 'colcon_pkg'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/action_msgs/msg) by extensions ['colcon_meta']
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/action_msgs/msg) by extension 'colcon_meta'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/action_msgs/msg) by extensions ['ros']
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/action_msgs/msg) by extension 'ros'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/action_msgs/msg) by extensions ['cmake', 'python']
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/action_msgs/msg) by extension 'cmake'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/action_msgs/msg) by extension 'python'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/action_msgs/msg) by extensions ['python_setup_py']
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/action_msgs/msg) by extension 'python_setup_py'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/actionlib_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/actionlib_msgs) by extension 'ignore'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/actionlib_msgs) by extension 'ignore_ament_install'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/actionlib_msgs) by extensions ['colcon_pkg']
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/actionlib_msgs) by extension 'colcon_pkg'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/actionlib_msgs) by extensions ['colcon_meta']
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/actionlib_msgs) by extension 'colcon_meta'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/actionlib_msgs) by extensions ['ros']
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/actionlib_msgs) by extension 'ros'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/actionlib_msgs) by extensions ['cmake', 'python']
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/actionlib_msgs) by extension 'cmake'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/actionlib_msgs) by extension 'python'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/actionlib_msgs) by extensions ['python_setup_py']
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/actionlib_msgs) by extension 'python_setup_py'
+[0.143s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/actionlib_msgs/msg) by extensions ['ignore', 'ignore_ament_install']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/actionlib_msgs/msg) by extension 'ignore'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/actionlib_msgs/msg) by extension 'ignore_ament_install'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/actionlib_msgs/msg) by extensions ['colcon_pkg']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/actionlib_msgs/msg) by extension 'colcon_pkg'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/actionlib_msgs/msg) by extensions ['colcon_meta']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/actionlib_msgs/msg) by extension 'colcon_meta'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/actionlib_msgs/msg) by extensions ['ros']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/actionlib_msgs/msg) by extension 'ros'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/actionlib_msgs/msg) by extensions ['cmake', 'python']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/actionlib_msgs/msg) by extension 'cmake'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/actionlib_msgs/msg) by extension 'python'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/actionlib_msgs/msg) by extensions ['python_setup_py']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/actionlib_msgs/msg) by extension 'python_setup_py'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/builtin_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/builtin_interfaces) by extension 'ignore'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/builtin_interfaces) by extension 'ignore_ament_install'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/builtin_interfaces) by extensions ['colcon_pkg']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/builtin_interfaces) by extension 'colcon_pkg'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/builtin_interfaces) by extensions ['colcon_meta']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/builtin_interfaces) by extension 'colcon_meta'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/builtin_interfaces) by extensions ['ros']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/builtin_interfaces) by extension 'ros'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/builtin_interfaces) by extensions ['cmake', 'python']
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/builtin_interfaces) by extension 'cmake'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/builtin_interfaces) by extension 'python'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/builtin_interfaces) by extensions ['python_setup_py']
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/builtin_interfaces) by extension 'python_setup_py'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/builtin_interfaces/msg) by extensions ['ignore', 'ignore_ament_install']
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/builtin_interfaces/msg) by extension 'ignore'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/builtin_interfaces/msg) by extension 'ignore_ament_install'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/builtin_interfaces/msg) by extensions ['colcon_pkg']
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/builtin_interfaces/msg) by extension 'colcon_pkg'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/builtin_interfaces/msg) by extensions ['colcon_meta']
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/builtin_interfaces/msg) by extension 'colcon_meta'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/builtin_interfaces/msg) by extensions ['ros']
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/builtin_interfaces/msg) by extension 'ros'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/builtin_interfaces/msg) by extensions ['cmake', 'python']
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/builtin_interfaces/msg) by extension 'cmake'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/builtin_interfaces/msg) by extension 'python'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/builtin_interfaces/msg) by extensions ['python_setup_py']
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/builtin_interfaces/msg) by extension 'python_setup_py'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/diagnostic_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/diagnostic_msgs) by extension 'ignore'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/diagnostic_msgs) by extension 'ignore_ament_install'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/diagnostic_msgs) by extensions ['colcon_pkg']
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/diagnostic_msgs) by extension 'colcon_pkg'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/diagnostic_msgs) by extensions ['colcon_meta']
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/diagnostic_msgs) by extension 'colcon_meta'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/diagnostic_msgs) by extensions ['ros']
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/diagnostic_msgs) by extension 'ros'
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/diagnostic_msgs) by extensions ['cmake', 'python']
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/diagnostic_msgs) by extension 'cmake'
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/diagnostic_msgs) by extension 'python'
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/diagnostic_msgs) by extensions ['python_setup_py']
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/diagnostic_msgs) by extension 'python_setup_py'
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/diagnostic_msgs/msg) by extensions ['ignore', 'ignore_ament_install']
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/diagnostic_msgs/msg) by extension 'ignore'
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/diagnostic_msgs/msg) by extension 'ignore_ament_install'
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/diagnostic_msgs/msg) by extensions ['colcon_pkg']
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/diagnostic_msgs/msg) by extension 'colcon_pkg'
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/diagnostic_msgs/msg) by extensions ['colcon_meta']
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/diagnostic_msgs/msg) by extension 'colcon_meta'
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/diagnostic_msgs/msg) by extensions ['ros']
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/diagnostic_msgs/msg) by extension 'ros'
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/diagnostic_msgs/msg) by extensions ['cmake', 'python']
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/diagnostic_msgs/msg) by extension 'cmake'
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/diagnostic_msgs/msg) by extension 'python'
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/diagnostic_msgs/msg) by extensions ['python_setup_py']
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/diagnostic_msgs/msg) by extension 'python_setup_py'
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/geometry_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/geometry_msgs) by extension 'ignore'
+[0.146s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/geometry_msgs) by extension 'ignore_ament_install'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/geometry_msgs) by extensions ['colcon_pkg']
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/geometry_msgs) by extension 'colcon_pkg'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/geometry_msgs) by extensions ['colcon_meta']
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/geometry_msgs) by extension 'colcon_meta'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/geometry_msgs) by extensions ['ros']
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/geometry_msgs) by extension 'ros'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/geometry_msgs) by extensions ['cmake', 'python']
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/geometry_msgs) by extension 'cmake'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/geometry_msgs) by extension 'python'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/geometry_msgs) by extensions ['python_setup_py']
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/geometry_msgs) by extension 'python_setup_py'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/geometry_msgs/msg) by extensions ['ignore', 'ignore_ament_install']
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/geometry_msgs/msg) by extension 'ignore'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/geometry_msgs/msg) by extension 'ignore_ament_install'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/geometry_msgs/msg) by extensions ['colcon_pkg']
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/geometry_msgs/msg) by extension 'colcon_pkg'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/geometry_msgs/msg) by extensions ['colcon_meta']
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/geometry_msgs/msg) by extension 'colcon_meta'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/geometry_msgs/msg) by extensions ['ros']
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/geometry_msgs/msg) by extension 'ros'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/geometry_msgs/msg) by extensions ['cmake', 'python']
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/geometry_msgs/msg) by extension 'cmake'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/geometry_msgs/msg) by extension 'python'
+[0.147s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/geometry_msgs/msg) by extensions ['python_setup_py']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/geometry_msgs/msg) by extension 'python_setup_py'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/halodi_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/halodi_msgs) by extension 'ignore'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/halodi_msgs) by extension 'ignore_ament_install'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/halodi_msgs) by extensions ['colcon_pkg']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/halodi_msgs) by extension 'colcon_pkg'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/halodi_msgs) by extensions ['colcon_meta']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/halodi_msgs) by extension 'colcon_meta'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/halodi_msgs) by extensions ['ros']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/halodi_msgs) by extension 'ros'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/halodi_msgs) by extensions ['cmake', 'python']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/halodi_msgs) by extension 'cmake'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/halodi_msgs) by extension 'python'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/halodi_msgs) by extensions ['python_setup_py']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/halodi_msgs) by extension 'python_setup_py'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/halodi_msgs/msg) by extensions ['ignore', 'ignore_ament_install']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/halodi_msgs/msg) by extension 'ignore'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/halodi_msgs/msg) by extension 'ignore_ament_install'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/halodi_msgs/msg) by extensions ['colcon_pkg']
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/halodi_msgs/msg) by extension 'colcon_pkg'
+[0.148s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/halodi_msgs/msg) by extensions ['colcon_meta']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/halodi_msgs/msg) by extension 'colcon_meta'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/halodi_msgs/msg) by extensions ['ros']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/halodi_msgs/msg) by extension 'ros'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/halodi_msgs/msg) by extensions ['cmake', 'python']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/halodi_msgs/msg) by extension 'cmake'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/halodi_msgs/msg) by extension 'python'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/halodi_msgs/msg) by extensions ['python_setup_py']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/halodi_msgs/msg) by extension 'python_setup_py'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/lifecycle_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/lifecycle_msgs) by extension 'ignore'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/lifecycle_msgs) by extension 'ignore_ament_install'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/lifecycle_msgs) by extensions ['colcon_pkg']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/lifecycle_msgs) by extension 'colcon_pkg'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/lifecycle_msgs) by extensions ['colcon_meta']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/lifecycle_msgs) by extension 'colcon_meta'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/lifecycle_msgs) by extensions ['ros']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/lifecycle_msgs) by extension 'ros'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/lifecycle_msgs) by extensions ['cmake', 'python']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/lifecycle_msgs) by extension 'cmake'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/lifecycle_msgs) by extension 'python'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/lifecycle_msgs) by extensions ['python_setup_py']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/lifecycle_msgs) by extension 'python_setup_py'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/lifecycle_msgs/msg) by extensions ['ignore', 'ignore_ament_install']
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/lifecycle_msgs/msg) by extension 'ignore'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/lifecycle_msgs/msg) by extension 'ignore_ament_install'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/lifecycle_msgs/msg) by extensions ['colcon_pkg']
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/lifecycle_msgs/msg) by extension 'colcon_pkg'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/lifecycle_msgs/msg) by extensions ['colcon_meta']
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/lifecycle_msgs/msg) by extension 'colcon_meta'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/lifecycle_msgs/msg) by extensions ['ros']
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/lifecycle_msgs/msg) by extension 'ros'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/lifecycle_msgs/msg) by extensions ['cmake', 'python']
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/lifecycle_msgs/msg) by extension 'cmake'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/lifecycle_msgs/msg) by extension 'python'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/lifecycle_msgs/msg) by extensions ['python_setup_py']
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/lifecycle_msgs/msg) by extension 'python_setup_py'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/nav_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/nav_msgs) by extension 'ignore'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/nav_msgs) by extension 'ignore_ament_install'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/nav_msgs) by extensions ['colcon_pkg']
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/nav_msgs) by extension 'colcon_pkg'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/nav_msgs) by extensions ['colcon_meta']
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/nav_msgs) by extension 'colcon_meta'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/nav_msgs) by extensions ['ros']
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/nav_msgs) by extension 'ros'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/nav_msgs) by extensions ['cmake', 'python']
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/nav_msgs) by extension 'cmake'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/nav_msgs) by extension 'python'
+[0.150s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/nav_msgs) by extensions ['python_setup_py']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/nav_msgs) by extension 'python_setup_py'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/nav_msgs/msg) by extensions ['ignore', 'ignore_ament_install']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/nav_msgs/msg) by extension 'ignore'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/nav_msgs/msg) by extension 'ignore_ament_install'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/nav_msgs/msg) by extensions ['colcon_pkg']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/nav_msgs/msg) by extension 'colcon_pkg'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/nav_msgs/msg) by extensions ['colcon_meta']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/nav_msgs/msg) by extension 'colcon_meta'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/nav_msgs/msg) by extensions ['ros']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/nav_msgs/msg) by extension 'ros'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/nav_msgs/msg) by extensions ['cmake', 'python']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/nav_msgs/msg) by extension 'cmake'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/nav_msgs/msg) by extension 'python'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/nav_msgs/msg) by extensions ['python_setup_py']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/nav_msgs/msg) by extension 'python_setup_py'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rcl_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rcl_interfaces) by extension 'ignore'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rcl_interfaces) by extension 'ignore_ament_install'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rcl_interfaces) by extensions ['colcon_pkg']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rcl_interfaces) by extension 'colcon_pkg'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rcl_interfaces) by extensions ['colcon_meta']
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rcl_interfaces) by extension 'colcon_meta'
+[0.151s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rcl_interfaces) by extensions ['ros']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rcl_interfaces) by extension 'ros'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rcl_interfaces) by extensions ['cmake', 'python']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rcl_interfaces) by extension 'cmake'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rcl_interfaces) by extension 'python'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rcl_interfaces) by extensions ['python_setup_py']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rcl_interfaces) by extension 'python_setup_py'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rcl_interfaces/msg) by extensions ['ignore', 'ignore_ament_install']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rcl_interfaces/msg) by extension 'ignore'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rcl_interfaces/msg) by extension 'ignore_ament_install'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rcl_interfaces/msg) by extensions ['colcon_pkg']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rcl_interfaces/msg) by extension 'colcon_pkg'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rcl_interfaces/msg) by extensions ['colcon_meta']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rcl_interfaces/msg) by extension 'colcon_meta'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rcl_interfaces/msg) by extensions ['ros']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rcl_interfaces/msg) by extension 'ros'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rcl_interfaces/msg) by extensions ['cmake', 'python']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rcl_interfaces/msg) by extension 'cmake'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rcl_interfaces/msg) by extension 'python'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rcl_interfaces/msg) by extensions ['python_setup_py']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rcl_interfaces/msg) by extension 'python_setup_py'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rosgraph_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rosgraph_msgs) by extension 'ignore'
+[0.152s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rosgraph_msgs) by extension 'ignore_ament_install'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rosgraph_msgs) by extensions ['colcon_pkg']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rosgraph_msgs) by extension 'colcon_pkg'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rosgraph_msgs) by extensions ['colcon_meta']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rosgraph_msgs) by extension 'colcon_meta'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rosgraph_msgs) by extensions ['ros']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rosgraph_msgs) by extension 'ros'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rosgraph_msgs) by extensions ['cmake', 'python']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rosgraph_msgs) by extension 'cmake'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rosgraph_msgs) by extension 'python'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rosgraph_msgs) by extensions ['python_setup_py']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rosgraph_msgs) by extension 'python_setup_py'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rosgraph_msgs/msg) by extensions ['ignore', 'ignore_ament_install']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rosgraph_msgs/msg) by extension 'ignore'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rosgraph_msgs/msg) by extension 'ignore_ament_install'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rosgraph_msgs/msg) by extensions ['colcon_pkg']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rosgraph_msgs/msg) by extension 'colcon_pkg'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rosgraph_msgs/msg) by extensions ['colcon_meta']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rosgraph_msgs/msg) by extension 'colcon_meta'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rosgraph_msgs/msg) by extensions ['ros']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rosgraph_msgs/msg) by extension 'ros'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rosgraph_msgs/msg) by extensions ['cmake', 'python']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rosgraph_msgs/msg) by extension 'cmake'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rosgraph_msgs/msg) by extension 'python'
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rosgraph_msgs/msg) by extensions ['python_setup_py']
+[0.153s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/rosgraph_msgs/msg) by extension 'python_setup_py'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/sensor_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/sensor_msgs) by extension 'ignore'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/sensor_msgs) by extension 'ignore_ament_install'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/sensor_msgs) by extensions ['colcon_pkg']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/sensor_msgs) by extension 'colcon_pkg'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/sensor_msgs) by extensions ['colcon_meta']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/sensor_msgs) by extension 'colcon_meta'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/sensor_msgs) by extensions ['ros']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/sensor_msgs) by extension 'ros'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/sensor_msgs) by extensions ['cmake', 'python']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/sensor_msgs) by extension 'cmake'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/sensor_msgs) by extension 'python'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/sensor_msgs) by extensions ['python_setup_py']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/sensor_msgs) by extension 'python_setup_py'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/sensor_msgs/msg) by extensions ['ignore', 'ignore_ament_install']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/sensor_msgs/msg) by extension 'ignore'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/sensor_msgs/msg) by extension 'ignore_ament_install'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/sensor_msgs/msg) by extensions ['colcon_pkg']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/sensor_msgs/msg) by extension 'colcon_pkg'
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/sensor_msgs/msg) by extensions ['colcon_meta']
+[0.154s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/sensor_msgs/msg) by extension 'colcon_meta'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/sensor_msgs/msg) by extensions ['ros']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/sensor_msgs/msg) by extension 'ros'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/sensor_msgs/msg) by extensions ['cmake', 'python']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/sensor_msgs/msg) by extension 'cmake'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/sensor_msgs/msg) by extension 'python'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/sensor_msgs/msg) by extensions ['python_setup_py']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/sensor_msgs/msg) by extension 'python_setup_py'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/shape_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/shape_msgs) by extension 'ignore'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/shape_msgs) by extension 'ignore_ament_install'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/shape_msgs) by extensions ['colcon_pkg']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/shape_msgs) by extension 'colcon_pkg'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/shape_msgs) by extensions ['colcon_meta']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/shape_msgs) by extension 'colcon_meta'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/shape_msgs) by extensions ['ros']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/shape_msgs) by extension 'ros'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/shape_msgs) by extensions ['cmake', 'python']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/shape_msgs) by extension 'cmake'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/shape_msgs) by extension 'python'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/shape_msgs) by extensions ['python_setup_py']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/shape_msgs) by extension 'python_setup_py'
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/shape_msgs/msg) by extensions ['ignore', 'ignore_ament_install']
+[0.155s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/shape_msgs/msg) by extension 'ignore'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/shape_msgs/msg) by extension 'ignore_ament_install'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/shape_msgs/msg) by extensions ['colcon_pkg']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/shape_msgs/msg) by extension 'colcon_pkg'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/shape_msgs/msg) by extensions ['colcon_meta']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/shape_msgs/msg) by extension 'colcon_meta'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/shape_msgs/msg) by extensions ['ros']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/shape_msgs/msg) by extension 'ros'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/shape_msgs/msg) by extensions ['cmake', 'python']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/shape_msgs/msg) by extension 'cmake'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/shape_msgs/msg) by extension 'python'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/shape_msgs/msg) by extensions ['python_setup_py']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/shape_msgs/msg) by extension 'python_setup_py'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/std_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/std_msgs) by extension 'ignore'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/std_msgs) by extension 'ignore_ament_install'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/std_msgs) by extensions ['colcon_pkg']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/std_msgs) by extension 'colcon_pkg'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/std_msgs) by extensions ['colcon_meta']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/std_msgs) by extension 'colcon_meta'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/std_msgs) by extensions ['ros']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/std_msgs) by extension 'ros'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/std_msgs) by extensions ['cmake', 'python']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/std_msgs) by extension 'cmake'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/std_msgs) by extension 'python'
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/std_msgs) by extensions ['python_setup_py']
+[0.156s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/std_msgs) by extension 'python_setup_py'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/std_msgs/msg) by extensions ['ignore', 'ignore_ament_install']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/std_msgs/msg) by extension 'ignore'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/std_msgs/msg) by extension 'ignore_ament_install'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/std_msgs/msg) by extensions ['colcon_pkg']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/std_msgs/msg) by extension 'colcon_pkg'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/std_msgs/msg) by extensions ['colcon_meta']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/std_msgs/msg) by extension 'colcon_meta'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/std_msgs/msg) by extensions ['ros']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/std_msgs/msg) by extension 'ros'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/std_msgs/msg) by extensions ['cmake', 'python']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/std_msgs/msg) by extension 'cmake'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/std_msgs/msg) by extension 'python'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/std_msgs/msg) by extensions ['python_setup_py']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/std_msgs/msg) by extension 'python_setup_py'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/stereo_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/stereo_msgs) by extension 'ignore'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/stereo_msgs) by extension 'ignore_ament_install'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/stereo_msgs) by extensions ['colcon_pkg']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/stereo_msgs) by extension 'colcon_pkg'
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/stereo_msgs) by extensions ['colcon_meta']
+[0.157s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/stereo_msgs) by extension 'colcon_meta'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/stereo_msgs) by extensions ['ros']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/stereo_msgs) by extension 'ros'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/stereo_msgs) by extensions ['cmake', 'python']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/stereo_msgs) by extension 'cmake'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/stereo_msgs) by extension 'python'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/stereo_msgs) by extensions ['python_setup_py']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/stereo_msgs) by extension 'python_setup_py'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/stereo_msgs/msg) by extensions ['ignore', 'ignore_ament_install']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/stereo_msgs/msg) by extension 'ignore'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/stereo_msgs/msg) by extension 'ignore_ament_install'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/stereo_msgs/msg) by extensions ['colcon_pkg']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/stereo_msgs/msg) by extension 'colcon_pkg'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/stereo_msgs/msg) by extensions ['colcon_meta']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/stereo_msgs/msg) by extension 'colcon_meta'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/stereo_msgs/msg) by extensions ['ros']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/stereo_msgs/msg) by extension 'ros'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/stereo_msgs/msg) by extensions ['cmake', 'python']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/stereo_msgs/msg) by extension 'cmake'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/stereo_msgs/msg) by extension 'python'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/stereo_msgs/msg) by extensions ['python_setup_py']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/stereo_msgs/msg) by extension 'python_setup_py'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/tf2_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/tf2_msgs) by extension 'ignore'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/tf2_msgs) by extension 'ignore_ament_install'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/tf2_msgs) by extensions ['colcon_pkg']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/tf2_msgs) by extension 'colcon_pkg'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/tf2_msgs) by extensions ['colcon_meta']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/tf2_msgs) by extension 'colcon_meta'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/tf2_msgs) by extensions ['ros']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/tf2_msgs) by extension 'ros'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/tf2_msgs) by extensions ['cmake', 'python']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/tf2_msgs) by extension 'cmake'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/tf2_msgs) by extension 'python'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/tf2_msgs) by extensions ['python_setup_py']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/tf2_msgs) by extension 'python_setup_py'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/tf2_msgs/msg) by extensions ['ignore', 'ignore_ament_install']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/tf2_msgs/msg) by extension 'ignore'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/tf2_msgs/msg) by extension 'ignore_ament_install'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/tf2_msgs/msg) by extensions ['colcon_pkg']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/tf2_msgs/msg) by extension 'colcon_pkg'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/tf2_msgs/msg) by extensions ['colcon_meta']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/tf2_msgs/msg) by extension 'colcon_meta'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/tf2_msgs/msg) by extensions ['ros']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/tf2_msgs/msg) by extension 'ros'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/tf2_msgs/msg) by extensions ['cmake', 'python']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/tf2_msgs/msg) by extension 'cmake'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/tf2_msgs/msg) by extension 'python'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/tf2_msgs/msg) by extensions ['python_setup_py']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/tf2_msgs/msg) by extension 'python_setup_py'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/trajectory_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/trajectory_msgs) by extension 'ignore'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/trajectory_msgs) by extension 'ignore_ament_install'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/trajectory_msgs) by extensions ['colcon_pkg']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/trajectory_msgs) by extension 'colcon_pkg'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/trajectory_msgs) by extensions ['colcon_meta']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/trajectory_msgs) by extension 'colcon_meta'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/trajectory_msgs) by extensions ['ros']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/trajectory_msgs) by extension 'ros'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/trajectory_msgs) by extensions ['cmake', 'python']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/trajectory_msgs) by extension 'cmake'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/trajectory_msgs) by extension 'python'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/trajectory_msgs) by extensions ['python_setup_py']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/trajectory_msgs) by extension 'python_setup_py'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/trajectory_msgs/msg) by extensions ['ignore', 'ignore_ament_install']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/trajectory_msgs/msg) by extension 'ignore'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/trajectory_msgs/msg) by extension 'ignore_ament_install'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/trajectory_msgs/msg) by extensions ['colcon_pkg']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/trajectory_msgs/msg) by extension 'colcon_pkg'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/trajectory_msgs/msg) by extensions ['colcon_meta']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/trajectory_msgs/msg) by extension 'colcon_meta'
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/trajectory_msgs/msg) by extensions ['ros']
+[0.160s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/trajectory_msgs/msg) by extension 'ros'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/trajectory_msgs/msg) by extensions ['cmake', 'python']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/trajectory_msgs/msg) by extension 'cmake'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/trajectory_msgs/msg) by extension 'python'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/trajectory_msgs/msg) by extensions ['python_setup_py']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/trajectory_msgs/msg) by extension 'python_setup_py'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/unique_identifier_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/unique_identifier_msgs) by extension 'ignore'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/unique_identifier_msgs) by extension 'ignore_ament_install'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/unique_identifier_msgs) by extensions ['colcon_pkg']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/unique_identifier_msgs) by extension 'colcon_pkg'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/unique_identifier_msgs) by extensions ['colcon_meta']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/unique_identifier_msgs) by extension 'colcon_meta'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/unique_identifier_msgs) by extensions ['ros']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/unique_identifier_msgs) by extension 'ros'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/unique_identifier_msgs) by extensions ['cmake', 'python']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/unique_identifier_msgs) by extension 'cmake'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/unique_identifier_msgs) by extension 'python'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/unique_identifier_msgs) by extensions ['python_setup_py']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/unique_identifier_msgs) by extension 'python_setup_py'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/unique_identifier_msgs/msg) by extensions ['ignore', 'ignore_ament_install']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/unique_identifier_msgs/msg) by extension 'ignore'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/unique_identifier_msgs/msg) by extension 'ignore_ament_install'
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/unique_identifier_msgs/msg) by extensions ['colcon_pkg']
+[0.161s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/unique_identifier_msgs/msg) by extension 'colcon_pkg'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/unique_identifier_msgs/msg) by extensions ['colcon_meta']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/unique_identifier_msgs/msg) by extension 'colcon_meta'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/unique_identifier_msgs/msg) by extensions ['ros']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/unique_identifier_msgs/msg) by extension 'ros'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/unique_identifier_msgs/msg) by extensions ['cmake', 'python']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/unique_identifier_msgs/msg) by extension 'cmake'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/unique_identifier_msgs/msg) by extension 'python'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/unique_identifier_msgs/msg) by extensions ['python_setup_py']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/unique_identifier_msgs/msg) by extension 'python_setup_py'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/visualization_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/visualization_msgs) by extension 'ignore'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/visualization_msgs) by extension 'ignore_ament_install'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/visualization_msgs) by extensions ['colcon_pkg']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/visualization_msgs) by extension 'colcon_pkg'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/visualization_msgs) by extensions ['colcon_meta']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/visualization_msgs) by extension 'colcon_meta'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/visualization_msgs) by extensions ['ros']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/visualization_msgs) by extension 'ros'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/visualization_msgs) by extensions ['cmake', 'python']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/visualization_msgs) by extension 'cmake'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/visualization_msgs) by extension 'python'
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/visualization_msgs) by extensions ['python_setup_py']
+[0.162s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/visualization_msgs) by extension 'python_setup_py'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/visualization_msgs/msg) by extensions ['ignore', 'ignore_ament_install']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/visualization_msgs/msg) by extension 'ignore'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/visualization_msgs/msg) by extension 'ignore_ament_install'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/visualization_msgs/msg) by extensions ['colcon_pkg']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/visualization_msgs/msg) by extension 'colcon_pkg'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/visualization_msgs/msg) by extensions ['colcon_meta']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/visualization_msgs/msg) by extension 'colcon_meta'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/visualization_msgs/msg) by extensions ['ros']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/visualization_msgs/msg) by extension 'ros'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/visualization_msgs/msg) by extensions ['cmake', 'python']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/visualization_msgs/msg) by extension 'cmake'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/visualization_msgs/msg) by extension 'python'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/visualization_msgs/msg) by extensions ['python_setup_py']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Runtime/visualization_msgs/msg) by extension 'python_setup_py'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests) by extensions ['ignore', 'ignore_ament_install']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests) by extension 'ignore'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests) by extension 'ignore_ament_install'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests) by extensions ['colcon_pkg']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests) by extension 'colcon_pkg'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests) by extensions ['colcon_meta']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests) by extension 'colcon_meta'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests) by extensions ['ros']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests) by extension 'ros'
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests) by extensions ['cmake', 'python']
+[0.163s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests) by extension 'cmake'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests) by extension 'python'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests) by extensions ['python_setup_py']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests) by extension 'python_setup_py'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests/Editor) by extensions ['ignore', 'ignore_ament_install']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests/Editor) by extension 'ignore'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests/Editor) by extension 'ignore_ament_install'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests/Editor) by extensions ['colcon_pkg']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests/Editor) by extension 'colcon_pkg'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests/Editor) by extensions ['colcon_meta']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests/Editor) by extension 'colcon_meta'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests/Editor) by extensions ['ros']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests/Editor) by extension 'ros'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests/Editor) by extensions ['cmake', 'python']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests/Editor) by extension 'cmake'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests/Editor) by extension 'python'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests/Editor) by extensions ['python_setup_py']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests/Editor) by extension 'python_setup_py'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests/Runtime) by extensions ['ignore', 'ignore_ament_install']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests/Runtime) by extension 'ignore'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests/Runtime) by extension 'ignore_ament_install'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests/Runtime) by extensions ['colcon_pkg']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests/Runtime) by extension 'colcon_pkg'
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests/Runtime) by extensions ['colcon_meta']
+[0.164s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests/Runtime) by extension 'colcon_meta'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests/Runtime) by extensions ['ros']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests/Runtime) by extension 'ros'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests/Runtime) by extensions ['cmake', 'python']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests/Runtime) by extension 'cmake'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests/Runtime) by extension 'python'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests/Runtime) by extensions ['python_setup_py']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/Packages/halodi-messages/Tests/Runtime) by extension 'python_setup_py'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/ProjectSettings) by extensions ['ignore', 'ignore_ament_install']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/ProjectSettings) by extension 'ignore'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/ProjectSettings) by extension 'ignore_ament_install'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/ProjectSettings) by extensions ['colcon_pkg']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/ProjectSettings) by extension 'colcon_pkg'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/ProjectSettings) by extensions ['colcon_meta']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/ProjectSettings) by extension 'colcon_meta'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/ProjectSettings) by extensions ['ros']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/ProjectSettings) by extension 'ros'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/ProjectSettings) by extensions ['cmake', 'python']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/ProjectSettings) by extension 'cmake'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/ProjectSettings) by extension 'python'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/ProjectSettings) by extensions ['python_setup_py']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/ProjectSettings) by extension 'python_setup_py'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/UserSettings) by extensions ['ignore', 'ignore_ament_install']
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/UserSettings) by extension 'ignore'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/UserSettings) by extension 'ignore_ament_install'
+[0.165s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/UserSettings) by extensions ['colcon_pkg']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/UserSettings) by extension 'colcon_pkg'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/UserSettings) by extensions ['colcon_meta']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/UserSettings) by extension 'colcon_meta'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/UserSettings) by extensions ['ros']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/UserSettings) by extension 'ros'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/UserSettings) by extensions ['cmake', 'python']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/UserSettings) by extension 'cmake'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/UserSettings) by extension 'python'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/UserSettings) by extensions ['python_setup_py']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(halodi-messages-unity-support/UserSettings) by extension 'python_setup_py'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(halodi_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(halodi_msgs) by extension 'ignore'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(halodi_msgs) by extension 'ignore_ament_install'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(halodi_msgs) by extensions ['colcon_pkg']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(halodi_msgs) by extension 'colcon_pkg'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(halodi_msgs) by extensions ['colcon_meta']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(halodi_msgs) by extension 'colcon_meta'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(halodi_msgs) by extensions ['ros']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(halodi_msgs) by extension 'ros'
+[0.168s] DEBUG:colcon.colcon_core.package_identification:Package 'halodi_msgs' with type 'ros.ament_cmake' and name 'halodi_msgs'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport) by extensions ['ignore', 'ignore_ament_install']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport) by extension 'ignore'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport) by extension 'ignore_ament_install'
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport) by extensions ['colcon_pkg']
+[0.168s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport) by extension 'colcon_pkg'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport) by extensions ['colcon_meta']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport) by extension 'colcon_meta'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport) by extensions ['ros']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport) by extension 'ros'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport) by extensions ['cmake', 'python']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport) by extension 'cmake'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport) by extension 'python'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport) by extensions ['python_setup_py']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport) by extension 'python_setup_py'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/action_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/action_msgs) by extension 'ignore'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/action_msgs) by extension 'ignore_ament_install'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/action_msgs) by extensions ['colcon_pkg']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/action_msgs) by extension 'colcon_pkg'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/action_msgs) by extensions ['colcon_meta']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/action_msgs) by extension 'colcon_meta'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/action_msgs) by extensions ['ros']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/action_msgs) by extension 'ros'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/action_msgs) by extensions ['cmake', 'python']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/action_msgs) by extension 'cmake'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/action_msgs) by extension 'python'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/action_msgs) by extensions ['python_setup_py']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/action_msgs) by extension 'python_setup_py'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/action_msgs/msg) by extensions ['ignore', 'ignore_ament_install']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/action_msgs/msg) by extension 'ignore'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/action_msgs/msg) by extension 'ignore_ament_install'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/action_msgs/msg) by extensions ['colcon_pkg']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/action_msgs/msg) by extension 'colcon_pkg'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/action_msgs/msg) by extensions ['colcon_meta']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/action_msgs/msg) by extension 'colcon_meta'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/action_msgs/msg) by extensions ['ros']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/action_msgs/msg) by extension 'ros'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/action_msgs/msg) by extensions ['cmake', 'python']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/action_msgs/msg) by extension 'cmake'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/action_msgs/msg) by extension 'python'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/action_msgs/msg) by extensions ['python_setup_py']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/action_msgs/msg) by extension 'python_setup_py'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/actionlib_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/actionlib_msgs) by extension 'ignore'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/actionlib_msgs) by extension 'ignore_ament_install'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/actionlib_msgs) by extensions ['colcon_pkg']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/actionlib_msgs) by extension 'colcon_pkg'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/actionlib_msgs) by extensions ['colcon_meta']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/actionlib_msgs) by extension 'colcon_meta'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/actionlib_msgs) by extensions ['ros']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/actionlib_msgs) by extension 'ros'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/actionlib_msgs) by extensions ['cmake', 'python']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/actionlib_msgs) by extension 'cmake'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/actionlib_msgs) by extension 'python'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/actionlib_msgs) by extensions ['python_setup_py']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/actionlib_msgs) by extension 'python_setup_py'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/actionlib_msgs/msg) by extensions ['ignore', 'ignore_ament_install']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/actionlib_msgs/msg) by extension 'ignore'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/actionlib_msgs/msg) by extension 'ignore_ament_install'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/actionlib_msgs/msg) by extensions ['colcon_pkg']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/actionlib_msgs/msg) by extension 'colcon_pkg'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/actionlib_msgs/msg) by extensions ['colcon_meta']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/actionlib_msgs/msg) by extension 'colcon_meta'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/actionlib_msgs/msg) by extensions ['ros']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/actionlib_msgs/msg) by extension 'ros'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/actionlib_msgs/msg) by extensions ['cmake', 'python']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/actionlib_msgs/msg) by extension 'cmake'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/actionlib_msgs/msg) by extension 'python'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/actionlib_msgs/msg) by extensions ['python_setup_py']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/actionlib_msgs/msg) by extension 'python_setup_py'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/builtin_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/builtin_interfaces) by extension 'ignore'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/builtin_interfaces) by extension 'ignore_ament_install'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/builtin_interfaces) by extensions ['colcon_pkg']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/builtin_interfaces) by extension 'colcon_pkg'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/builtin_interfaces) by extensions ['colcon_meta']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/builtin_interfaces) by extension 'colcon_meta'
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/builtin_interfaces) by extensions ['ros']
+[0.171s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/builtin_interfaces) by extension 'ros'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/builtin_interfaces) by extensions ['cmake', 'python']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/builtin_interfaces) by extension 'cmake'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/builtin_interfaces) by extension 'python'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/builtin_interfaces) by extensions ['python_setup_py']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/builtin_interfaces) by extension 'python_setup_py'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/builtin_interfaces/msg) by extensions ['ignore', 'ignore_ament_install']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/builtin_interfaces/msg) by extension 'ignore'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/builtin_interfaces/msg) by extension 'ignore_ament_install'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/builtin_interfaces/msg) by extensions ['colcon_pkg']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/builtin_interfaces/msg) by extension 'colcon_pkg'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/builtin_interfaces/msg) by extensions ['colcon_meta']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/builtin_interfaces/msg) by extension 'colcon_meta'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/builtin_interfaces/msg) by extensions ['ros']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/builtin_interfaces/msg) by extension 'ros'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/builtin_interfaces/msg) by extensions ['cmake', 'python']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/builtin_interfaces/msg) by extension 'cmake'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/builtin_interfaces/msg) by extension 'python'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/builtin_interfaces/msg) by extensions ['python_setup_py']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/builtin_interfaces/msg) by extension 'python_setup_py'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/diagnostic_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/diagnostic_msgs) by extension 'ignore'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/diagnostic_msgs) by extension 'ignore_ament_install'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/diagnostic_msgs) by extensions ['colcon_pkg']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/diagnostic_msgs) by extension 'colcon_pkg'
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/diagnostic_msgs) by extensions ['colcon_meta']
+[0.172s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/diagnostic_msgs) by extension 'colcon_meta'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/diagnostic_msgs) by extensions ['ros']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/diagnostic_msgs) by extension 'ros'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/diagnostic_msgs) by extensions ['cmake', 'python']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/diagnostic_msgs) by extension 'cmake'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/diagnostic_msgs) by extension 'python'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/diagnostic_msgs) by extensions ['python_setup_py']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/diagnostic_msgs) by extension 'python_setup_py'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/diagnostic_msgs/msg) by extensions ['ignore', 'ignore_ament_install']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/diagnostic_msgs/msg) by extension 'ignore'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/diagnostic_msgs/msg) by extension 'ignore_ament_install'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/diagnostic_msgs/msg) by extensions ['colcon_pkg']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/diagnostic_msgs/msg) by extension 'colcon_pkg'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/diagnostic_msgs/msg) by extensions ['colcon_meta']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/diagnostic_msgs/msg) by extension 'colcon_meta'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/diagnostic_msgs/msg) by extensions ['ros']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/diagnostic_msgs/msg) by extension 'ros'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/diagnostic_msgs/msg) by extensions ['cmake', 'python']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/diagnostic_msgs/msg) by extension 'cmake'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/diagnostic_msgs/msg) by extension 'python'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/diagnostic_msgs/msg) by extensions ['python_setup_py']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/diagnostic_msgs/msg) by extension 'python_setup_py'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/geometry_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/geometry_msgs) by extension 'ignore'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/geometry_msgs) by extension 'ignore_ament_install'
+[0.173s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/geometry_msgs) by extensions ['colcon_pkg']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/geometry_msgs) by extension 'colcon_pkg'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/geometry_msgs) by extensions ['colcon_meta']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/geometry_msgs) by extension 'colcon_meta'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/geometry_msgs) by extensions ['ros']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/geometry_msgs) by extension 'ros'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/geometry_msgs) by extensions ['cmake', 'python']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/geometry_msgs) by extension 'cmake'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/geometry_msgs) by extension 'python'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/geometry_msgs) by extensions ['python_setup_py']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/geometry_msgs) by extension 'python_setup_py'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/geometry_msgs/msg) by extensions ['ignore', 'ignore_ament_install']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/geometry_msgs/msg) by extension 'ignore'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/geometry_msgs/msg) by extension 'ignore_ament_install'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/geometry_msgs/msg) by extensions ['colcon_pkg']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/geometry_msgs/msg) by extension 'colcon_pkg'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/geometry_msgs/msg) by extensions ['colcon_meta']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/geometry_msgs/msg) by extension 'colcon_meta'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/geometry_msgs/msg) by extensions ['ros']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/geometry_msgs/msg) by extension 'ros'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/geometry_msgs/msg) by extensions ['cmake', 'python']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/geometry_msgs/msg) by extension 'cmake'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/geometry_msgs/msg) by extension 'python'
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/geometry_msgs/msg) by extensions ['python_setup_py']
+[0.174s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/geometry_msgs/msg) by extension 'python_setup_py'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/lifecycle_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/lifecycle_msgs) by extension 'ignore'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/lifecycle_msgs) by extension 'ignore_ament_install'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/lifecycle_msgs) by extensions ['colcon_pkg']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/lifecycle_msgs) by extension 'colcon_pkg'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/lifecycle_msgs) by extensions ['colcon_meta']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/lifecycle_msgs) by extension 'colcon_meta'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/lifecycle_msgs) by extensions ['ros']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/lifecycle_msgs) by extension 'ros'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/lifecycle_msgs) by extensions ['cmake', 'python']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/lifecycle_msgs) by extension 'cmake'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/lifecycle_msgs) by extension 'python'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/lifecycle_msgs) by extensions ['python_setup_py']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/lifecycle_msgs) by extension 'python_setup_py'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/lifecycle_msgs/msg) by extensions ['ignore', 'ignore_ament_install']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/lifecycle_msgs/msg) by extension 'ignore'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/lifecycle_msgs/msg) by extension 'ignore_ament_install'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/lifecycle_msgs/msg) by extensions ['colcon_pkg']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/lifecycle_msgs/msg) by extension 'colcon_pkg'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/lifecycle_msgs/msg) by extensions ['colcon_meta']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/lifecycle_msgs/msg) by extension 'colcon_meta'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/lifecycle_msgs/msg) by extensions ['ros']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/lifecycle_msgs/msg) by extension 'ros'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/lifecycle_msgs/msg) by extensions ['cmake', 'python']
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/lifecycle_msgs/msg) by extension 'cmake'
+[0.175s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/lifecycle_msgs/msg) by extension 'python'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/lifecycle_msgs/msg) by extensions ['python_setup_py']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/lifecycle_msgs/msg) by extension 'python_setup_py'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/nav_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/nav_msgs) by extension 'ignore'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/nav_msgs) by extension 'ignore_ament_install'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/nav_msgs) by extensions ['colcon_pkg']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/nav_msgs) by extension 'colcon_pkg'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/nav_msgs) by extensions ['colcon_meta']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/nav_msgs) by extension 'colcon_meta'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/nav_msgs) by extensions ['ros']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/nav_msgs) by extension 'ros'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/nav_msgs) by extensions ['cmake', 'python']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/nav_msgs) by extension 'cmake'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/nav_msgs) by extension 'python'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/nav_msgs) by extensions ['python_setup_py']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/nav_msgs) by extension 'python_setup_py'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/nav_msgs/msg) by extensions ['ignore', 'ignore_ament_install']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/nav_msgs/msg) by extension 'ignore'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/nav_msgs/msg) by extension 'ignore_ament_install'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/nav_msgs/msg) by extensions ['colcon_pkg']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/nav_msgs/msg) by extension 'colcon_pkg'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/nav_msgs/msg) by extensions ['colcon_meta']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/nav_msgs/msg) by extension 'colcon_meta'
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/nav_msgs/msg) by extensions ['ros']
+[0.176s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/nav_msgs/msg) by extension 'ros'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/nav_msgs/msg) by extensions ['cmake', 'python']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/nav_msgs/msg) by extension 'cmake'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/nav_msgs/msg) by extension 'python'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/nav_msgs/msg) by extensions ['python_setup_py']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/nav_msgs/msg) by extension 'python_setup_py'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rcl_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rcl_interfaces) by extension 'ignore'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rcl_interfaces) by extension 'ignore_ament_install'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rcl_interfaces) by extensions ['colcon_pkg']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rcl_interfaces) by extension 'colcon_pkg'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rcl_interfaces) by extensions ['colcon_meta']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rcl_interfaces) by extension 'colcon_meta'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rcl_interfaces) by extensions ['ros']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rcl_interfaces) by extension 'ros'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rcl_interfaces) by extensions ['cmake', 'python']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rcl_interfaces) by extension 'cmake'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rcl_interfaces) by extension 'python'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rcl_interfaces) by extensions ['python_setup_py']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rcl_interfaces) by extension 'python_setup_py'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rcl_interfaces/msg) by extensions ['ignore', 'ignore_ament_install']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rcl_interfaces/msg) by extension 'ignore'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rcl_interfaces/msg) by extension 'ignore_ament_install'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rcl_interfaces/msg) by extensions ['colcon_pkg']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rcl_interfaces/msg) by extension 'colcon_pkg'
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rcl_interfaces/msg) by extensions ['colcon_meta']
+[0.177s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rcl_interfaces/msg) by extension 'colcon_meta'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rcl_interfaces/msg) by extensions ['ros']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rcl_interfaces/msg) by extension 'ros'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rcl_interfaces/msg) by extensions ['cmake', 'python']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rcl_interfaces/msg) by extension 'cmake'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rcl_interfaces/msg) by extension 'python'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rcl_interfaces/msg) by extensions ['python_setup_py']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rcl_interfaces/msg) by extension 'python_setup_py'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rosgraph_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rosgraph_msgs) by extension 'ignore'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rosgraph_msgs) by extension 'ignore_ament_install'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rosgraph_msgs) by extensions ['colcon_pkg']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rosgraph_msgs) by extension 'colcon_pkg'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rosgraph_msgs) by extensions ['colcon_meta']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rosgraph_msgs) by extension 'colcon_meta'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rosgraph_msgs) by extensions ['ros']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rosgraph_msgs) by extension 'ros'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rosgraph_msgs) by extensions ['cmake', 'python']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rosgraph_msgs) by extension 'cmake'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rosgraph_msgs) by extension 'python'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rosgraph_msgs) by extensions ['python_setup_py']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rosgraph_msgs) by extension 'python_setup_py'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rosgraph_msgs/msg) by extensions ['ignore', 'ignore_ament_install']
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rosgraph_msgs/msg) by extension 'ignore'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rosgraph_msgs/msg) by extension 'ignore_ament_install'
+[0.178s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rosgraph_msgs/msg) by extensions ['colcon_pkg']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rosgraph_msgs/msg) by extension 'colcon_pkg'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rosgraph_msgs/msg) by extensions ['colcon_meta']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rosgraph_msgs/msg) by extension 'colcon_meta'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rosgraph_msgs/msg) by extensions ['ros']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rosgraph_msgs/msg) by extension 'ros'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rosgraph_msgs/msg) by extensions ['cmake', 'python']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rosgraph_msgs/msg) by extension 'cmake'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rosgraph_msgs/msg) by extension 'python'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rosgraph_msgs/msg) by extensions ['python_setup_py']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/rosgraph_msgs/msg) by extension 'python_setup_py'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/sensor_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/sensor_msgs) by extension 'ignore'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/sensor_msgs) by extension 'ignore_ament_install'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/sensor_msgs) by extensions ['colcon_pkg']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/sensor_msgs) by extension 'colcon_pkg'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/sensor_msgs) by extensions ['colcon_meta']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/sensor_msgs) by extension 'colcon_meta'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/sensor_msgs) by extensions ['ros']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/sensor_msgs) by extension 'ros'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/sensor_msgs) by extensions ['cmake', 'python']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/sensor_msgs) by extension 'cmake'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/sensor_msgs) by extension 'python'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/sensor_msgs) by extensions ['python_setup_py']
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/sensor_msgs) by extension 'python_setup_py'
+[0.179s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/sensor_msgs/msg) by extensions ['ignore', 'ignore_ament_install']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/sensor_msgs/msg) by extension 'ignore'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/sensor_msgs/msg) by extension 'ignore_ament_install'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/sensor_msgs/msg) by extensions ['colcon_pkg']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/sensor_msgs/msg) by extension 'colcon_pkg'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/sensor_msgs/msg) by extensions ['colcon_meta']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/sensor_msgs/msg) by extension 'colcon_meta'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/sensor_msgs/msg) by extensions ['ros']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/sensor_msgs/msg) by extension 'ros'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/sensor_msgs/msg) by extensions ['cmake', 'python']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/sensor_msgs/msg) by extension 'cmake'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/sensor_msgs/msg) by extension 'python'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/sensor_msgs/msg) by extensions ['python_setup_py']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/sensor_msgs/msg) by extension 'python_setup_py'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/shape_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/shape_msgs) by extension 'ignore'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/shape_msgs) by extension 'ignore_ament_install'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/shape_msgs) by extensions ['colcon_pkg']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/shape_msgs) by extension 'colcon_pkg'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/shape_msgs) by extensions ['colcon_meta']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/shape_msgs) by extension 'colcon_meta'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/shape_msgs) by extensions ['ros']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/shape_msgs) by extension 'ros'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/shape_msgs) by extensions ['cmake', 'python']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/shape_msgs) by extension 'cmake'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/shape_msgs) by extension 'python'
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/shape_msgs) by extensions ['python_setup_py']
+[0.180s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/shape_msgs) by extension 'python_setup_py'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/shape_msgs/msg) by extensions ['ignore', 'ignore_ament_install']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/shape_msgs/msg) by extension 'ignore'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/shape_msgs/msg) by extension 'ignore_ament_install'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/shape_msgs/msg) by extensions ['colcon_pkg']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/shape_msgs/msg) by extension 'colcon_pkg'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/shape_msgs/msg) by extensions ['colcon_meta']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/shape_msgs/msg) by extension 'colcon_meta'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/shape_msgs/msg) by extensions ['ros']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/shape_msgs/msg) by extension 'ros'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/shape_msgs/msg) by extensions ['cmake', 'python']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/shape_msgs/msg) by extension 'cmake'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/shape_msgs/msg) by extension 'python'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/shape_msgs/msg) by extensions ['python_setup_py']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/shape_msgs/msg) by extension 'python_setup_py'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/std_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/std_msgs) by extension 'ignore'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/std_msgs) by extension 'ignore_ament_install'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/std_msgs) by extensions ['colcon_pkg']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/std_msgs) by extension 'colcon_pkg'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/std_msgs) by extensions ['colcon_meta']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/std_msgs) by extension 'colcon_meta'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/std_msgs) by extensions ['ros']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/std_msgs) by extension 'ros'
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/std_msgs) by extensions ['cmake', 'python']
+[0.181s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/std_msgs) by extension 'cmake'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/std_msgs) by extension 'python'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/std_msgs) by extensions ['python_setup_py']
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/std_msgs) by extension 'python_setup_py'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/std_msgs/msg) by extensions ['ignore', 'ignore_ament_install']
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/std_msgs/msg) by extension 'ignore'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/std_msgs/msg) by extension 'ignore_ament_install'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/std_msgs/msg) by extensions ['colcon_pkg']
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/std_msgs/msg) by extension 'colcon_pkg'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/std_msgs/msg) by extensions ['colcon_meta']
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/std_msgs/msg) by extension 'colcon_meta'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/std_msgs/msg) by extensions ['ros']
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/std_msgs/msg) by extension 'ros'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/std_msgs/msg) by extensions ['cmake', 'python']
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/std_msgs/msg) by extension 'cmake'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/std_msgs/msg) by extension 'python'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/std_msgs/msg) by extensions ['python_setup_py']
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/std_msgs/msg) by extension 'python_setup_py'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/stereo_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/stereo_msgs) by extension 'ignore'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/stereo_msgs) by extension 'ignore_ament_install'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/stereo_msgs) by extensions ['colcon_pkg']
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/stereo_msgs) by extension 'colcon_pkg'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/stereo_msgs) by extensions ['colcon_meta']
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/stereo_msgs) by extension 'colcon_meta'
+[0.182s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/stereo_msgs) by extensions ['ros']
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/stereo_msgs) by extension 'ros'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/stereo_msgs) by extensions ['cmake', 'python']
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/stereo_msgs) by extension 'cmake'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/stereo_msgs) by extension 'python'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/stereo_msgs) by extensions ['python_setup_py']
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/stereo_msgs) by extension 'python_setup_py'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/stereo_msgs/msg) by extensions ['ignore', 'ignore_ament_install']
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/stereo_msgs/msg) by extension 'ignore'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/stereo_msgs/msg) by extension 'ignore_ament_install'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/stereo_msgs/msg) by extensions ['colcon_pkg']
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/stereo_msgs/msg) by extension 'colcon_pkg'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/stereo_msgs/msg) by extensions ['colcon_meta']
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/stereo_msgs/msg) by extension 'colcon_meta'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/stereo_msgs/msg) by extensions ['ros']
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/stereo_msgs/msg) by extension 'ros'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/stereo_msgs/msg) by extensions ['cmake', 'python']
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/stereo_msgs/msg) by extension 'cmake'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/stereo_msgs/msg) by extension 'python'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/stereo_msgs/msg) by extensions ['python_setup_py']
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/stereo_msgs/msg) by extension 'python_setup_py'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/tf2_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/tf2_msgs) by extension 'ignore'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/tf2_msgs) by extension 'ignore_ament_install'
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/tf2_msgs) by extensions ['colcon_pkg']
+[0.183s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/tf2_msgs) by extension 'colcon_pkg'
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/tf2_msgs) by extensions ['colcon_meta']
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/tf2_msgs) by extension 'colcon_meta'
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/tf2_msgs) by extensions ['ros']
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/tf2_msgs) by extension 'ros'
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/tf2_msgs) by extensions ['cmake', 'python']
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/tf2_msgs) by extension 'cmake'
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/tf2_msgs) by extension 'python'
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/tf2_msgs) by extensions ['python_setup_py']
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/tf2_msgs) by extension 'python_setup_py'
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/tf2_msgs/msg) by extensions ['ignore', 'ignore_ament_install']
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/tf2_msgs/msg) by extension 'ignore'
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/tf2_msgs/msg) by extension 'ignore_ament_install'
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/tf2_msgs/msg) by extensions ['colcon_pkg']
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/tf2_msgs/msg) by extension 'colcon_pkg'
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/tf2_msgs/msg) by extensions ['colcon_meta']
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/tf2_msgs/msg) by extension 'colcon_meta'
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/tf2_msgs/msg) by extensions ['ros']
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/tf2_msgs/msg) by extension 'ros'
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/tf2_msgs/msg) by extensions ['cmake', 'python']
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/tf2_msgs/msg) by extension 'cmake'
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/tf2_msgs/msg) by extension 'python'
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/tf2_msgs/msg) by extensions ['python_setup_py']
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/tf2_msgs/msg) by extension 'python_setup_py'
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/trajectory_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/trajectory_msgs) by extension 'ignore'
+[0.184s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/trajectory_msgs) by extension 'ignore_ament_install'
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/trajectory_msgs) by extensions ['colcon_pkg']
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/trajectory_msgs) by extension 'colcon_pkg'
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/trajectory_msgs) by extensions ['colcon_meta']
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/trajectory_msgs) by extension 'colcon_meta'
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/trajectory_msgs) by extensions ['ros']
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/trajectory_msgs) by extension 'ros'
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/trajectory_msgs) by extensions ['cmake', 'python']
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/trajectory_msgs) by extension 'cmake'
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/trajectory_msgs) by extension 'python'
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/trajectory_msgs) by extensions ['python_setup_py']
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/trajectory_msgs) by extension 'python_setup_py'
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/trajectory_msgs/msg) by extensions ['ignore', 'ignore_ament_install']
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/trajectory_msgs/msg) by extension 'ignore'
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/trajectory_msgs/msg) by extension 'ignore_ament_install'
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/trajectory_msgs/msg) by extensions ['colcon_pkg']
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/trajectory_msgs/msg) by extension 'colcon_pkg'
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/trajectory_msgs/msg) by extensions ['colcon_meta']
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/trajectory_msgs/msg) by extension 'colcon_meta'
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/trajectory_msgs/msg) by extensions ['ros']
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/trajectory_msgs/msg) by extension 'ros'
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/trajectory_msgs/msg) by extensions ['cmake', 'python']
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/trajectory_msgs/msg) by extension 'cmake'
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/trajectory_msgs/msg) by extension 'python'
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/trajectory_msgs/msg) by extensions ['python_setup_py']
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/trajectory_msgs/msg) by extension 'python_setup_py'
+[0.185s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/unique_identifier_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/unique_identifier_msgs) by extension 'ignore'
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/unique_identifier_msgs) by extension 'ignore_ament_install'
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/unique_identifier_msgs) by extensions ['colcon_pkg']
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/unique_identifier_msgs) by extension 'colcon_pkg'
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/unique_identifier_msgs) by extensions ['colcon_meta']
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/unique_identifier_msgs) by extension 'colcon_meta'
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/unique_identifier_msgs) by extensions ['ros']
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/unique_identifier_msgs) by extension 'ros'
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/unique_identifier_msgs) by extensions ['cmake', 'python']
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/unique_identifier_msgs) by extension 'cmake'
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/unique_identifier_msgs) by extension 'python'
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/unique_identifier_msgs) by extensions ['python_setup_py']
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/unique_identifier_msgs) by extension 'python_setup_py'
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/unique_identifier_msgs/msg) by extensions ['ignore', 'ignore_ament_install']
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/unique_identifier_msgs/msg) by extension 'ignore'
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/unique_identifier_msgs/msg) by extension 'ignore_ament_install'
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/unique_identifier_msgs/msg) by extensions ['colcon_pkg']
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/unique_identifier_msgs/msg) by extension 'colcon_pkg'
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/unique_identifier_msgs/msg) by extensions ['colcon_meta']
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/unique_identifier_msgs/msg) by extension 'colcon_meta'
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/unique_identifier_msgs/msg) by extensions ['ros']
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/unique_identifier_msgs/msg) by extension 'ros'
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/unique_identifier_msgs/msg) by extensions ['cmake', 'python']
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/unique_identifier_msgs/msg) by extension 'cmake'
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/unique_identifier_msgs/msg) by extension 'python'
+[0.186s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/unique_identifier_msgs/msg) by extensions ['python_setup_py']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/unique_identifier_msgs/msg) by extension 'python_setup_py'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/visualization_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/visualization_msgs) by extension 'ignore'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/visualization_msgs) by extension 'ignore_ament_install'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/visualization_msgs) by extensions ['colcon_pkg']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/visualization_msgs) by extension 'colcon_pkg'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/visualization_msgs) by extensions ['colcon_meta']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/visualization_msgs) by extension 'colcon_meta'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/visualization_msgs) by extensions ['ros']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/visualization_msgs) by extension 'ros'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/visualization_msgs) by extensions ['cmake', 'python']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/visualization_msgs) by extension 'cmake'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/visualization_msgs) by extension 'python'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/visualization_msgs) by extensions ['python_setup_py']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/visualization_msgs) by extension 'python_setup_py'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/visualization_msgs/msg) by extensions ['ignore', 'ignore_ament_install']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/visualization_msgs/msg) by extension 'ignore'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/visualization_msgs/msg) by extension 'ignore_ament_install'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/visualization_msgs/msg) by extensions ['colcon_pkg']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/visualization_msgs/msg) by extension 'colcon_pkg'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/visualization_msgs/msg) by extensions ['colcon_meta']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/visualization_msgs/msg) by extension 'colcon_meta'
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/visualization_msgs/msg) by extensions ['ros']
+[0.187s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/visualization_msgs/msg) by extension 'ros'
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/visualization_msgs/msg) by extensions ['cmake', 'python']
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/visualization_msgs/msg) by extension 'cmake'
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/visualization_msgs/msg) by extension 'python'
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/visualization_msgs/msg) by extensions ['python_setup_py']
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(java-typesupport/visualization_msgs/msg) by extension 'python_setup_py'
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(ocs2_ros2_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(ocs2_ros2_msgs) by extension 'ignore'
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(ocs2_ros2_msgs) by extension 'ignore_ament_install'
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(ocs2_ros2_msgs) by extensions ['colcon_pkg']
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(ocs2_ros2_msgs) by extension 'colcon_pkg'
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(ocs2_ros2_msgs) by extensions ['colcon_meta']
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(ocs2_ros2_msgs) by extension 'colcon_meta'
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(ocs2_ros2_msgs) by extensions ['ros']
+[0.188s] Level 1:colcon.colcon_core.package_identification:_identify(ocs2_ros2_msgs) by extension 'ros'
+[0.188s] DEBUG:colcon.colcon_core.package_identification:Package 'ocs2_ros2_msgs' with type 'ros.ament_cmake' and name 'ocs2_ros2_msgs'
+[0.189s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.189s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.189s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.189s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.189s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.192s] Level 5:colcon.colcon_core.verb:set package 'halodi_msgs' build argument 'cmake_args' from command line to 'None'
+[0.192s] Level 5:colcon.colcon_core.verb:set package 'halodi_msgs' build argument 'cmake_target' from command line to 'None'
+[0.192s] Level 5:colcon.colcon_core.verb:set package 'halodi_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.192s] Level 5:colcon.colcon_core.verb:set package 'halodi_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.192s] Level 5:colcon.colcon_core.verb:set package 'halodi_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'halodi_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'halodi_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'halodi_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.193s] Level 5:colcon.colcon_core.verb:set package 'halodi_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.193s] DEBUG:colcon.colcon_core.verb:Building package 'halodi_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/james/eloquent_ws/src/halodi-messages/build/halodi_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs', 'merge_install': False, 'path': '/home/james/eloquent_ws/src/halodi-messages/halodi_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.195s] Level 5:colcon.colcon_core.verb:set package 'ocs2_ros2_msgs' build argument 'cmake_args' from command line to 'None'
+[0.195s] Level 5:colcon.colcon_core.verb:set package 'ocs2_ros2_msgs' build argument 'cmake_target' from command line to 'None'
+[0.195s] Level 5:colcon.colcon_core.verb:set package 'ocs2_ros2_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.195s] Level 5:colcon.colcon_core.verb:set package 'ocs2_ros2_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.195s] Level 5:colcon.colcon_core.verb:set package 'ocs2_ros2_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.195s] Level 5:colcon.colcon_core.verb:set package 'ocs2_ros2_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.195s] Level 5:colcon.colcon_core.verb:set package 'ocs2_ros2_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.195s] Level 5:colcon.colcon_core.verb:set package 'ocs2_ros2_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.195s] Level 5:colcon.colcon_core.verb:set package 'ocs2_ros2_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.195s] DEBUG:colcon.colcon_core.verb:Building package 'ocs2_ros2_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/james/eloquent_ws/src/halodi-messages/build/ocs2_ros2_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/james/eloquent_ws/src/halodi-messages/install/ocs2_ros2_msgs', 'merge_install': False, 'path': '/home/james/eloquent_ws/src/halodi-messages/ocs2_ros2_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.195s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.196s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.196s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/james/eloquent_ws/src/halodi-messages/halodi_msgs' with build type 'ament_cmake'
+[0.199s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.199s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/james/eloquent_ws/src/halodi-messages/halodi_msgs'
+[0.199s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.199s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.202s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/james/eloquent_ws/src/halodi-messages/ocs2_ros2_msgs' with build type 'ament_cmake'
+[0.203s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/james/eloquent_ws/src/halodi-messages/ocs2_ros2_msgs'
+[0.204s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.204s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.211s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/james/eloquent_ws/src/halodi-messages/build/halodi_msgs': /usr/local/bin/cmake --build /home/james/eloquent_ws/src/halodi-messages/build/halodi_msgs -- -j16 -l16
+[0.214s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/james/eloquent_ws/src/halodi-messages/build/ocs2_ros2_msgs': /usr/local/bin/cmake /home/james/eloquent_ws/src/halodi-messages/ocs2_ros2_msgs -DCMAKE_INSTALL_PREFIX=/home/james/eloquent_ws/src/halodi-messages/install/ocs2_ros2_msgs
+[0.225s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/james/eloquent_ws/src/halodi-messages/build/ocs2_ros2_msgs' returned '1': /usr/local/bin/cmake /home/james/eloquent_ws/src/halodi-messages/ocs2_ros2_msgs -DCMAKE_INSTALL_PREFIX=/home/james/eloquent_ws/src/halodi-messages/install/ocs2_ros2_msgs
+[0.319s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[0.320s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[0.320s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '1'
+[0.320s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[0.330s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[0.330s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[0.330s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[0.332s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[0.333s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/james/eloquent_ws/src/halodi-messages/install/local_setup.ps1'
+[0.333s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/james/eloquent_ws/src/halodi-messages/install/_local_setup_util_ps1.py'
+[0.334s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/james/eloquent_ws/src/halodi-messages/install/setup.ps1'
+[0.336s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/james/eloquent_ws/src/halodi-messages/install/local_setup.sh'
+[0.336s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/james/eloquent_ws/src/halodi-messages/install/_local_setup_util_sh.py'
+[0.336s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/james/eloquent_ws/src/halodi-messages/install/setup.sh'
+[0.338s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/james/eloquent_ws/src/halodi-messages/install/local_setup.bash'
+[0.338s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/james/eloquent_ws/src/halodi-messages/install/setup.bash'
+[0.340s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/james/eloquent_ws/src/halodi-messages/install/local_setup.zsh'
+[0.340s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/james/eloquent_ws/src/halodi-messages/install/setup.zsh'

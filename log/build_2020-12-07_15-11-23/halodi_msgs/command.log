@@ -1,0 +1,2 @@
+Invoking command in '/home/james/eloquent_ws/src/halodi-messages/build/halodi_msgs': /usr/local/bin/cmake --build /home/james/eloquent_ws/src/halodi-messages/build/halodi_msgs -- -j16 -l16
+Invoked command in '/home/james/eloquent_ws/src/halodi-messages/build/halodi_msgs' returned '2': /usr/local/bin/cmake --build /home/james/eloquent_ws/src/halodi-messages/build/halodi_msgs -- -j16 -l16

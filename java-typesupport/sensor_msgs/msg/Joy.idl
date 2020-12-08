@@ -1,0 +1,34 @@
+#ifndef __sensor_msgs__msg__Joy__idl__
+#define __sensor_msgs__msg__Joy__idl__
+
+#include "std_msgs/msg/./Header.idl"
+module sensor_msgs
+{
+  module msg
+  {
+    
+
+      /**
+       * Reports the state of a joystick's axes and buttons.
+       */
+      @TypeCode(type="sensor_msgs::msg::dds_::Joy_")
+      struct Joy
+      {
+        /**
+         * The timestamp is the time at which data is received from the joystick.
+         */
+        std_msgs::msg::Header header;
+        /**
+         * The axes measurements from a joystick.
+         */
+        sequence<float> axes;
+        /**
+         * The buttons measurements from a joystick.
+         */
+        sequence<long> buttons;
+      };
+    };
+  };
+
+
+#endif
