@@ -1,0 +1,14 @@
+{
+    "name": "com.halodi.halodi-messages.Editor.Tests",
+    "references": [
+        "com.halodi.halodi-messages.Runtime",
+        "com.halodi.halodi-messages.Editor"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ]
+}

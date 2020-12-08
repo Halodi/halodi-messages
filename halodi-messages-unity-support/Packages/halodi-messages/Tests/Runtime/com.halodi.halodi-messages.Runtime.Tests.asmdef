@@ -1,0 +1,11 @@
+{
+    "name": "com.halodi.halodi-messages.Runtime.Tests",
+    "references": [
+        "com.halodi.halodi-messages.Runtime"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ]
+}

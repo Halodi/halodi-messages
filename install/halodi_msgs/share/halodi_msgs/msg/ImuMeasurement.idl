@@ -1,0 +1,23 @@
+#include <geometry_msgs/msg/Vector3.idl>
+#include <geometry_msgs/msg/Quaternion.idl>
+
+#include <halodi_msgs/msg/ImuName.idl>
+
+module halodi_msgs {
+    module msg {
+    
+        /**
+          * Direct measurement of IMU data for the robot.
+          *
+          */
+        @TypeCode(type="halodi_msgs::msg::dds_::ImuMeasurement_")
+        struct ImuMeasurement
+        {
+            halodi_msgs::msg::ImuName imu;
+            geometry_msgs::msg::Quaternion orientation;
+            geometry_msgs::msg::Vector3 angular_velocity;
+            geometry_msgs::msg::Vector3 linear_acceleration;
+        };
+        
+    };
+};

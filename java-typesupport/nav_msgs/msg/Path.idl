@@ -1,0 +1,25 @@
+#ifndef __nav_msgs__msg__Path__idl__
+#define __nav_msgs__msg__Path__idl__
+
+#include "geometry_msgs/msg/./PoseStamped.idl"
+#include "std_msgs/msg/./Header.idl"
+module nav_msgs
+{
+  module msg
+  {
+    
+
+      /**
+       * An array of poses that represents a Path for a robot to follow.
+       */
+      @TypeCode(type="nav_msgs::msg::dds_::Path_")
+      struct Path
+      {
+        std_msgs::msg::Header header;
+        sequence<geometry_msgs::msg::PoseStamped> poses;
+      };
+    };
+  };
+
+
+#endif

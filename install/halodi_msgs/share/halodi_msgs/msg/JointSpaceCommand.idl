@@ -1,0 +1,128 @@
+
+#include <halodi_msgs/msg/JointName.idl>
+
+module halodi_msgs {
+    module msg {
+        
+    
+        /**
+         *
+         * Joint space command for the whole body controller
+         *
+         */
+        @TypeCode(type="halodi_msgs::msg::dds_::JointSpaceCommand_")
+        struct JointSpaceCommand
+        {
+            halodi_msgs::msg::JointName joint;
+        
+            /**
+             * Desired joint angle
+             * 
+             * Unit: rad
+             *
+             */
+            double q_desired;
+            
+            /**
+             * Desired joint velocity
+             * 
+             * Unit: rad/s
+             *
+             */
+            double qd_desired;
+            
+            /**
+             * Desired feedforward joint acceleration
+             * 
+             * Unit: rad/s^2
+             *
+             */
+            double qdd_desired;
+            
+            
+            /**
+             * (Optional) Break frequency to filter q_desired.
+             * 
+             * Useful to smooth out noisy or jerky inputs (for example joystick/mouse). 
+             *
+             * Unit: Hz 
+             *
+             * Note: filtering is applied at the realtime controller, after any interpolation of the trajectory manager.
+             *
+             */
+            sequence<double, 1> q_desired_filter_break_frequency;
+            
+            
+            /**
+             *
+             * If set to true, qd_desired is calculated to be the derivative of q_desired.
+             * 
+             * It is recommeded to set q_desired_filter_break_frequency when using this to avoid large jumps in velocity.
+             *
+             */
+            boolean derive_qd_desired;
+            
+            
+            /**
+             * Use sensible default gains as provided by the controller instead of custom gains.
+             * 
+             * Recommended to use for initial testing.
+             */
+            boolean use_default_gains;
+            
+            /**
+             * Desired stiffness of the PD Controller for this joint. 
+             * 
+             * Unit: (rad/s^2)/rad
+             * The output of this controller is joint acceleration.
+             * Ignored when use_default_gains is set
+             */
+            double stiffness;
+            
+            /**
+             * Desired damping of the PD Controller for this joint.
+             * 
+             * Unit: (rad/s^2)/rad
+             * The output of this controller is joint acceleration.
+             * Ignored when use_default_gains is set
+             */
+            double damping;
+            
+            /**
+             * 
+             * Desired damping (scale) applied on the motor driver level for this joint.
+             * 
+             * The amount of joint damping that can be applied without instability is limited. 
+             * To increase the applied damping, damping can be applied at the motor driver level. 
+             * 
+             * The applied motor damping is: motorDampingScale * maximumMotorDamping * (q_desired(motor) - q_actual(motor))
+             * - maximumMotorDamping is specific to each motor, and is set from factory. The applied damping does not neccessarly correlate with physical numbers.
+             *  
+             * motorDampingScale is a scale between 0 and 1 (inclusive). Set to 0 to disable motor damping.
+             * 
+             * When joints share motors (in the differential drives), the highest motor level damping is used on both motors.
+             * 
+             * 
+             * Unit: [0.0 - 1.0]
+             *
+             *
+             */
+            double motorDampingScale;
+                        
+            
+            /**
+             * Maximum feedback appied on the joint.
+             * 
+             * This ignores feedback due to motorDampingScale
+             * 
+             * Unit: rad/s^2
+             * Ignored when use_default_gains is set
+             * 
+             * When set to 0, no feedback will be applied. 
+             * 
+             */
+            double max_feedback;
+            
+        };
+    };
+};

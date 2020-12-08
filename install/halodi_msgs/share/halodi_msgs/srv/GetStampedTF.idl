@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from halodi_msgs/srv/GetStampedTF.srv
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/TransformStamped.idl"
+
+module halodi_msgs {
+  module srv {
+    struct GetStampedTF_Request {
+      double monotonic_stamp;
+
+      string parent_frame;
+
+      string child_frame;
+    };
+    struct GetStampedTF_Response {
+      boolean ok;
+
+      geometry_msgs::msg::TransformStamped stf;
+    };
+  };
+};

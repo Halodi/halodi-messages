@@ -1,0 +1,20 @@
+#ifndef __visualization_msgs__msg__MarkerArray__idl__
+#define __visualization_msgs__msg__MarkerArray__idl__
+
+#include "visualization_msgs/msg/./Marker.idl"
+module visualization_msgs
+{
+  module msg
+  {
+    
+
+      @TypeCode(type="visualization_msgs::msg::dds_::MarkerArray_")
+      struct MarkerArray
+      {
+        sequence<visualization_msgs::msg::Marker> markers;
+      };
+    };
+  };
+
+
+#endif

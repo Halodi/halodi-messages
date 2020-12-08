@@ -1,0 +1,98 @@
+
+#include <halodi_msgs/msg/JointName.idl>
+#include <geometry_msgs/msg/Vector3.idl>
+
+
+module halodi_msgs {
+    module msg {
+        
+    
+        /**
+         *
+         * Contact point command for the whole body controller
+         *
+         *
+         * Contact points are only valid when the balance mode is set to disabled
+         *
+         */
+        @TypeCode(type="halodi_msgs::msg::dds_::ContactPointCommand_")
+        struct ContactPointCommand
+        {
+            /**
+             *
+             * Joint to which this contact point is attached. 
+             * 
+             * Joint that have defined contact points are
+             * 
+             * KNEE_PITCH       (id 0: knee contact point)
+             * ANKLE_ROLL       (id 0: caster)
+             * LEFT_WRIST_ROLL  (id 0: left palm)
+             * RIGHT_WRIST_ROLL (id 0: right_palm)
+             *
+             *
+             */
+            halodi_msgs::msg::JointName parent_joint;
+        
+            /**
+             *
+             * ID for the contact point for this joint.
+             * 
+             * Currently, no more than one contact point per joint is defined and
+             * contact_point_id is always zero.
+             *
+             */
+            long contact_point_id;
+        
+            /**
+             * Define if this point is in contact or not.
+             *
+             */
+             boolean point_in_contact;
+             
+             /**
+              * (Optional) normal vector for this contact point
+              *
+              * This vector in expressed in Z-Up world frame.
+              *
+              * If not set, this default to {0,0,1}
+              *
+              */
+             sequence<geometry_msgs::msg::Vector3, 1> normal;
+             
+             /**
+              * (Optional) coefficient of friction for this contact point
+              *
+              * Recommended range: 0 - 1
+              *
+              * If not set, a reasonable default is choosen`
+              */
+             sequence<double, 1> coefficient_of_friction;
+             
+             /**
+              * (Optional) Maximum normal contact force
+              *
+              * If not set, the maximum contact force is infinite
+              *
+              * Avoid setting too low, as this will make the controller unstable.
+              */
+              sequence<double, 1> maximum_contact_force;
+              
+              /**
+               * (Optional) rho weight divider
+               * 
+               * The whole body controller minimizes the contact forces acting on each point. The cost of each contact point is scaled by the "rho weight".
+               * Reducing the rho weight for this contact point would favour this contact point over the others.
+               *
+               * The rho weight divider scales the default controller rho weight. A higher value results in an increased preference for this contact point.
+               * 
+               * Recommended range 0.1 - 10
+               * 
+               * If not set, this defaults to 1.
+               *
+               */
+               sequence<double, 1> rho_weight_divider;
+             
+             
+        };
+    };
+};
