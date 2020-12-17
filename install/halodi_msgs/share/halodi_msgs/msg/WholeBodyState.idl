@@ -1,0 +1,96 @@
+#include <std_msgs/msg/Header.idl>
+#include <geometry_msgs/msg/Vector3.idl>
+#include <geometry_msgs/msg/Pose.idl>
+#include <halodi_msgs/msg/ImuMeasurement.idl>
+#include <halodi_msgs/msg/JointMeasurement.idl>
+#include <halodi_msgs/msg/BalanceMode.idl>
+#include <halodi_msgs/msg/TaskSpaceFeedback.idl>
+
+module halodi_msgs {
+    module msg {
+    
+        /**
+          * Full state of the robot
+          *
+          */
+        @TypeCode(type="halodi_msgs::msg::dds_::WholeBodyState_")
+        struct WholeBodyState
+        {
+            /**
+              * Header including the timestamp of the robot when this measurement was taken
+              *
+              */
+            std_msgs::msg::Header header;
+            
+            /**
+              * Last received sequence_id from WholeBodyControllerCommand
+              *
+              */
+            long last_received_sequence_id;
+            
+            
+            /**
+              * The current state of the balance module
+              */
+            string controller_state;
+            
+            
+            /**
+              * The current balance mode the controller is using
+              */
+            halodi_msgs::msg::BalanceMode current_balance_mode;
+            
+            /**
+              * The status of the robot. Valid values are
+              * 
+              * diagnostic_msgs::msg:DiagnosticStatus::OK       (0)
+              * diagnostic_msgs::msg:DiagnosticStatus::WARN     (1)
+              * diagnostic_msgs::msg:DiagnosticStatus::ERROR    (2)
+              * diagnostic_msgs::msg:DiagnosticStatus::STALE    (3)
+              * 
+              */
+            octet robot_status;
+            
+            /**
+              * Pose of the root joint (pelvis) of the robot
+              *
+              */
+            geometry_msgs::msg::Pose pose;
+            
+            /**
+              * Angular velocity of the root joint (pelvis) of the robot expressed in world frame
+              * 
+              */
+            geometry_msgs::msg::Vector3 angular_velocity;
+            
+            /**
+              * Linear velocity of the root joint (pelvis) of the robot expressed in world frame
+              * 
+              */
+            geometry_msgs::msg::Vector3 linear_velocity;
+            
+            
+            /**
+              * Raw IMU Measurements for each IMU on the robot
+              *
+              */
+            sequence<halodi_msgs::msg::ImuMeasurement, 2> imu_measurements;
+            
+            /**
+              * State of each joint on the robot
+              *
+              */
+            sequence<halodi_msgs::msg::JointMeasurement, 25> joint_states;
+            
+            
+            /**
+             * Output of the task space controllers. 
+             * 
+             * Useful for force feedback applications.
+             *
+             */
+             sequence<halodi_msgs::msg::TaskSpaceFeedback, 5> taskspace_feedback;
+            
+        };
+    };
+};

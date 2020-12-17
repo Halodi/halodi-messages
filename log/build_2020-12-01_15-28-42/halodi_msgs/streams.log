@@ -1,0 +1,935 @@
+[0.009s] Invoking command in '/home/james/eloquent_ws/src/halodi-messages/build/halodi_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/james/eloquent_ws/install/ros2_grpc_tools:/home/james/eloquent_ws/install/eve_ros2_examples_py:/home/james/eloquent_ws/install/ar_tools:/opt/ros/eloquent /usr/local/bin/cmake /home/james/eloquent_ws/src/halodi-messages/halodi_msgs -DCMAKE_INSTALL_PREFIX=/home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs
+[0.015s] -- Found ament_cmake: 0.8.2 (/opt/ros/eloquent/share/ament_cmake/cmake)
+[0.033s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.6.9", minimum required is "3") 
+[0.033s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.170s] -- Found rosidl_default_generators: 0.8.0 (/opt/ros/eloquent/share/rosidl_default_generators/cmake)
+[0.223s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1")  
+[0.235s] -- Found FastRTPS: /opt/ros/eloquent/include  
+[0.245s] -- Found rosidl_adapter: 0.8.2 (/opt/ros/eloquent/share/rosidl_adapter/cmake)
+[0.288s] -- Found rcl_interfaces: 0.8.0 (/opt/ros/eloquent/share/rcl_interfaces/cmake)
+[0.297s] -- Found geometry_msgs: 0.8.1 (/opt/ros/eloquent/share/geometry_msgs/cmake)
+[0.305s] -- Found unique_identifier_msgs: 2.1.1 (/opt/ros/eloquent/share/unique_identifier_msgs/cmake)
+[0.325s] -- Found PythonInterp: /usr/bin/python3 (found version "3.6.9") 
+[0.460s] -- Using single matching rosidl_typesupport_c: rosidl_typesupport_fastrtps_c
+[0.467s] -- Found ament_cmake_cppcheck: 0.8.1 (/opt/ros/eloquent/share/ament_cmake_cppcheck/cmake)
+[0.468s] -- Found ament_cmake_cpplint: 0.8.1 (/opt/ros/eloquent/share/ament_cmake_cpplint/cmake)
+[0.470s] -- Found ament_cmake_uncrustify: 0.8.1 (/opt/ros/eloquent/share/ament_cmake_uncrustify/cmake)
+[0.499s] -- Using single matching rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp
+[0.764s] -- Found rmw_implementation_cmake: 0.8.1 (/opt/ros/eloquent/share/rmw_implementation_cmake/cmake)
+[0.781s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.6.9", minimum required is "3.5") 
+[0.782s] -- Found python_cmake_module: 0.8.0 (/opt/ros/eloquent/share/python_cmake_module/cmake)
+[0.802s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.6m.so (found suitable version "3.6.9", minimum required is "3.5") 
+[0.803s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.803s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.6m
+[0.803s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.6m.so
+[0.817s] -- Found PythonExtra: .so  
+[0.930s] -- Found ament_cmake_flake8: 0.8.1 (/opt/ros/eloquent/share/ament_cmake_flake8/cmake)
+[0.931s] -- Found ament_cmake_pep257: 0.8.1 (/opt/ros/eloquent/share/ament_cmake_pep257/cmake)
+[0.936s] -- Configuring done
+[1.046s] -- Generating done
+[1.047s] -- Build files have been written to: /home/james/eloquent_ws/src/halodi-messages/build/halodi_msgs
+[1.051s] Invoked command in '/home/james/eloquent_ws/src/halodi-messages/build/halodi_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/james/eloquent_ws/install/ros2_grpc_tools:/home/james/eloquent_ws/install/eve_ros2_examples_py:/home/james/eloquent_ws/install/ar_tools:/opt/ros/eloquent /usr/local/bin/cmake /home/james/eloquent_ws/src/halodi-messages/halodi_msgs -DCMAKE_INSTALL_PREFIX=/home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs
+[1.053s] Invoking command in '/home/james/eloquent_ws/src/halodi-messages/build/halodi_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/james/eloquent_ws/install/ros2_grpc_tools:/home/james/eloquent_ws/install/eve_ros2_examples_py:/home/james/eloquent_ws/install/ar_tools:/opt/ros/eloquent /usr/local/bin/cmake --build /home/james/eloquent_ws/src/halodi-messages/build/halodi_msgs -- -j16 -l16
+[1.075s] [35m[1mScanning dependencies of target halodi_msgs__cpp[0m
+[1.076s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.078s] [  1%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[2.537s] [  1%] Built target halodi_msgs__cpp
+[2.541s] [  1%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[2.542s] [  2%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[2.850s] [35m[1mScanning dependencies of target halodi_msgs__rosidl_generator_c[0m
+[2.860s] [  2%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_generator_c.dir/rosidl_generator_c/halodi_msgs/msg/reference_frame_name__functions.c.o[0m
+[2.860s] [  2%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_generator_c.dir/rosidl_generator_c/halodi_msgs/msg/joint_name__functions.c.o[0m
+[2.860s] [  3%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_generator_c.dir/rosidl_generator_c/halodi_msgs/msg/task_space_command__functions.c.o[0m
+[2.860s] [  3%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_generator_c.dir/rosidl_generator_c/halodi_msgs/msg/driving_command__functions.c.o[0m
+[2.860s] [  3%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_generator_c.dir/rosidl_generator_c/halodi_msgs/msg/feedback_parameters3_d__functions.c.o[0m
+[2.861s] [  3%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_generator_c.dir/rosidl_generator_c/halodi_msgs/msg/joint_space_command__functions.c.o[0m
+[2.861s] [  4%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_generator_c.dir/rosidl_generator_c/halodi_msgs/msg/whole_body_controller_command__functions.c.o[0m
+[2.861s] [  5%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_generator_c.dir/rosidl_generator_c/halodi_msgs/msg/imu_measurement__functions.c.o[0m
+[2.861s] [  5%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_generator_c.dir/rosidl_generator_c/halodi_msgs/msg/balance_mode__functions.c.o[0m
+[2.861s] [  6%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_generator_c.dir/rosidl_generator_c/halodi_msgs/msg/joint_measurement__functions.c.o[0m
+[2.862s] [  6%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_generator_c.dir/rosidl_generator_c/halodi_msgs/msg/imu_name__functions.c.o[0m
+[2.862s] [  7%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_generator_c.dir/rosidl_generator_c/halodi_msgs/msg/whole_body_trajectory_point__functions.c.o[0m
+[2.862s] [  7%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_generator_c.dir/rosidl_generator_c/halodi_msgs/msg/whole_body_state__functions.c.o[0m
+[2.862s] [  7%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_generator_c.dir/rosidl_generator_c/halodi_msgs/msg/whole_body_trajectory__functions.c.o[0m
+[2.883s] [  7%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_generator_c.dir/rosidl_generator_c/halodi_msgs/msg/joint_null_space_configuration__functions.c.o[0m
+[2.889s] [  7%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_generator_c.dir/rosidl_generator_c/halodi_msgs/msg/trajectory_interpolation__functions.c.o[0m
+[2.890s] [  7%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_generator_c.dir/rosidl_generator_c/halodi_msgs/msg/driving_trajectory__functions.c.o[0m
+[2.890s] [  8%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_generator_c.dir/rosidl_generator_c/halodi_msgs/msg/driving_trajectory_point__functions.c.o[0m
+[2.891s] [  9%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_generator_c.dir/rosidl_generator_c/halodi_msgs/msg/contact_point_command__functions.c.o[0m
+[2.891s] [  9%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_generator_c.dir/rosidl_generator_c/halodi_msgs/msg/robot_joint_calibration_info__functions.c.o[0m
+[2.893s] [  9%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_generator_c.dir/rosidl_generator_c/halodi_msgs/msg/extrinsic_calibration_info__functions.c.o[0m
+[2.895s] [  9%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_generator_c.dir/rosidl_generator_c/halodi_msgs/msg/joint_status__functions.c.o[0m
+[2.896s] [ 10%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_generator_c.dir/rosidl_generator_c/halodi_msgs/msg/robot_status__functions.c.o[0m
+[2.897s] [ 10%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_generator_c.dir/rosidl_generator_c/halodi_msgs/msg/motor_status__functions.c.o[0m
+[2.897s] [ 10%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_generator_c.dir/rosidl_generator_c/halodi_msgs/msg/ar_marker__functions.c.o[0m
+[2.902s] [ 11%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_generator_c.dir/rosidl_generator_c/halodi_msgs/msg/battery_status__functions.c.o[0m
+[2.909s] [ 12%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_generator_c.dir/rosidl_generator_c/halodi_msgs/msg/ar_markers__functions.c.o[0m
+[2.909s] [ 12%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_generator_c.dir/rosidl_generator_c/halodi_msgs/msg/passivity_data__functions.c.o[0m
+[2.910s] [ 12%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_generator_c.dir/rosidl_generator_c/halodi_msgs/msg/task_space_feedback__functions.c.o[0m
+[2.923s] [ 12%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_generator_c.dir/rosidl_generator_c/halodi_msgs/srv/get_stamped_tf__functions.c.o[0m
+[2.923s] [ 13%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_generator_c.dir/rosidl_generator_c/halodi_msgs/msg/hand_command__functions.c.o[0m
+[2.948s] [ 13%] [32m[1mLinking C shared library libhalodi_msgs__rosidl_generator_c.so[0m
+[2.976s] [ 13%] Built target halodi_msgs__rosidl_generator_c
+[2.980s] [ 13%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[3.977s] [35m[1mScanning dependencies of target halodi_msgs__rosidl_typesupport_introspection_cpp[0m
+[3.989s] [ 14%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/halodi_msgs/msg/reference_frame_name__type_support.cpp.o[0m
+[3.989s] [ 14%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/halodi_msgs/msg/joint_name__type_support.cpp.o[0m
+[3.989s] [ 14%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/halodi_msgs/msg/driving_command__type_support.cpp.o[0m
+[3.989s] [ 15%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/halodi_msgs/msg/whole_body_controller_command__type_support.cpp.o[0m
+[3.989s] [ 15%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/halodi_msgs/msg/feedback_parameters3_d__type_support.cpp.o[0m
+[3.989s] [ 15%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/halodi_msgs/msg/task_space_command__type_support.cpp.o[0m
+[3.989s] [ 15%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/halodi_msgs/msg/joint_space_command__type_support.cpp.o[0m
+[3.990s] [ 15%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/halodi_msgs/msg/imu_name__type_support.cpp.o[0m
+[3.990s] [ 15%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/halodi_msgs/msg/imu_measurement__type_support.cpp.o[0m
+[3.991s] [ 15%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/halodi_msgs/msg/whole_body_state__type_support.cpp.o[0m
+[3.991s] [ 15%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/halodi_msgs/msg/whole_body_trajectory__type_support.cpp.o[0m
+[3.991s] [ 16%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/halodi_msgs/msg/balance_mode__type_support.cpp.o[0m
+[3.991s] [ 18%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/halodi_msgs/msg/whole_body_trajectory_point__type_support.cpp.o[0m
+[3.991s] [ 17%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/halodi_msgs/msg/joint_measurement__type_support.cpp.o[0m
+[4.231s] [ 19%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/halodi_msgs/msg/trajectory_interpolation__type_support.cpp.o[0m
+[4.234s] [ 19%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/halodi_msgs/msg/driving_trajectory__type_support.cpp.o[0m
+[4.234s] [ 19%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/halodi_msgs/msg/joint_null_space_configuration__type_support.cpp.o[0m
+[4.234s] [ 20%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/halodi_msgs/msg/contact_point_command__type_support.cpp.o[0m
+[4.236s] [ 20%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/halodi_msgs/msg/driving_trajectory_point__type_support.cpp.o[0m
+[4.237s] [ 20%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/halodi_msgs/msg/robot_joint_calibration_info__type_support.cpp.o[0m
+[4.250s] [ 20%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/halodi_msgs/msg/extrinsic_calibration_info__type_support.cpp.o[0m
+[4.276s] [ 21%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/halodi_msgs/msg/robot_status__type_support.cpp.o[0m
+[4.310s] [ 21%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/halodi_msgs/msg/joint_status__type_support.cpp.o[0m
+[4.379s] [ 22%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/halodi_msgs/msg/motor_status__type_support.cpp.o[0m
+[4.392s] [ 22%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/halodi_msgs/msg/battery_status__type_support.cpp.o[0m
+[4.474s] [ 22%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/halodi_msgs/msg/ar_marker__type_support.cpp.o[0m
+[4.479s] [ 23%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/halodi_msgs/msg/ar_markers__type_support.cpp.o[0m
+[4.481s] [ 23%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/halodi_msgs/msg/task_space_feedback__type_support.cpp.o[0m
+[4.482s] [ 23%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/halodi_msgs/msg/passivity_data__type_support.cpp.o[0m
+[4.483s] [ 24%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/halodi_msgs/msg/hand_command__type_support.cpp.o[0m
+[4.483s] [ 24%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/halodi_msgs/srv/get_stamped_tf__type_support.cpp.o[0m
+[4.558s] [35m[1mScanning dependencies of target halodi_msgs__rosidl_typesupport_fastrtps_cpp[0m
+[4.583s] [ 24%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/halodi_msgs/msg/dds_fastrtps/joint_name__type_support.cpp.o[0m
+[4.583s] [ 26%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/halodi_msgs/msg/dds_fastrtps/reference_frame_name__type_support.cpp.o[0m
+[4.584s] [ 26%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/halodi_msgs/msg/dds_fastrtps/task_space_command__type_support.cpp.o[0m
+[4.584s] [ 26%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/halodi_msgs/msg/dds_fastrtps/driving_command__type_support.cpp.o[0m
+[4.584s] [ 26%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/halodi_msgs/msg/dds_fastrtps/joint_space_command__type_support.cpp.o[0m
+[4.584s] [ 26%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/halodi_msgs/msg/dds_fastrtps/whole_body_controller_command__type_support.cpp.o[0m
+[4.633s] [ 27%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/halodi_msgs/msg/dds_fastrtps/feedback_parameters3_d__type_support.cpp.o[0m
+[4.635s] [ 27%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/halodi_msgs/msg/dds_fastrtps/balance_mode__type_support.cpp.o[0m
+[4.659s] [ 27%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/halodi_msgs/msg/dds_fastrtps/imu_measurement__type_support.cpp.o[0m
+[4.711s] [ 28%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/halodi_msgs/msg/dds_fastrtps/imu_name__type_support.cpp.o[0m
+[4.722s] [ 28%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/halodi_msgs/msg/dds_fastrtps/joint_measurement__type_support.cpp.o[0m
+[4.745s] [ 29%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/halodi_msgs/msg/dds_fastrtps/whole_body_state__type_support.cpp.o[0m
+[4.760s] [ 29%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/halodi_msgs/msg/dds_fastrtps/whole_body_trajectory__type_support.cpp.o[0m
+[4.763s] [ 29%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/halodi_msgs/msg/dds_fastrtps/whole_body_trajectory_point__type_support.cpp.o[0m
+[4.789s] [ 30%] [32m[1mLinking CXX shared library libhalodi_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[4.949s] [ 31%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/halodi_msgs/msg/dds_fastrtps/joint_null_space_configuration__type_support.cpp.o[0m
+[4.953s] [ 31%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/halodi_msgs/msg/dds_fastrtps/trajectory_interpolation__type_support.cpp.o[0m
+[4.963s] [ 31%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/halodi_msgs/msg/dds_fastrtps/driving_trajectory_point__type_support.cpp.o[0m
+[4.969s] [ 31%] Built target halodi_msgs__rosidl_typesupport_introspection_cpp
+[4.977s] [ 32%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/halodi_msgs/msg/dds_fastrtps/driving_trajectory__type_support.cpp.o[0m
+[4.994s] [ 32%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/halodi_msgs/msg/dds_fastrtps/contact_point_command__type_support.cpp.o[0m
+[5.002s] [ 33%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/halodi_msgs/msg/dds_fastrtps/robot_joint_calibration_info__type_support.cpp.o[0m
+[5.032s] [ 33%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/halodi_msgs/msg/dds_fastrtps/extrinsic_calibration_info__type_support.cpp.o[0m
+[5.086s] [ 33%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/halodi_msgs/msg/dds_fastrtps/robot_status__type_support.cpp.o[0m
+[5.104s] [ 34%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/halodi_msgs/msg/dds_fastrtps/joint_status__type_support.cpp.o[0m
+[5.108s] [ 34%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/halodi_msgs/msg/dds_fastrtps/motor_status__type_support.cpp.o[0m
+[5.111s] [ 34%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/halodi_msgs/msg/dds_fastrtps/battery_status__type_support.cpp.o[0m
+[5.147s] [35m[1mScanning dependencies of target halodi_msgs__rosidl_typesupport_introspection_c[0m
+[5.173s] [ 35%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/halodi_msgs/msg/joint_name__type_support.c.o[0m
+[5.199s] [ 35%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/halodi_msgs/msg/reference_frame_name__type_support.c.o[0m
+[5.225s] [ 35%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/halodi_msgs/msg/driving_command__type_support.c.o[0m
+[5.253s] [ 36%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/halodi_msgs/msg/task_space_command__type_support.c.o[0m
+[5.263s] [ 37%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/halodi_msgs/msg/dds_fastrtps/ar_marker__type_support.cpp.o[0m
+[5.265s] [ 37%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/halodi_msgs/msg/dds_fastrtps/ar_markers__type_support.cpp.o[0m
+[5.291s] [ 37%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/halodi_msgs/msg/joint_space_command__type_support.c.o[0m
+[5.305s] [ 37%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/halodi_msgs/msg/dds_fastrtps/task_space_feedback__type_support.cpp.o[0m
+[5.323s] [ 38%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/halodi_msgs/msg/whole_body_controller_command__type_support.c.o[0m
+[5.326s] [ 39%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/halodi_msgs/msg/dds_fastrtps/passivity_data__type_support.cpp.o[0m
+[5.338s] [ 39%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/halodi_msgs/msg/dds_fastrtps/hand_command__type_support.cpp.o[0m
+[5.367s] [ 39%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/halodi_msgs/msg/feedback_parameters3_d__type_support.c.o[0m
+[5.378s] [ 40%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/halodi_msgs/srv/dds_fastrtps/get_stamped_tf__type_support.cpp.o[0m
+[5.387s] [ 40%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/halodi_msgs/msg/balance_mode__type_support.c.o[0m
+[5.388s] [ 41%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/halodi_msgs/msg/imu_measurement__type_support.c.o[0m
+[5.394s] [ 41%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/halodi_msgs/msg/imu_name__type_support.c.o[0m
+[5.396s] [ 41%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/halodi_msgs/msg/joint_measurement__type_support.c.o[0m
+[5.413s] [ 42%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/halodi_msgs/msg/whole_body_state__type_support.c.o[0m
+[5.415s] [ 42%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/halodi_msgs/msg/whole_body_trajectory__type_support.c.o[0m
+[5.422s] [ 43%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/halodi_msgs/msg/whole_body_trajectory_point__type_support.c.o[0m
+[5.425s] [ 43%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/halodi_msgs/msg/joint_null_space_configuration__type_support.c.o[0m
+[5.438s] [ 43%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/halodi_msgs/msg/trajectory_interpolation__type_support.c.o[0m
+[5.449s] [ 44%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/halodi_msgs/msg/driving_trajectory__type_support.c.o[0m
+[5.449s] [ 44%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/halodi_msgs/msg/driving_trajectory_point__type_support.c.o[0m
+[5.454s] [ 44%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/halodi_msgs/msg/contact_point_command__type_support.c.o[0m
+[5.459s] [ 45%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/halodi_msgs/msg/robot_joint_calibration_info__type_support.c.o[0m
+[5.465s] [ 45%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/halodi_msgs/msg/extrinsic_calibration_info__type_support.c.o[0m
+[5.477s] [ 46%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/halodi_msgs/msg/robot_status__type_support.c.o[0m
+[5.479s] [ 46%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/halodi_msgs/msg/joint_status__type_support.c.o[0m
+[5.486s] [ 46%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/halodi_msgs/msg/motor_status__type_support.c.o[0m
+[5.487s] [ 46%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/halodi_msgs/msg/ar_marker__type_support.c.o[0m
+[5.487s] [ 47%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/halodi_msgs/msg/battery_status__type_support.c.o[0m
+[5.489s] [ 47%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/halodi_msgs/msg/ar_markers__type_support.c.o[0m
+[5.494s] [ 48%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/halodi_msgs/msg/task_space_feedback__type_support.c.o[0m
+[5.498s] [ 48%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/halodi_msgs/msg/passivity_data__type_support.c.o[0m
+[5.508s] [ 48%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/halodi_msgs/msg/hand_command__type_support.c.o[0m
+[5.510s] [ 49%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/halodi_msgs/srv/get_stamped_tf__type_support.c.o[0m
+[5.538s] [ 49%] [32m[1mLinking C shared library libhalodi_msgs__rosidl_typesupport_introspection_c.so[0m
+[5.565s] [ 49%] Built target halodi_msgs__rosidl_typesupport_introspection_c
+[5.705s] [ 49%] [32m[1mLinking CXX shared library libhalodi_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[5.791s] [ 49%] Built target halodi_msgs__rosidl_typesupport_fastrtps_cpp
+[5.795s] [ 50%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[5.795s] [ 50%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[6.913s] [35m[1mScanning dependencies of target halodi_msgs__rosidl_typesupport_cpp[0m
+[6.927s] [ 50%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/halodi_msgs/msg/driving_command__type_support.cpp.o[0m
+[6.927s] [ 51%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/halodi_msgs/msg/joint_name__type_support.cpp.o[0m
+[6.927s] [ 51%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/halodi_msgs/msg/reference_frame_name__type_support.cpp.o[0m
+[6.927s] [ 51%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/halodi_msgs/msg/task_space_command__type_support.cpp.o[0m
+[6.927s] [ 51%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/halodi_msgs/msg/feedback_parameters3_d__type_support.cpp.o[0m
+[6.928s] [ 52%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/halodi_msgs/msg/joint_space_command__type_support.cpp.o[0m
+[6.928s] [ 52%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/halodi_msgs/msg/whole_body_controller_command__type_support.cpp.o[0m
+[6.928s] [ 53%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/halodi_msgs/msg/balance_mode__type_support.cpp.o[0m
+[6.928s] [ 54%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/halodi_msgs/msg/imu_name__type_support.cpp.o[0m
+[6.928s] [ 54%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/halodi_msgs/msg/imu_measurement__type_support.cpp.o[0m
+[6.928s] [ 54%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/halodi_msgs/msg/joint_measurement__type_support.cpp.o[0m
+[6.929s] [ 55%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/halodi_msgs/msg/whole_body_trajectory__type_support.cpp.o[0m
+[6.929s] [ 55%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/halodi_msgs/msg/whole_body_trajectory_point__type_support.cpp.o[0m
+[6.929s] [ 55%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/halodi_msgs/msg/whole_body_state__type_support.cpp.o[0m
+[6.929s] [ 55%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/halodi_msgs/msg/joint_null_space_configuration__type_support.cpp.o[0m
+[7.282s] [ 56%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/halodi_msgs/msg/trajectory_interpolation__type_support.cpp.o[0m
+[7.286s] [ 56%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/halodi_msgs/msg/driving_trajectory_point__type_support.cpp.o[0m
+[7.289s] [ 57%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/halodi_msgs/msg/driving_trajectory__type_support.cpp.o[0m
+[7.289s] [ 57%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/halodi_msgs/msg/contact_point_command__type_support.cpp.o[0m
+[7.297s] [ 57%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/halodi_msgs/msg/robot_joint_calibration_info__type_support.cpp.o[0m
+[7.298s] [ 57%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/halodi_msgs/msg/robot_status__type_support.cpp.o[0m
+[7.299s] [ 57%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/halodi_msgs/msg/joint_status__type_support.cpp.o[0m
+[7.300s] [ 58%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/halodi_msgs/msg/extrinsic_calibration_info__type_support.cpp.o[0m
+[7.302s] [ 58%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/halodi_msgs/msg/battery_status__type_support.cpp.o[0m
+[7.306s] [ 59%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/halodi_msgs/msg/motor_status__type_support.cpp.o[0m
+[7.307s] [ 59%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/halodi_msgs/msg/ar_marker__type_support.cpp.o[0m
+[7.308s] [ 59%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/halodi_msgs/msg/task_space_feedback__type_support.cpp.o[0m
+[7.308s] [ 60%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/halodi_msgs/msg/ar_markers__type_support.cpp.o[0m
+[7.309s] [ 61%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/halodi_msgs/msg/passivity_data__type_support.cpp.o[0m
+[7.309s] [ 61%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/halodi_msgs/msg/hand_command__type_support.cpp.o[0m
+[7.641s] [ 61%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/halodi_msgs/srv/get_stamped_tf__type_support.cpp.o[0m
+[7.750s] [35m[1mScanning dependencies of target halodi_msgs__rosidl_typesupport_fastrtps_c[0m
+[7.777s] [ 63%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/halodi_msgs/msg/task_space_command__type_support_c.cpp.o[0m
+[7.777s] [ 63%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/halodi_msgs/msg/reference_frame_name__type_support_c.cpp.o[0m
+[7.777s] [ 63%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/halodi_msgs/msg/joint_name__type_support_c.cpp.o[0m
+[7.777s] [ 63%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/halodi_msgs/msg/driving_command__type_support_c.cpp.o[0m
+[7.777s] [ 63%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/halodi_msgs/msg/joint_space_command__type_support_c.cpp.o[0m
+[7.778s] [ 63%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/halodi_msgs/msg/whole_body_controller_command__type_support_c.cpp.o[0m
+[7.778s] [ 63%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/halodi_msgs/msg/joint_measurement__type_support_c.cpp.o[0m
+[7.778s] [ 63%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/halodi_msgs/msg/imu_measurement__type_support_c.cpp.o[0m
+[7.778s] [ 64%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/halodi_msgs/msg/feedback_parameters3_d__type_support_c.cpp.o[0m
+[7.779s] [ 65%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/halodi_msgs/msg/imu_name__type_support_c.cpp.o[0m
+[7.779s] [ 66%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/halodi_msgs/msg/whole_body_trajectory__type_support_c.cpp.o[0m
+[7.779s] [ 66%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/halodi_msgs/msg/joint_null_space_configuration__type_support_c.cpp.o[0m
+[7.779s] [ 66%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/halodi_msgs/msg/balance_mode__type_support_c.cpp.o[0m
+[7.779s] [ 67%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/halodi_msgs/msg/whole_body_state__type_support_c.cpp.o[0m
+[7.779s] [ 67%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/halodi_msgs/msg/whole_body_trajectory_point__type_support_c.cpp.o[0m
+[7.961s] [ 68%] [32m[1mLinking CXX shared library libhalodi_msgs__rosidl_typesupport_cpp.so[0m
+[8.086s] [ 68%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/halodi_msgs/msg/trajectory_interpolation__type_support_c.cpp.o[0m
+[8.091s] [ 68%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/halodi_msgs/msg/driving_trajectory_point__type_support_c.cpp.o[0m
+[8.092s] [ 69%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/halodi_msgs/msg/driving_trajectory__type_support_c.cpp.o[0m
+[8.092s] [ 69%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/halodi_msgs/msg/contact_point_command__type_support_c.cpp.o[0m
+[8.096s] [ 69%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/halodi_msgs/msg/robot_joint_calibration_info__type_support_c.cpp.o[0m
+[8.099s] [ 70%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/halodi_msgs/msg/extrinsic_calibration_info__type_support_c.cpp.o[0m
+[8.101s] [ 70%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/halodi_msgs/msg/robot_status__type_support_c.cpp.o[0m
+[8.102s] [ 71%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/halodi_msgs/msg/joint_status__type_support_c.cpp.o[0m
+[8.105s] [ 71%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/halodi_msgs/msg/battery_status__type_support_c.cpp.o[0m
+[8.105s] [ 71%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/halodi_msgs/msg/motor_status__type_support_c.cpp.o[0m
+[8.111s] [ 72%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/halodi_msgs/msg/ar_marker__type_support_c.cpp.o[0m
+[8.111s] [ 72%] Built target halodi_msgs__rosidl_typesupport_cpp
+[8.111s] [ 72%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/halodi_msgs/msg/ar_markers__type_support_c.cpp.o[0m
+[8.115s] [ 72%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/halodi_msgs/msg/task_space_feedback__type_support_c.cpp.o[0m
+[8.117s] [ 73%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/halodi_msgs/msg/passivity_data__type_support_c.cpp.o[0m
+[8.123s] [ 73%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/halodi_msgs/msg/hand_command__type_support_c.cpp.o[0m
+[8.135s] [ 74%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/halodi_msgs/srv/get_stamped_tf__type_support_c.cpp.o[0m
+[8.448s] [ 74%] [32m[1mLinking CXX shared library libhalodi_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[8.506s] [ 74%] Built target halodi_msgs__rosidl_typesupport_fastrtps_c
+[8.510s] [ 75%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[9.601s] [35m[1mScanning dependencies of target halodi_msgs__rosidl_typesupport_c[0m
+[9.612s] [ 75%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/halodi_msgs/msg/joint_name__type_support.cpp.o[0m
+[9.612s] [ 76%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/halodi_msgs/msg/joint_space_command__type_support.cpp.o[0m
+[9.612s] [ 76%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/halodi_msgs/msg/task_space_command__type_support.cpp.o[0m
+[9.612s] [ 77%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/halodi_msgs/msg/driving_command__type_support.cpp.o[0m
+[9.612s] [ 77%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/halodi_msgs/msg/reference_frame_name__type_support.cpp.o[0m
+[9.612s] [ 77%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/halodi_msgs/msg/feedback_parameters3_d__type_support.cpp.o[0m
+[9.613s] [ 77%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/halodi_msgs/msg/whole_body_controller_command__type_support.cpp.o[0m
+[9.613s] [ 77%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/halodi_msgs/msg/imu_measurement__type_support.cpp.o[0m
+[9.613s] [ 78%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/halodi_msgs/msg/balance_mode__type_support.cpp.o[0m
+[9.613s] [ 78%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/halodi_msgs/msg/whole_body_state__type_support.cpp.o[0m
+[9.613s] [ 78%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/halodi_msgs/msg/imu_name__type_support.cpp.o[0m
+[9.614s] [ 78%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/halodi_msgs/msg/whole_body_trajectory_point__type_support.cpp.o[0m
+[9.614s] [ 78%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/halodi_msgs/msg/joint_null_space_configuration__type_support.cpp.o[0m
+[9.614s] [ 79%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/halodi_msgs/msg/whole_body_trajectory__type_support.cpp.o[0m
+[9.614s] [ 80%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/halodi_msgs/msg/joint_measurement__type_support.cpp.o[0m
+[9.615s] [ 81%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/halodi_msgs/msg/trajectory_interpolation__type_support.cpp.o[0m
+[9.631s] [ 81%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/halodi_msgs/msg/driving_trajectory_point__type_support.cpp.o[0m
+[9.635s] [ 82%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/halodi_msgs/msg/contact_point_command__type_support.cpp.o[0m
+[9.635s] [ 82%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/halodi_msgs/msg/driving_trajectory__type_support.cpp.o[0m
+[9.636s] [ 82%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/halodi_msgs/msg/robot_joint_calibration_info__type_support.cpp.o[0m
+[9.636s] [ 82%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/halodi_msgs/msg/robot_status__type_support.cpp.o[0m
+[9.636s] [ 83%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/halodi_msgs/msg/extrinsic_calibration_info__type_support.cpp.o[0m
+[9.636s] [ 84%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/halodi_msgs/msg/motor_status__type_support.cpp.o[0m
+[9.636s] [ 84%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/halodi_msgs/msg/joint_status__type_support.cpp.o[0m
+[9.636s] [ 84%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/halodi_msgs/msg/battery_status__type_support.cpp.o[0m
+[9.637s] [ 84%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/halodi_msgs/msg/ar_marker__type_support.cpp.o[0m
+[9.639s] [ 85%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/halodi_msgs/msg/ar_markers__type_support.cpp.o[0m
+[9.641s] [ 85%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/halodi_msgs/srv/get_stamped_tf__type_support.cpp.o[0m
+[9.642s] [ 86%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/halodi_msgs/msg/passivity_data__type_support.cpp.o[0m
+[9.644s] [ 86%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/halodi_msgs/msg/task_space_feedback__type_support.cpp.o[0m
+[9.648s] [ 86%] [32mBuilding CXX object CMakeFiles/halodi_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/halodi_msgs/msg/hand_command__type_support.cpp.o[0m
+[9.667s] [ 87%] [32m[1mLinking CXX shared library libhalodi_msgs__rosidl_typesupport_c.so[0m
+[9.706s] [ 87%] Built target halodi_msgs__rosidl_typesupport_c
+[9.708s] [35m[1mScanning dependencies of target halodi_msgs[0m
+[9.711s] [ 87%] Built target halodi_msgs
+[9.714s] [35m[1mScanning dependencies of target halodi_msgs__py[0m
+[9.718s] [ 87%] [34m[1mGenerating Python code for ROS interfaces[0m
+[13.069s] [ 87%] Built target halodi_msgs__py
+[13.072s] [35m[1mScanning dependencies of target halodi_msgs__python[0m
+[13.191s] [ 88%] [32mBuilding C object CMakeFiles/halodi_msgs__python.dir/rosidl_generator_py/halodi_msgs/msg/_joint_name_s.c.o[0m
+[13.192s] [ 88%] [32mBuilding C object CMakeFiles/halodi_msgs__python.dir/rosidl_generator_py/halodi_msgs/msg/_driving_command_s.c.o[0m
+[13.192s] [ 88%] [32mBuilding C object CMakeFiles/halodi_msgs__python.dir/rosidl_generator_py/halodi_msgs/msg/_reference_frame_name_s.c.o[0m
+[13.192s] [ 88%] [32mBuilding C object CMakeFiles/halodi_msgs__python.dir/rosidl_generator_py/halodi_msgs/msg/_whole_body_controller_command_s.c.o[0m
+[13.192s] [ 89%] [32mBuilding C object CMakeFiles/halodi_msgs__python.dir/rosidl_generator_py/halodi_msgs/msg/_task_space_command_s.c.o[0m
+[13.192s] [ 89%] [32mBuilding C object CMakeFiles/halodi_msgs__python.dir/rosidl_generator_py/halodi_msgs/msg/_joint_space_command_s.c.o[0m
+[13.192s] [ 90%] [32mBuilding C object CMakeFiles/halodi_msgs__python.dir/rosidl_generator_py/halodi_msgs/msg/_imu_measurement_s.c.o[0m
+[13.192s] [ 90%] [32mBuilding C object CMakeFiles/halodi_msgs__python.dir/rosidl_generator_py/halodi_msgs/msg/_balance_mode_s.c.o[0m
+[13.193s] [ 91%] [32mBuilding C object CMakeFiles/halodi_msgs__python.dir/rosidl_generator_py/halodi_msgs/msg/_feedback_parameters3_d_s.c.o[0m
+[13.193s] [ 91%] [32mBuilding C object CMakeFiles/halodi_msgs__python.dir/rosidl_generator_py/halodi_msgs/msg/_joint_measurement_s.c.o[0m
+[13.193s] [ 91%] [32mBuilding C object CMakeFiles/halodi_msgs__python.dir/rosidl_generator_py/halodi_msgs/msg/_whole_body_trajectory_s.c.o[0m
+[13.193s] [ 92%] [32mBuilding C object CMakeFiles/halodi_msgs__python.dir/rosidl_generator_py/halodi_msgs/msg/_whole_body_state_s.c.o[0m
+[13.194s] [ 92%] [32mBuilding C object CMakeFiles/halodi_msgs__python.dir/rosidl_generator_py/halodi_msgs/msg/_whole_body_trajectory_point_s.c.o[0m
+[13.194s] [ 92%] [32mBuilding C object CMakeFiles/halodi_msgs__python.dir/rosidl_generator_py/halodi_msgs/msg/_imu_name_s.c.o[0m
+[13.194s] [ 92%] [32mBuilding C object CMakeFiles/halodi_msgs__python.dir/rosidl_generator_py/halodi_msgs/msg/_trajectory_interpolation_s.c.o[0m
+[13.194s] [ 93%] [32mBuilding C object CMakeFiles/halodi_msgs__python.dir/rosidl_generator_py/halodi_msgs/msg/_joint_null_space_configuration_s.c.o[0m
+[13.264s] [ 93%] [32mBuilding C object CMakeFiles/halodi_msgs__python.dir/rosidl_generator_py/halodi_msgs/msg/_driving_trajectory_s.c.o[0m
+[13.264s] [ 94%] [32mBuilding C object CMakeFiles/halodi_msgs__python.dir/rosidl_generator_py/halodi_msgs/msg/_driving_trajectory_point_s.c.o[0m
+[13.265s] [ 94%] [32mBuilding C object CMakeFiles/halodi_msgs__python.dir/rosidl_generator_py/halodi_msgs/msg/_contact_point_command_s.c.o[0m
+[13.267s] [ 94%] [32mBuilding C object CMakeFiles/halodi_msgs__python.dir/rosidl_generator_py/halodi_msgs/msg/_extrinsic_calibration_info_s.c.o[0m
+[13.269s] [ 95%] [32mBuilding C object CMakeFiles/halodi_msgs__python.dir/rosidl_generator_py/halodi_msgs/msg/_robot_joint_calibration_info_s.c.o[0m
+[13.269s] [ 95%] [32mBuilding C object CMakeFiles/halodi_msgs__python.dir/rosidl_generator_py/halodi_msgs/msg/_robot_status_s.c.o[0m
+[13.272s] [ 96%] [32mBuilding C object CMakeFiles/halodi_msgs__python.dir/rosidl_generator_py/halodi_msgs/msg/_joint_status_s.c.o[0m
+[13.274s] [ 96%] [32mBuilding C object CMakeFiles/halodi_msgs__python.dir/rosidl_generator_py/halodi_msgs/msg/_motor_status_s.c.o[0m
+[13.279s] [ 97%] [32mBuilding C object CMakeFiles/halodi_msgs__python.dir/rosidl_generator_py/halodi_msgs/msg/_battery_status_s.c.o[0m
+[13.284s] [ 97%] [32mBuilding C object CMakeFiles/halodi_msgs__python.dir/rosidl_generator_py/halodi_msgs/msg/_ar_marker_s.c.o[0m
+[13.291s] [ 97%] [32mBuilding C object CMakeFiles/halodi_msgs__python.dir/rosidl_generator_py/halodi_msgs/msg/_ar_markers_s.c.o[0m
+[13.292s] [ 97%] [32mBuilding C object CMakeFiles/halodi_msgs__python.dir/rosidl_generator_py/halodi_msgs/msg/_passivity_data_s.c.o[0m
+[13.294s] [ 98%] [32mBuilding C object CMakeFiles/halodi_msgs__python.dir/rosidl_generator_py/halodi_msgs/msg/_task_space_feedback_s.c.o[0m
+[13.297s] [ 98%] [32mBuilding C object CMakeFiles/halodi_msgs__python.dir/rosidl_generator_py/halodi_msgs/msg/_hand_command_s.c.o[0m
+[13.301s] [ 99%] [32mBuilding C object CMakeFiles/halodi_msgs__python.dir/rosidl_generator_py/halodi_msgs/srv/_get_stamped_tf_s.c.o[0m
+[13.380s] [ 99%] [32m[1mLinking CXX shared library rosidl_generator_py/halodi_msgs/libhalodi_msgs__python.so[0m
+[13.430s] [ 99%] Built target halodi_msgs__python
+[13.433s] [35m[1mScanning dependencies of target halodi_msgs__rosidl_typesupport_c__pyext[0m
+[13.433s] [35m[1mScanning dependencies of target halodi_msgs__rosidl_typesupport_fastrtps_c__pyext[0m
+[13.444s] [ 99%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/halodi_msgs/_halodi_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[13.444s] [ 99%] [32mBuilding C object CMakeFiles/halodi_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/halodi_msgs/_halodi_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[13.561s] [100%] [32m[1mLinking CXX shared library rosidl_generator_py/halodi_msgs/halodi_msgs_s__rosidl_typesupport_c.cpython-36m-x86_64-linux-gnu.so[0m
+[13.561s] [100%] [32m[1mLinking CXX shared library rosidl_generator_py/halodi_msgs/halodi_msgs_s__rosidl_typesupport_fastrtps_c.cpython-36m-x86_64-linux-gnu.so[0m
+[13.621s] [100%] Built target halodi_msgs__rosidl_typesupport_c__pyext
+[13.621s] [100%] Built target halodi_msgs__rosidl_typesupport_fastrtps_c__pyext
+[13.625s] Invoked command in '/home/james/eloquent_ws/src/halodi-messages/build/halodi_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/james/eloquent_ws/install/ros2_grpc_tools:/home/james/eloquent_ws/install/eve_ros2_examples_py:/home/james/eloquent_ws/install/ar_tools:/opt/ros/eloquent /usr/local/bin/cmake --build /home/james/eloquent_ws/src/halodi-messages/build/halodi_msgs -- -j16 -l16
+[13.986s] Invoking command in '/home/james/eloquent_ws/src/halodi-messages/build/halodi_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/james/eloquent_ws/install/ros2_grpc_tools:/home/james/eloquent_ws/install/eve_ros2_examples_py:/home/james/eloquent_ws/install/ar_tools:/opt/ros/eloquent /usr/local/bin/cmake --install /home/james/eloquent_ws/src/halodi-messages/build/halodi_msgs
+[13.989s] -- Install configuration: ""
+[13.990s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/ament_index/resource_index/rosidl_interfaces/halodi_msgs
+[13.990s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/libhalodi_msgs__rosidl_typesupport_c.so
+[13.990s] -- Set runtime path of "/home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/libhalodi_msgs__rosidl_typesupport_c.so" to ""
+[13.990s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/environment/library_path.sh
+[13.990s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/environment/library_path.dsv
+[13.991s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/libhalodi_msgs__rosidl_typesupport_cpp.so
+[13.991s] -- Set runtime path of "/home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/libhalodi_msgs__rosidl_typesupport_cpp.so" to ""
+[13.991s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs
+[13.991s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/srv
+[13.991s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/srv/get_stamped_tf__rosidl_typesupport_fastrtps_c.h
+[13.992s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg
+[13.992s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_measurement__rosidl_typesupport_fastrtps_c.h
+[13.992s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/passivity_data__rosidl_typesupport_fastrtps_c.h
+[13.992s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/ar_markers__rosidl_typesupport_fastrtps_c.h
+[13.992s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/feedback_parameters3_d__rosidl_typesupport_fastrtps_c.h
+[13.992s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/imu_measurement__rosidl_typesupport_fastrtps_c.h
+[13.992s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_controller_command__rosidl_typesupport_fastrtps_c.h
+[13.993s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_status__rosidl_typesupport_fastrtps_c.h
+[13.993s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_null_space_configuration__rosidl_typesupport_fastrtps_c.h
+[13.993s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_space_command__rosidl_typesupport_fastrtps_c.h
+[13.993s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/hand_command__rosidl_typesupport_fastrtps_c.h
+[13.993s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/contact_point_command__rosidl_typesupport_fastrtps_c.h
+[13.993s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[13.993s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/extrinsic_calibration_info__rosidl_typesupport_fastrtps_c.h
+[13.993s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/imu_name__rosidl_typesupport_fastrtps_c.h
+[13.994s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_state__rosidl_typesupport_fastrtps_c.h
+[13.994s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/reference_frame_name__rosidl_typesupport_fastrtps_c.h
+[13.994s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/battery_status__rosidl_typesupport_fastrtps_c.h
+[13.994s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/trajectory_interpolation__rosidl_typesupport_fastrtps_c.h
+[13.994s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/robot_status__rosidl_typesupport_fastrtps_c.h
+[13.994s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_trajectory__rosidl_typesupport_fastrtps_c.h
+[13.994s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/robot_joint_calibration_info__rosidl_typesupport_fastrtps_c.h
+[13.994s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_trajectory__rosidl_typesupport_fastrtps_c.h
+[13.995s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_command__rosidl_typesupport_fastrtps_c.h
+[13.995s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_name__rosidl_typesupport_fastrtps_c.h
+[13.995s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_trajectory_point__rosidl_typesupport_fastrtps_c.h
+[13.995s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/task_space_command__rosidl_typesupport_fastrtps_c.h
+[13.995s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/task_space_feedback__rosidl_typesupport_fastrtps_c.h
+[13.995s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/motor_status__rosidl_typesupport_fastrtps_c.h
+[13.995s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_trajectory_point__rosidl_typesupport_fastrtps_c.h
+[13.995s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/ar_marker__rosidl_typesupport_fastrtps_c.h
+[13.996s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/balance_mode__rosidl_typesupport_fastrtps_c.h
+[13.996s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/libhalodi_msgs__rosidl_typesupport_fastrtps_c.so
+[13.996s] -- Set runtime path of "/home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/libhalodi_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[13.996s] -- Up-to-date: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs
+[13.996s] -- Up-to-date: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/srv
+[13.996s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/srv/get_stamped_tf__functions.c
+[13.996s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/srv/get_stamped_tf__type_support.h
+[13.996s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/srv/get_stamped_tf__struct.h
+[13.997s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/srv/get_stamped_tf.h
+[13.997s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/srv/get_stamped_tf__functions.h
+[13.997s] -- Up-to-date: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg
+[13.997s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/feedback_parameters3_d.h
+[13.997s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/feedback_parameters3_d__functions.h
+[13.997s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/contact_point_command__struct.h
+[13.997s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_trajectory__type_support.h
+[13.998s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/battery_status__functions.h
+[13.998s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/extrinsic_calibration_info.h
+[13.998s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/hand_command__struct.h
+[13.998s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_state__struct.h
+[13.998s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/trajectory_interpolation.h
+[13.998s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_null_space_configuration__functions.h
+[13.998s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/robot_status__type_support.h
+[13.998s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_trajectory.h
+[13.999s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_measurement__functions.h
+[13.999s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_measurement__functions.c
+[13.999s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_controller_command.h
+[13.999s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/balance_mode__type_support.h
+[13.999s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_null_space_configuration.h
+[13.999s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/rosidl_generator_c__visibility_control.h
+[13.999s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_null_space_configuration__functions.c
+[13.999s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_measurement.h
+[14.000s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/feedback_parameters3_d__type_support.h
+[14.000s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/trajectory_interpolation__functions.c
+[14.000s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_controller_command__functions.c
+[14.000s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/imu_name__type_support.h
+[14.000s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_state.h
+[14.000s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/ar_marker__functions.c
+[14.000s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/motor_status__type_support.h
+[14.001s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/contact_point_command__functions.h
+[14.001s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_trajectory_point__functions.c
+[14.001s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/passivity_data__type_support.h
+[14.001s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_trajectory.h
+[14.001s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/reference_frame_name__struct.h
+[14.001s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/robot_joint_calibration_info__functions.c
+[14.001s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_state__functions.c
+[14.002s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/balance_mode.h
+[14.002s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/imu_name__functions.c
+[14.002s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_trajectory__functions.c
+[14.002s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_state__functions.h
+[14.002s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/ar_marker__functions.h
+[14.002s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_trajectory__struct.h
+[14.002s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/ar_markers__functions.c
+[14.002s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/task_space_command__functions.c
+[14.003s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_null_space_configuration__type_support.h
+[14.003s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/robot_status.h
+[14.003s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/hand_command.h
+[14.003s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/ar_markers__type_support.h
+[14.003s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/trajectory_interpolation__struct.h
+[14.003s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_status__type_support.h
+[14.003s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_name__functions.c
+[14.003s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_trajectory__functions.h
+[14.004s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_trajectory_point.h
+[14.004s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/reference_frame_name__functions.h
+[14.004s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/passivity_data__functions.h
+[14.004s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_name.h
+[14.004s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_trajectory__functions.c
+[14.004s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/hand_command__functions.c
+[14.004s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/ar_marker.h
+[14.005s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_space_command__struct.h
+[14.005s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/feedback_parameters3_d__struct.h
+[14.005s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/passivity_data.h
+[14.005s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/ar_markers__functions.h
+[14.005s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_space_command.h
+[14.005s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_space_command__type_support.h
+[14.005s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/task_space_feedback__functions.h
+[14.005s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_command__functions.h
+[14.006s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/task_space_feedback__functions.c
+[14.006s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/trajectory_interpolation__functions.h
+[14.006s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/contact_point_command__functions.c
+[14.006s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_trajectory_point__functions.h
+[14.006s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/imu_measurement__struct.h
+[14.006s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/ar_marker__struct.h
+[14.006s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/imu_measurement__functions.h
+[14.007s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_space_command__functions.h
+[14.007s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_command__type_support.h
+[14.007s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/robot_joint_calibration_info__struct.h
+[14.007s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/imu_name.h
+[14.007s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_space_command__functions.c
+[14.007s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/task_space_command.h
+[14.007s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/task_space_command__struct.h
+[14.007s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/balance_mode__struct.h
+[14.008s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_command__struct.h
+[14.008s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_trajectory_point__type_support.h
+[14.008s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/motor_status__functions.h
+[14.008s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_measurement__type_support.h
+[14.008s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/reference_frame_name__functions.c
+[14.008s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_trajectory__functions.h
+[14.008s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_name__struct.h
+[14.008s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_name__type_support.h
+[14.008s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/trajectory_interpolation__type_support.h
+[14.008s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_null_space_configuration__struct.h
+[14.009s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_command__functions.c
+[14.009s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/robot_status__functions.c
+[14.009s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_controller_command__functions.h
+[14.009s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/robot_status__functions.h
+[14.009s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_trajectory__type_support.h
+[14.009s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/contact_point_command__type_support.h
+[14.009s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/battery_status__struct.h
+[14.009s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_state__type_support.h
+[14.009s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/hand_command__type_support.h
+[14.009s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/extrinsic_calibration_info__functions.c
+[14.010s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_controller_command__struct.h
+[14.010s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/balance_mode__functions.c
+[14.010s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_trajectory__struct.h
+[14.010s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_trajectory_point__struct.h
+[14.010s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/feedback_parameters3_d__functions.c
+[14.010s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/ar_markers__struct.h
+[14.010s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_name__functions.h
+[14.010s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/robot_joint_calibration_info.h
+[14.010s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/extrinsic_calibration_info__functions.h
+[14.011s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/task_space_feedback__type_support.h
+[14.011s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/battery_status__type_support.h
+[14.011s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/ar_marker__type_support.h
+[14.011s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/motor_status.h
+[14.011s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/robot_status__struct.h
+[14.011s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/extrinsic_calibration_info__type_support.h
+[14.011s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/imu_measurement__functions.c
+[14.011s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_controller_command__type_support.h
+[14.011s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/task_space_command__type_support.h
+[14.012s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/imu_name__struct.h
+[14.012s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_trajectory_point__type_support.h
+[14.012s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/imu_measurement__type_support.h
+[14.012s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_status__functions.h
+[14.012s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_trajectory_point.h
+[14.012s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_trajectory_point__struct.h
+[14.012s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/reference_frame_name__type_support.h
+[14.012s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/battery_status.h
+[14.012s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/motor_status__functions.c
+[14.013s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/task_space_feedback__struct.h
+[14.013s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/battery_status__functions.c
+[14.013s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/extrinsic_calibration_info__struct.h
+[14.013s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_status__struct.h
+[14.013s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/robot_joint_calibration_info__functions.h
+[14.013s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/robot_joint_calibration_info__type_support.h
+[14.013s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/ar_markers.h
+[14.013s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_measurement__struct.h
+[14.013s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_status__functions.c
+[14.013s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/imu_measurement.h
+[14.013s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/motor_status__struct.h
+[14.013s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_trajectory_point__functions.h
+[14.013s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/task_space_command__functions.h
+[14.013s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/passivity_data__functions.c
+[14.014s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_command.h
+[14.014s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/hand_command__functions.h
+[14.014s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_trajectory_point__functions.c
+[14.014s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/balance_mode__functions.h
+[14.014s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/reference_frame_name.h
+[14.014s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_status.h
+[14.014s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/contact_point_command.h
+[14.014s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/passivity_data__struct.h
+[14.014s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/task_space_feedback.h
+[14.014s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/imu_name__functions.h
+[14.015s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/libhalodi_msgs__rosidl_generator_c.so
+[14.015s] -- Set runtime path of "/home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/libhalodi_msgs__rosidl_generator_c.so" to ""
+[14.015s] -- Up-to-date: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs
+[14.015s] -- Up-to-date: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/srv
+[14.015s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/srv/get_stamped_tf__rosidl_typesupport_fastrtps_cpp.hpp
+[14.015s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/srv/dds_fastrtps
+[14.015s] -- Up-to-date: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg
+[14.015s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/trajectory_interpolation__rosidl_typesupport_fastrtps_cpp.hpp
+[14.015s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_trajectory_point__rosidl_typesupport_fastrtps_cpp.hpp
+[14.015s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/task_space_command__rosidl_typesupport_fastrtps_cpp.hpp
+[14.015s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/balance_mode__rosidl_typesupport_fastrtps_cpp.hpp
+[14.016s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/passivity_data__rosidl_typesupport_fastrtps_cpp.hpp
+[14.016s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[14.016s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/ar_markers__rosidl_typesupport_fastrtps_cpp.hpp
+[14.016s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/task_space_feedback__rosidl_typesupport_fastrtps_cpp.hpp
+[14.016s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_trajectory__rosidl_typesupport_fastrtps_cpp.hpp
+[14.016s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/robot_status__rosidl_typesupport_fastrtps_cpp.hpp
+[14.016s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_state__rosidl_typesupport_fastrtps_cpp.hpp
+[14.016s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/imu_name__rosidl_typesupport_fastrtps_cpp.hpp
+[14.016s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_command__rosidl_typesupport_fastrtps_cpp.hpp
+[14.016s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_null_space_configuration__rosidl_typesupport_fastrtps_cpp.hpp
+[14.016s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/hand_command__rosidl_typesupport_fastrtps_cpp.hpp
+[14.017s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/feedback_parameters3_d__rosidl_typesupport_fastrtps_cpp.hpp
+[14.017s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/ar_marker__rosidl_typesupport_fastrtps_cpp.hpp
+[14.017s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_controller_command__rosidl_typesupport_fastrtps_cpp.hpp
+[14.017s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/dds_fastrtps
+[14.017s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_trajectory__rosidl_typesupport_fastrtps_cpp.hpp
+[14.017s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/motor_status__rosidl_typesupport_fastrtps_cpp.hpp
+[14.017s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/contact_point_command__rosidl_typesupport_fastrtps_cpp.hpp
+[14.017s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/reference_frame_name__rosidl_typesupport_fastrtps_cpp.hpp
+[14.017s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/imu_measurement__rosidl_typesupport_fastrtps_cpp.hpp
+[14.017s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_name__rosidl_typesupport_fastrtps_cpp.hpp
+[14.017s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_trajectory_point__rosidl_typesupport_fastrtps_cpp.hpp
+[14.018s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/robot_joint_calibration_info__rosidl_typesupport_fastrtps_cpp.hpp
+[14.018s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/battery_status__rosidl_typesupport_fastrtps_cpp.hpp
+[14.018s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_status__rosidl_typesupport_fastrtps_cpp.hpp
+[14.018s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_measurement__rosidl_typesupport_fastrtps_cpp.hpp
+[14.018s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/extrinsic_calibration_info__rosidl_typesupport_fastrtps_cpp.hpp
+[14.018s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_space_command__rosidl_typesupport_fastrtps_cpp.hpp
+[14.018s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/libhalodi_msgs__rosidl_typesupport_fastrtps_cpp.so
+[14.018s] -- Set runtime path of "/home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/libhalodi_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[14.018s] -- Up-to-date: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs
+[14.018s] -- Up-to-date: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/srv
+[14.018s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/srv/get_stamped_tf.hpp
+[14.018s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/srv/get_stamped_tf__struct.hpp
+[14.019s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/srv/get_stamped_tf__traits.hpp
+[14.019s] -- Up-to-date: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg
+[14.019s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_name__traits.hpp
+[14.019s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_command__struct.hpp
+[14.019s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_controller_command__traits.hpp
+[14.019s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_controller_command.hpp
+[14.019s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/extrinsic_calibration_info__traits.hpp
+[14.019s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_trajectory.hpp
+[14.019s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/task_space_feedback__struct.hpp
+[14.019s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/robot_status__traits.hpp
+[14.019s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/robot_joint_calibration_info__struct.hpp
+[14.019s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/battery_status__traits.hpp
+[14.020s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/robot_joint_calibration_info__traits.hpp
+[14.020s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_trajectory__struct.hpp
+[14.020s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/imu_name__traits.hpp
+[14.020s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/task_space_command__traits.hpp
+[14.020s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/ar_markers__traits.hpp
+[14.020s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/hand_command.hpp
+[14.020s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/imu_measurement.hpp
+[14.020s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_measurement.hpp
+[14.020s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/ar_markers__struct.hpp
+[14.020s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_controller_command__struct.hpp
+[14.020s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/contact_point_command__struct.hpp
+[14.020s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/task_space_command.hpp
+[14.021s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_trajectory.hpp
+[14.021s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_trajectory_point__traits.hpp
+[14.021s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_space_command__struct.hpp
+[14.021s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/robot_status.hpp
+[14.021s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/trajectory_interpolation__struct.hpp
+[14.021s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/trajectory_interpolation__traits.hpp
+[14.021s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_trajectory_point.hpp
+[14.021s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/task_space_feedback__traits.hpp
+[14.021s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/feedback_parameters3_d__traits.hpp
+[14.021s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_trajectory_point__traits.hpp
+[14.021s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_space_command__traits.hpp
+[14.021s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/motor_status__traits.hpp
+[14.022s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/imu_name.hpp
+[14.022s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/ar_markers.hpp
+[14.022s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/balance_mode__traits.hpp
+[14.022s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/ar_marker__struct.hpp
+[14.022s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/reference_frame_name.hpp
+[14.022s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/passivity_data.hpp
+[14.022s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_status.hpp
+[14.022s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/trajectory_interpolation.hpp
+[14.022s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/ar_marker__traits.hpp
+[14.022s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_trajectory__traits.hpp
+[14.022s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_trajectory__struct.hpp
+[14.022s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/balance_mode.hpp
+[14.023s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/passivity_data__struct.hpp
+[14.024s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/imu_measurement__struct.hpp
+[14.024s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/battery_status.hpp
+[14.024s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/contact_point_command.hpp
+[14.024s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/imu_name__struct.hpp
+[14.024s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_trajectory_point__struct.hpp
+[14.024s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_trajectory_point.hpp
+[14.024s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/ar_marker.hpp
+[14.024s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/robot_joint_calibration_info.hpp
+[14.024s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/reference_frame_name__struct.hpp
+[14.024s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_null_space_configuration.hpp
+[14.024s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_status__traits.hpp
+[14.024s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/extrinsic_calibration_info__struct.hpp
+[14.025s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/hand_command__traits.hpp
+[14.025s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/feedback_parameters3_d.hpp
+[14.025s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_null_space_configuration__struct.hpp
+[14.025s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_command__traits.hpp
+[14.025s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/task_space_command__struct.hpp
+[14.025s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_trajectory_point__struct.hpp
+[14.025s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_trajectory__traits.hpp
+[14.025s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_measurement__struct.hpp
+[14.025s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_name.hpp
+[14.025s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_null_space_configuration__traits.hpp
+[14.025s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/robot_status__struct.hpp
+[14.025s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_space_command.hpp
+[14.025s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_state__traits.hpp
+[14.025s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/balance_mode__struct.hpp
+[14.026s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/imu_measurement__traits.hpp
+[14.026s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_state.hpp
+[14.026s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_state__struct.hpp
+[14.026s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_command.hpp
+[14.026s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/task_space_feedback.hpp
+[14.026s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/motor_status__struct.hpp
+[14.026s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/battery_status__struct.hpp
+[14.026s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/reference_frame_name__traits.hpp
+[14.026s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/motor_status.hpp
+[14.026s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/hand_command__struct.hpp
+[14.026s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/passivity_data__traits.hpp
+[14.026s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_measurement__traits.hpp
+[14.026s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/contact_point_command__traits.hpp
+[14.027s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_status__struct.hpp
+[14.027s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_name__struct.hpp
+[14.027s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/extrinsic_calibration_info.hpp
+[14.027s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/feedback_parameters3_d__struct.hpp
+[14.027s] -- Up-to-date: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs
+[14.027s] -- Up-to-date: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/srv
+[14.027s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/srv/get_stamped_tf__rosidl_typesupport_introspection_c.h
+[14.027s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/srv/get_stamped_tf__type_support.c
+[14.027s] -- Up-to-date: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg
+[14.027s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/passivity_data__type_support.c
+[14.027s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_trajectory__rosidl_typesupport_introspection_c.h
+[14.027s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_null_space_configuration__type_support.c
+[14.027s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/ar_markers__rosidl_typesupport_introspection_c.h
+[14.027s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_command__type_support.c
+[14.028s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_trajectory__type_support.c
+[14.028s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/robot_status__rosidl_typesupport_introspection_c.h
+[14.028s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_name__rosidl_typesupport_introspection_c.h
+[14.028s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/trajectory_interpolation__rosidl_typesupport_introspection_c.h
+[14.028s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/imu_measurement__type_support.c
+[14.028s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/imu_name__rosidl_typesupport_introspection_c.h
+[14.028s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/feedback_parameters3_d__type_support.c
+[14.028s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_controller_command__type_support.c
+[14.028s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/extrinsic_calibration_info__type_support.c
+[14.028s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/feedback_parameters3_d__rosidl_typesupport_introspection_c.h
+[14.028s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_state__rosidl_typesupport_introspection_c.h
+[14.028s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_null_space_configuration__rosidl_typesupport_introspection_c.h
+[14.028s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/balance_mode__rosidl_typesupport_introspection_c.h
+[14.028s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/extrinsic_calibration_info__rosidl_typesupport_introspection_c.h
+[14.028s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_measurement__rosidl_typesupport_introspection_c.h
+[14.028s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/balance_mode__type_support.c
+[14.029s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[14.029s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_trajectory_point__type_support.c
+[14.029s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/contact_point_command__rosidl_typesupport_introspection_c.h
+[14.029s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_name__type_support.c
+[14.029s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_command__rosidl_typesupport_introspection_c.h
+[14.029s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/ar_marker__type_support.c
+[14.029s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/imu_name__type_support.c
+[14.029s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_status__type_support.c
+[14.029s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/robot_status__type_support.c
+[14.029s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/battery_status__rosidl_typesupport_introspection_c.h
+[14.029s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_status__rosidl_typesupport_introspection_c.h
+[14.029s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/contact_point_command__type_support.c
+[14.029s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_trajectory__rosidl_typesupport_introspection_c.h
+[14.029s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/robot_joint_calibration_info__rosidl_typesupport_introspection_c.h
+[14.029s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_trajectory_point__rosidl_typesupport_introspection_c.h
+[14.029s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_state__type_support.c
+[14.029s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_measurement__type_support.c
+[14.029s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/motor_status__type_support.c
+[14.030s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_controller_command__rosidl_typesupport_introspection_c.h
+[14.030s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_space_command__type_support.c
+[14.030s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/trajectory_interpolation__type_support.c
+[14.030s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_trajectory_point__rosidl_typesupport_introspection_c.h
+[14.030s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_space_command__rosidl_typesupport_introspection_c.h
+[14.030s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/robot_joint_calibration_info__type_support.c
+[14.030s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/battery_status__type_support.c
+[14.030s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_trajectory__type_support.c
+[14.030s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/task_space_feedback__rosidl_typesupport_introspection_c.h
+[14.030s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/task_space_feedback__type_support.c
+[14.030s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/hand_command__rosidl_typesupport_introspection_c.h
+[14.030s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/task_space_command__rosidl_typesupport_introspection_c.h
+[14.030s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/reference_frame_name__type_support.c
+[14.030s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/imu_measurement__rosidl_typesupport_introspection_c.h
+[14.030s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/task_space_command__type_support.c
+[14.030s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/motor_status__rosidl_typesupport_introspection_c.h
+[14.030s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_trajectory_point__type_support.c
+[14.030s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/ar_markers__type_support.c
+[14.030s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/passivity_data__rosidl_typesupport_introspection_c.h
+[14.031s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/reference_frame_name__rosidl_typesupport_introspection_c.h
+[14.031s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/hand_command__type_support.c
+[14.031s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/ar_marker__rosidl_typesupport_introspection_c.h
+[14.031s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/libhalodi_msgs__rosidl_typesupport_introspection_c.so
+[14.031s] -- Set runtime path of "/home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/libhalodi_msgs__rosidl_typesupport_introspection_c.so" to ""
+[14.031s] -- Up-to-date: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs
+[14.031s] -- Up-to-date: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/srv
+[14.031s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/srv/get_stamped_tf__type_support.cpp
+[14.031s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/srv/get_stamped_tf__rosidl_typesupport_introspection_cpp.hpp
+[14.031s] -- Up-to-date: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg
+[14.031s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_controller_command__type_support.cpp
+[14.031s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/imu_measurement__type_support.cpp
+[14.031s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/task_space_command__rosidl_typesupport_introspection_cpp.hpp
+[14.031s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/battery_status__rosidl_typesupport_introspection_cpp.hpp
+[14.031s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/contact_point_command__type_support.cpp
+[14.031s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/extrinsic_calibration_info__rosidl_typesupport_introspection_cpp.hpp
+[14.031s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/hand_command__type_support.cpp
+[14.031s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_trajectory__rosidl_typesupport_introspection_cpp.hpp
+[14.031s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/extrinsic_calibration_info__type_support.cpp
+[14.032s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/ar_markers__type_support.cpp
+[14.032s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_status__rosidl_typesupport_introspection_cpp.hpp
+[14.032s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/trajectory_interpolation__rosidl_typesupport_introspection_cpp.hpp
+[14.032s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/imu_measurement__rosidl_typesupport_introspection_cpp.hpp
+[14.032s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/imu_name__type_support.cpp
+[14.032s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_null_space_configuration__rosidl_typesupport_introspection_cpp.hpp
+[14.032s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/reference_frame_name__rosidl_typesupport_introspection_cpp.hpp
+[14.032s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/feedback_parameters3_d__type_support.cpp
+[14.032s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/passivity_data__rosidl_typesupport_introspection_cpp.hpp
+[14.032s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/ar_marker__type_support.cpp
+[14.032s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_trajectory__type_support.cpp
+[14.032s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_status__type_support.cpp
+[14.032s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/task_space_feedback__type_support.cpp
+[14.032s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_command__rosidl_typesupport_introspection_cpp.hpp
+[14.032s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/balance_mode__rosidl_typesupport_introspection_cpp.hpp
+[14.032s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/robot_status__rosidl_typesupport_introspection_cpp.hpp
+[14.032s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_name__rosidl_typesupport_introspection_cpp.hpp
+[14.032s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_controller_command__rosidl_typesupport_introspection_cpp.hpp
+[14.032s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/robot_status__type_support.cpp
+[14.032s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_space_command__type_support.cpp
+[14.033s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/task_space_feedback__rosidl_typesupport_introspection_cpp.hpp
+[14.033s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_measurement__rosidl_typesupport_introspection_cpp.hpp
+[14.033s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_measurement__type_support.cpp
+[14.033s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/motor_status__rosidl_typesupport_introspection_cpp.hpp
+[14.033s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_trajectory_point__type_support.cpp
+[14.033s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_trajectory_point__type_support.cpp
+[14.033s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/robot_joint_calibration_info__type_support.cpp
+[14.033s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/trajectory_interpolation__type_support.cpp
+[14.033s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/ar_markers__rosidl_typesupport_introspection_cpp.hpp
+[14.033s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_trajectory__rosidl_typesupport_introspection_cpp.hpp
+[14.033s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_trajectory_point__rosidl_typesupport_introspection_cpp.hpp
+[14.033s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/battery_status__type_support.cpp
+[14.033s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/contact_point_command__rosidl_typesupport_introspection_cpp.hpp
+[14.033s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/passivity_data__type_support.cpp
+[14.033s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/imu_name__rosidl_typesupport_introspection_cpp.hpp
+[14.033s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/hand_command__rosidl_typesupport_introspection_cpp.hpp
+[14.033s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/robot_joint_calibration_info__rosidl_typesupport_introspection_cpp.hpp
+[14.033s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_name__type_support.cpp
+[14.033s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_state__type_support.cpp
+[14.033s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/driving_command__type_support.cpp
+[14.034s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_state__rosidl_typesupport_introspection_cpp.hpp
+[14.034s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/task_space_command__type_support.cpp
+[14.034s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/ar_marker__rosidl_typesupport_introspection_cpp.hpp
+[14.034s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_space_command__rosidl_typesupport_introspection_cpp.hpp
+[14.034s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_trajectory__type_support.cpp
+[14.034s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/motor_status__type_support.cpp
+[14.034s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/feedback_parameters3_d__rosidl_typesupport_introspection_cpp.hpp
+[14.034s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/reference_frame_name__type_support.cpp
+[14.034s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/whole_body_trajectory_point__rosidl_typesupport_introspection_cpp.hpp
+[14.034s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/joint_null_space_configuration__type_support.cpp
+[14.034s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/include/halodi_msgs/msg/balance_mode__type_support.cpp
+[14.034s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/libhalodi_msgs__rosidl_typesupport_introspection_cpp.so
+[14.034s] -- Set runtime path of "/home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/libhalodi_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[14.034s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/environment/pythonpath.sh
+[14.034s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/environment/pythonpath.dsv
+[14.034s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/__init__.py
+[14.051s] Compiling '/home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/__init__.py'...
+[14.053s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg
+[14.054s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_task_space_command.py
+[14.054s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_passivity_data.py
+[14.054s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_task_space_command_s.c
+[14.054s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_motor_status.py
+[14.054s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_hand_command_s.c
+[14.054s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_whole_body_trajectory.py
+[14.054s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_ar_marker.py
+[14.054s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_balance_mode.py
+[14.054s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_reference_frame_name.py
+[14.054s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_contact_point_command.py
+[14.054s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/__init__.py
+[14.054s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_joint_space_command_s.c
+[14.054s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_ar_marker_s.c
+[14.055s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_whole_body_state.py
+[14.055s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_reference_frame_name_s.c
+[14.055s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_contact_point_command_s.c
+[14.055s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_joint_name_s.c
+[14.055s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_task_space_feedback.py
+[14.055s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_driving_trajectory_s.c
+[14.055s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_joint_space_command.py
+[14.055s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_passivity_data_s.c
+[14.055s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_joint_measurement.py
+[14.055s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_trajectory_interpolation_s.c
+[14.055s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_joint_status.py
+[14.055s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_extrinsic_calibration_info.py
+[14.055s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_battery_status_s.c
+[14.055s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_hand_command.py
+[14.055s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_whole_body_trajectory_point_s.c
+[14.055s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_joint_measurement_s.c
+[14.056s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_ar_markers.py
+[14.056s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_driving_trajectory_point_s.c
+[14.056s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_robot_status.py
+[14.056s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_task_space_feedback_s.c
+[14.056s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_robot_status_s.c
+[14.056s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_whole_body_trajectory_point.py
+[14.056s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_balance_mode_s.c
+[14.056s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_ar_markers_s.c
+[14.056s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_extrinsic_calibration_info_s.c
+[14.056s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_imu_name_s.c
+[14.056s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_imu_measurement_s.c
+[14.056s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_driving_command_s.c
+[14.056s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_imu_name.py
+[14.056s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_battery_status.py
+[14.057s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_driving_trajectory.py
+[14.057s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_whole_body_controller_command_s.c
+[14.057s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_trajectory_interpolation.py
+[14.057s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_robot_joint_calibration_info_s.c
+[14.057s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_imu_measurement.py
+[14.057s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_feedback_parameters3_d.py
+[14.057s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_whole_body_controller_command.py
+[14.057s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_whole_body_trajectory_s.c
+[14.057s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_joint_name.py
+[14.057s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_driving_command.py
+[14.057s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_joint_status_s.c
+[14.057s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_feedback_parameters3_d_s.c
+[14.057s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_joint_null_space_configuration_s.c
+[14.057s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_joint_null_space_configuration.py
+[14.057s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_robot_joint_calibration_info.py
+[14.057s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_driving_trajectory_point.py
+[14.058s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_whole_body_state_s.c
+[14.058s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/msg/_motor_status_s.c
+[14.058s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/srv
+[14.058s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/srv/__init__.py
+[14.058s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/srv/_get_stamped_tf.py
+[14.058s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/srv/_get_stamped_tf_s.c
+[14.058s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/halodi_msgs_s__rosidl_typesupport_c.cpython-36m-x86_64-linux-gnu.so
+[14.058s] -- Set runtime path of "/home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/halodi_msgs_s__rosidl_typesupport_c.cpython-36m-x86_64-linux-gnu.so" to ""
+[14.058s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/halodi_msgs_s__rosidl_typesupport_fastrtps_c.cpython-36m-x86_64-linux-gnu.so
+[14.058s] -- Set runtime path of "/home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/python3.6/site-packages/halodi_msgs/halodi_msgs_s__rosidl_typesupport_fastrtps_c.cpython-36m-x86_64-linux-gnu.so" to ""
+[14.058s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/libhalodi_msgs__python.so
+[14.058s] -- Set runtime path of "/home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/lib/libhalodi_msgs__python.so" to ""
+[14.058s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/msg/JointName.idl
+[14.058s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/msg/ReferenceFrameName.idl
+[14.059s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/msg/DrivingCommand.idl
+[14.059s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/msg/TaskSpaceCommand.idl
+[14.059s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/msg/JointSpaceCommand.idl
+[14.059s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/msg/WholeBodyControllerCommand.idl
+[14.059s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/msg/FeedbackParameters3D.idl
+[14.059s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/msg/BalanceMode.idl
+[14.059s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/msg/ImuMeasurement.idl
+[14.059s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/msg/ImuName.idl
+[14.059s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/msg/JointMeasurement.idl
+[14.059s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/msg/WholeBodyState.idl
+[14.059s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/msg/WholeBodyTrajectory.idl
+[14.059s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/msg/WholeBodyTrajectoryPoint.idl
+[14.060s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/msg/JointNullSpaceConfiguration.idl
+[14.060s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/msg/TrajectoryInterpolation.idl
+[14.060s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/msg/DrivingTrajectoryPoint.idl
+[14.060s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/msg/DrivingTrajectory.idl
+[14.060s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/msg/ContactPointCommand.idl
+[14.060s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/msg/RobotJointCalibrationInfo.idl
+[14.060s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/msg/ExtrinsicCalibrationInfo.idl
+[14.060s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/msg/RobotStatus.idl
+[14.060s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/msg/JointStatus.idl
+[14.060s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/msg/MotorStatus.idl
+[14.060s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/msg/BatteryStatus.idl
+[14.061s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/msg/ARMarker.idl
+[14.061s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/msg/ARMarkers.idl
+[14.061s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/msg/TaskSpaceFeedback.idl
+[14.061s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/msg/PassivityData.idl
+[14.061s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/msg/HandCommand.idl
+[14.061s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/srv/GetStampedTF.idl
+[14.061s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/srv/GetStampedTF.srv
+[14.061s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/srv/GetStampedTF_Request.msg
+[14.061s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/srv/GetStampedTF_Response.msg
+[14.061s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/ament_index/resource_index/package_run_dependencies/halodi_msgs
+[14.061s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/ament_index/resource_index/parent_prefix_path/halodi_msgs
+[14.062s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/environment/ament_prefix_path.sh
+[14.062s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/environment/ament_prefix_path.dsv
+[14.062s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/environment/path.sh
+[14.062s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/environment/path.dsv
+[14.062s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/local_setup.bash
+[14.062s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/local_setup.sh
+[14.062s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/local_setup.zsh
+[14.062s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/local_setup.dsv
+[14.062s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/package.dsv
+[14.062s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/ament_index/resource_index/packages/halodi_msgs
+[14.063s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/cmake/rosidl_cmake-extras.cmake
+[14.063s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[14.063s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[14.063s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[14.063s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/cmake/halodi_msgsConfig.cmake
+[14.063s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/cmake/halodi_msgsConfig-version.cmake
+[14.063s] -- Installing: /home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs/share/halodi_msgs/package.xml
+[14.064s] Invoked command in '/home/james/eloquent_ws/src/halodi-messages/build/halodi_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/james/eloquent_ws/install/ros2_grpc_tools:/home/james/eloquent_ws/install/eve_ros2_examples_py:/home/james/eloquent_ws/install/ar_tools:/opt/ros/eloquent /usr/local/bin/cmake --install /home/james/eloquent_ws/src/halodi-messages/build/halodi_msgs

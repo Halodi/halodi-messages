@@ -1,0 +1,75 @@
+
+
+module halodi_msgs 
+{
+    module msg 
+    {
+
+        /**
+         *
+         *  List of Reference Frames in the controller
+         *
+         *
+        **/
+        module ReferenceFrameName_Constants
+        {
+            
+            /**
+             * Robot world frame.
+             *
+             * Expressable in : YES
+             * Controllable : NO
+             */ 
+            const long WORLD = 0;
+            
+            /**
+             * Pelvis (torso) of the robot. Origin is the intersection of the hip roll, pitch and yaw axes.
+             *
+             * Expressable in : YES
+             * Controllable : Partial (z-height with respect to base expressed in world and orientation)
+             */
+            const long PELVIS = 1;
+            
+            /**
+             * Wheeled base frame of the robot. Origin is the intersection of the ankle roll and pitch axes.
+             *
+             * Expressable in : YES
+             * Controllable : NO
+             */
+            const long BASE = 2;
+            
+            /**
+             * Left hand frame. Origin is the intersection of the left wrist roll, pitch and yaw axes
+             *
+             * Expressable in : YES
+             * Controllable : YES
+             */
+            const long LEFT_HAND = 3;
+            
+            /**
+             * Right hand frame. Origin is the intersection of the right wrist roll, pitch and yaw axes
+             *
+             * Expressable in : YES
+             * Controllable : YES
+             */
+            const long RIGHT_HAND = 4;
+            
+            /**
+             * Head frame. Origin is the base of the head.
+             *
+             * Expressable in : YES
+             * Controllable : Partial (orientation pitch with respect to pelvis only)
+             */
+            const long HEAD = 5;
+             
+        };
+       
+        @TypeCode(type="halodi_msgs::msg::dds_::ReferenceFrameName_")
+        struct ReferenceFrameName
+        {
+            long frame_id;
+        };
+        
+    };
+};
+

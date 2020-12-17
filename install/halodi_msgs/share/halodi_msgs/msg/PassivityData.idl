@@ -1,0 +1,16 @@
+
+module halodi_msgs {
+    module msg {
+    
+        @TypeCode(type="halodi_msgs::msg::dds_::PassivityData_")
+        struct PassivityData
+        {
+            double energy_packet;
+            
+            double energy_tank_level;
+            
+            double virtual_mass;
+        
+        };
+    };
+};    

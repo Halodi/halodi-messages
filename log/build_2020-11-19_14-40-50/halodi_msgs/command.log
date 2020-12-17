@@ -1,0 +1,2 @@
+Invoking command in '/home/james/eloquent_ws/src/halodi-messages/build/halodi_msgs': /usr/local/bin/cmake /home/james/eloquent_ws/src/halodi-messages/halodi_msgs -DCMAKE_INSTALL_PREFIX=/home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs
+Invoked command in '/home/james/eloquent_ws/src/halodi-messages/build/halodi_msgs' returned '1': /usr/local/bin/cmake /home/james/eloquent_ws/src/halodi-messages/halodi_msgs -DCMAKE_INSTALL_PREFIX=/home/james/eloquent_ws/src/halodi-messages/install/halodi_msgs

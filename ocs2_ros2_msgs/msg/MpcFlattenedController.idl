@@ -1,0 +1,37 @@
+#include "ocs2_ros2_msgs/msg/ModeSchedule.idl"
+#include "ocs2_ros2_msgs/msg/MpcInput.idl"
+#include "ocs2_ros2_msgs/msg/MpcObservation.idl"
+#include "ocs2_ros2_msgs/msg/MpcState.idl"
+#include "ocs2_ros2_msgs/msg/MpcTargetTrajectories.idl"
+#include "ocs2_ros2_msgs/msg/ControllerData.idl"
+
+module ocs2_ros2_msgs {
+  module msg {
+    module MpcFlattenedController_Constants {
+      const octet CONTROLLER_UNKNOWN = 0;
+      const octet CONTROLLER_FEEDFORWARD = 1;
+      const octet CONTROLLER_LINEAR = 2;
+    };
+
+    @TypeCode(type="ocs2_ros2_msgs::msg::dds_::MpcFlattenedController_")
+    struct MpcFlattenedController {
+      octet controller_type;
+
+      ocs2_ros2_msgs::msg::MpcObservation init_observation;
+
+      ocs2_ros2_msgs::msg::MpcTargetTrajectories plan_target_trajectories;
+
+      sequence<ocs2_ros2_msgs::msg::MpcState> state_trajectory;
+
+      sequence<ocs2_ros2_msgs::msg::MpcInput> input_trajectory;
+
+      sequence<float> time_trajectory;
+
+      ocs2_ros2_msgs::msg::ModeSchedule mode_schedule;
+
+      boolean controller_is_updated;
+
+      sequence<ocs2_ros2_msgs::msg::ControllerData> data;
+    };
+  };
+};

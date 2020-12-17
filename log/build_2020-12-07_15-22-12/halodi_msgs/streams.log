@@ -1,0 +1,23 @@
+[0.014s] Invoking command in '/home/james/eloquent_ws/src/halodi-messages/build/halodi_msgs': /usr/local/bin/cmake --build /home/james/eloquent_ws/src/halodi-messages/build/halodi_msgs -- -j16 -l16
+[0.033s] -- Found ament_cmake: 0.8.2 (/opt/ros/eloquent/share/ament_cmake/cmake)
+[0.049s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.105s] Traceback (most recent call last):
+[0.105s]   File "/opt/ros/eloquent/share/ament_cmake_core/cmake/package_templates/templates_2_cmake.py", line 21, in <module>
+[0.105s]     from ament_package.templates import get_environment_hook_template_path
+[0.105s] ModuleNotFoundError: No module named 'ament_package'
+[0.110s] CMake Error at /opt/ros/eloquent/share/ament_cmake_core/cmake/ament_cmake_package_templates-extras.cmake:41 (message):
+[0.110s]   execute_process(/usr/bin/python3
+[0.110s]   /opt/ros/eloquent/share/ament_cmake_core/cmake/package_templates/templates_2_cmake.py
+[0.110s]   /home/james/eloquent_ws/src/halodi-messages/build/halodi_msgs/ament_cmake_package_templates/templates.cmake)
+[0.110s]   returned error code 1
+[0.111s] Call Stack (most recent call first):
+[0.111s]   /opt/ros/eloquent/share/ament_cmake_core/cmake/ament_cmake_coreConfig.cmake:38 (include)
+[0.111s]   /opt/ros/eloquent/share/ament_cmake/cmake/ament_cmake_export_dependencies-extras.cmake:15 (find_package)
+[0.111s]   /opt/ros/eloquent/share/ament_cmake/cmake/ament_cmakeConfig.cmake:38 (include)
+[0.111s]   CMakeLists.txt:12 (find_package)
+[0.111s] 
+[0.111s] 
+[0.111s] -- Configuring incomplete, errors occurred!
+[0.111s] See also "/home/james/eloquent_ws/src/halodi-messages/build/halodi_msgs/CMakeFiles/CMakeOutput.log".
+[0.111s] make: *** [cmake_check_build_system] Error 1
+[0.111s] Makefile:7923: recipe for target 'cmake_check_build_system' failed

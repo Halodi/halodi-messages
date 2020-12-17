@@ -1,0 +1,27 @@
+#include <halodi_msgs/msg/JointName.idl>
+
+module halodi_msgs {
+    module msg {
+        
+    
+        /**
+         *
+         * Null space configuration for joint in task space control mode
+         *
+         */
+        @TypeCode(type="halodi_msgs::msg::dds_::JointNullSpaceConfiguration_")
+        struct JointNullSpaceConfiguration
+        {
+            /**
+             * Name of joint, required.
+             */
+            halodi_msgs::msg::JointName joint;
+            
+            /**
+             * Desired joint angle in the nullspace configuration
+             *
+             */
+            double q_nullspace;
+        };
+    };
+};

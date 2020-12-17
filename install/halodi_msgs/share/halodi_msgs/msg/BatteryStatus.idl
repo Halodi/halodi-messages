@@ -1,0 +1,48 @@
+
+module halodi_msgs {
+    module msg {
+    
+        /**
+          * Status of the battery
+          *
+          */
+        @TypeCode(type="halodi_msgs::msg::dds_::Battery_")
+        struct BatteryStatus
+        {
+            
+            
+            /**
+             * Charge status of the battery
+             * 
+             * WARNING: The robot should be moved to a safe position to shutdown and charge as soon as possible. 
+             * ERROR: Note, this shutdown happens even if the battery voltage drops momentary due to fast motions. 
+             *
+             */
+            octet battery_status_level;
+            
+            
+            /**
+             * Current estimate of the battery voltage in Volts
+             *
+             */
+            double battery_voltage;
+            
+            /**
+             * Battery voltage when the robot will emit a warning
+             * 
+             * 
+             *
+             */
+            double low_battery_voltage;
+            
+            /**
+             * Battery voltage when the robot will shutdown
+             * 
+             */
+            double shutdown_battery_voltage;
+            
+        };
+        
+    };
+};
+ 

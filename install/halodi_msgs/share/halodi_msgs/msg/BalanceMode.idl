@@ -1,0 +1,29 @@
+module halodi_msgs {
+    module msg {
+        module BalanceMode_Constants
+        {
+            const long AUTOMATIC = 0;
+            const long DRIVING = 1;
+            const long FOLLOW_ME = 2;
+            const long FORCE_STATIONARY = 3;
+            const long DISABLED = 84;
+        };
+        
+        /**
+          * Set the mode for the balance controller
+          *
+          * AUTOMATIC: The balance controller will try to stay stationary, but switch to driving if a driving command is received or the robot is pushed.
+          * DRIVING: The balance controller is in driving mode. This allows faster reaction than AUTOMATIC, at the cost of less strict postion keeping
+          * FOLLOW_ME: The balance controller heavily favours moving the base to balance, allowing easy pushing of the robot.
+          * DISABLED: The balance controller will be disabled (CAUTION, NOT IMPLEMENTED)
+          *
+          */
+        @TypeCode(type="halodi_msgs::msg::dds_::BalanceMode_")
+        struct BalanceMode
+        {
+            long mode;
+        };
+
+    
+    };
+};

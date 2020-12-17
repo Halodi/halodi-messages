@@ -1,0 +1,119 @@
+
+
+#include <geometry_msgs/msg/Pose.idl>
+#include <geometry_msgs/msg/Vector3.idl>
+
+
+#include <halodi_msgs/msg/FeedbackParameters3D.idl>
+#include <halodi_msgs/msg/JointNullSpaceConfiguration.idl>
+#include <halodi_msgs/msg/ReferenceFrameName.idl>
+
+#include <halodi_msgs/msg/PassivityData.idl>
+
+module halodi_msgs {
+    module msg {
+    
+        @TypeCode(type="halodi_msgs::msg::dds_::TaskSpaceCommand_")
+        struct TaskSpaceCommand
+        {
+            /**
+             * Body Frame: The reference frame to control.
+             *
+             * Valid options are all frames that are "Controllable"
+             *
+             */
+            halodi_msgs::msg::ReferenceFrameName body_frame;
+            
+            
+            /**
+             * Expressed in frame: Origin of the command.
+             *
+             * Valid options are all frames that are "Expressable in"
+             *
+             */
+            halodi_msgs::msg::ReferenceFrameName expressed_in_frame;
+            
+            
+            /**
+             * Align the orientation of the expressed in frame such that z-axis points up. 
+             * 
+             * The heading (also known as yaw or the rotation around the z-axis) and position match the expressed_in_frame.
+             *
+             * This can be useful for keeping an end effector aligned with gravity while moving.
+             * 
+             */
+            boolean express_in_z_up;
+            
+                        
+            /**
+             * 
+             * Desired pose of the body frame, expressed in "expressed_in_frame"
+             *
+             */
+            geometry_msgs::msg::Pose pose;
+            
+            
+            /**
+             * 
+             * Desired angular velocity of the body frame, expressed in "expressed_in_frame"
+             *
+             */
+            geometry_msgs::msg::Vector3 angular_velocity;
+            
+            /**
+             * 
+             * Desired linear velocity of the body frame, expressed in "expressed_in_frame"
+             *
+             */
+            geometry_msgs::msg::Vector3 linear_velocity;
+         
+            /**
+             * Desired angular acceleration of the body frame, expressed in "expressed_in_frame"
+             *
+             */
+            geometry_msgs::msg::Vector3 angular_acceleration;
+            
+            /**
+             * Desired linear acceleration of the body frame, expressed in "expressed_in_frame"
+             *
+             */
+            geometry_msgs::msg::Vector3 linear_acceleration;
+            
+            
+            /**
+             * (Optional) Input for the passivity layer. Internal use, keep disabled.
+             *
+             * If not set, the passivity layer will be disabled.
+             *
+             */
+            sequence<halodi_msgs::msg::PassivityData, 1> passivity_input;
+            
+            /**
+             *
+             * Angular feedback parameters
+             *
+             * Optional. When not provided, default values are used
+             *
+             */
+            sequence<halodi_msgs::msg::FeedbackParameters3D, 1> orientation_feedback_parameters; 
+            
+            /**
+             *
+             * Linear feedback parameters
+             *
+             * Optional. When not provided, default values are used
+             *
+             */
+            sequence<halodi_msgs::msg::FeedbackParameters3D, 1> position_feedback_parameters;
+            
+            
+            /**
+             * Nullspace joint configuration 
+             *
+             */
+            sequence<halodi_msgs::msg::JointNullSpaceConfiguration, 7> nullspace_command;
+            
+        };
+    };
+};
+

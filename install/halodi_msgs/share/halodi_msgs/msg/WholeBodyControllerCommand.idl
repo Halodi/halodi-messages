@@ -1,0 +1,87 @@
+
+
+#include <geometry_msgs/msg/Vector3.idl>
+#include <geometry_msgs/msg/Quaternion.idl>
+
+#include <halodi_msgs/msg/TaskSpaceCommand.idl>
+#include <halodi_msgs/msg/JointSpaceCommand.idl>
+#include <halodi_msgs/msg/DrivingCommand.idl>
+#include <halodi_msgs/msg/BalanceMode.idl>
+#include <halodi_msgs/msg/ContactPointCommand.idl>
+
+module halodi_msgs {
+    module msg {
+    
+        @TypeCode(type="halodi_msgs::msg::dds_::WholeBodyControllerCommand_")
+        struct WholeBodyControllerCommand
+        {
+                long sequence_id;
+                
+                halodi_msgs::msg::BalanceMode balance_mode;
+                
+                /**
+                * Task space commands
+                *
+                * One or more tasks space commands. 
+                * 
+                * - If more than one task space is sent for the same body_frame, they are both ignored.
+                * - If joint space commands are provided for the kinematic chain for a task space command, the joint space commands get ignored
+                * - If no task space or joint space command is provided, the robot will hold position
+                * - If no new settings are provided, the controller will hold position and set the desired velocity and acceleration to zero
+                */
+                sequence<halodi_msgs::msg::TaskSpaceCommand, 5> task_space_commands;
+                
+                /**
+                * Joint space commands
+                *
+                * One or more commanded joint angles
+                *
+                * - If no task space command is sent for the kinematic chain the joint is in, the controller for that kinematic chain switches to joint space control. 
+                * - Joints not set in a kinematic chain are frozen at the current position with default gains.
+                * - If more than one joint space command is sent for the same joint, they are both ignored. 
+                * - If a task space command is set for the kinematic chain a joint is in, the joint space command gets ignored.
+                *
+                */
+                sequence<halodi_msgs::msg::JointSpaceCommand, 25> joint_space_commands;
+
+                
+                /**
+                 * Contact point commands
+                 * 
+                 * One or more commands for setting contact points.
+                 * 
+                 * - Only valid when balance mode is DISABLED
+                 * - If no contact point command is provided, the controller will use the previous contact point command (or default)
+                 * - If more than one contact point command is sent for the same contact point, the behaviour is undefined.
+                 *
+                 */
+                sequence<halodi_msgs::msg::ContactPointCommand, 5> contact_point_commands;
+                
+                /**
+                  * Sequence of driving commands into the future
+                  * 
+                  * If not set, the robot will continue driving till "timeout", after which it stops
+                  * 
+                  * "timeout" is currently set to approximatly 100ms
+                  * 
+                  * Currently, only the first driving command is used. This functionality is available to allow future prediciton in the MPC.
+                  *
+                  */ 
+                sequence<halodi_msgs::msg::DrivingCommand, 20> driving_command;
+                
+                /**
+                  *
+                  * Sequence of ICP position offests into the future
+                  *
+                  * If not set, the robot will hold the current icp offset.
+                  *
+                  * Currently, only the first icp position offset is used. This functionality is available to allow future prediciton in the MPC.
+                  *
+                  */ 
+                sequence<geometry_msgs::msg::Vector3, 20> icp_command;
+                
+                
+                
+        };
+    };
+};
