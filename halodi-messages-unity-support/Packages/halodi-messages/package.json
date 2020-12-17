@@ -1,6 +1,6 @@
 {
   "name": "com.halodi.halodi-messages",
-  "version": "1.5.4",
+  "version": "1.5.5",
   "displayName": "Halodi ROS2 Messages",
   "description": "C# compiled version of the ROS2 messages from halodi",
   "license": "Apache-2.0",
