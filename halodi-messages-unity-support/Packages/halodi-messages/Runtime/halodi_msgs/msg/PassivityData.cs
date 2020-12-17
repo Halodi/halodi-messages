@@ -12,6 +12,7 @@ public class PassivityData : Halodi.CDR.DataType<PassivityData>
    public double energy_packet;
    public double energy_tank_level;
    public double virtual_mass;
+   public double virtual_inertia;
 
 
    public void Set(PassivityData other)
@@ -21,6 +22,8 @@ public class PassivityData : Halodi.CDR.DataType<PassivityData>
       energy_tank_level = other.energy_tank_level;
 
       virtual_mass = other.virtual_mass;
+
+      virtual_inertia = other.virtual_inertia;
 
    }
 
@@ -36,7 +39,9 @@ public class PassivityData : Halodi.CDR.DataType<PassivityData>
       builder.Append("energy_tank_level=");
       builder.Append(this.energy_tank_level);      builder.Append(", ");
       builder.Append("virtual_mass=");
-      builder.Append(this.virtual_mass);
+      builder.Append(this.virtual_mass);      builder.Append(", ");
+      builder.Append("virtual_inertia=");
+      builder.Append(this.virtual_inertia);
       builder.Append("}");
       return builder.ToString();
    }

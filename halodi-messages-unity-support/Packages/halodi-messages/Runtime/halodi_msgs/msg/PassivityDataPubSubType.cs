@@ -53,6 +53,9 @@ public class PassivityDataPubSubType : Halodi.CDR.TopicDataType<PassivityData>
       current_alignment += 8 + Halodi.CDR.CDRCommon.alignment(current_alignment, 8);
 
 
+      current_alignment += 8 + Halodi.CDR.CDRCommon.alignment(current_alignment, 8);
+
+
 
       return current_alignment - initial_alignment;
    }
@@ -65,6 +68,8 @@ public class PassivityDataPubSubType : Halodi.CDR.TopicDataType<PassivityData>
 
       cdr.write_type_6(data.virtual_mass);
 
+      cdr.write_type_6(data.virtual_inertia);
+
    }
 
    public static void read(halodi_msgs.msg.PassivityData data, Halodi.CDR.CDRDeserializer cdr)
@@ -74,6 +79,8 @@ public class PassivityDataPubSubType : Halodi.CDR.TopicDataType<PassivityData>
       data.energy_tank_level=cdr.read_type_6();
       	
       data.virtual_mass=cdr.read_type_6();
+      	
+      data.virtual_inertia=cdr.read_type_6();
       	
 
    }

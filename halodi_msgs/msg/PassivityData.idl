@@ -10,6 +10,8 @@ module halodi_msgs {
             double energy_tank_level;
             
             double virtual_mass;
+            
+            double virtual_inertia;
         
         };
     };
