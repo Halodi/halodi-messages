@@ -1,0 +1,17 @@
+module halodi_msgs {
+    module msg {
+    
+        /**
+          * Calibration information for a 1DOF joint.
+          *
+          */
+        @TypeCode(type="halodi_msgs::msg::dds_::JointCalibrationInfo_")
+        struct JointCalibration
+        {
+            string joint_name;
+            double measurement_multiplier;
+            double measurement_bias;
+        };
+        
+    };
+};
