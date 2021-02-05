@@ -1,0 +1,20 @@
+#include <geometry_msgs/msg/TransformStamped.idl>
+#include <halodi_msgs/msg/JointCalibration.idl>
+
+module halodi_msgs {
+    module msg {
+    
+        /**
+          * Extrinsic calibration data.
+          *
+          */
+        @TypeCode(type="halodi_msgs::msg::dds_::ExtrinsicCalibration_")
+        struct ExtrinsicCalibration
+        {
+            sequence<geometry_msgs::msg::TransformStamped, 255> sensors;
+            sequence<geometry_msgs::msg::TransformStamped, 255> links;
+            sequence<halodi_msgs::msg::JointCalibration, 255> joints;
+        };
+        
+    };
+};
