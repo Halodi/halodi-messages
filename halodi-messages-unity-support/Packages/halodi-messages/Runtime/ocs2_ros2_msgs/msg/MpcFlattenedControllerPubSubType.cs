@@ -67,13 +67,12 @@ public class MpcFlattenedControllerPubSubType : Halodi.CDR.TopicDataType<MpcFlat
 
       current_alignment += ocs2_ros2_msgs.msg.ModeSchedulePubSubType.getCdrSerializedSize(data.mode_schedule, current_alignment);
 
-      current_alignment += 1 + Halodi.CDR.CDRCommon.alignment(current_alignment, 1);
-
-
       current_alignment += 4 + Halodi.CDR.CDRCommon.alignment(current_alignment, 4);
       for(int i0 = 0; i0 < data.data.Count; ++i0)
       {
           current_alignment += ocs2_ros2_msgs.msg.ControllerDataPubSubType.getCdrSerializedSize(data.data[i0], current_alignment);}
+
+      current_alignment += ocs2_ros2_msgs.msg.MpcPerformanceIndicesPubSubType.getCdrSerializedSize(data.performance_indices, current_alignment);
 
 
       return current_alignment - initial_alignment;
@@ -129,8 +128,6 @@ public class MpcFlattenedControllerPubSubType : Halodi.CDR.TopicDataType<MpcFlat
         }
       ocs2_ros2_msgs.msg.ModeSchedulePubSubType.write(data.mode_schedule, cdr);
 
-      cdr.write_type_7(data.controller_is_updated);
-
       	if(data.data == null)
       	{
       		cdr.write_type_2(0);
@@ -144,6 +141,8 @@ public class MpcFlattenedControllerPubSubType : Halodi.CDR.TopicDataType<MpcFlat
             {
       			ocs2_ros2_msgs.msg.ControllerDataPubSubType.write(data.data[i0], cdr);	      }
         }
+      ocs2_ros2_msgs.msg.MpcPerformanceIndicesPubSubType.write(data.performance_indices, cdr);
+
    }
 
    public static void read(ocs2_ros2_msgs.msg.MpcFlattenedController data, Halodi.CDR.CDRDeserializer cdr)
@@ -194,8 +193,6 @@ public class MpcFlattenedControllerPubSubType : Halodi.CDR.TopicDataType<MpcFlat
       data.mode_schedule = ocs2_ros2_msgs.msg.ModeSchedulePubSubType.Create();
       ocs2_ros2_msgs.msg.ModeSchedulePubSubType.read(data.mode_schedule, cdr);
       	
-      data.controller_is_updated=cdr.read_type_7();
-      	
 
       int data_length = cdr.read_type_2();
       data.data = new System.Collections.Generic.List<ocs2_ros2_msgs.msg.ControllerData>(data_length);
@@ -207,6 +204,9 @@ public class MpcFlattenedControllerPubSubType : Halodi.CDR.TopicDataType<MpcFlat
       	
       }
 
+      	
+      data.performance_indices = ocs2_ros2_msgs.msg.MpcPerformanceIndicesPubSubType.Create();
+      ocs2_ros2_msgs.msg.MpcPerformanceIndicesPubSubType.read(data.performance_indices, cdr);
       	
 
    }
