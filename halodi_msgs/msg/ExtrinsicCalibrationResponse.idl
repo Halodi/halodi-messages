@@ -1,0 +1,27 @@
+
+module halodi_msgs {
+    module msg {
+    
+    module ExtrinsicCalibrationResponse_Constants
+        {
+            const octet ACCEPTED = 0;
+            const octet CONTROLLER_RESTART_REQUIRED = 1;
+        };
+    
+        /**
+          * Status of the battery
+          *
+          */
+        @TypeCode(type="halodi_msgs::msg::dds_::ExtrinsicCalibrationResponse_")
+        struct ExtrinsicCalibrationResponse
+        {            
+            /**
+             * Acknowledge status for extrinsic calibraiton
+             *
+             */
+            octet status;            
+        };
+        
+    };
+};
+ 
