@@ -12,7 +12,7 @@ module ocs2_ros2_msgs {
 
       ocs2_ros2_msgs::msg::MpcInput input;
 
-      octet mode;
+      octet subsystem;
     };
   };
 };
