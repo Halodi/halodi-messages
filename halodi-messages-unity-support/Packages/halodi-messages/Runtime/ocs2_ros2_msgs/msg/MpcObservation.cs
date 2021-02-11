@@ -12,7 +12,7 @@ public class MpcObservation : Halodi.CDR.DataType<MpcObservation>
    public float time;
    public ocs2_ros2_msgs.msg.MpcState state;
    public ocs2_ros2_msgs.msg.MpcInput input;
-   public byte mode;
+   public byte subsystem;
 
 
    public void Set(MpcObservation other)
@@ -23,7 +23,7 @@ public class MpcObservation : Halodi.CDR.DataType<MpcObservation>
 
       ocs2_ros2_msgs.msg.MpcInputPubSubType.Copy(other.input, input);
 
-      mode = other.mode;
+      subsystem = other.subsystem;
 
    }
 
@@ -40,8 +40,8 @@ public class MpcObservation : Halodi.CDR.DataType<MpcObservation>
       builder.Append(this.state);      builder.Append(", ");
       builder.Append("input=");
       builder.Append(this.input);      builder.Append(", ");
-      builder.Append("mode=");
-      builder.Append(this.mode);
+      builder.Append("subsystem=");
+      builder.Append(this.subsystem);
       builder.Append("}");
       return builder.ToString();
    }

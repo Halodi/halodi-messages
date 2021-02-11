@@ -66,7 +66,7 @@ public class MpcObservationPubSubType : Halodi.CDR.TopicDataType<MpcObservation>
 
       ocs2_ros2_msgs.msg.MpcInputPubSubType.write(data.input, cdr);
 
-      cdr.write_type_9(data.mode);
+      cdr.write_type_9(data.subsystem);
 
    }
 
@@ -80,7 +80,7 @@ public class MpcObservationPubSubType : Halodi.CDR.TopicDataType<MpcObservation>
       data.input = ocs2_ros2_msgs.msg.MpcInputPubSubType.Create();
       ocs2_ros2_msgs.msg.MpcInputPubSubType.read(data.input, cdr);
       	
-      data.mode=cdr.read_type_9();
+      data.subsystem=cdr.read_type_9();
       	
 
    }
