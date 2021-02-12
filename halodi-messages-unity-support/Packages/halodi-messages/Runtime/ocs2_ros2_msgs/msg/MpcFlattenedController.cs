@@ -9,9 +9,6 @@ public class MpcFlattenedController : Halodi.CDR.DataType<MpcFlattenedController
 
 	public Halodi.CDR.TopicDataType<MpcFlattenedController> Type => new MpcFlattenedControllerPubSubType();
 	
-   public const byte CONTROLLER_UNKNOWN = (byte) 0;
-   public const byte CONTROLLER_FEEDFORWARD = (byte) 1;
-   public const byte CONTROLLER_LINEAR = (byte) 2;
    public byte controller_type;
    public ocs2_ros2_msgs.msg.MpcObservation init_observation;
    public ocs2_ros2_msgs.msg.MpcTargetTrajectories plan_target_trajectories;

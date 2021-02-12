@@ -8,9 +8,9 @@
 module ocs2_ros2_msgs {
   module msg {
     module MpcFlattenedController_Constants {
-      const octet CONTROLLER_UNKNOWN = 0;
-      const octet CONTROLLER_FEEDFORWARD = 1;
-      const octet CONTROLLER_LINEAR = 2;
+      const uint8 CONTROLLER_UNKNOWN = 0;
+      const uint8 CONTROLLER_FEEDFORWARD = 1;
+      const uint8 CONTROLLER_LINEAR = 2;
     };
 
     @TypeCode(type="ocs2_ros2_msgs::msg::dds_::MpcFlattenedController_")
