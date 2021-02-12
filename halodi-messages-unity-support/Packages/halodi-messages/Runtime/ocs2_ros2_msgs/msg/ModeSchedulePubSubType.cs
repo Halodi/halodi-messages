@@ -49,7 +49,7 @@ public class ModeSchedulePubSubType : Halodi.CDR.TopicDataType<ModeSchedule>
 
 
       current_alignment += 4 + Halodi.CDR.CDRCommon.alignment(current_alignment, 4);
-      current_alignment += (data.mode_sequence.Count * 4) + Halodi.CDR.CDRCommon.alignment(current_alignment, 4);
+      current_alignment += (data.mode_sequence.Count * 1) + Halodi.CDR.CDRCommon.alignment(current_alignment, 1);
 
 
 
@@ -83,7 +83,7 @@ public class ModeSchedulePubSubType : Halodi.CDR.TopicDataType<ModeSchedule>
             cdr.write_type_2(mode_sequence_length);
             for (int i0 = 0; i0 < mode_sequence_length; i0++)
             {
-      			cdr.write_type_2(data.mode_sequence[i0]);
+      			cdr.write_type_9(data.mode_sequence[i0]);
             }
         }
    }
@@ -103,10 +103,10 @@ public class ModeSchedulePubSubType : Halodi.CDR.TopicDataType<ModeSchedule>
       	
 
       int mode_sequence_length = cdr.read_type_2();
-      data.mode_sequence = new System.Collections.Generic.List<int>(mode_sequence_length);
+      data.mode_sequence = new System.Collections.Generic.List<byte>(mode_sequence_length);
       for(int i = 0; i < mode_sequence_length; i++)
       {
-      	data.mode_sequence.Add(cdr.read_type_2());
+      	data.mode_sequence.Add(cdr.read_type_9());
       	
       	
       }

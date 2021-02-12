@@ -10,7 +10,7 @@ public class ModeSchedule : Halodi.CDR.DataType<ModeSchedule>
 	public Halodi.CDR.TopicDataType<ModeSchedule> Type => new ModeSchedulePubSubType();
 	
    public System.Collections.Generic.List<float> event_times;
-   public System.Collections.Generic.List<int> mode_sequence;
+   public System.Collections.Generic.List<byte> mode_sequence;
 
 
    public void Set(ModeSchedule other)
@@ -35,7 +35,7 @@ public class ModeSchedule : Halodi.CDR.DataType<ModeSchedule>
       }
       else
       {
-      	mode_sequence = new System.Collections.Generic.List<int>(other.mode_sequence.Count);
+      	mode_sequence = new System.Collections.Generic.List<byte>(other.mode_sequence.Count);
       	for(int i2 = 0; i2 < other.mode_sequence.Count; i2++)
       	{
          		mode_sequence.Add(other.mode_sequence[i2]);
