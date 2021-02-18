@@ -4,6 +4,7 @@
 #include "ocs2_ros2_msgs/msg/MpcObservation.idl"
 #include "ocs2_ros2_msgs/msg/MpcState.idl"
 #include "ocs2_ros2_msgs/msg/MpcTargetTrajectories.idl"
+#include "ocs2_ros2_msgs/msg/MpcPerformanceIndices.idl"
 
 module ocs2_ros2_msgs {
   module msg {
@@ -29,9 +30,9 @@ module ocs2_ros2_msgs {
 
       ocs2_ros2_msgs::msg::ModeSchedule mode_schedule;
 
-      boolean controller_is_updated;
-      
       sequence<ocs2_ros2_msgs::msg::ControllerData> data;
+
+      ocs2_ros2_msgs::msg::MpcPerformanceIndices performance_indices;
 
     };
   };

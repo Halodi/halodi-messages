@@ -20,6 +20,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/MpcObservation.idl"
   "msg/MpcState.idl"
   "msg/MpcTargetTrajectories.idl"
+  "msg/MpcPerformanceIndices.idl"
   "srv/Reset.srv"
 )
 
