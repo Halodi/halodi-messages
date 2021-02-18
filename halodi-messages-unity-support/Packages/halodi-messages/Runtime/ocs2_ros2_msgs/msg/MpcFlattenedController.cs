@@ -19,8 +19,8 @@ public class MpcFlattenedController : Halodi.CDR.DataType<MpcFlattenedController
    public System.Collections.Generic.List<ocs2_ros2_msgs.msg.MpcInput> input_trajectory;
    public System.Collections.Generic.List<float> time_trajectory;
    public ocs2_ros2_msgs.msg.ModeSchedule mode_schedule;
-   public bool controller_is_updated;
    public System.Collections.Generic.List<ocs2_ros2_msgs.msg.ControllerData> data;
+   public ocs2_ros2_msgs.msg.MpcPerformanceIndices performance_indices;
 
 
    public void Set(MpcFlattenedController other)
@@ -88,8 +88,6 @@ public class MpcFlattenedController : Halodi.CDR.DataType<MpcFlattenedController
       }
       ocs2_ros2_msgs.msg.ModeSchedulePubSubType.Copy(other.mode_schedule, mode_schedule);
 
-      controller_is_updated = other.controller_is_updated;
-
 
       if(other.data == null)
       {
@@ -111,6 +109,8 @@ public class MpcFlattenedController : Halodi.CDR.DataType<MpcFlattenedController
       	   		data.Add(newElement);
       		}	}
       }
+      ocs2_ros2_msgs.msg.MpcPerformanceIndicesPubSubType.Copy(other.performance_indices, performance_indices);
+
    }
 
 
@@ -134,10 +134,10 @@ public class MpcFlattenedController : Halodi.CDR.DataType<MpcFlattenedController
       builder.Append(this.time_trajectory);      builder.Append(", ");
       builder.Append("mode_schedule=");
       builder.Append(this.mode_schedule);      builder.Append(", ");
-      builder.Append("controller_is_updated=");
-      builder.Append(this.controller_is_updated);      builder.Append(", ");
       builder.Append("data=");
-      builder.Append(this.data);
+      builder.Append(this.data);      builder.Append(", ");
+      builder.Append("performance_indices=");
+      builder.Append(this.performance_indices);
       builder.Append("}");
       return builder.ToString();
    }
