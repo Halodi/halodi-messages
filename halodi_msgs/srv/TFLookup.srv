@@ -1,4 +1,4 @@
-float64 monotonic_stamp
+builtin_interfaces/Time stamp
 string parent_frame
 string child_frame
 ---
