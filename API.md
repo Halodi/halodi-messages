@@ -46,6 +46,15 @@ THis topic provides the ROS clock.
 
 This topic publishes standard TF2 information. The root transform is called "World".
 
+#### /eve/hand_status
+- Rate: ~100Hz (depends on hand option chosen)
+- Data type: [sensors_msgs/msg/JointState.msg](https://github.com/ros2/common_interfaces/blob/master/sensor_msgs/msg/JointState.msg)
+- Reliablilty QOS: Best effort
+
+For each hand, joint state
+- Position: Closure rate  of the hand (0 - 1)
+- Velocity: Relative velocity of the hand if supported
+- Effort: Relative effort of the hand if supported
 
 ## Control messages
 
@@ -90,3 +99,12 @@ Topics:
 The recommended implementation is to block on /eve/whole_body_trajectory_status and publish a command every time a new whole_body_trajectory_status is received. 
 
 Note: In simulation, the controller can run at a different rate than realtime. Hence it is not recommended to publish based on the system clock.
+
+### Hands
+
+Topics:
+#### /eve/hand_closure
+- Rate: Up to 100Hz, depends on publisher
+- [halodi_msgs/msg/HandCommand](halodi_msg/msg/HandCommand)
+- Reliablility QOS: Best Effort
+
