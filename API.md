@@ -105,6 +105,6 @@ Note: In simulation, the controller can run at a different rate than realtime. H
 Topics:
 #### /eve/hand_closure
 - Rate: Up to 100Hz, depends on publisher
-- [halodi_msgs/msg/HandCommand](halodi_msg/msg/HandCommand)
+- [halodi_msgs/msg/HandCommand.idl](halodi_msg/msg/HandCommand.idl)
 - Reliablility QOS: Best Effort
 
