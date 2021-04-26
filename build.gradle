@@ -10,20 +10,19 @@ buildscript {
    dependencies {
       classpath "us.ihmc:ihmc-pub-sub-generator:0.14.0"
       classpath 'com.halodi:halodi-csharp-pub-sub-generator:0.1.1'
-      classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.+'
    }
    
 
 }
 
 apply plugin: 'java'
-apply plugin: 'com.jfrog.bintray'
 apply plugin: 'maven'
 apply plugin: 'maven-publish'
 
 
 group = "com.halodi"
 version = "1.5.12"
+def repoUrl = "https://artifacts.halodi.com/repository"
 
 
 
@@ -209,16 +208,14 @@ publishing {
 }
 
 
-
-bintray {   
-    user = project.hasProperty('bintrayUsername') ? project.property('bintrayUsername') : System.getenv('BINTRAY_USER')
-    key = project.hasProperty('bintrayApiKey') ? project.property('bintrayApiKey') : System.getenv('BINTRAY_API_KEY')
-    pkg {
-        repo = 'maven-release'
-        name = 'halodi-messages'
-        userOrg = 'halodirobotics'
-        licenses = ['Apache-2.0']
-        vcsUrl = 'https://github.com/Halodi/halodi-messages.git'
+publishing {
+    repositories {
+        maven {
+            credentials {
+                username System.getenv('ARTIFACTS_USERNAME')
+                password System.getenv('ARTIFACTS_PASSWORD')
+            }
+            url "${repoUrl}/maven-incoming"
+        }
     }
-    publications = ['HalodiMessages'] 
 }
