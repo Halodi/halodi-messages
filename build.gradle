@@ -3,6 +3,7 @@ buildscript {
       mavenCentral()
       maven { url "http://dl.bintray.com/ihmcrobotics/maven-release" }
       maven { url "http://dl.bintray.com/halodirobotics/maven-release" }
+      maven { url "https://plugins.gradle.org/m2/" }
       mavenLocal()
       jcenter()
    }
@@ -10,6 +11,7 @@ buildscript {
    dependencies {
       classpath "us.ihmc:ihmc-pub-sub-generator:0.14.0"
       classpath 'com.halodi:halodi-csharp-pub-sub-generator:0.1.1'
+      classpath 'net.saliman:gradle-properties-plugin:1.5.1'
    }
    
 
@@ -18,13 +20,14 @@ buildscript {
 apply plugin: 'java'
 apply plugin: 'maven'
 apply plugin: 'maven-publish'
+apply plugin: 'net.saliman.properties'
 
 
 group = "com.halodi"
-version = "1.5.12"
+def inputVersion= project.hasProperty("artifactVersion") ? 
+                project.getProperty("artifactVersion"): System.getenv('ARTIFACT_VERSION')
+version = "$inputVersion$versionAppendix"
 def repoUrl = "https://artifacts.halodi.com/repository"
-
-
 
 def outputDirectory = project.file("$buildDir/java-generated")
 def csOutputDirectory = project.file("${project.projectDir}/halodi-messages-unity-support/Packages/halodi-messages/Runtime")
@@ -211,11 +214,15 @@ publishing {
 publishing {
     repositories {
         maven {
+            def inputUsername = project.hasProperty("artifactUsername") ? 
+                project.getProperty("artifactUsername"): System.getenv('ARTIFACT_USERNAME')
+            def inputPassword = project.hasProperty("artifactPassword") ? 
+                project.getProperty("artifactPassword"): System.getenv('ARTIFACT_PASSWORD')
             credentials {
-                username System.getenv('ARTIFACTS_USERNAME')
-                password System.getenv('ARTIFACTS_PASSWORD')
+                username inputUsername
+                password inputPassword
             }
-            url "${repoUrl}/maven-incoming"
+            url "$repoUrl$repository"
         }
     }
 }
