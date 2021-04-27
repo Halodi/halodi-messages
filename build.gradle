@@ -3,6 +3,7 @@ buildscript {
       mavenCentral()
       maven { url "http://dl.bintray.com/ihmcrobotics/maven-release" }
       maven { url "http://dl.bintray.com/halodirobotics/maven-release" }
+      maven { url "https://plugins.gradle.org/m2/" }
       mavenLocal()
       jcenter()
    }
@@ -10,22 +11,23 @@ buildscript {
    dependencies {
       classpath "us.ihmc:ihmc-pub-sub-generator:0.14.0"
       classpath 'com.halodi:halodi-csharp-pub-sub-generator:0.1.1'
-      classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.+'
+      classpath 'net.saliman:gradle-properties-plugin:1.5.1'
    }
    
 
 }
 
 apply plugin: 'java'
-apply plugin: 'com.jfrog.bintray'
 apply plugin: 'maven'
 apply plugin: 'maven-publish'
+apply plugin: 'net.saliman.properties'
 
 
 group = "com.halodi"
-version = "1.5.12"
-
-
+def inputVersion= project.hasProperty("artifactVersion") ? 
+                project.getProperty("artifactVersion"): System.getenv('ARTIFACT_VERSION')
+version = "$inputVersion$versionAppendix"
+def repoUrl = "https://artifacts.halodi.com/repository"
 
 def outputDirectory = project.file("$buildDir/java-generated")
 def csOutputDirectory = project.file("${project.projectDir}/halodi-messages-unity-support/Packages/halodi-messages/Runtime")
@@ -209,16 +211,18 @@ publishing {
 }
 
 
-
-bintray {   
-    user = project.hasProperty('bintrayUsername') ? project.property('bintrayUsername') : System.getenv('BINTRAY_USER')
-    key = project.hasProperty('bintrayApiKey') ? project.property('bintrayApiKey') : System.getenv('BINTRAY_API_KEY')
-    pkg {
-        repo = 'maven-release'
-        name = 'halodi-messages'
-        userOrg = 'halodirobotics'
-        licenses = ['Apache-2.0']
-        vcsUrl = 'https://github.com/Halodi/halodi-messages.git'
+publishing {
+    repositories {
+        maven {
+            def inputUsername = project.hasProperty("artifactUsername") ? 
+                project.getProperty("artifactUsername"): System.getenv('ARTIFACT_USERNAME')
+            def inputPassword = project.hasProperty("artifactPassword") ? 
+                project.getProperty("artifactPassword"): System.getenv('ARTIFACT_PASSWORD')
+            credentials {
+                username inputUsername
+                password inputPassword
+            }
+            url "$repoUrl$repository"
+        }
     }
-    publications = ['HalodiMessages'] 
 }
