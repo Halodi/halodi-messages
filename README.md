@@ -60,10 +60,14 @@ gradle jar
 gradle publishToMavenLocal
 ```
 
-To upload to bintray, set `bintrayUsername` and `bintrayApiKey` in `~/.gradle/gradle.properties` and run instead of `gradle publishToMavenLocal`:
-
+To upload snapshot to artifacts.halodi.com:
 ```
-gradle bintrayUpload
+ARTIFACT_USERNAME=[username] ARTIFACT_PASSWORD=[password] ARTIFACT_VERSION=[version] gradle publish
+```
+
+To upload release to artifacts.halodi.com:
+```
+ARTIFACT_USERNAME=[username] ARTIFACT_PASSWORD=[password] ARTIFACT_VERSION=[version] gradle publish -PenvironmentName=release
 ```
 
 ### Building and publishing C#/Unity libraries
