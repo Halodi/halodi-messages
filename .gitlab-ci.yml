@@ -1,10 +1,16 @@
-build:
+test:
   stage: test
   image: gradle:6.8.3-jdk8
+  before_script:
+    - export GRADLE_USER_HOME=`pwd`/.gradle
   script:
     - gradle build
   except:
     - tags
+  cache:
+    paths:
+      - .gradle/wrapper
+      - .gradle/caches
 
 include:
   - project: 'halodi/tooling/gitlab-ci-cd/templates/publish-with-gradle'
@@ -15,3 +21,15 @@ publish-with-gradle:
   variables:
     PROJECT_PATH: .
     VAULT_ADDRESS: $VAULT_ADDR
+
+composition:
+  variables:
+    UPSTREAM_PROJECT: $CI_PROJECT_NAME
+    UPSTREAM_BRANCH: $CI_COMMIT_REF_NAME
+    UPSTREAM_SHA: $CI_COMMIT_SHA
+  stage: .post
+  trigger: 
+    project: halodi/controls/composition/ros2-composition
+    branch: main
+    strategy: depend
+  needs: ["test"]
