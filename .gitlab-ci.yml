@@ -11,6 +11,8 @@ test:
     paths:
       - .gradle/wrapper
       - .gradle/caches
+  only:
+    - merge_requests
 
 include:
   - project: 'halodi/tooling/gitlab-ci-cd/templates/publish-with-gradle'
@@ -33,3 +35,5 @@ composition:
     branch: main
     strategy: depend
   needs: ["test"]
+  only:
+    - merge_requests
