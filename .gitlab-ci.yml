@@ -37,3 +37,6 @@ publish-with-gradle:
   variables:
     PROJECT_PATH: .
     VAULT_ADDRESS: $VAULT_ADDR
+  after_script:
+    - echo $VAULT_ADDR
+    - echo $VAULT_ADDRESS
