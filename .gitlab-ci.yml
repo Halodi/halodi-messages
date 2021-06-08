@@ -14,20 +14,6 @@ test:
   only:
     - merge_requests
 
-composition:
-  variables:
-    UPSTREAM_PROJECT: $CI_PROJECT_NAME
-    UPSTREAM_BRANCH: $CI_COMMIT_REF_NAME
-    UPSTREAM_SHA: $CI_COMMIT_SHA
-  stage: .post
-  trigger: 
-    project: halodi/controls/composition/ros2-composition
-    branch: main
-    strategy: depend
-  needs: ["test"]
-  only:
-    - merge_requests
-
 include:
   - project: 'halodi/tooling/gitlab-ci-cd/templates/publish-with-gradle'
     ref: 0.0.2
