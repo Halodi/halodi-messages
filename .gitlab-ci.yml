@@ -23,6 +23,17 @@ publish-with-gradle:
   variables:
     PROJECT_PATH: .
     VAULT_ADDRESS: $VAULT_ADDR
-  after_script:
-    - echo "$VAULT_ADDR"
-    - echo "$VAULT_ADDRESS"
+
+composition:
+  variables:
+    UPSTREAM_PROJECT: $CI_PROJECT_NAME
+    UPSTREAM_BRANCH: $CI_COMMIT_REF_NAME
+    UPSTREAM_SHA: $CI_COMMIT_SHA
+  stage: .post
+  trigger: 
+    project: halodi/controls/composition/ros2-composition
+    branch: main
+    strategy: depend
+  needs: ["test"]
+  only:
+    - merge_requests
