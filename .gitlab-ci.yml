@@ -14,16 +14,6 @@ test:
   only:
     - merge_requests
 
-include:
-  - project: 'halodi/tooling/gitlab-ci-cd/templates/publish-with-gradle'
-    ref: 0.0.2
-    file: 'publish-with-gradle-vault1.7.1-gradle6.8.3-jdk8.gitlab-ci.yml'
-
-publish-with-gradle:
-  variables:
-    PROJECT_PATH: .
-    VAULT_ADDRESS: $VAULT_ADDR
-
 composition:
   variables:
     UPSTREAM_PROJECT: $CI_PROJECT_NAME
@@ -37,3 +27,13 @@ composition:
   needs: ["test"]
   only:
     - merge_requests
+
+include:
+  - project: 'halodi/tooling/gitlab-ci-cd/templates/publish-with-gradle'
+    ref: 0.0.2
+    file: 'publish-with-gradle-vault1.7.1-gradle6.8.3-jdk8.gitlab-ci.yml'
+
+publish-with-gradle:
+  variables:
+    PROJECT_PATH: .
+    VAULT_ADDRESS: $VAULT_ADDR
