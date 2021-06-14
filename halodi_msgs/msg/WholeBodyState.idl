@@ -28,6 +28,14 @@ module halodi_msgs {
               */
             long last_received_sequence_id;
             
+            /**
+              * True if the controller accepts commands from the API. 
+              *
+              * If set to false, commands from the API will get ignored. 
+              * 
+              */
+            boolean accepts_commands;
+            
             
             /**
               * The current state of the balance module

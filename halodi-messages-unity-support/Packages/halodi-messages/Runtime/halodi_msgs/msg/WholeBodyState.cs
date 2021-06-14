@@ -24,6 +24,13 @@ public class WholeBodyState : Halodi.CDR.DataType<WholeBodyState>
                  */
    public int last_received_sequence_id;
    /**
+                 * True if the controller accepts commands from the API. 
+                 *
+                 * If set to false, commands from the API will get ignored. 
+                 * 
+                 */
+   public bool accepts_commands;
+   /**
                  * The current state of the balance module
                  */
    public string controller_state;
@@ -80,6 +87,8 @@ public class WholeBodyState : Halodi.CDR.DataType<WholeBodyState>
       std_msgs.msg.HeaderPubSubType.Copy(other.header, header);
 
       last_received_sequence_id = other.last_received_sequence_id;
+
+      accepts_commands = other.accepts_commands;
 
       controller_state = other.controller_state;
 
@@ -169,6 +178,8 @@ public class WholeBodyState : Halodi.CDR.DataType<WholeBodyState>
       builder.Append(this.header);      builder.Append(", ");
       builder.Append("last_received_sequence_id=");
       builder.Append(this.last_received_sequence_id);      builder.Append(", ");
+      builder.Append("accepts_commands=");
+      builder.Append(this.accepts_commands);      builder.Append(", ");
       builder.Append("controller_state=");
       builder.Append(this.controller_state);      builder.Append(", ");
       builder.Append("current_balance_mode=");
