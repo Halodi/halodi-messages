@@ -57,7 +57,7 @@ To compile and publishing to your local maven repository, run
 ```
 rm -r build
 gradle jar
-gradle publishToMavenLocal
+gradle publishToMavenLocal -PartifactVersion=[version] -PenvironmentName=release
 ```
 
 To upload snapshot to artifacts.halodi.com:

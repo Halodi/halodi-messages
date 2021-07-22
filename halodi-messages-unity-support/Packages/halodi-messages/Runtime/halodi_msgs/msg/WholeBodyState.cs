@@ -49,20 +49,27 @@ public class WholeBodyState : Halodi.CDR.DataType<WholeBodyState>
                  */
    public byte robot_status;
    /**
-                 * Pose of the root joint (pelvis) of the robot
+                 * Pose of the root joint (pelvis) of the robot expressed in odometry frame
                  *
                  */
    public geometry_msgs.msg.Pose pose;
    /**
-                 * Angular velocity of the root joint (pelvis) of the robot expressed in world frame
+                 * Angular velocity of the root joint (pelvis) of the robot expressed in odometry frame
                  * 
                  */
    public geometry_msgs.msg.Vector3 angular_velocity;
    /**
-                 * Linear velocity of the root joint (pelvis) of the robot expressed in world frame
+                 * Linear velocity of the root joint (pelvis) of the robot expressed in odometry frame
                  * 
                  */
    public geometry_msgs.msg.Vector3 linear_velocity;
+   /**
+                * Pose of the robot expressed in the map frame
+                *
+                * This pose is calculated from data send to /eve/estimated_pose
+                *
+                */
+   public geometry_msgs.msg.Pose map_pose;
    /**
                  * Raw IMU Measurements for each IMU on the robot
                  *
@@ -101,6 +108,8 @@ public class WholeBodyState : Halodi.CDR.DataType<WholeBodyState>
       geometry_msgs.msg.Vector3PubSubType.Copy(other.angular_velocity, angular_velocity);
 
       geometry_msgs.msg.Vector3PubSubType.Copy(other.linear_velocity, linear_velocity);
+
+      geometry_msgs.msg.PosePubSubType.Copy(other.map_pose, map_pose);
 
 
       if(other.imu_measurements == null)
@@ -192,6 +201,8 @@ public class WholeBodyState : Halodi.CDR.DataType<WholeBodyState>
       builder.Append(this.angular_velocity);      builder.Append(", ");
       builder.Append("linear_velocity=");
       builder.Append(this.linear_velocity);      builder.Append(", ");
+      builder.Append("map_pose=");
+      builder.Append(this.map_pose);      builder.Append(", ");
       builder.Append("imu_measurements=");
       builder.Append(this.imu_measurements);      builder.Append(", ");
       builder.Append("joint_states=");

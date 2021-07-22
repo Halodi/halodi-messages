@@ -65,6 +65,8 @@ public class WholeBodyStatePubSubType : Halodi.CDR.TopicDataType<WholeBodyState>
 
       current_alignment += geometry_msgs.msg.Vector3PubSubType.getCdrSerializedSize(data.linear_velocity, current_alignment);
 
+      current_alignment += geometry_msgs.msg.PosePubSubType.getCdrSerializedSize(data.map_pose, current_alignment);
+
       current_alignment += 4 + Halodi.CDR.CDRCommon.alignment(current_alignment, 4);
       for(int i0 = 0; i0 < data.imu_measurements.Count; ++i0)
       {
@@ -103,6 +105,8 @@ public class WholeBodyStatePubSubType : Halodi.CDR.TopicDataType<WholeBodyState>
       geometry_msgs.msg.Vector3PubSubType.write(data.angular_velocity, cdr);
 
       geometry_msgs.msg.Vector3PubSubType.write(data.linear_velocity, cdr);
+
+      geometry_msgs.msg.PosePubSubType.write(data.map_pose, cdr);
 
       	if(data.imu_measurements == null)
       	{
@@ -168,6 +172,9 @@ public class WholeBodyStatePubSubType : Halodi.CDR.TopicDataType<WholeBodyState>
       	
       data.linear_velocity = geometry_msgs.msg.Vector3PubSubType.Create();
       geometry_msgs.msg.Vector3PubSubType.read(data.linear_velocity, cdr);
+      	
+      data.map_pose = geometry_msgs.msg.PosePubSubType.Create();
+      geometry_msgs.msg.PosePubSubType.read(data.map_pose, cdr);
       	
 
       int imu_measurements_length = cdr.read_type_2();

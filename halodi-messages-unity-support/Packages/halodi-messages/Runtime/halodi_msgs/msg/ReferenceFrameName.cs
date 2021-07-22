@@ -10,12 +10,17 @@ public class ReferenceFrameName : Halodi.CDR.DataType<ReferenceFrameName>
 	public Halodi.CDR.TopicDataType<ReferenceFrameName> Type => new ReferenceFrameNamePubSubType();
 	
    /**
-                * Robot world frame.
+                * Robot odometry frame.
+                * 
+                * The odometry frame of the robot is the origin of the odometry estimation. The estimated
+                * robot position in odometry frame is guarnateed to be continous, and will not exhibit large jumps in position and orientation.
+                * 
+                * Note that within the controller code, this is referered to as the WorldFrame
                 *
                 * Expressable in : YES
                 * Controllable : NO
                 */
-   public const int WORLD = 0;
+   public const int ODOMETRY = 0;
    /**
                 * Pelvis (torso) of the robot. Origin is the intersection of the hip roll, pitch and yaw axes.
                 *
@@ -51,6 +56,15 @@ public class ReferenceFrameName : Halodi.CDR.DataType<ReferenceFrameName>
                 * Controllable : Partial (orientation pitch with respect to pelvis only)
                 */
    public const int HEAD = 5;
+   /**
+                * Map frame. This is the "real world" origin of the robot.
+                *
+                * It is recommended to send commands in odometry frame, as the robot position in map frame can jump due localization updates from visual sensors.
+                *
+                * Expressable in : YES
+                * Controllable : NO
+                */
+   public const int MAP = 6;
    public int frame_id;
 
 
