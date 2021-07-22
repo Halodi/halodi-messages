@@ -1,0 +1,52 @@
+#include <geometry_msgs/msg/Transform.idl>
+#include <halodi_msgs/msg/ReferenceFrameName.idl>
+
+
+#include <halodi_msgs/msg/JointStatus.idl>
+#include <halodi_msgs/msg/MotorStatus.idl>
+#include <halodi_msgs/msg/BatteryStatus.idl>
+
+module halodi_msgs {
+    module msg {
+    
+        /**
+          * Configuration for pose estimates of the robot
+          * 
+          * This sets up the map to pelvis pose estimator in the controller
+          *
+          */
+        @TypeCode(type="halodi_msgs::msg::dds_::RobotPoseEstimateConfiguration_")
+        struct RobotPoseEstimateConfiguration
+        {
+        
+            
+            /**
+             * Parent frame: Parent frame of this pose estimate, to which the sensor is statically attached
+             *
+             * Valid options are all frames that are "Controllable"
+             *
+             */
+            halodi_msgs::msg::ReferenceFrameName parent_frame;
+
+            
+            /**
+             * Transform from static frame to the sensor
+             *
+             */
+            geometry_msgs::msg::Transform static_transform;
+            
+            
+            /**
+             * Filtering alpha for the complimentary filter.
+             * 
+             * A low value (0.01) would be a good initial estimate.
+             */
+            double alpha;
+            
+            
+            
+        };
+        
+    };
+};
+ 

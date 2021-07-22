@@ -90,7 +90,7 @@ The realtime API allows the fastest control updates for the user, but the user i
 
 The realtime API is used by the trajectory manager, and therefore cannot be used if the trajectory manager is in use.
 
-Topics: 
+Subscribers:
 #### /eve/whole_body_command
 - Rate: 500Hz
 - [halodi_msgs/msg/WholeBodyControllerCommand.idl](halodi_msgs/msg/WholeBodyControllerCommand.idl)
@@ -108,3 +108,23 @@ Topics:
 - [halodi_msgs/msg/HandCommand.idl](halodi_msgs/msg/HandCommand.idl)
 - Reliablility QOS: Best Effort
 
+### Navigation and mapping
+
+These topics are used to update the pose estimate of the robot in map frame
+
+Subscribers:
+#### /eve/estimated_pose_config
+- Rate: Single shot
+- [halodi_msgs/msg/RobotPoseEstimateConfiguration.idl](
+- Reliablility QOS: Reliable
+- Durability QOS: Transient Local
+
+
+Configuration element for the estimated pose updates. Publish using transient local so later connections still get the update
+
+#### /eve/estimated_pose
+- Rate: Up to 500Hz
+- [halodi_msgs/msg/
+- Reliability QOS: Best Effort
+
+Robot pose from external estimator to calculate the map_pose in the whole body state.

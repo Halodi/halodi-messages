@@ -19,7 +19,7 @@ module halodi_msgs {
             double linear_velocity;
             
             /**
-              *
+              * Desired angular velocity
               *
               */
             double angular_velocity;

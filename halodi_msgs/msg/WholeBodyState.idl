@@ -59,23 +59,33 @@ module halodi_msgs {
               */
             octet robot_status;
             
+            
             /**
-              * Pose of the root joint (pelvis) of the robot
+              * Pose of the root joint (pelvis) of the robot expressed in odometry frame
               *
               */
             geometry_msgs::msg::Pose pose;
             
             /**
-              * Angular velocity of the root joint (pelvis) of the robot expressed in world frame
+              * Angular velocity of the root joint (pelvis) of the robot expressed in odometry frame
               * 
               */
             geometry_msgs::msg::Vector3 angular_velocity;
             
             /**
-              * Linear velocity of the root joint (pelvis) of the robot expressed in world frame
+              * Linear velocity of the root joint (pelvis) of the robot expressed in odometry frame
               * 
               */
             geometry_msgs::msg::Vector3 linear_velocity;
+            
+            
+            /**
+             * Pose of the robot expressed in the map frame
+             *
+             * This pose is calculated from data send to /eve/estimated_pose
+             *
+             */
+            geometry_msgs::msg::Pose map_pose;
             
             
             /**
