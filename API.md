@@ -115,7 +115,7 @@ These topics are used to update the pose estimate of the robot in map frame
 Subscribers:
 #### /eve/estimated_pose_config
 - Rate: Single shot
-- [halodi_msgs/msg/RobotPoseEstimateConfiguration.idl](halodi_msgs/msg/RobotPoseEstimateConfiguration)
+- [halodi_msgs/msg/RobotPoseEstimateConfiguration.idl](halodi_msgs/msg/RobotPoseEstimateConfiguration.idl)
 - Reliablility QOS: Reliable
 - Durability QOS: Transient Local
 
