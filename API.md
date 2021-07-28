@@ -115,7 +115,7 @@ These topics are used to update the pose estimate of the robot in map frame
 Subscribers:
 #### /eve/estimated_pose_config
 - Rate: Single shot
-- [halodi_msgs/msg/RobotPoseEstimateConfiguration.idl](
+- [halodi_msgs/msg/RobotPoseEstimateConfiguration.idl](halodi_msgs/msg/RobotPoseEstimateConfiguration)
 - Reliablility QOS: Reliable
 - Durability QOS: Transient Local
 
@@ -124,7 +124,7 @@ Configuration element for the estimated pose updates. Publish using transient lo
 
 #### /eve/estimated_pose
 - Rate: Up to 500Hz
-- [halodi_msgs/msg/
+- [geometry_msgs/msg/PoseWithCovarianceStamped.msg](https://github.com/ros2/common_interfaces/blob/master/geometry_msgs/msg/PoseWithCovarianceStamped.msg)
 - Reliability QOS: Best Effort
 
 Robot pose from external estimator to calculate the map_pose in the whole body state.
