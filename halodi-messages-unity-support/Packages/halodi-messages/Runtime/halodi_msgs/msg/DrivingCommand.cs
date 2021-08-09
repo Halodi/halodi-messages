@@ -22,7 +22,7 @@ public class DrivingCommand : Halodi.CDR.DataType<DrivingCommand>
                  */
    public double linear_velocity;
    /**
-                 *
+                 * Desired angular velocity
                  *
                  */
    public double angular_velocity;

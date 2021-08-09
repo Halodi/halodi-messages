@@ -15,12 +15,17 @@ module halodi_msgs
         {
             
             /**
-             * Robot world frame.
+             * Robot odometry frame.
+             * 
+             * The odometry frame of the robot is the origin of the odometry estimation. The estimated
+             * robot position in odometry frame is guarnateed to be continous, and will not exhibit large jumps in position and orientation.
+             * 
+             * Note that within the controller code, this is referered to as the WorldFrame
              *
              * Expressable in : YES
              * Controllable : NO
              */ 
-            const long WORLD = 0;
+            const long ODOMETRY = 0;
             
             /**
              * Pelvis (torso) of the robot. Origin is the intersection of the hip roll, pitch and yaw axes.
@@ -61,6 +66,16 @@ module halodi_msgs
              * Controllable : Partial (orientation pitch with respect to pelvis only)
              */
             const long HEAD = 5;
+            
+            /**
+             * Map frame. This is the "real world" origin of the robot.
+             *
+             * It is recommended to send commands in odometry frame, as the robot position in map frame can jump due localization updates from visual sensors.
+             *
+             * Expressable in : YES
+             * Controllable : NO
+             */
+            const long MAP = 6;
              
         };
        
