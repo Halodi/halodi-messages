@@ -19,7 +19,7 @@ public class AccelWithCovariance : Halodi.CDR.DataType<AccelWithCovariance>
             * In order, the parameters are:
             * (x, y, z, rotation about X axis, rotation about Y axis, rotation about Z axis)
             */
-   public readonly double[] covariance = new double[36];
+   public double[] covariance = new double[36];
 
 
    public void Set(AccelWithCovariance other)

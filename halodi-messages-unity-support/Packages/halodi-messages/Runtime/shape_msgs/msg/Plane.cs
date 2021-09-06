@@ -17,7 +17,7 @@ public class Plane : Halodi.CDR.DataType<Plane>
             * c := coef[2]
             * d := coef[3]
             */
-   public readonly double[] coef = new double[4];
+   public double[] coef = new double[4];
 
 
    public void Set(Plane other)

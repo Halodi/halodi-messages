@@ -57,7 +57,7 @@ public class NavSatFix : Halodi.CDR.DataType<NavSatFix>
             * 
             * Beware: this coordinate system exhibits singularities at the poles.
             */
-   public readonly double[] position_covariance = new double[9];
+   public double[] position_covariance = new double[9];
    public byte position_covariance_type;
 
 

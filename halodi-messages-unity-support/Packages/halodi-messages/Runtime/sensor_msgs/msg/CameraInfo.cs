@@ -94,7 +94,7 @@ public class CameraInfo : Halodi.CDR.DataType<CameraInfo>
             * (cx, cy).
             * 3x3 row-major matrix
             */
-   public readonly double[] k = new double[9];
+   public double[] k = new double[9];
    /**
             * Rectification matrix (stereo cameras only)
             * A rotation matrix aligning the camera coordinate system to the ideal
@@ -102,7 +102,7 @@ public class CameraInfo : Halodi.CDR.DataType<CameraInfo>
             * parallel.
             * 3x3 row-major matrix
             */
-   public readonly double[] r = new double[9];
+   public double[] r = new double[9];
    /**
             * Projection/camera matrix
             * [fx'  0  cx' Tx]
@@ -130,7 +130,7 @@ public class CameraInfo : Halodi.CDR.DataType<CameraInfo>
             * This holds for both images of a stereo pair.
             * 3x4 row-major matrix
             */
-   public readonly double[] p = new double[12];
+   public double[] p = new double[12];
    /**
             * Binning refers here to any camera setting which combines rectangular
             * neighborhoods of pixels into larger "super-pixels." It reduces the

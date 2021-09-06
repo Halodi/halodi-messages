@@ -36,7 +36,7 @@ public class MagneticField : Halodi.CDR.DataType<MagneticField>
    /**
             * Row major about x, y, z axes
             */
-   public readonly double[] magnetic_field_covariance = new double[9];
+   public double[] magnetic_field_covariance = new double[9];
 
 
    public void Set(MagneticField other)

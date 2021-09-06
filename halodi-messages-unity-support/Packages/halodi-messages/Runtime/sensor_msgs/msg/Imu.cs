@@ -29,17 +29,17 @@ public class Imu : Halodi.CDR.DataType<Imu>
    /**
             * Row major about x, y, z axes
             */
-   public readonly double[] orientation_covariance = new double[9];
+   public double[] orientation_covariance = new double[9];
    public geometry_msgs.msg.Vector3 angular_velocity;
    /**
             * Row major about x, y, z axes
             */
-   public readonly double[] angular_velocity_covariance = new double[9];
+   public double[] angular_velocity_covariance = new double[9];
    public geometry_msgs.msg.Vector3 linear_acceleration;
    /**
             * Row major x, y z
             */
-   public readonly double[] linear_acceleration_covariance = new double[9];
+   public double[] linear_acceleration_covariance = new double[9];
 
 
    public void Set(Imu other)

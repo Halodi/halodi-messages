@@ -15,7 +15,7 @@ public class UUID : Halodi.CDR.DataType<UUID>
 
 	public Halodi.CDR.TopicDataType<UUID> Type => new UUIDPubSubType();
 	
-   public readonly byte[] uuid = new byte[16];
+   public byte[] uuid = new byte[16];
 
    public void Set(UUID other)
    {
