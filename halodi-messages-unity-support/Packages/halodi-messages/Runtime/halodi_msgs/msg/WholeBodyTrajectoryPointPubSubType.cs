@@ -66,6 +66,16 @@ public class WholeBodyTrajectoryPointPubSubType : Halodi.CDR.TopicDataType<Whole
       {
           current_alignment += geometry_msgs.msg.Vector3PubSubType.getCdrSerializedSize(data.icp_offset_command[i0], current_alignment);}
 
+      current_alignment += 4 + Halodi.CDR.CDRCommon.alignment(current_alignment, 4);
+      for(int i0 = 0; i0 < data.left_hand_command.Count; ++i0)
+      {
+          current_alignment += halodi_msgs.msg.HandCommandPubSubType.getCdrSerializedSize(data.left_hand_command[i0], current_alignment);}
+
+      current_alignment += 4 + Halodi.CDR.CDRCommon.alignment(current_alignment, 4);
+      for(int i0 = 0; i0 < data.right_hand_command.Count; ++i0)
+      {
+          current_alignment += halodi_msgs.msg.HandCommandPubSubType.getCdrSerializedSize(data.right_hand_command[i0], current_alignment);}
+
 
       return current_alignment - initial_alignment;
    }
@@ -126,6 +136,32 @@ public class WholeBodyTrajectoryPointPubSubType : Halodi.CDR.TopicDataType<Whole
             {
       			geometry_msgs.msg.Vector3PubSubType.write(data.icp_offset_command[i0], cdr);	      }
         }
+      	if(data.left_hand_command == null)
+      	{
+      		cdr.write_type_2(0);
+      	}
+      	else
+      	{
+
+      	  int left_hand_command_length = data.left_hand_command.Count;
+            cdr.write_type_2(left_hand_command_length);
+            for (int i0 = 0; i0 < left_hand_command_length; i0++)
+            {
+      			halodi_msgs.msg.HandCommandPubSubType.write(data.left_hand_command[i0], cdr);	      }
+        }
+      	if(data.right_hand_command == null)
+      	{
+      		cdr.write_type_2(0);
+      	}
+      	else
+      	{
+
+      	  int right_hand_command_length = data.right_hand_command.Count;
+            cdr.write_type_2(right_hand_command_length);
+            for (int i0 = 0; i0 < right_hand_command_length; i0++)
+            {
+      			halodi_msgs.msg.HandCommandPubSubType.write(data.right_hand_command[i0], cdr);	      }
+        }
    }
 
    public static void read(halodi_msgs.msg.WholeBodyTrajectoryPoint data, Halodi.CDR.CDRDeserializer cdr)
@@ -177,6 +213,30 @@ public class WholeBodyTrajectoryPointPubSubType : Halodi.CDR.TopicDataType<Whole
       	geometry_msgs.msg.Vector3 new_icp_offset_command = geometry_msgs.msg.Vector3PubSubType.Create(); 
       	geometry_msgs.msg.Vector3PubSubType.read(new_icp_offset_command, cdr);
       	data.icp_offset_command.Add(new_icp_offset_command);	
+      	
+      }
+
+      	
+
+      int left_hand_command_length = cdr.read_type_2();
+      data.left_hand_command = new System.Collections.Generic.List<halodi_msgs.msg.HandCommand>(left_hand_command_length);
+      for(int i = 0; i < left_hand_command_length; i++)
+      {
+      	halodi_msgs.msg.HandCommand new_left_hand_command = halodi_msgs.msg.HandCommandPubSubType.Create(); 
+      	halodi_msgs.msg.HandCommandPubSubType.read(new_left_hand_command, cdr);
+      	data.left_hand_command.Add(new_left_hand_command);	
+      	
+      }
+
+      	
+
+      int right_hand_command_length = cdr.read_type_2();
+      data.right_hand_command = new System.Collections.Generic.List<halodi_msgs.msg.HandCommand>(right_hand_command_length);
+      for(int i = 0; i < right_hand_command_length; i++)
+      {
+      	halodi_msgs.msg.HandCommand new_right_hand_command = halodi_msgs.msg.HandCommandPubSubType.Create(); 
+      	halodi_msgs.msg.HandCommandPubSubType.read(new_right_hand_command, cdr);
+      	data.right_hand_command.Add(new_right_hand_command);	
       	
       }
 
