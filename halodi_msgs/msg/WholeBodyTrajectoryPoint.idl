@@ -3,6 +3,7 @@
 #include <halodi_msgs/msg/JointSpaceCommand.idl>
 #include <builtin_interfaces/msg/Time.idl>
 #include <halodi_msgs/msg/ContactPointCommand.idl>
+#include <halodi_msgs/msg/HandCommand.idl>
 
 
 
@@ -35,6 +36,22 @@ module halodi_msgs {
             sequence<halodi_msgs::msg::ContactPointCommand, 5> contact_point_commands;
             
             sequence<geometry_msgs::msg::Vector3, 1> icp_offset_command;
+            
+            /**
+              * Optional left hand command
+              * 
+              * Gets send to the hand topic at the start of the point execution
+              *
+              */
+            sequence<halodi_msgs::msg::HandCommand, 1> left_hand_command;
+            
+            /**
+              * Optional right hand command
+              * 
+              * Gets send to the hand topic at the start of the point execution
+              *
+              */
+            sequence<halodi_msgs::msg::HandCommand, 1> right_hand_command;
         };
     };
 };

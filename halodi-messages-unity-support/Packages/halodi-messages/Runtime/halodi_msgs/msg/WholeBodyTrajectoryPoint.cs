@@ -27,6 +27,20 @@ public class WholeBodyTrajectoryPoint : Halodi.CDR.DataType<WholeBodyTrajectoryP
                  */
    public System.Collections.Generic.List<halodi_msgs.msg.ContactPointCommand> contact_point_commands;
    public System.Collections.Generic.List<geometry_msgs.msg.Vector3> icp_offset_command;
+   /**
+                 * Optional left hand command
+                 * 
+                 * Gets send to the hand topic at the start of the point execution
+                 *
+                 */
+   public System.Collections.Generic.List<halodi_msgs.msg.HandCommand> left_hand_command;
+   /**
+                 * Optional right hand command
+                 * 
+                 * Gets send to the hand topic at the start of the point execution
+                 *
+                 */
+   public System.Collections.Generic.List<halodi_msgs.msg.HandCommand> right_hand_command;
 
 
    public void Set(WholeBodyTrajectoryPoint other)
@@ -117,6 +131,48 @@ public class WholeBodyTrajectoryPoint : Halodi.CDR.DataType<WholeBodyTrajectoryP
       	   		icp_offset_command.Add(newElement);
       		}	}
       }
+
+      if(other.left_hand_command == null)
+      {
+      	left_hand_command = null;
+      }
+      else
+      {
+      	left_hand_command = new System.Collections.Generic.List<halodi_msgs.msg.HandCommand>(other.left_hand_command.Count);
+      	for(int i5 = 0; i5 < other.left_hand_command.Count; i5++)
+      	{
+      		if(other.left_hand_command[i5] == null)
+      		{
+      			left_hand_command.Add(null);
+      		}
+      		else
+      		{
+      			halodi_msgs.msg.HandCommand newElement = halodi_msgs.msg.HandCommandPubSubType.Create();
+      	   		halodi_msgs.msg.HandCommandPubSubType.Copy(other.left_hand_command[i5], newElement);
+      	   		left_hand_command.Add(newElement);
+      		}	}
+      }
+
+      if(other.right_hand_command == null)
+      {
+      	right_hand_command = null;
+      }
+      else
+      {
+      	right_hand_command = new System.Collections.Generic.List<halodi_msgs.msg.HandCommand>(other.right_hand_command.Count);
+      	for(int i6 = 0; i6 < other.right_hand_command.Count; i6++)
+      	{
+      		if(other.right_hand_command[i6] == null)
+      		{
+      			right_hand_command.Add(null);
+      		}
+      		else
+      		{
+      			halodi_msgs.msg.HandCommand newElement = halodi_msgs.msg.HandCommandPubSubType.Create();
+      	   		halodi_msgs.msg.HandCommandPubSubType.Copy(other.right_hand_command[i6], newElement);
+      	   		right_hand_command.Add(newElement);
+      		}	}
+      }
    }
 
 
@@ -135,7 +191,11 @@ public class WholeBodyTrajectoryPoint : Halodi.CDR.DataType<WholeBodyTrajectoryP
       builder.Append("contact_point_commands=");
       builder.Append(this.contact_point_commands);      builder.Append(", ");
       builder.Append("icp_offset_command=");
-      builder.Append(this.icp_offset_command);
+      builder.Append(this.icp_offset_command);      builder.Append(", ");
+      builder.Append("left_hand_command=");
+      builder.Append(this.left_hand_command);      builder.Append(", ");
+      builder.Append("right_hand_command=");
+      builder.Append(this.right_hand_command);
       builder.Append("}");
       return builder.ToString();
    }
