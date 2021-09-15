@@ -84,6 +84,7 @@ module halodi_msgs {
              * Useful to smooth out noisy or jerky inputs (for example joystick/mouse). 
              *
              * Unit: Hz
+             * Default: 10Hz
              *
              */
             sequence<double, 1> q_desired_filter_break_frequency;
