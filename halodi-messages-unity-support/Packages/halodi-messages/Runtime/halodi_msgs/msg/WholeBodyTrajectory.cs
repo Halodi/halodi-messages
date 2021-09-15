@@ -63,6 +63,15 @@ public class WholeBodyTrajectory : Halodi.CDR.DataType<WholeBodyTrajectory>
                  */
    public halodi_msgs.msg.TrajectoryInterpolation interpolation_mode;
    /**
+                * (Optional) Break frequency for low pass interpolation.
+                * 
+                * Useful to smooth out noisy or jerky inputs (for example joystick/mouse). 
+                *
+                * Unit: Hz
+                *
+                */
+   public System.Collections.Generic.List<double> q_desired_filter_break_frequency;
+   /**
                  *
                  * Sequence of trajectory points. 
                  * 
@@ -123,6 +132,19 @@ public class WholeBodyTrajectory : Halodi.CDR.DataType<WholeBodyTrajectory>
       halodi_msgs.msg.TrajectoryInterpolationPubSubType.Copy(other.interpolation_mode, interpolation_mode);
 
 
+      if(other.q_desired_filter_break_frequency == null)
+      {
+      	q_desired_filter_break_frequency = null;
+      }
+      else
+      {
+      	q_desired_filter_break_frequency = new System.Collections.Generic.List<double>(other.q_desired_filter_break_frequency.Count);
+      	for(int i3 = 0; i3 < other.q_desired_filter_break_frequency.Count; i3++)
+      	{
+         		q_desired_filter_break_frequency.Add(other.q_desired_filter_break_frequency[i3]);
+      	}
+      }
+
       if(other.trajectory_points == null)
       {
       	trajectory_points = null;
@@ -130,16 +152,16 @@ public class WholeBodyTrajectory : Halodi.CDR.DataType<WholeBodyTrajectory>
       else
       {
       	trajectory_points = new System.Collections.Generic.List<halodi_msgs.msg.WholeBodyTrajectoryPoint>(other.trajectory_points.Count);
-      	for(int i3 = 0; i3 < other.trajectory_points.Count; i3++)
+      	for(int i4 = 0; i4 < other.trajectory_points.Count; i4++)
       	{
-      		if(other.trajectory_points[i3] == null)
+      		if(other.trajectory_points[i4] == null)
       		{
       			trajectory_points.Add(null);
       		}
       		else
       		{
       			halodi_msgs.msg.WholeBodyTrajectoryPoint newElement = halodi_msgs.msg.WholeBodyTrajectoryPointPubSubType.Create();
-      	   		halodi_msgs.msg.WholeBodyTrajectoryPointPubSubType.Copy(other.trajectory_points[i3], newElement);
+      	   		halodi_msgs.msg.WholeBodyTrajectoryPointPubSubType.Copy(other.trajectory_points[i4], newElement);
       	   		trajectory_points.Add(newElement);
       		}	}
       }
@@ -162,6 +184,8 @@ public class WholeBodyTrajectory : Halodi.CDR.DataType<WholeBodyTrajectory>
       builder.Append(this.append_trajectory);      builder.Append(", ");
       builder.Append("interpolation_mode=");
       builder.Append(this.interpolation_mode);      builder.Append(", ");
+      builder.Append("q_desired_filter_break_frequency=");
+      builder.Append(this.q_desired_filter_break_frequency);      builder.Append(", ");
       builder.Append("trajectory_points=");
       builder.Append(this.trajectory_points);
       builder.Append("}");

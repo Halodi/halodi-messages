@@ -55,13 +55,6 @@ public class JointSpaceCommandPubSubType : Halodi.CDR.TopicDataType<JointSpaceCo
       current_alignment += 8 + Halodi.CDR.CDRCommon.alignment(current_alignment, 8);
 
 
-      current_alignment += 4 + Halodi.CDR.CDRCommon.alignment(current_alignment, 4);
-      current_alignment += (data.q_desired_filter_break_frequency.Count * 8) + Halodi.CDR.CDRCommon.alignment(current_alignment, 8);
-
-
-      current_alignment += 1 + Halodi.CDR.CDRCommon.alignment(current_alignment, 1);
-
-
       current_alignment += 1 + Halodi.CDR.CDRCommon.alignment(current_alignment, 1);
 
 
@@ -91,22 +84,6 @@ public class JointSpaceCommandPubSubType : Halodi.CDR.TopicDataType<JointSpaceCo
 
       cdr.write_type_6(data.qdd_desired);
 
-      	if(data.q_desired_filter_break_frequency == null)
-      	{
-      		cdr.write_type_2(0);
-      	}
-      	else
-      	{
-
-      	  int q_desired_filter_break_frequency_length = data.q_desired_filter_break_frequency.Count;
-            cdr.write_type_2(q_desired_filter_break_frequency_length);
-            for (int i0 = 0; i0 < q_desired_filter_break_frequency_length; i0++)
-            {
-      			cdr.write_type_6(data.q_desired_filter_break_frequency[i0]);
-            }
-        }
-      cdr.write_type_7(data.derive_qd_desired);
-
       cdr.write_type_7(data.use_default_gains);
 
       cdr.write_type_6(data.stiffness);
@@ -129,19 +106,6 @@ public class JointSpaceCommandPubSubType : Halodi.CDR.TopicDataType<JointSpaceCo
       data.qd_desired=cdr.read_type_6();
       	
       data.qdd_desired=cdr.read_type_6();
-      	
-
-      int q_desired_filter_break_frequency_length = cdr.read_type_2();
-      data.q_desired_filter_break_frequency = new System.Collections.Generic.List<double>(q_desired_filter_break_frequency_length);
-      for(int i = 0; i < q_desired_filter_break_frequency_length; i++)
-      {
-      	data.q_desired_filter_break_frequency.Add(cdr.read_type_6());
-      	
-      	
-      }
-
-      	
-      data.derive_qd_desired=cdr.read_type_7();
       	
       data.use_default_gains=cdr.read_type_7();
       	

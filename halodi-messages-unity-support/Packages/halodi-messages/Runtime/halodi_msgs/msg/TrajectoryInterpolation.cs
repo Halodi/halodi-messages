@@ -37,6 +37,14 @@ public class TrajectoryInterpolation : Halodi.CDR.DataType<TrajectoryInterpolati
                  *
                  */
    public const byte MULTIPLE_WAYPOINT_SPLINE = (byte) 2;
+   /**
+                 *
+                 * Use a low pass filter to interpolate between points
+                 * 
+                 * Used to stream points at a lower rate from, for example, a VR headset.
+                 *
+                 */
+   public const byte LOW_PASS_FILTERED = (byte) 3;
    public byte value;
 
 

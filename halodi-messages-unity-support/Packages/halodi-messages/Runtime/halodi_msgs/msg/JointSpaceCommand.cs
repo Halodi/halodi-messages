@@ -37,25 +37,6 @@ public class JointSpaceCommand : Halodi.CDR.DataType<JointSpaceCommand>
                 */
    public double qdd_desired;
    /**
-                * (Optional) Break frequency to filter q_desired.
-                * 
-                * Useful to smooth out noisy or jerky inputs (for example joystick/mouse). 
-                *
-                * Unit: Hz 
-                *
-                * Note: filtering is applied at the realtime controller, after any interpolation of the trajectory manager.
-                *
-                */
-   public System.Collections.Generic.List<double> q_desired_filter_break_frequency;
-   /**
-                *
-                * If set to true, qd_desired is calculated to be the derivative of q_desired.
-                * 
-                * It is recommeded to set q_desired_filter_break_frequency when using this to avoid large jumps in velocity.
-                *
-                */
-   public bool derive_qd_desired;
-   /**
                 * Use sensible default gains as provided by the controller instead of custom gains.
                 * 
                 * Recommended to use for initial testing.
@@ -121,21 +102,6 @@ public class JointSpaceCommand : Halodi.CDR.DataType<JointSpaceCommand>
 
       qdd_desired = other.qdd_desired;
 
-
-      if(other.q_desired_filter_break_frequency == null)
-      {
-      	q_desired_filter_break_frequency = null;
-      }
-      else
-      {
-      	q_desired_filter_break_frequency = new System.Collections.Generic.List<double>(other.q_desired_filter_break_frequency.Count);
-      	for(int i1 = 0; i1 < other.q_desired_filter_break_frequency.Count; i1++)
-      	{
-         		q_desired_filter_break_frequency.Add(other.q_desired_filter_break_frequency[i1]);
-      	}
-      }
-      derive_qd_desired = other.derive_qd_desired;
-
       use_default_gains = other.use_default_gains;
 
       stiffness = other.stiffness;
@@ -163,10 +129,6 @@ public class JointSpaceCommand : Halodi.CDR.DataType<JointSpaceCommand>
       builder.Append(this.qd_desired);      builder.Append(", ");
       builder.Append("qdd_desired=");
       builder.Append(this.qdd_desired);      builder.Append(", ");
-      builder.Append("q_desired_filter_break_frequency=");
-      builder.Append(this.q_desired_filter_break_frequency);      builder.Append(", ");
-      builder.Append("derive_qd_desired=");
-      builder.Append(this.derive_qd_desired);      builder.Append(", ");
       builder.Append("use_default_gains=");
       builder.Append(this.use_default_gains);      builder.Append(", ");
       builder.Append("stiffness=");

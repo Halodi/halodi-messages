@@ -62,6 +62,10 @@ public class WholeBodyTrajectoryPubSubType : Halodi.CDR.TopicDataType<WholeBodyT
       current_alignment += halodi_msgs.msg.TrajectoryInterpolationPubSubType.getCdrSerializedSize(data.interpolation_mode, current_alignment);
 
       current_alignment += 4 + Halodi.CDR.CDRCommon.alignment(current_alignment, 4);
+      current_alignment += (data.q_desired_filter_break_frequency.Count * 8) + Halodi.CDR.CDRCommon.alignment(current_alignment, 8);
+
+
+      current_alignment += 4 + Halodi.CDR.CDRCommon.alignment(current_alignment, 4);
       for(int i0 = 0; i0 < data.trajectory_points.Count; ++i0)
       {
           current_alignment += halodi_msgs.msg.WholeBodyTrajectoryPointPubSubType.getCdrSerializedSize(data.trajectory_points[i0], current_alignment);}
@@ -104,6 +108,20 @@ public class WholeBodyTrajectoryPubSubType : Halodi.CDR.TopicDataType<WholeBodyT
 
       halodi_msgs.msg.TrajectoryInterpolationPubSubType.write(data.interpolation_mode, cdr);
 
+      	if(data.q_desired_filter_break_frequency == null)
+      	{
+      		cdr.write_type_2(0);
+      	}
+      	else
+      	{
+
+      	  int q_desired_filter_break_frequency_length = data.q_desired_filter_break_frequency.Count;
+            cdr.write_type_2(q_desired_filter_break_frequency_length);
+            for (int i0 = 0; i0 < q_desired_filter_break_frequency_length; i0++)
+            {
+      			cdr.write_type_6(data.q_desired_filter_break_frequency[i0]);
+            }
+        }
       	if(data.trajectory_points == null)
       	{
       		cdr.write_type_2(0);
@@ -152,6 +170,17 @@ public class WholeBodyTrajectoryPubSubType : Halodi.CDR.TopicDataType<WholeBodyT
       	
       data.interpolation_mode = halodi_msgs.msg.TrajectoryInterpolationPubSubType.Create();
       halodi_msgs.msg.TrajectoryInterpolationPubSubType.read(data.interpolation_mode, cdr);
+      	
+
+      int q_desired_filter_break_frequency_length = cdr.read_type_2();
+      data.q_desired_filter_break_frequency = new System.Collections.Generic.List<double>(q_desired_filter_break_frequency_length);
+      for(int i = 0; i < q_desired_filter_break_frequency_length; i++)
+      {
+      	data.q_desired_filter_break_frequency.Add(cdr.read_type_6());
+      	
+      	
+      }
+
       	
 
       int trajectory_points_length = cdr.read_type_2();

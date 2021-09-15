@@ -28,6 +28,17 @@ module halodi_msgs {
               *
               */
             const octet MULTIPLE_WAYPOINT_SPLINE = 2;
+            
+            
+            /**
+              *
+              * Use a low pass filter to interpolate between points
+              * 
+              * Used to stream points at a lower rate from, for example, a VR headset.
+              *
+              */
+            const octet LOW_PASS_FILTERED = 3;
+
 
         };
 
