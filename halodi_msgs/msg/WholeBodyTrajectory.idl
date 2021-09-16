@@ -87,7 +87,7 @@ module halodi_msgs {
              * Default: 10Hz
              *
              */
-            sequence<double, 1> q_desired_filter_break_frequency;
+            double low_pass_filter_break_frequency;
             
             
             /**
