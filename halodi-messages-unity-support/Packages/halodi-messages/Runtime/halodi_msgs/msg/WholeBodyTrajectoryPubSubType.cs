@@ -61,6 +61,9 @@ public class WholeBodyTrajectoryPubSubType : Halodi.CDR.TopicDataType<WholeBodyT
 
       current_alignment += halodi_msgs.msg.TrajectoryInterpolationPubSubType.getCdrSerializedSize(data.interpolation_mode, current_alignment);
 
+      current_alignment += 8 + Halodi.CDR.CDRCommon.alignment(current_alignment, 8);
+
+
       current_alignment += 4 + Halodi.CDR.CDRCommon.alignment(current_alignment, 4);
       for(int i0 = 0; i0 < data.trajectory_points.Count; ++i0)
       {
@@ -103,6 +106,8 @@ public class WholeBodyTrajectoryPubSubType : Halodi.CDR.TopicDataType<WholeBodyT
       cdr.write_type_7(data.append_trajectory);
 
       halodi_msgs.msg.TrajectoryInterpolationPubSubType.write(data.interpolation_mode, cdr);
+
+      cdr.write_type_6(data.low_pass_filter_break_frequency);
 
       	if(data.trajectory_points == null)
       	{
@@ -152,6 +157,8 @@ public class WholeBodyTrajectoryPubSubType : Halodi.CDR.TopicDataType<WholeBodyT
       	
       data.interpolation_mode = halodi_msgs.msg.TrajectoryInterpolationPubSubType.Create();
       halodi_msgs.msg.TrajectoryInterpolationPubSubType.read(data.interpolation_mode, cdr);
+      	
+      data.low_pass_filter_break_frequency=cdr.read_type_6();
       	
 
       int trajectory_points_length = cdr.read_type_2();

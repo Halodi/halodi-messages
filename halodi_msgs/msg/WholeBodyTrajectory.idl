@@ -76,6 +76,20 @@ module halodi_msgs {
             halodi_msgs::msg::TrajectoryInterpolation interpolation_mode;
             
             
+            
+            
+            /**
+             * (Optional) Break frequency for low pass interpolation.
+             * 
+             * Useful to smooth out noisy or jerky inputs (for example joystick/mouse). 
+             *
+             * Unit: Hz
+             * Default: 10Hz
+             *
+             */
+            double low_pass_filter_break_frequency;
+            
+            
             /**
               *
               * Sequence of trajectory points. 

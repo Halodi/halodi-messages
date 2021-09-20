@@ -1,11 +1,11 @@
 {
   "name": "com.halodi.halodi-messages",
-  "version": "1.8.0",
+  "version": "1.8.1",
   "displayName": "Halodi ROS2 Messages",
   "description": "C# compiled version of the ROS2 messages from halodi",
   "license": "Apache-2.0",
   "publishConfig": {
-    "registry": "https://npm.halodi.com"
+    "registry": "https://artifacts.halodi.com/repository/upm-open-source-production/"
   },
   "author": {
     "name": "Halodi",
@@ -17,5 +17,9 @@
   "hideInEditor": false,
   "dependencies": {
     "com.halodi.cdr": "0.12.6"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
   }
 }

@@ -63,6 +63,16 @@ public class WholeBodyTrajectory : Halodi.CDR.DataType<WholeBodyTrajectory>
                  */
    public halodi_msgs.msg.TrajectoryInterpolation interpolation_mode;
    /**
+                * (Optional) Break frequency for low pass interpolation.
+                * 
+                * Useful to smooth out noisy or jerky inputs (for example joystick/mouse). 
+                *
+                * Unit: Hz
+                * Default: 10Hz
+                *
+                */
+   public double low_pass_filter_break_frequency;
+   /**
                  *
                  * Sequence of trajectory points. 
                  * 
@@ -122,6 +132,8 @@ public class WholeBodyTrajectory : Halodi.CDR.DataType<WholeBodyTrajectory>
 
       halodi_msgs.msg.TrajectoryInterpolationPubSubType.Copy(other.interpolation_mode, interpolation_mode);
 
+      low_pass_filter_break_frequency = other.low_pass_filter_break_frequency;
+
 
       if(other.trajectory_points == null)
       {
@@ -162,6 +174,8 @@ public class WholeBodyTrajectory : Halodi.CDR.DataType<WholeBodyTrajectory>
       builder.Append(this.append_trajectory);      builder.Append(", ");
       builder.Append("interpolation_mode=");
       builder.Append(this.interpolation_mode);      builder.Append(", ");
+      builder.Append("low_pass_filter_break_frequency=");
+      builder.Append(this.low_pass_filter_break_frequency);      builder.Append(", ");
       builder.Append("trajectory_points=");
       builder.Append(this.trajectory_points);
       builder.Append("}");

@@ -38,30 +38,7 @@ module halodi_msgs {
              *
              */
             double qdd_desired;
-            
-            
-            /**
-             * (Optional) Break frequency to filter q_desired.
-             * 
-             * Useful to smooth out noisy or jerky inputs (for example joystick/mouse). 
-             *
-             * Unit: Hz 
-             *
-             * Note: filtering is applied at the realtime controller, after any interpolation of the trajectory manager.
-             *
-             */
-            sequence<double, 1> q_desired_filter_break_frequency;
-            
-            
-            /**
-             *
-             * If set to true, qd_desired is calculated to be the derivative of q_desired.
-             * 
-             * It is recommeded to set q_desired_filter_break_frequency when using this to avoid large jumps in velocity.
-             *
-             */
-            boolean derive_qd_desired;
-            
+                        
             
             /**
              * Use sensible default gains as provided by the controller instead of custom gains.
