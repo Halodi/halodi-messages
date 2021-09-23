@@ -1,3 +1,4 @@
+#include <halodi_msgs/msg/RobotStatusLevel.idl>
 
 module halodi_msgs {
     module msg {
@@ -15,10 +16,11 @@ module halodi_msgs {
              * Charge status of the battery
              * 
              * WARNING: The robot should be moved to a safe position to shutdown and charge as soon as possible. 
-             * ERROR: Note, this shutdown happens even if the battery voltage drops momentary due to fast motions. 
+             * ERROR: The battery is empty. The robot will go in a safe pose to avoid falling down
+             * CRITICAL: The battery management system (BMS) turned off the power and the robot fell over. Note: This is never transmitted.
              *
              */
-            octet battery_status_level;
+            halodi_msgs::msg::RobotStatusLevel battery_status_level;
             
             
             /**

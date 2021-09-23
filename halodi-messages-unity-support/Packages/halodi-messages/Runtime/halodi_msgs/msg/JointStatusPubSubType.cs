@@ -46,8 +46,7 @@ public class JointStatusPubSubType : Halodi.CDR.TopicDataType<JointStatus>
 
       current_alignment += halodi_msgs.msg.JointNamePubSubType.getCdrSerializedSize(data.joint, current_alignment);
 
-      current_alignment += 1 + Halodi.CDR.CDRCommon.alignment(current_alignment, 1);
-
+      current_alignment += halodi_msgs.msg.RobotStatusLevelPubSubType.getCdrSerializedSize(data.status_level, current_alignment);
 
       current_alignment += 1 + Halodi.CDR.CDRCommon.alignment(current_alignment, 1);
 
@@ -66,7 +65,7 @@ public class JointStatusPubSubType : Halodi.CDR.TopicDataType<JointStatus>
    {
       halodi_msgs.msg.JointNamePubSubType.write(data.joint, cdr);
 
-      cdr.write_type_9(data.status_level);
+      halodi_msgs.msg.RobotStatusLevelPubSubType.write(data.status_level, cdr);
 
       cdr.write_type_7(data.critical_for_balance);
 
@@ -81,7 +80,8 @@ public class JointStatusPubSubType : Halodi.CDR.TopicDataType<JointStatus>
       data.joint = halodi_msgs.msg.JointNamePubSubType.Create();
       halodi_msgs.msg.JointNamePubSubType.read(data.joint, cdr);
       	
-      data.status_level=cdr.read_type_9();
+      data.status_level = halodi_msgs.msg.RobotStatusLevelPubSubType.Create();
+      halodi_msgs.msg.RobotStatusLevelPubSubType.read(data.status_level, cdr);
       	
       data.critical_for_balance=cdr.read_type_7();
       	

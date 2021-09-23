@@ -29,11 +29,8 @@ public class MotorStatus : Halodi.CDR.DataType<MotorStatus>
    public const byte INVALID_STATE_TRANSITION = (byte) 11;
    /**
                 * Current status level of the motor
-                *
-                * As described in diagnostic_msgs/DiagnosticStatus
-                *
                 */
-   public byte status_level;
+   public halodi_msgs.msg.RobotStatusLevel status_level;
    /**
                 * Joints controlled by this motor
                 *
@@ -93,7 +90,7 @@ public class MotorStatus : Halodi.CDR.DataType<MotorStatus>
 
    public void Set(MotorStatus other)
    {
-      status_level = other.status_level;
+      halodi_msgs.msg.RobotStatusLevelPubSubType.Copy(other.status_level, status_level);
 
 
       if(other.joints == null)

@@ -17,10 +17,11 @@ public class BatteryStatus : Halodi.CDR.DataType<BatteryStatus>
                 * Charge status of the battery
                 * 
                 * WARNING: The robot should be moved to a safe position to shutdown and charge as soon as possible. 
-                * ERROR: Note, this shutdown happens even if the battery voltage drops momentary due to fast motions. 
+                * ERROR: The battery is empty. The robot will go in a safe pose to avoid falling down
+                * CRITICAL: The battery management system (BMS) turned off the power and the robot fell over. Note: This is never transmitted.
                 *
                 */
-   public byte battery_status_level;
+   public halodi_msgs.msg.RobotStatusLevel battery_status_level;
    /**
                 * Current estimate of the battery voltage in Volts
                 *
@@ -42,7 +43,7 @@ public class BatteryStatus : Halodi.CDR.DataType<BatteryStatus>
 
    public void Set(BatteryStatus other)
    {
-      battery_status_level = other.battery_status_level;
+      halodi_msgs.msg.RobotStatusLevelPubSubType.Copy(other.battery_status_level, battery_status_level);
 
       battery_voltage = other.battery_voltage;
 

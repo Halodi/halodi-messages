@@ -1,0 +1,34 @@
+module halodi_msgs {
+    module msg {
+        module RobotStatusLevel_Constants
+        {
+            /**
+              * Robot is in normal status
+              */
+            const octet OK = 0;
+            
+            /**
+             *  A warning has been detected. The user can resolve the warning and continue operation
+             */
+            const octet WARN = 1;
+            
+            /**
+             * A non-recoverable error has been detected. The robot can continue operation with reduced functionality
+             */
+            const octet ERROR = 2;
+            /**
+             * A critical error has been detected. The robot will shutdown immediatly
+             */ 
+            const octet CRITICAL = 3;
+        };
+        
+        /**
+         * Status level of the robot
+         */
+        @TypeCode(type="halodi_msgs::msg::dds_::RobotStatusLevel_")
+        struct RobotStatusLevel
+        {
+            octet level;
+        };
+    };
+};

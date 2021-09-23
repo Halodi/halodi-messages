@@ -1,5 +1,5 @@
 #include <halodi_msgs/msg/JointName.idl>
-
+#include <halodi_msgs/msg/RobotStatusLevel.idl>
 
 module halodi_msgs {
     module msg {
@@ -37,11 +37,8 @@ module halodi_msgs {
         {
             /**
              * Current status level of the motor
-             *
-             * As described in diagnostic_msgs/DiagnosticStatus
-             *
              */
-            octet status_level;
+            halodi_msgs::msg::RobotStatusLevel status_level;
             
             /**
              * Joints controlled by this motor

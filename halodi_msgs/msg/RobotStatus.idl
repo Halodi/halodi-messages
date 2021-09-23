@@ -2,9 +2,13 @@
 #include <halodi_msgs/msg/JointStatus.idl>
 #include <halodi_msgs/msg/MotorStatus.idl>
 #include <halodi_msgs/msg/BatteryStatus.idl>
+#include <halodi_msgs/msg/RobotStatusLevel.idl>
+#include <halodi_msgs/msg/RobotStatusAction.idl>
 
 module halodi_msgs {
     module msg {
+    
+        
     
         /**
           * Status of a robot
@@ -24,11 +28,14 @@ module halodi_msgs {
             
             /**
              * Current status level of the robot
-             *
-             * As described in diagnostic_msgs/DiagnosticStatus
-             *
              */
-            octet robot_status_level;
+            halodi_msgs::msg::RobotStatusLevel robot_status_level;
+            
+            
+            /**
+             * Action taken based on the robot_status_level.
+             */
+            halodi_msgs::msg::RobotStatusAction robot_status_action;
             
             
             /**

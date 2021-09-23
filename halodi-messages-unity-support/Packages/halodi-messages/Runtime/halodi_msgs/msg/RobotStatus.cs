@@ -21,11 +21,12 @@ public class RobotStatus : Halodi.CDR.DataType<RobotStatus>
    public std_msgs.msg.Header header;
    /**
                 * Current status level of the robot
-                *
-                * As described in diagnostic_msgs/DiagnosticStatus
-                *
                 */
-   public byte robot_status_level;
+   public halodi_msgs.msg.RobotStatusLevel robot_status_level;
+   /**
+                * Action taken based on the robot_status_level.
+                */
+   public halodi_msgs.msg.RobotStatusAction robot_status_action;
    /**
                 *
                 * Status of the battery
@@ -97,7 +98,9 @@ public class RobotStatus : Halodi.CDR.DataType<RobotStatus>
    {
       std_msgs.msg.HeaderPubSubType.Copy(other.header, header);
 
-      robot_status_level = other.robot_status_level;
+      halodi_msgs.msg.RobotStatusLevelPubSubType.Copy(other.robot_status_level, robot_status_level);
+
+      halodi_msgs.msg.RobotStatusActionPubSubType.Copy(other.robot_status_action, robot_status_action);
 
       halodi_msgs.msg.BatteryStatusPubSubType.Copy(other.battery_status, battery_status);
 
@@ -170,6 +173,8 @@ public class RobotStatus : Halodi.CDR.DataType<RobotStatus>
       builder.Append(this.header);      builder.Append(", ");
       builder.Append("robot_status_level=");
       builder.Append(this.robot_status_level);      builder.Append(", ");
+      builder.Append("robot_status_action=");
+      builder.Append(this.robot_status_action);      builder.Append(", ");
       builder.Append("battery_status=");
       builder.Append(this.battery_status);      builder.Append(", ");
       builder.Append("backpack_estop_enabled=");

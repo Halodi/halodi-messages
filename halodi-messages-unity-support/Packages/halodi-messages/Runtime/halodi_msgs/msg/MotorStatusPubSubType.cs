@@ -44,8 +44,7 @@ public class MotorStatusPubSubType : Halodi.CDR.TopicDataType<MotorStatus>
    {
       int initial_alignment = current_alignment;
 
-      current_alignment += 1 + Halodi.CDR.CDRCommon.alignment(current_alignment, 1);
-
+      current_alignment += halodi_msgs.msg.RobotStatusLevelPubSubType.getCdrSerializedSize(data.status_level, current_alignment);
 
       current_alignment += 4 + Halodi.CDR.CDRCommon.alignment(current_alignment, 4);
       for(int i0 = 0; i0 < data.joints.Count; ++i0)
@@ -85,7 +84,7 @@ public class MotorStatusPubSubType : Halodi.CDR.TopicDataType<MotorStatus>
 
    public static void write(halodi_msgs.msg.MotorStatus data, Halodi.CDR.CDRSerializer cdr)
    {
-      cdr.write_type_9(data.status_level);
+      halodi_msgs.msg.RobotStatusLevelPubSubType.write(data.status_level, cdr);
 
       	if(data.joints == null)
       	{
@@ -122,7 +121,8 @@ public class MotorStatusPubSubType : Halodi.CDR.TopicDataType<MotorStatus>
 
    public static void read(halodi_msgs.msg.MotorStatus data, Halodi.CDR.CDRDeserializer cdr)
    {
-      data.status_level=cdr.read_type_9();
+      data.status_level = halodi_msgs.msg.RobotStatusLevelPubSubType.Create();
+      halodi_msgs.msg.RobotStatusLevelPubSubType.read(data.status_level, cdr);
       	
 
       int joints_length = cdr.read_type_2();

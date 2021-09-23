@@ -1,4 +1,5 @@
 #include <halodi_msgs/msg/JointName.idl>
+#include <halodi_msgs/msg/RobotStatusLevel.idl>
 
 
 module halodi_msgs {
@@ -23,7 +24,7 @@ module halodi_msgs {
              * As described in diagnostic_msgs/DiagnosticStatus
              *
              */
-            octet status_level;
+            halodi_msgs::msg::RobotStatusLevel status_level;
                         
             /**
              *

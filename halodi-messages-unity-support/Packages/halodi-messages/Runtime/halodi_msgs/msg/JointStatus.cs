@@ -24,7 +24,7 @@ public class JointStatus : Halodi.CDR.DataType<JointStatus>
                 * As described in diagnostic_msgs/DiagnosticStatus
                 *
                 */
-   public byte status_level;
+   public halodi_msgs.msg.RobotStatusLevel status_level;
    /**
                 *
                 * True if the motor is critical for balance. A failure in this joint will lead to the robot falling.
@@ -48,7 +48,7 @@ public class JointStatus : Halodi.CDR.DataType<JointStatus>
    {
       halodi_msgs.msg.JointNamePubSubType.Copy(other.joint, joint);
 
-      status_level = other.status_level;
+      halodi_msgs.msg.RobotStatusLevelPubSubType.Copy(other.status_level, status_level);
 
       critical_for_balance = other.critical_for_balance;
 

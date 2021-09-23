@@ -1,0 +1,35 @@
+module halodi_msgs {
+    module msg {
+        module RobotStatusAction_Constants
+        {
+            /**
+             * No action is taken
+             */
+            const octet NO_ACTION = 0;
+            
+            /**
+             * The robot goes to "safe pose"
+             */
+            const octet SAFE_POSE = 1;
+            
+            /**
+             * The robot goes to its "shutdown pose". Not implemented
+             */
+            const octet SHUTDOWN_POSE = 2;
+            
+            /**
+             * The robot disables motor power immediatly. 
+             */
+            const octet DISABLE_MOTOR_POWER = 3;
+        };
+        
+        /**
+         *  Enum describing the action the robot should take based on its status
+         */ 
+        @TypeCode(type="halodi_msgs::msg::dds_::RobotStatusAction_")
+        struct RobotStatusAction
+        {
+            octet action;
+        };
+    };
+};
