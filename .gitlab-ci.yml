@@ -14,26 +14,15 @@ test:
   only:
     - merge_requests
 
-include:
-  - project: 'halodi/tooling/gitlab-ci-cd/templates/publish-with-gradle'
-    ref: 0.0.9
-    file: 'publish-with-gradle-vault1.7.1-gradle6.8.3-jdk8.gitlab-ci.yml'
 
 publish-with-gradle:
-  variables:
-    PROJECT_PATH: .
-    VAULT_ADDRESS: $VAULT_ADDR
-    OPEN_SOURCE: "true"
-
-move-to-staging:
-  variables:
-    VAULT_ADDRESS: $VAULT_ADDR
-    OPEN_SOURCE: "true"
-
-move-to-production:
-  variables:
-    VAULT_ADDRESS: $VAULT_ADDR
-    OPEN_SOURCE: "true"
+  stage: deploy
+  image: registry.gitlab.com/halodi/tooling/gitlab-ci-cd/dockers/vault-and-gradle:0.0.1-vault1.7.1-gradle6.8.3-jdk8
+  script:
+    - gradle jar
+    - ARTIFACT_VERSION=$CI_COMMIT_TAG gradle publish -p .
+  only:
+    - /^((\d+)\.(\d+)\.(\d+))((-)(\balpha\b)|(-)(\bbeta\b)|(-)(\bhalodi\b))?(\.\d+)?$/
 
 composition:
   variables:

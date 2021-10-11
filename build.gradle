@@ -11,7 +11,6 @@ buildscript {
       classpath "us.ihmc:log-tools:0.6.1"
       classpath "us.ihmc:ihmc-pub-sub-generator:0.15.0"
       classpath 'com.halodi:halodi-csharp-pub-sub-generator:0.1.2'
-      classpath 'net.saliman:gradle-properties-plugin:1.5.1'
    }
    
 
@@ -20,14 +19,15 @@ buildscript {
 apply plugin: 'java'
 apply plugin: 'maven'
 apply plugin: 'maven-publish'
-apply plugin: 'net.saliman.properties'
 
 
-group = "com.halodi"
-def inputVersion= project.hasProperty("artifactVersion") ? 
+group = "halodi.controls"
+def inputVersion = project.hasProperty("artifactVersion") ? 
                 project.getProperty("artifactVersion"): System.getenv('ARTIFACT_VERSION')
-version = "$inputVersion$versionAppendix"
-def repoUrl = "https://artifacts.halodi.com/repository"
+version = inputVersion ? inputVersion: "0.0.0-SNAPSHOT"
+def baseRepoUrl = System.getenv('CI_API_V4_URL')
+def projectId = System.getenv('CI_PROJECT_ID')
+def repoUrl = "${baseRepoUrl}/projects/${projectId}/packages/maven"
 
 def outputDirectory = project.file("$buildDir/java-generated")
 def csOutputDirectory = project.file("${project.projectDir}/halodi-messages-unity-support/Packages/halodi-messages/Runtime")
@@ -206,21 +206,16 @@ publishing {
             version version
         }
     }
-}
-
-
-publishing {
     repositories {
         maven {
-            def inputUsername = project.hasProperty("artifactUsername") ? 
-                project.getProperty("artifactUsername"): System.getenv('ARTIFACT_USERNAME')
-            def inputPassword = project.hasProperty("artifactPassword") ? 
-                project.getProperty("artifactPassword"): System.getenv('ARTIFACT_PASSWORD')
-            credentials {
-                username inputUsername
-                password inputPassword
+            credentials(HttpHeaderCredentials) {
+            name = 'Job-Token'
+            value = System.getenv("CI_JOB_TOKEN")
             }
-            url "$repoUrl$repository"
+            authentication {
+                header(HttpHeaderAuthentication)
+            }
+            url "$repoUrl"
         }
     }
 }
