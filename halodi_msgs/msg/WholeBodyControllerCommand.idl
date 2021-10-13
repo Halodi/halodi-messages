@@ -58,18 +58,6 @@ module halodi_msgs {
                 sequence<halodi_msgs::msg::ContactPointCommand, 5> contact_point_commands;
                 
                 /**
-                  * Sequence of driving commands into the future
-                  * 
-                  * If not set, the robot will continue driving till "timeout", after which it stops
-                  * 
-                  * "timeout" is currently set to approximatly 100ms
-                  * 
-                  * Currently, only the first driving command is used. This functionality is available to allow future prediciton in the MPC.
-                  *
-                  */ 
-                sequence<halodi_msgs::msg::DrivingCommand, 20> driving_command;
-                
-                /**
                   *
                   * Sequence of ICP position offests into the future
                   *
