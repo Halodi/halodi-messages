@@ -2,7 +2,7 @@ buildscript {
    repositories {
       mavenCentral()
       maven { url "https://plugins.gradle.org/m2/" }
-      maven { url "https://artifacts.halodi.com/repository/maven-open-source-group" }
+      maven { url "https://artifacts.halodi.cloud/repository/maven-open" }
       mavenLocal()
    }
    
@@ -34,7 +34,7 @@ def csOutputDirectory = project.file("${project.projectDir}/halodi-messages-unit
 
 repositories {
     mavenCentral()
-    maven { url "https://artifacts.halodi.com/repository/maven-open-source-group" }
+    maven { url "https://artifacts.halodi.cloud/repository/maven-open" }
     mavenLocal()
 }
 

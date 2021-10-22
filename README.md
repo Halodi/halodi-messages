@@ -21,33 +21,17 @@ This repository builds against the IHMC ROS2 libraries and generates compatible 
 
 ### Adding as dependency
 
-To add this as a dependency to your Java project, add the following to your build.gradle
+To add this as a dependency to your Java project, find the release here and the how to use it:
+https://artifacts.halodi.cloud/#browse/browse:maven-open:com%2Fhalodi%2Fhalodi-messages
 
 ```
 repositories {
-    mavenCentral()
-    maven { url "http://dl.bintray.com/ihmcrobotics/maven-release" }
-    maven { url "http://dl.bintray.com/halodirobotics/maven-release" }
-    mavenLocal()
+    ...
+    maven { url "https://artifacts.halodi.cloud/repository/maven-open/" }
+    ...
 }
 ```
 
-```
-dependencies {
-    compile group: "us.ihmc", name: "euclid-geometry", version: "0.12.0"
-    compile group: "us.ihmc", name: "ihmc-pub-sub", version: "0.10.3"
-    compile group: "us.ihmc", name: "ros2-common-interfaces", version: "0.13.4"
-    compile group: "com.halodi", name: "halodi-messages", version: "0.0.2"
-}
-```
-
-
-### Increasing version number
-
-Before building and publishing the Java and C# libraries, increase the version in the following files
-
-- `build.gradle`
-- `halodi-messages-unity-support/Packages/halodi-messages/package.json`
 
 
 ### Building and publishing Java libraries
@@ -63,11 +47,6 @@ gradle publishToMavenLocal -PartifactVersion=[version] -PenvironmentName=release
 To upload snapshot to artifacts.halodi.com:
 ```
 ARTIFACT_USERNAME=[username] ARTIFACT_PASSWORD=[password] ARTIFACT_VERSION=[version] gradle publish
-```
-
-To upload release to artifacts.halodi.com:
-```
-ARTIFACT_USERNAME=[username] ARTIFACT_PASSWORD=[password] ARTIFACT_VERSION=[version] gradle publish -PenvironmentName=production
 ```
 
 ### Building and publishing C#/Unity libraries

@@ -25,16 +25,6 @@ publish-with-gradle:
     VAULT_ADDRESS: $VAULT_ADDR
     OPEN_SOURCE: "true"
 
-move-to-staging:
-  variables:
-    VAULT_ADDRESS: $VAULT_ADDR
-    OPEN_SOURCE: "true"
-
-move-to-production:
-  variables:
-    VAULT_ADDRESS: $VAULT_ADDR
-    OPEN_SOURCE: "true"
-
 composition:
   variables:
     UPSTREAM_PROJECT: $CI_PROJECT_NAME
