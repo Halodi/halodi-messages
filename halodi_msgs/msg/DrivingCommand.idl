@@ -5,12 +5,12 @@ module halodi_msgs {
         struct DrivingCommand
         {
             /**
-              * Filter the desired x_dot and omega_z using a low pass filter 
-              * 
-              * Note: Commands sent to the "driving_command" will always be filtered
+              * Bypass the default lowpass filter the desired x_dot and omega_z
+	      *
+	      * Use with caution, this could result in the robot falling if large changes in input velocity are send to the robot.              
               * 
               */
-            boolean filter_driving_command;
+            boolean bypass_input_filter;
             
             /**
               * Desired linear velocity
