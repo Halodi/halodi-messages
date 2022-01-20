@@ -22,6 +22,15 @@ STATUS_EXECUTING is published for every poin tin the trajectory.
 If no trajectory_id is set in the WholeBodyTrajectory, no feedback will be generated. 
 
 
+#### /eve/accepting_trajectories
+- Data rate: 500Hz
+- Data type: [std_msgs/msg/Bool.msg](https://github.com/ros2/common_interfaces/blob/master/std_msgs/msg/Bool.msg)
+- Reliablity QOS: Best effort
+
+Published if the Trajectory API is active. When the API is active, this topic will be set to true. If the API is active, but the controller is not accepting messages, this will be false. If not published, the trajectory API is not active.
+It is recommended to only publish to /eve/whole_body_trajectory if this is true.
+
+
 #### /eve/status
 - Rate: 5Hz
 - Data type: [halodi_msgs/msg/RobotStatus.idl](https://github.com/Halodi/halodi-messages/blob/master/halodi_msgs/msg/RobotStatus.idl)
@@ -37,7 +46,7 @@ This topic provides the system status of the robot and includes
 - Data type: [rosgraph_msgs/msg/Clock.msg](https://github.com/ros2/rcl_interfaces/blob/master/rosgraph_msgs/msg/Clock.msg)
 - Reliablity QOS: Best effort
 
-THis topic provides the ROS clock.
+This topic provides the ROS clock.
 
 #### /tf
 - Rate: 500Hz
@@ -56,6 +65,27 @@ For each hand, joint state
 - Velocity: Relative velocity of the hand if supported
 - Effort: Relative effort of the hand if supported
 
+
+## Lifecycle messages
+
+Lifecycle messages can stop the controller and clear certain error states
+
+#### /eve/clear_error_state
+- Data type: [std_msgs/msg/Bool.msg](https://github.com/ros2/common_interfaces/blob/master/std_msgs/msg/Bool.msg)
+- Reliability QOS: Reliable
+
+
+When the controller is not accepting commands (accepts_commands in /eve/whole_body_state is false) due to an error, for example the e-stop being pressed, this could reset the error and allow user control.
+
+To clear the error, press the e-stop to freeze the robot in position (if not already pressed). Then release the e-stop. The robot will go to its default pose. Once the robot is in default pose, the user can request to clear the error state by sending "data: true" to this topic. If the error is resolved, the robot acccepts this command and allows user control again.
+
+#### /eve/request_controller_stop
+- Data type: [std_msgs/msg/Bool.msg](https://github.com/ros2/common_interfaces/blob/master/std_msgs/msg/Bool.msg)
+- Reliability QOS: Reliable
+
+To stop the controller, first press the e-stop to freeze the robot in its current position. In this state, the robot accepts "data: true" on this topic and stops the controller. Warning: The robot will immediatly collapse.
+
+
 ## Control messages
 
 The robot can be controlled with the Trajectory API or the Realtime API.
@@ -64,6 +94,9 @@ We recommend using the trajectory API, as this does not put realtime constraints
 
 ### Trajectory API
 The trajectory API is a high level API that can interpolate trajectories trough points in task space and joint space. The following topics are available:
+
+
+
 
 
 #### /eve/whole_body_trajectory
