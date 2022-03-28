@@ -38,9 +38,11 @@ public class TaskSpaceCommand : Halodi.CDR.DataType<TaskSpaceCommand>
                 * 
                 * Defaults to zero.
                 *
-                * This offset allows more accurate position control of a point on the hand,
+                * This offset allows more accurate position control of a point on the hand or tool object, if the orientation of the wrist is not stiffly controlled.
                 * 
-                * To adjust the rotation, adjust the desired rotation in the desired pose.
+                * Note: This offset does not get interpolated in the trajectory manager. 
+                * If the frame_offset changes, the trajectory manager will reset the previous desired pose to the actual pose and interpolate from there. 
+                * It is recommended to keep frame_offset constant during a task to avoid jumps in setpoints.
                 *
                 */
    public geometry_msgs.msg.Vector3 frame_offset;
