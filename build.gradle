@@ -24,7 +24,7 @@ apply plugin: 'net.saliman.properties'
 
 group = "com.halodi"
 //def inputVersion= project.hasProperty("artifactVersion") ? 
-                project.getProperty("artifactVersion"): System.getenv('ARTIFACT_VERSION')
+//                project.getProperty("artifactVersion"): System.getenv('ARTIFACT_VERSION')
 //version = "$inputVersion$versionAppendix"
 version = "1.9.0-alpha1"
 def repoUrl = "https://artifacts.halodi.com/repository"
