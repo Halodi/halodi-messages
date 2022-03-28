@@ -33,8 +33,20 @@ public class TaskSpaceCommand : Halodi.CDR.DataType<TaskSpaceCommand>
                 */
    public bool express_in_z_up;
    /**
+                *
+                * Offset from the root of the body_frame to the controlled point.
                 * 
-                * Desired pose of the body frame, expressed in "expressed_in_frame"
+                * Defaults to zero.
+                *
+                * This offset allows more accurate position control of a point on the hand,
+                * 
+                * To adjust the rotation, adjust the desired rotation in the desired pose.
+                *
+                */
+   public geometry_msgs.msg.Vector3 frame_offset;
+   /**
+                * 
+                * Desired pose of the body frame + frame_offset, expressed in "expressed_in_frame"
                 *
                 */
    public geometry_msgs.msg.Pose pose;
@@ -97,6 +109,8 @@ public class TaskSpaceCommand : Halodi.CDR.DataType<TaskSpaceCommand>
       halodi_msgs.msg.ReferenceFrameNamePubSubType.Copy(other.expressed_in_frame, expressed_in_frame);
 
       express_in_z_up = other.express_in_z_up;
+
+      geometry_msgs.msg.Vector3PubSubType.Copy(other.frame_offset, frame_offset);
 
       geometry_msgs.msg.PosePubSubType.Copy(other.pose, pose);
 
@@ -207,6 +221,8 @@ public class TaskSpaceCommand : Halodi.CDR.DataType<TaskSpaceCommand>
       builder.Append(this.expressed_in_frame);      builder.Append(", ");
       builder.Append("express_in_z_up=");
       builder.Append(this.express_in_z_up);      builder.Append(", ");
+      builder.Append("frame_offset=");
+      builder.Append(this.frame_offset);      builder.Append(", ");
       builder.Append("pose=");
       builder.Append(this.pose);      builder.Append(", ");
       builder.Append("angular_velocity=");
