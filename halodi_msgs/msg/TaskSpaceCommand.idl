@@ -58,7 +58,7 @@ module halodi_msgs {
              * It is recommended to keep frame_offset constant during a task to avoid jumps in setpoints.
              *
              */
-             geometry_msgs::msg::Vector3 frame_offset;
+             geometry_msgs::msg::Vector3 body_frame_offset;
             
                         
             /**
