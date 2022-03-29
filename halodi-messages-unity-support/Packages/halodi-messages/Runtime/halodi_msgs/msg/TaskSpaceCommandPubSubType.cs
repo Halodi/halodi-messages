@@ -79,6 +79,10 @@ public class TaskSpaceCommandPubSubType : Halodi.CDR.TopicDataType<TaskSpaceComm
           current_alignment += halodi_msgs.msg.FeedbackParameters3DPubSubType.getCdrSerializedSize(data.position_feedback_parameters[i0], current_alignment);}
 
       current_alignment += 4 + Halodi.CDR.CDRCommon.alignment(current_alignment, 4);
+      current_alignment += (data.motor_damping.Count * 8) + Halodi.CDR.CDRCommon.alignment(current_alignment, 8);
+
+
+      current_alignment += 4 + Halodi.CDR.CDRCommon.alignment(current_alignment, 4);
       for(int i0 = 0; i0 < data.nullspace_command.Count; ++i0)
       {
           current_alignment += halodi_msgs.msg.JointNullSpaceConfigurationPubSubType.getCdrSerializedSize(data.nullspace_command[i0], current_alignment);}
@@ -145,6 +149,20 @@ public class TaskSpaceCommandPubSubType : Halodi.CDR.TopicDataType<TaskSpaceComm
             for (int i0 = 0; i0 < position_feedback_parameters_length; i0++)
             {
       			halodi_msgs.msg.FeedbackParameters3DPubSubType.write(data.position_feedback_parameters[i0], cdr);	      }
+        }
+      	if(data.motor_damping == null)
+      	{
+      		cdr.write_type_2(0);
+      	}
+      	else
+      	{
+
+      	  int motor_damping_length = data.motor_damping.Count;
+            cdr.write_type_2(motor_damping_length);
+            for (int i0 = 0; i0 < motor_damping_length; i0++)
+            {
+      			cdr.write_type_6(data.motor_damping[i0]);
+            }
         }
       	if(data.nullspace_command == null)
       	{
@@ -221,6 +239,17 @@ public class TaskSpaceCommandPubSubType : Halodi.CDR.TopicDataType<TaskSpaceComm
       	halodi_msgs.msg.FeedbackParameters3D new_position_feedback_parameters = halodi_msgs.msg.FeedbackParameters3DPubSubType.Create(); 
       	halodi_msgs.msg.FeedbackParameters3DPubSubType.read(new_position_feedback_parameters, cdr);
       	data.position_feedback_parameters.Add(new_position_feedback_parameters);	
+      	
+      }
+
+      	
+
+      int motor_damping_length = cdr.read_type_2();
+      data.motor_damping = new System.Collections.Generic.List<double>(motor_damping_length);
+      for(int i = 0; i < motor_damping_length; i++)
+      {
+      	data.motor_damping.Add(cdr.read_type_6());
+      	
       	
       }
 

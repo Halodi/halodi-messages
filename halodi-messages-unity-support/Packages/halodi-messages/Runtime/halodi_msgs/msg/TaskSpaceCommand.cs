@@ -98,6 +98,15 @@ public class TaskSpaceCommand : Halodi.CDR.DataType<TaskSpaceCommand>
                 */
    public System.Collections.Generic.List<halodi_msgs.msg.FeedbackParameters3D> position_feedback_parameters;
    /**
+                *
+                *
+                * Motor damping applied to all joints in the chain to the root body of this body frame
+                *
+                * Optional. Defaults to 1
+                *
+                */
+   public System.Collections.Generic.List<double> motor_damping;
+   /**
                 * Nullspace joint configuration 
                 *
                 */
@@ -188,6 +197,19 @@ public class TaskSpaceCommand : Halodi.CDR.DataType<TaskSpaceCommand>
       		}	}
       }
 
+      if(other.motor_damping == null)
+      {
+      	motor_damping = null;
+      }
+      else
+      {
+      	motor_damping = new System.Collections.Generic.List<double>(other.motor_damping.Count);
+      	for(int i4 = 0; i4 < other.motor_damping.Count; i4++)
+      	{
+         		motor_damping.Add(other.motor_damping[i4]);
+      	}
+      }
+
       if(other.nullspace_command == null)
       {
       	nullspace_command = null;
@@ -195,16 +217,16 @@ public class TaskSpaceCommand : Halodi.CDR.DataType<TaskSpaceCommand>
       else
       {
       	nullspace_command = new System.Collections.Generic.List<halodi_msgs.msg.JointNullSpaceConfiguration>(other.nullspace_command.Count);
-      	for(int i4 = 0; i4 < other.nullspace_command.Count; i4++)
+      	for(int i5 = 0; i5 < other.nullspace_command.Count; i5++)
       	{
-      		if(other.nullspace_command[i4] == null)
+      		if(other.nullspace_command[i5] == null)
       		{
       			nullspace_command.Add(null);
       		}
       		else
       		{
       			halodi_msgs.msg.JointNullSpaceConfiguration newElement = halodi_msgs.msg.JointNullSpaceConfigurationPubSubType.Create();
-      	   		halodi_msgs.msg.JointNullSpaceConfigurationPubSubType.Copy(other.nullspace_command[i4], newElement);
+      	   		halodi_msgs.msg.JointNullSpaceConfigurationPubSubType.Copy(other.nullspace_command[i5], newElement);
       	   		nullspace_command.Add(newElement);
       		}	}
       }
@@ -241,6 +263,8 @@ public class TaskSpaceCommand : Halodi.CDR.DataType<TaskSpaceCommand>
       builder.Append(this.orientation_feedback_parameters);      builder.Append(", ");
       builder.Append("position_feedback_parameters=");
       builder.Append(this.position_feedback_parameters);      builder.Append(", ");
+      builder.Append("motor_damping=");
+      builder.Append(this.motor_damping);      builder.Append(", ");
       builder.Append("nullspace_command=");
       builder.Append(this.nullspace_command);
       builder.Append("}");
