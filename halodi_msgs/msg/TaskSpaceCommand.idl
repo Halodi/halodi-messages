@@ -132,7 +132,7 @@ module halodi_msgs {
              * Optional. Defaults to 1
              *
              */
-             sequence<double> motor_damping;
+             sequence<double, 1> motor_damping;
             
             
             /**
