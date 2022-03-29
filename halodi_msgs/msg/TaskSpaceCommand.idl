@@ -137,12 +137,16 @@ module halodi_msgs {
             /**
              *
              *
-             * Motor damping applied to all joints in the chain to the root body of this body frame
+             * Motor damping scale applied to all joints in the chain to the root body of this body frame
+             * 
+             * This is scaled value between 0 and 1, where 0 is no motor level damping and 1 is the maximum motor level damping. This is tuned per motor and there is no physical value corresponding to the scale.
+             * 
+             * This is useful to stabalize the taskspace controller if not enough damping can be applied using the feedback parameters
              *
              * Optional. Defaults to 1
              *
              */
-             sequence<double, 1> motor_damping;
+             sequence<double, 1> motor_damping_scale;
             
             
             /**
