@@ -10,6 +10,11 @@ public class TaskSpaceCommand : Halodi.CDR.DataType<TaskSpaceCommand>
 	public Halodi.CDR.TopicDataType<TaskSpaceCommand> Type => new TaskSpaceCommandPubSubType();
 	
    /**
+                * Maximum difference in meters between two values of body_frame_offset before they are considered different offsets
+                *
+                */
+   public const double BODY_FRAME_OFFSET_EPSILON = 1e-4;
+   /**
                 * Body Frame: The reference frame to control.
                 *
                 * Valid options are all frames that are "Controllable"
@@ -43,6 +48,7 @@ public class TaskSpaceCommand : Halodi.CDR.DataType<TaskSpaceCommand>
                 * Note: This offset does not get interpolated in the trajectory manager. 
                 * If the frame_offset changes, the trajectory manager will reset the previous desired pose to the actual pose and interpolate from there. 
                 * It is recommended to keep frame_offset constant during a task to avoid jumps in setpoints.
+                * Two body frame offsets are considered equal if they differ less than BODY_FRAME_OFFSET_EPSILON meter on each axis.
                 *
                 */
    public geometry_msgs.msg.Vector3 body_frame_offset;
