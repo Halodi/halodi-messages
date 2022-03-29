@@ -106,12 +106,16 @@ public class TaskSpaceCommand : Halodi.CDR.DataType<TaskSpaceCommand>
    /**
                 *
                 *
-                * Motor damping applied to all joints in the chain to the root body of this body frame
+                * Motor damping scale applied to all joints in the chain to the root body of this body frame
+                * 
+                * This is scaled value between 0 and 1, where 0 is no motor level damping and 1 is the maximum motor level damping. This is tuned per motor and there is no physical value corresponding to the scale.
+                * 
+                * This is useful to stabalize the taskspace controller if not enough damping can be applied using the feedback parameters
                 *
                 * Optional. Defaults to 1
                 *
                 */
-   public System.Collections.Generic.List<double> motor_damping;
+   public System.Collections.Generic.List<double> motor_damping_scale;
    /**
                 * Nullspace joint configuration 
                 *
@@ -203,16 +207,16 @@ public class TaskSpaceCommand : Halodi.CDR.DataType<TaskSpaceCommand>
       		}	}
       }
 
-      if(other.motor_damping == null)
+      if(other.motor_damping_scale == null)
       {
-      	motor_damping = null;
+      	motor_damping_scale = null;
       }
       else
       {
-      	motor_damping = new System.Collections.Generic.List<double>(other.motor_damping.Count);
-      	for(int i4 = 0; i4 < other.motor_damping.Count; i4++)
+      	motor_damping_scale = new System.Collections.Generic.List<double>(other.motor_damping_scale.Count);
+      	for(int i4 = 0; i4 < other.motor_damping_scale.Count; i4++)
       	{
-         		motor_damping.Add(other.motor_damping[i4]);
+         		motor_damping_scale.Add(other.motor_damping_scale[i4]);
       	}
       }
 
@@ -269,8 +273,8 @@ public class TaskSpaceCommand : Halodi.CDR.DataType<TaskSpaceCommand>
       builder.Append(this.orientation_feedback_parameters);      builder.Append(", ");
       builder.Append("position_feedback_parameters=");
       builder.Append(this.position_feedback_parameters);      builder.Append(", ");
-      builder.Append("motor_damping=");
-      builder.Append(this.motor_damping);      builder.Append(", ");
+      builder.Append("motor_damping_scale=");
+      builder.Append(this.motor_damping_scale);      builder.Append(", ");
       builder.Append("nullspace_command=");
       builder.Append(this.nullspace_command);
       builder.Append("}");
