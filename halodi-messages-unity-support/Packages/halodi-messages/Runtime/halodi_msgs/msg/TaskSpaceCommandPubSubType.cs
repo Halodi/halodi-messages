@@ -51,7 +51,7 @@ public class TaskSpaceCommandPubSubType : Halodi.CDR.TopicDataType<TaskSpaceComm
       current_alignment += 1 + Halodi.CDR.CDRCommon.alignment(current_alignment, 1);
 
 
-      current_alignment += geometry_msgs.msg.Vector3PubSubType.getCdrSerializedSize(data.frame_offset, current_alignment);
+      current_alignment += geometry_msgs.msg.Vector3PubSubType.getCdrSerializedSize(data.body_frame_offset, current_alignment);
 
       current_alignment += geometry_msgs.msg.PosePubSubType.getCdrSerializedSize(data.pose, current_alignment);
 
@@ -99,7 +99,7 @@ public class TaskSpaceCommandPubSubType : Halodi.CDR.TopicDataType<TaskSpaceComm
 
       cdr.write_type_7(data.express_in_z_up);
 
-      geometry_msgs.msg.Vector3PubSubType.write(data.frame_offset, cdr);
+      geometry_msgs.msg.Vector3PubSubType.write(data.body_frame_offset, cdr);
 
       geometry_msgs.msg.PosePubSubType.write(data.pose, cdr);
 
@@ -189,8 +189,8 @@ public class TaskSpaceCommandPubSubType : Halodi.CDR.TopicDataType<TaskSpaceComm
       	
       data.express_in_z_up=cdr.read_type_7();
       	
-      data.frame_offset = geometry_msgs.msg.Vector3PubSubType.Create();
-      geometry_msgs.msg.Vector3PubSubType.read(data.frame_offset, cdr);
+      data.body_frame_offset = geometry_msgs.msg.Vector3PubSubType.Create();
+      geometry_msgs.msg.Vector3PubSubType.read(data.body_frame_offset, cdr);
       	
       data.pose = geometry_msgs.msg.PosePubSubType.Create();
       geometry_msgs.msg.PosePubSubType.read(data.pose, cdr);

@@ -45,7 +45,7 @@ public class TaskSpaceCommand : Halodi.CDR.DataType<TaskSpaceCommand>
                 * It is recommended to keep frame_offset constant during a task to avoid jumps in setpoints.
                 *
                 */
-   public geometry_msgs.msg.Vector3 frame_offset;
+   public geometry_msgs.msg.Vector3 body_frame_offset;
    /**
                 * 
                 * Desired pose of the body frame + frame_offset, expressed in "expressed_in_frame"
@@ -121,7 +121,7 @@ public class TaskSpaceCommand : Halodi.CDR.DataType<TaskSpaceCommand>
 
       express_in_z_up = other.express_in_z_up;
 
-      geometry_msgs.msg.Vector3PubSubType.Copy(other.frame_offset, frame_offset);
+      geometry_msgs.msg.Vector3PubSubType.Copy(other.body_frame_offset, body_frame_offset);
 
       geometry_msgs.msg.PosePubSubType.Copy(other.pose, pose);
 
@@ -245,8 +245,8 @@ public class TaskSpaceCommand : Halodi.CDR.DataType<TaskSpaceCommand>
       builder.Append(this.expressed_in_frame);      builder.Append(", ");
       builder.Append("express_in_z_up=");
       builder.Append(this.express_in_z_up);      builder.Append(", ");
-      builder.Append("frame_offset=");
-      builder.Append(this.frame_offset);      builder.Append(", ");
+      builder.Append("body_frame_offset=");
+      builder.Append(this.body_frame_offset);      builder.Append(", ");
       builder.Append("pose=");
       builder.Append(this.pose);      builder.Append(", ");
       builder.Append("angular_velocity=");
