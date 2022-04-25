@@ -1,0 +1,133 @@
+//#include <halodi_msgs/msg/JointName.idl>
+
+
+module halodi_msgs {
+    module msg {
+        
+        /**
+         * Raw errors from the HandMotor driver
+         *
+         */
+        module HandMotorStatus_Constants
+        {
+            const octet NO_ERROR = 0;
+            const octet FAULTED = 1;
+            const octet MISSED_DEADLINE = 2;
+            const octet AUX_ENCODER_WARNING = 3;
+            const octet AUX_ENCODER_ERROR = 4;
+            const octet HANDMOTOR_ENCODER_WARNING = 5;
+            const octet HANDMOTOR_ENCODER_ERROR = 6;
+            const octet OVER_TEMPERATURE = 7;
+            const octet OVER_VOLTAGE = 8;
+            const octet UNDER_VOLTAGE = 9;
+            const octet ETHERCAT_FAULT = 10;
+            const octet INVALID_STATE_TRANSITION = 11;
+            
+        };
+        
+    
+        /**
+          * Status of a HandMotor
+          *
+          * This message is a custom type instead of DiagnosticsArray, due to the overhead of String based values inside the controller
+          *
+          */
+        @TypeCode(type="halodi_msgs::msg::dds_::HandMotorStatus_")
+        struct HandMotorStatus
+        {
+            /**
+             * Current status level of the HandMotor
+             *
+             * As described in diagnostic_msgs/DiagnosticStatus
+             *
+             */
+            octet status_level;
+            
+            /**
+             * Joints controlled by this HandMotor
+             *
+             */
+            //sequence<halodi_msgs::msg::JointName, 2> joints;
+            
+            /**
+             * ID of the HandMotor with respect to the transmission 
+             * 
+             * This is either 0 or 1
+             *
+             */
+            octet HandMotor_id;
+            
+            /**
+             *
+             * Safe Torque Off (STO) enabled status.
+             *
+             * If STO is enabled, the HandMotor driver is unable to turn on.
+             */
+            boolean sto_enabled;
+            
+            
+            /**
+             * If statusLevel == WARNING: The HandMotor exceeds the warning temperature
+             * If statusLevel == ERROR: The HandMotor exceeds the error temperature and has been shutdown.
+             */
+            boolean over_temperature;
+                        
+            /**
+             *
+             * Serial number of the HandMotor.
+             *
+             */
+            unsigned long HandMotor_serial_number;
+            
+            /**
+             * Serial number of the driver.
+             *
+             */
+            unsigned long driver_serial_number;
+            
+            /**
+             * Set to true when the HandMotor is initialized and reporting data
+             *
+             */
+            boolean HandMotor_initialized;
+            
+        
+            /**
+             * Current temperature of the HandMotor
+             *
+             */
+            double HandMotor_temperature;
+            
+            /**
+             * Current temperature of the HandMotor driver
+             *
+             */
+            double driver_temperature;
+            
+            
+            /**
+             * Error state from the HandMotor driver board.
+             *
+             */ 
+            octet HandMotor_error;
+             /**
+             * Position of the HandMotor
+             *
+             */
+            double HandMotor_position;
+            /**
+             * Position of the HandMotor
+             *
+             */
+            double HandMotor_velocity;
+                         /**
+             * Position of the HandMotor
+             *
+             */
+            double HandMotor_torque;
+            
+        };
+        
+    };
+};
+ 

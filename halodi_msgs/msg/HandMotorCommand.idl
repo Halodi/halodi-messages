@@ -1,0 +1,98 @@
+module halodi_msgs {
+    module msg {
+        
+    
+        /**
+         *
+         * HandMotor space command for the whole body controller
+         *
+         */
+        @TypeCode(type="halodi_msgs::msg::dds_::HandMotorCommand_")
+        struct HandMotorCommand
+        {
+       
+            /**
+             * Desired HandMotor angle
+             * 
+             * Unit: rad
+             *
+             */
+            double q_desired;
+            
+            /**
+             * Desired HandMotor velocity
+             * 
+             * Unit: rad/s
+             *
+             */
+            double qd_desired;
+            
+            /**
+             * Desired feedforward HandMotor acceleration
+             * 
+             * Unit: rad/s^2
+             *
+             */
+            double qdd_desired;
+                        
+            
+            /**
+             * Use sensible default gains as provided by the controller instead of custom gains.
+             * 
+             * Recommended to use for initial testing.
+             */
+            boolean use_default_gains;
+            
+            /**
+             * Desired stiffness of the PD Controller for this HandMotor. 
+             * 
+             * Unit: (rad/s^2)/rad
+             * The output of this controller is HandMotor acceleration.
+             * Ignored when use_default_gains is set
+             */
+            double stiffness;
+            
+            /**
+             * Desired damping of the PD Controller for this HandMotor.
+             * 
+             * Unit: (rad/s^2)/rad
+             * The output of this controller is HandMotor acceleration.
+             * Ignored when use_default_gains is set
+             */
+            double damping;
+            
+            /**
+             * 
+             * Desired damping (scale) applied on the motor driver level for this HandMotor.
+             * 
+             * The amount of HandMotor damping that can be applied without instability is limited. 
+             * To increase the applied damping, damping can be applied at the motor driver level. 
+             * 
+             * The applied motor damping is: motorDampingScale * maximumMotorDamping * (q_desired() - q_actual())
+             * - maximumMotorDamping is specific to each motor, and is set from factory. The applied damping does not neccessarly correlate with physical numbers.
+             *  
+             * motorDampingScale is a scale between 0 and 1 (inclusive). Set to 0 to disable motor damping.
+
+             * Unit: [0.0 - 1.0]
+             *
+             *
+             */
+            double motorDampingScale;
+                        
+            
+            /**
+             * Maximum feedback appied on the HandMotor.
+             * 
+             * This ignores feedback due to motorDampingScale
+             * 
+             * Unit: rad/s^2
+             * Ignored when use_default_gains is set
+             * 
+             * When set to 0, no feedback will be applied. 
+             * 
+             */
+            double max_feedback;
+            
+        };
+    };
+};
