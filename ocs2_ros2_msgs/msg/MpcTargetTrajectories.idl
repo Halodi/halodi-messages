@@ -6,6 +6,9 @@ module ocs2_ros2_msgs {
 
     @TypeCode(type="ocs2_ros2_msgs::msg::dds_::MpcTargetTrajectories_")
     struct MpcTargetTrajectories {
+
+      long api_version;
+
       sequence<float> time_trajectory;
 
       sequence<ocs2_ros2_msgs::msg::MpcState> state_trajectory;

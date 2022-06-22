@@ -9,6 +9,7 @@ public class MpcTargetTrajectories : Halodi.CDR.DataType<MpcTargetTrajectories>
 
 	public Halodi.CDR.TopicDataType<MpcTargetTrajectories> Type => new MpcTargetTrajectoriesPubSubType();
 	
+   public int api_version;
    public System.Collections.Generic.List<float> time_trajectory;
    public System.Collections.Generic.List<ocs2_ros2_msgs.msg.MpcState> state_trajectory;
    public System.Collections.Generic.List<ocs2_ros2_msgs.msg.MpcInput> input_trajectory;
@@ -16,6 +17,8 @@ public class MpcTargetTrajectories : Halodi.CDR.DataType<MpcTargetTrajectories>
 
    public void Set(MpcTargetTrajectories other)
    {
+      api_version = other.api_version;
+
 
       if(other.time_trajectory == null)
       {
@@ -80,6 +83,8 @@ public class MpcTargetTrajectories : Halodi.CDR.DataType<MpcTargetTrajectories>
       StringBuilder builder = new StringBuilder();
 
       builder.Append("MpcTargetTrajectories {");
+      builder.Append("api_version=");
+      builder.Append(this.api_version);      builder.Append(", ");
       builder.Append("time_trajectory=");
       builder.Append(this.time_trajectory);      builder.Append(", ");
       builder.Append("state_trajectory=");

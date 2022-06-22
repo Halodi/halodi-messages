@@ -45,11 +45,7 @@ public class TaskSpaceCommand : Halodi.CDR.DataType<TaskSpaceCommand>
                 *
                 * This offset allows more accurate position control of a point on the hand or tool object, if the orientation of the wrist is not stiffly controlled.
                 * 
-                * Note: This offset does not get interpolated in the trajectory manager. 
-                * If the frame_offset changes, the trajectory manager will reset the previous desired pose to the actual pose and interpolate from there. 
-                * It is recommended to keep frame_offset constant during a task to avoid jumps in setpoints.
-                * Two body frame offsets are considered equal if they differ less than BODY_FRAME_OFFSET_EPSILON meter on each axis.
-                *
+                * 
                 */
    public geometry_msgs.msg.Vector3 body_frame_offset;
    /**

@@ -9,6 +9,7 @@ public class MpcObservation : Halodi.CDR.DataType<MpcObservation>
 
 	public Halodi.CDR.TopicDataType<MpcObservation> Type => new MpcObservationPubSubType();
 	
+   public int api_version;
    public float time;
    public ocs2_ros2_msgs.msg.MpcState state;
    public ocs2_ros2_msgs.msg.MpcInput input;
@@ -17,6 +18,8 @@ public class MpcObservation : Halodi.CDR.DataType<MpcObservation>
 
    public void Set(MpcObservation other)
    {
+      api_version = other.api_version;
+
       time = other.time;
 
       ocs2_ros2_msgs.msg.MpcStatePubSubType.Copy(other.state, state);
@@ -34,6 +37,8 @@ public class MpcObservation : Halodi.CDR.DataType<MpcObservation>
       StringBuilder builder = new StringBuilder();
 
       builder.Append("MpcObservation {");
+      builder.Append("api_version=");
+      builder.Append(this.api_version);      builder.Append(", ");
       builder.Append("time=");
       builder.Append(this.time);      builder.Append(", ");
       builder.Append("state=");
