@@ -9,7 +9,7 @@ buildscript {
    dependencies {
       classpath "us.ihmc:ihmc-commons:0.30.4"
       classpath "us.ihmc:log-tools:0.6.1"
-      classpath "us.ihmc:ihmc-pub-sub-generator:0.15.0"
+      classpath "us.ihmc:ihmc-pub-sub-generator:0.16.2"
       classpath 'com.halodi:halodi-csharp-pub-sub-generator:0.1.2'
       classpath 'net.saliman:gradle-properties-plugin:1.5.1'
    }
@@ -17,16 +17,16 @@ buildscript {
 
 }
 
-apply plugin: 'java'
-apply plugin: 'maven'
+apply plugin: 'java-library'
 apply plugin: 'maven-publish'
 apply plugin: 'net.saliman.properties'
 
 
 group = "com.halodi"
-def inputVersion= project.hasProperty("artifactVersion") ? 
-                project.getProperty("artifactVersion"): System.getenv('ARTIFACT_VERSION')
-version = "$inputVersion$versionAppendix"
+//def inputVersion= project.hasProperty("artifactVersion") ? 
+//                project.getProperty("artifactVersion"): System.getenv('ARTIFACT_VERSION')
+//version = "$inputVersion$versionAppendix"
+version = "1.9.0-alpha10"
 def repoUrl = "https://artifacts.halodi.com/repository"
 
 def outputDirectory = project.file("$buildDir/java-generated")
@@ -51,9 +51,9 @@ sourceSets {
 
 dependencies
 {
-    compile group: "us.ihmc", name: "euclid-geometry", version: "0.16.2"
-    compile group: "us.ihmc", name: "ihmc-pub-sub", version: "0.15.0"
-    compile group: "us.ihmc", name: "ros2-common-interfaces", version: "0.19.4"
+    api group: "us.ihmc", name: "euclid-geometry", version: "0.16.2"
+    api group: "us.ihmc", name: "ihmc-pub-sub", version: "0.16.2"
+    api group: "us.ihmc", name: "ros2-common-interfaces", version: "0.19.4"
 }
 
 

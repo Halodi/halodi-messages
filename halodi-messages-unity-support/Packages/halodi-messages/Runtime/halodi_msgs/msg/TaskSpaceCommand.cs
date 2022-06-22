@@ -10,6 +10,11 @@ public class TaskSpaceCommand : Halodi.CDR.DataType<TaskSpaceCommand>
 	public Halodi.CDR.TopicDataType<TaskSpaceCommand> Type => new TaskSpaceCommandPubSubType();
 	
    /**
+                * Maximum difference in meters between two values of body_frame_offset before they are considered different offsets
+                *
+                */
+   public const double BODY_FRAME_OFFSET_EPSILON = 1e-4;
+   /**
                 * Body Frame: The reference frame to control.
                 *
                 * Valid options are all frames that are "Controllable"
@@ -33,8 +38,23 @@ public class TaskSpaceCommand : Halodi.CDR.DataType<TaskSpaceCommand>
                 */
    public bool express_in_z_up;
    /**
+                *
+                * Offset from the root of the body_frame to the controlled point.
                 * 
-                * Desired pose of the body frame, expressed in "expressed_in_frame"
+                * Defaults to zero.
+                *
+                * This offset allows more accurate position control of a point on the hand or tool object, if the orientation of the wrist is not stiffly controlled.
+                * 
+                * Note: This offset does not get interpolated in the trajectory manager. 
+                * If the frame_offset changes, the trajectory manager will reset the previous desired pose to the actual pose and interpolate from there. 
+                * It is recommended to keep frame_offset constant during a task to avoid jumps in setpoints.
+                * Two body frame offsets are considered equal if they differ less than BODY_FRAME_OFFSET_EPSILON meter on each axis.
+                *
+                */
+   public geometry_msgs.msg.Vector3 body_frame_offset;
+   /**
+                * 
+                * Desired pose of the body frame + frame_offset, expressed in "expressed_in_frame"
                 *
                 */
    public geometry_msgs.msg.Pose pose;
@@ -84,6 +104,19 @@ public class TaskSpaceCommand : Halodi.CDR.DataType<TaskSpaceCommand>
                 */
    public System.Collections.Generic.List<halodi_msgs.msg.FeedbackParameters3D> position_feedback_parameters;
    /**
+                *
+                *
+                * Motor damping scale applied to all joints in the chain to the root body of this body frame
+                * 
+                * This is scaled value between 0 and 1, where 0 is no motor level damping and 1 is the maximum motor level damping. This is tuned per motor and there is no physical value corresponding to the scale.
+                * 
+                * This is useful to stabalize the taskspace controller if not enough damping can be applied using the feedback parameters
+                *
+                * Optional. Defaults to 1
+                *
+                */
+   public System.Collections.Generic.List<double> motor_damping_scale;
+   /**
                 * Nullspace joint configuration 
                 *
                 */
@@ -97,6 +130,8 @@ public class TaskSpaceCommand : Halodi.CDR.DataType<TaskSpaceCommand>
       halodi_msgs.msg.ReferenceFrameNamePubSubType.Copy(other.expressed_in_frame, expressed_in_frame);
 
       express_in_z_up = other.express_in_z_up;
+
+      geometry_msgs.msg.Vector3PubSubType.Copy(other.body_frame_offset, body_frame_offset);
 
       geometry_msgs.msg.PosePubSubType.Copy(other.pose, pose);
 
@@ -172,6 +207,19 @@ public class TaskSpaceCommand : Halodi.CDR.DataType<TaskSpaceCommand>
       		}	}
       }
 
+      if(other.motor_damping_scale == null)
+      {
+      	motor_damping_scale = null;
+      }
+      else
+      {
+      	motor_damping_scale = new System.Collections.Generic.List<double>(other.motor_damping_scale.Count);
+      	for(int i4 = 0; i4 < other.motor_damping_scale.Count; i4++)
+      	{
+         		motor_damping_scale.Add(other.motor_damping_scale[i4]);
+      	}
+      }
+
       if(other.nullspace_command == null)
       {
       	nullspace_command = null;
@@ -179,16 +227,16 @@ public class TaskSpaceCommand : Halodi.CDR.DataType<TaskSpaceCommand>
       else
       {
       	nullspace_command = new System.Collections.Generic.List<halodi_msgs.msg.JointNullSpaceConfiguration>(other.nullspace_command.Count);
-      	for(int i4 = 0; i4 < other.nullspace_command.Count; i4++)
+      	for(int i5 = 0; i5 < other.nullspace_command.Count; i5++)
       	{
-      		if(other.nullspace_command[i4] == null)
+      		if(other.nullspace_command[i5] == null)
       		{
       			nullspace_command.Add(null);
       		}
       		else
       		{
       			halodi_msgs.msg.JointNullSpaceConfiguration newElement = halodi_msgs.msg.JointNullSpaceConfigurationPubSubType.Create();
-      	   		halodi_msgs.msg.JointNullSpaceConfigurationPubSubType.Copy(other.nullspace_command[i4], newElement);
+      	   		halodi_msgs.msg.JointNullSpaceConfigurationPubSubType.Copy(other.nullspace_command[i5], newElement);
       	   		nullspace_command.Add(newElement);
       		}	}
       }
@@ -207,6 +255,8 @@ public class TaskSpaceCommand : Halodi.CDR.DataType<TaskSpaceCommand>
       builder.Append(this.expressed_in_frame);      builder.Append(", ");
       builder.Append("express_in_z_up=");
       builder.Append(this.express_in_z_up);      builder.Append(", ");
+      builder.Append("body_frame_offset=");
+      builder.Append(this.body_frame_offset);      builder.Append(", ");
       builder.Append("pose=");
       builder.Append(this.pose);      builder.Append(", ");
       builder.Append("angular_velocity=");
@@ -223,6 +273,8 @@ public class TaskSpaceCommand : Halodi.CDR.DataType<TaskSpaceCommand>
       builder.Append(this.orientation_feedback_parameters);      builder.Append(", ");
       builder.Append("position_feedback_parameters=");
       builder.Append(this.position_feedback_parameters);      builder.Append(", ");
+      builder.Append("motor_damping_scale=");
+      builder.Append(this.motor_damping_scale);      builder.Append(", ");
       builder.Append("nullspace_command=");
       builder.Append(this.nullspace_command);
       builder.Append("}");

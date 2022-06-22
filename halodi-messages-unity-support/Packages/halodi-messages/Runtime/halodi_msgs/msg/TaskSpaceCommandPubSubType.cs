@@ -51,6 +51,8 @@ public class TaskSpaceCommandPubSubType : Halodi.CDR.TopicDataType<TaskSpaceComm
       current_alignment += 1 + Halodi.CDR.CDRCommon.alignment(current_alignment, 1);
 
 
+      current_alignment += geometry_msgs.msg.Vector3PubSubType.getCdrSerializedSize(data.body_frame_offset, current_alignment);
+
       current_alignment += geometry_msgs.msg.PosePubSubType.getCdrSerializedSize(data.pose, current_alignment);
 
       current_alignment += geometry_msgs.msg.Vector3PubSubType.getCdrSerializedSize(data.angular_velocity, current_alignment);
@@ -77,6 +79,10 @@ public class TaskSpaceCommandPubSubType : Halodi.CDR.TopicDataType<TaskSpaceComm
           current_alignment += halodi_msgs.msg.FeedbackParameters3DPubSubType.getCdrSerializedSize(data.position_feedback_parameters[i0], current_alignment);}
 
       current_alignment += 4 + Halodi.CDR.CDRCommon.alignment(current_alignment, 4);
+      current_alignment += (data.motor_damping_scale.Count * 8) + Halodi.CDR.CDRCommon.alignment(current_alignment, 8);
+
+
+      current_alignment += 4 + Halodi.CDR.CDRCommon.alignment(current_alignment, 4);
       for(int i0 = 0; i0 < data.nullspace_command.Count; ++i0)
       {
           current_alignment += halodi_msgs.msg.JointNullSpaceConfigurationPubSubType.getCdrSerializedSize(data.nullspace_command[i0], current_alignment);}
@@ -92,6 +98,8 @@ public class TaskSpaceCommandPubSubType : Halodi.CDR.TopicDataType<TaskSpaceComm
       halodi_msgs.msg.ReferenceFrameNamePubSubType.write(data.expressed_in_frame, cdr);
 
       cdr.write_type_7(data.express_in_z_up);
+
+      geometry_msgs.msg.Vector3PubSubType.write(data.body_frame_offset, cdr);
 
       geometry_msgs.msg.PosePubSubType.write(data.pose, cdr);
 
@@ -142,6 +150,20 @@ public class TaskSpaceCommandPubSubType : Halodi.CDR.TopicDataType<TaskSpaceComm
             {
       			halodi_msgs.msg.FeedbackParameters3DPubSubType.write(data.position_feedback_parameters[i0], cdr);	      }
         }
+      	if(data.motor_damping_scale == null)
+      	{
+      		cdr.write_type_2(0);
+      	}
+      	else
+      	{
+
+      	  int motor_damping_scale_length = data.motor_damping_scale.Count;
+            cdr.write_type_2(motor_damping_scale_length);
+            for (int i0 = 0; i0 < motor_damping_scale_length; i0++)
+            {
+      			cdr.write_type_6(data.motor_damping_scale[i0]);
+            }
+        }
       	if(data.nullspace_command == null)
       	{
       		cdr.write_type_2(0);
@@ -166,6 +188,9 @@ public class TaskSpaceCommandPubSubType : Halodi.CDR.TopicDataType<TaskSpaceComm
       halodi_msgs.msg.ReferenceFrameNamePubSubType.read(data.expressed_in_frame, cdr);
       	
       data.express_in_z_up=cdr.read_type_7();
+      	
+      data.body_frame_offset = geometry_msgs.msg.Vector3PubSubType.Create();
+      geometry_msgs.msg.Vector3PubSubType.read(data.body_frame_offset, cdr);
       	
       data.pose = geometry_msgs.msg.PosePubSubType.Create();
       geometry_msgs.msg.PosePubSubType.read(data.pose, cdr);
@@ -214,6 +239,17 @@ public class TaskSpaceCommandPubSubType : Halodi.CDR.TopicDataType<TaskSpaceComm
       	halodi_msgs.msg.FeedbackParameters3D new_position_feedback_parameters = halodi_msgs.msg.FeedbackParameters3DPubSubType.Create(); 
       	halodi_msgs.msg.FeedbackParameters3DPubSubType.read(new_position_feedback_parameters, cdr);
       	data.position_feedback_parameters.Add(new_position_feedback_parameters);	
+      	
+      }
+
+      	
+
+      int motor_damping_scale_length = cdr.read_type_2();
+      data.motor_damping_scale = new System.Collections.Generic.List<double>(motor_damping_scale_length);
+      for(int i = 0; i < motor_damping_scale_length; i++)
+      {
+      	data.motor_damping_scale.Add(cdr.read_type_6());
+      	
       	
       }
 
