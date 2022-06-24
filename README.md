@@ -13,6 +13,10 @@ This repository contains the halodi_msgs ROS2 package. Checkout this repository 
 
 For information to setup the halodi-controller in simulation, go to [halodi-controller](https://github.com/Halodi/halodi-controller).
 
+When building on anything that depends on halodi-messages, you will need to pass additional compile flags or else the compiler will fail.
+```
+colcon build --symlink-install --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON --no-warn-unused-cli -DCMAKE_BUILD_TYPE=Release -DOCS2_CXX_FLAGS=-march=native\;-mtune=native
+```
 
 ## Using with IHMC ROS2 Libraries
 
