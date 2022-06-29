@@ -47,6 +47,9 @@ public class MpcObservationPubSubType : Halodi.CDR.TopicDataType<MpcObservation>
       current_alignment += 4 + Halodi.CDR.CDRCommon.alignment(current_alignment, 4);
 
 
+      current_alignment += 4 + Halodi.CDR.CDRCommon.alignment(current_alignment, 4);
+
+
       current_alignment += ocs2_ros2_msgs.msg.MpcStatePubSubType.getCdrSerializedSize(data.state, current_alignment);
 
       current_alignment += ocs2_ros2_msgs.msg.MpcInputPubSubType.getCdrSerializedSize(data.input, current_alignment);
@@ -60,6 +63,8 @@ public class MpcObservationPubSubType : Halodi.CDR.TopicDataType<MpcObservation>
 
    public static void write(ocs2_ros2_msgs.msg.MpcObservation data, Halodi.CDR.CDRSerializer cdr)
    {
+      cdr.write_type_2(data.api_version);
+
       cdr.write_type_5(data.time);
 
       ocs2_ros2_msgs.msg.MpcStatePubSubType.write(data.state, cdr);
@@ -72,6 +77,8 @@ public class MpcObservationPubSubType : Halodi.CDR.TopicDataType<MpcObservation>
 
    public static void read(ocs2_ros2_msgs.msg.MpcObservation data, Halodi.CDR.CDRDeserializer cdr)
    {
+      data.api_version=cdr.read_type_2();
+      	
       data.time=cdr.read_type_5();
       	
       data.state = ocs2_ros2_msgs.msg.MpcStatePubSubType.Create();

@@ -12,6 +12,7 @@ public class MpcFlattenedController : Halodi.CDR.DataType<MpcFlattenedController
    public const byte CONTROLLER_UNKNOWN = (byte) 0;
    public const byte CONTROLLER_FEEDFORWARD = (byte) 1;
    public const byte CONTROLLER_LINEAR = (byte) 2;
+   public int api_version;
    public byte controller_type;
    public ocs2_ros2_msgs.msg.MpcObservation init_observation;
    public ocs2_ros2_msgs.msg.MpcTargetTrajectories plan_target_trajectories;
@@ -25,6 +26,8 @@ public class MpcFlattenedController : Halodi.CDR.DataType<MpcFlattenedController
 
    public void Set(MpcFlattenedController other)
    {
+      api_version = other.api_version;
+
       controller_type = other.controller_type;
 
       ocs2_ros2_msgs.msg.MpcObservationPubSubType.Copy(other.init_observation, init_observation);
@@ -120,6 +123,8 @@ public class MpcFlattenedController : Halodi.CDR.DataType<MpcFlattenedController
       StringBuilder builder = new StringBuilder();
 
       builder.Append("MpcFlattenedController {");
+      builder.Append("api_version=");
+      builder.Append(this.api_version);      builder.Append(", ");
       builder.Append("controller_type=");
       builder.Append(this.controller_type);      builder.Append(", ");
       builder.Append("init_observation=");

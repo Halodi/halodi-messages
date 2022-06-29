@@ -44,6 +44,9 @@ public class MpcFlattenedControllerPubSubType : Halodi.CDR.TopicDataType<MpcFlat
    {
       int initial_alignment = current_alignment;
 
+      current_alignment += 4 + Halodi.CDR.CDRCommon.alignment(current_alignment, 4);
+
+
       current_alignment += 1 + Halodi.CDR.CDRCommon.alignment(current_alignment, 1);
 
 
@@ -80,6 +83,8 @@ public class MpcFlattenedControllerPubSubType : Halodi.CDR.TopicDataType<MpcFlat
 
    public static void write(ocs2_ros2_msgs.msg.MpcFlattenedController data, Halodi.CDR.CDRSerializer cdr)
    {
+      cdr.write_type_2(data.api_version);
+
       cdr.write_type_9(data.controller_type);
 
       ocs2_ros2_msgs.msg.MpcObservationPubSubType.write(data.init_observation, cdr);
@@ -147,6 +152,8 @@ public class MpcFlattenedControllerPubSubType : Halodi.CDR.TopicDataType<MpcFlat
 
    public static void read(ocs2_ros2_msgs.msg.MpcFlattenedController data, Halodi.CDR.CDRDeserializer cdr)
    {
+      data.api_version=cdr.read_type_2();
+      	
       data.controller_type=cdr.read_type_9();
       	
       data.init_observation = ocs2_ros2_msgs.msg.MpcObservationPubSubType.Create();

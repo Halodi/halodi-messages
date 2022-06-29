@@ -45,6 +45,9 @@ public class MpcTargetTrajectoriesPubSubType : Halodi.CDR.TopicDataType<MpcTarge
       int initial_alignment = current_alignment;
 
       current_alignment += 4 + Halodi.CDR.CDRCommon.alignment(current_alignment, 4);
+
+
+      current_alignment += 4 + Halodi.CDR.CDRCommon.alignment(current_alignment, 4);
       current_alignment += (data.time_trajectory.Count * 4) + Halodi.CDR.CDRCommon.alignment(current_alignment, 4);
 
 
@@ -64,6 +67,8 @@ public class MpcTargetTrajectoriesPubSubType : Halodi.CDR.TopicDataType<MpcTarge
 
    public static void write(ocs2_ros2_msgs.msg.MpcTargetTrajectories data, Halodi.CDR.CDRSerializer cdr)
    {
+      cdr.write_type_2(data.api_version);
+
       	if(data.time_trajectory == null)
       	{
       		cdr.write_type_2(0);
@@ -108,6 +113,8 @@ public class MpcTargetTrajectoriesPubSubType : Halodi.CDR.TopicDataType<MpcTarge
 
    public static void read(ocs2_ros2_msgs.msg.MpcTargetTrajectories data, Halodi.CDR.CDRDeserializer cdr)
    {
+      data.api_version=cdr.read_type_2();
+      	
 
       int time_trajectory_length = cdr.read_type_2();
       data.time_trajectory = new System.Collections.Generic.List<float>(time_trajectory_length);

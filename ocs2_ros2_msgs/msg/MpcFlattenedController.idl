@@ -16,6 +16,9 @@ module ocs2_ros2_msgs {
 
     @TypeCode(type="ocs2_ros2_msgs::msg::dds_::MpcFlattenedController_")
     struct MpcFlattenedController {
+
+      long api_version;
+
       octet controller_type;
 
       ocs2_ros2_msgs::msg::MpcObservation init_observation;
