@@ -19,7 +19,7 @@ module halodi_msgs {
              *
              */
             const double BODY_FRAME_OFFSET_EPSILON = 1e-4;
-        }
+        };
         
 
         @TypeCode(type="halodi_msgs::msg::dds_::TaskSpaceCommand_")
