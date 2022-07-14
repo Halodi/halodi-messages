@@ -59,6 +59,12 @@ public class MotorStatus : Halodi.CDR.DataType<MotorStatus>
                 */
    public bool over_temperature;
    /**
+                * If true, an instability in the control of the motor (high energy, high frequency velocity signals) has been detected.
+                * The motor has been switched to failure mode to avoid damaging the robot and anything in its vicinity
+                *
+                */
+   public bool instability_detected;
+   /**
                 *
                 * Serial number of the motor.
                 *
@@ -122,6 +128,8 @@ public class MotorStatus : Halodi.CDR.DataType<MotorStatus>
 
       over_temperature = other.over_temperature;
 
+      instability_detected = other.instability_detected;
+
       motor_serial_number = other.motor_serial_number;
 
       driver_serial_number = other.driver_serial_number;
@@ -153,6 +161,8 @@ public class MotorStatus : Halodi.CDR.DataType<MotorStatus>
       builder.Append(this.sto_enabled);      builder.Append(", ");
       builder.Append("over_temperature=");
       builder.Append(this.over_temperature);      builder.Append(", ");
+      builder.Append("instability_detected=");
+      builder.Append(this.instability_detected);      builder.Append(", ");
       builder.Append("motor_serial_number=");
       builder.Append(this.motor_serial_number);      builder.Append(", ");
       builder.Append("driver_serial_number=");

@@ -71,7 +71,14 @@ module halodi_msgs {
              * If statusLevel == ERROR: The motor exceeds the error temperature and has been shutdown.
              */
             boolean over_temperature;
-                        
+            
+            /**
+             * If true, an instability in the control of the motor (high energy, high frequency velocity signals) has been detected.
+             * The motor has been switched to failure mode to avoid damaging the robot and anything in its vicinity
+             *
+             */ 
+            boolean instability_detected;            
+            
             /**
              *
              * Serial number of the motor.

@@ -61,6 +61,9 @@ public class MotorStatusPubSubType : Halodi.CDR.TopicDataType<MotorStatus>
       current_alignment += 1 + Halodi.CDR.CDRCommon.alignment(current_alignment, 1);
 
 
+      current_alignment += 1 + Halodi.CDR.CDRCommon.alignment(current_alignment, 1);
+
+
       current_alignment += 4 + Halodi.CDR.CDRCommon.alignment(current_alignment, 4);
 
 
@@ -106,6 +109,8 @@ public class MotorStatusPubSubType : Halodi.CDR.TopicDataType<MotorStatus>
 
       cdr.write_type_7(data.over_temperature);
 
+      cdr.write_type_7(data.instability_detected);
+
       cdr.write_type_4(data.motor_serial_number);
 
       cdr.write_type_4(data.driver_serial_number);
@@ -141,6 +146,8 @@ public class MotorStatusPubSubType : Halodi.CDR.TopicDataType<MotorStatus>
       data.sto_enabled=cdr.read_type_7();
       	
       data.over_temperature=cdr.read_type_7();
+      	
+      data.instability_detected=cdr.read_type_7();
       	
       data.motor_serial_number=cdr.read_type_4();
       	
