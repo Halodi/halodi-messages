@@ -27,6 +27,14 @@ public class RobotStatus : Halodi.CDR.DataType<RobotStatus>
                 */
    public byte robot_status_level;
    /**
+                 * State of the control input module of the controller
+                 *
+                 * If this is not ACCEPTING_COMMANDS, commands from the API will get ignored. 
+                 * 
+                 * Note: This is the same as control_input_state in whole_body_state and is here for convenience
+                 */
+   public halodi_msgs.msg.ControlInputState control_input_state;
+   /**
                 *
                 * Status of the battery
                 *
@@ -99,6 +107,8 @@ public class RobotStatus : Halodi.CDR.DataType<RobotStatus>
 
       robot_status_level = other.robot_status_level;
 
+      halodi_msgs.msg.ControlInputStatePubSubType.Copy(other.control_input_state, control_input_state);
+
       halodi_msgs.msg.BatteryStatusPubSubType.Copy(other.battery_status, battery_status);
 
       backpack_estop_enabled = other.backpack_estop_enabled;
@@ -170,6 +180,8 @@ public class RobotStatus : Halodi.CDR.DataType<RobotStatus>
       builder.Append(this.header);      builder.Append(", ");
       builder.Append("robot_status_level=");
       builder.Append(this.robot_status_level);      builder.Append(", ");
+      builder.Append("control_input_state=");
+      builder.Append(this.control_input_state);      builder.Append(", ");
       builder.Append("battery_status=");
       builder.Append(this.battery_status);      builder.Append(", ");
       builder.Append("backpack_estop_enabled=");

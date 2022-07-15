@@ -49,6 +49,8 @@ public class RobotStatusPubSubType : Halodi.CDR.TopicDataType<RobotStatus>
       current_alignment += 1 + Halodi.CDR.CDRCommon.alignment(current_alignment, 1);
 
 
+      current_alignment += halodi_msgs.msg.ControlInputStatePubSubType.getCdrSerializedSize(data.control_input_state, current_alignment);
+
       current_alignment += halodi_msgs.msg.BatteryStatusPubSubType.getCdrSerializedSize(data.battery_status, current_alignment);
 
       current_alignment += 1 + Halodi.CDR.CDRCommon.alignment(current_alignment, 1);
@@ -91,6 +93,8 @@ public class RobotStatusPubSubType : Halodi.CDR.TopicDataType<RobotStatus>
       std_msgs.msg.HeaderPubSubType.write(data.header, cdr);
 
       cdr.write_type_9(data.robot_status_level);
+
+      halodi_msgs.msg.ControlInputStatePubSubType.write(data.control_input_state, cdr);
 
       halodi_msgs.msg.BatteryStatusPubSubType.write(data.battery_status, cdr);
 
@@ -142,6 +146,9 @@ public class RobotStatusPubSubType : Halodi.CDR.TopicDataType<RobotStatus>
       std_msgs.msg.HeaderPubSubType.read(data.header, cdr);
       	
       data.robot_status_level=cdr.read_type_9();
+      	
+      data.control_input_state = halodi_msgs.msg.ControlInputStatePubSubType.Create();
+      halodi_msgs.msg.ControlInputStatePubSubType.read(data.control_input_state, cdr);
       	
       data.battery_status = halodi_msgs.msg.BatteryStatusPubSubType.Create();
       halodi_msgs.msg.BatteryStatusPubSubType.read(data.battery_status, cdr);

@@ -2,6 +2,8 @@
 #include <halodi_msgs/msg/JointStatus.idl>
 #include <halodi_msgs/msg/MotorStatus.idl>
 #include <halodi_msgs/msg/BatteryStatus.idl>
+#include <halodi_msgs/msg/ControlInputState.idl>
+
 
 module halodi_msgs {
     module msg {
@@ -29,6 +31,16 @@ module halodi_msgs {
              *
              */
             octet robot_status_level;
+            
+            
+            /**
+              * State of the control input module of the controller
+              *
+              * If this is not ACCEPTING_COMMANDS, commands from the API will get ignored. 
+              * 
+              * Note: This is the same as control_input_state in whole_body_state and is here for convenience
+              */
+            halodi_msgs:msg:ControlInputState control_input_state;
             
             
             /**

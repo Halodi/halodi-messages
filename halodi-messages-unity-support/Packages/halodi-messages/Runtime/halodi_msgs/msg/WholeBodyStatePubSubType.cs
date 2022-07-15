@@ -49,8 +49,7 @@ public class WholeBodyStatePubSubType : Halodi.CDR.TopicDataType<WholeBodyState>
       current_alignment += 4 + Halodi.CDR.CDRCommon.alignment(current_alignment, 4);
 
 
-      current_alignment += 1 + Halodi.CDR.CDRCommon.alignment(current_alignment, 1);
-
+      current_alignment += halodi_msgs.msg.ControlInputStatePubSubType.getCdrSerializedSize(data.control_input_state, current_alignment);
 
       current_alignment += 4 + Halodi.CDR.CDRCommon.alignment(current_alignment, 4) + data.controller_state.Length + 1;
 
@@ -92,7 +91,7 @@ public class WholeBodyStatePubSubType : Halodi.CDR.TopicDataType<WholeBodyState>
 
       cdr.write_type_2(data.last_received_sequence_id);
 
-      cdr.write_type_7(data.accepts_commands);
+      halodi_msgs.msg.ControlInputStatePubSubType.write(data.control_input_state, cdr);
 
       cdr.write_type_d(data.controller_state);
 
@@ -156,7 +155,8 @@ public class WholeBodyStatePubSubType : Halodi.CDR.TopicDataType<WholeBodyState>
       	
       data.last_received_sequence_id=cdr.read_type_2();
       	
-      data.accepts_commands=cdr.read_type_7();
+      data.control_input_state = halodi_msgs.msg.ControlInputStatePubSubType.Create();
+      halodi_msgs.msg.ControlInputStatePubSubType.read(data.control_input_state, cdr);
       	
       data.controller_state = cdr.read_type_d();	
       data.current_balance_mode = halodi_msgs.msg.BalanceModePubSubType.Create();

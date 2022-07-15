@@ -5,6 +5,7 @@
 #include <halodi_msgs/msg/JointMeasurement.idl>
 #include <halodi_msgs/msg/BalanceMode.idl>
 #include <halodi_msgs/msg/TaskSpaceFeedback.idl>
+#include <halodi_msgs/msg/ControlInputState.idl>
 
 module halodi_msgs {
     module msg {
@@ -29,12 +30,12 @@ module halodi_msgs {
             long last_received_sequence_id;
             
             /**
-              * True if the controller accepts commands from the API. 
+              * State of the control input module of the controller
               *
-              * If set to false, commands from the API will get ignored. 
+              * If this is not ACCEPTING_COMMANDS, commands from the API will get ignored. 
               * 
               */
-            boolean accepts_commands;
+            halodi_msgs:msg:ControlInputState control_input_state;
             
             
             /**
