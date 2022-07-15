@@ -30,19 +30,24 @@ public class ControlInputState : Halodi.CDR.DataType<ControlInputState>
                 */
    public const int FROZEN = 2;
    /**
+                * The robot is clearing motor errors and moving to default pose.
+                *
+                */
+   public const int MOVING_TO_DEFAULT_POSE = 3;
+   /**
                 * The robot is in default pose
                 * 
                 * Use the StopCommand RESUME_CONTROL to accept commands again
                 * Use the StopCommand SHUTDOWN_ROBOT to turn off the motors and controller
                 */
-   public const int DEFAULT_POSE = 2;
+   public const int DEFAULT_POSE = 4;
    /**
                 * The robot has been turned off by an unrecoverable fault.
                 * 
                 * Note: This could be the user pressing the emergency stop.
                 *
                 */
-   public const int FAULTED = 3;
+   public const int FAULTED = 5;
    public int state;
 
 
