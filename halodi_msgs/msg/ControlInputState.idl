@@ -25,12 +25,18 @@ module halodi_msgs {
             const long FROZEN = 2;
             
             /**
+             * The robot is clearing motor errors and moving to default pose.
+             *
+             */
+            const long MOVING_TO_DEFAULT_POSE = 3;            
+            
+            /**
              * The robot is in default pose
              * 
              * Use the StopCommand RESUME_CONTROL to accept commands again
              * Use the StopCommand SHUTDOWN_ROBOT to turn off the motors and controller
              */
-            const long DEFAULT_POSE = 2;
+            const long DEFAULT_POSE = 4;
             
             /**
              * The robot has been turned off by an unrecoverable fault.
@@ -38,7 +44,7 @@ module halodi_msgs {
              * Note: This could be the user pressing the emergency stop.
              *
              */ 
-            const long FAULTED = 3;
+            const long FAULTED = 5;
         };
         
         /**
