@@ -1,0 +1,53 @@
+
+
+module halodi_msgs {
+    module msg {
+        
+        module StopCommand_Constants
+        {
+            /**
+             * Freeze the robot.
+             *
+             * Valid from all control input states
+             */
+            const long FREEZE_ROBOT = 0;
+            
+            /**
+             * Clear the motor faults and go to default pose.
+             *
+             * Valid from all control input states
+             * 
+             */
+             
+            const long CLEAR_MOTOR_FAULTS_AND_GO_TO_DEFAULT_POSE = 1;
+            
+            
+            /**
+             * Resume listing for control messages
+             *
+             * Valid from the input state DEFAULT_POSE 
+             */
+            const long RESUME_CONTROL = 2;
+            
+            /**
+             * Turn off all motors
+             * 
+             * Valid from the input state FREEZE and DEFAULT_POSE
+             *
+             */ 
+            const long SHUTDOWN_ROBOT = 3;
+        };
+        
+        /**
+          * Command to stop the robot
+          *
+          * Allows trigging different stop modes and clearing the stop status
+          *
+          */
+        @TypeCode(type="halodi_msgs::msg::dds_::StopCommand_")
+        struct StopCommand
+        {   
+            long stop_command;
+        };
+    };
+};

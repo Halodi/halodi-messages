@@ -24,12 +24,12 @@ public class WholeBodyState : Halodi.CDR.DataType<WholeBodyState>
                  */
    public int last_received_sequence_id;
    /**
-                 * True if the controller accepts commands from the API. 
+                 * State of the control input module of the controller
                  *
-                 * If set to false, commands from the API will get ignored. 
+                 * If this is not ACCEPTING_COMMANDS, commands from the API will get ignored. 
                  * 
                  */
-   public bool accepts_commands;
+   public halodi_msgs.msg.ControlInputState control_input_state;
    /**
                  * The current state of the balance module
                  */
@@ -95,7 +95,7 @@ public class WholeBodyState : Halodi.CDR.DataType<WholeBodyState>
 
       last_received_sequence_id = other.last_received_sequence_id;
 
-      accepts_commands = other.accepts_commands;
+      halodi_msgs.msg.ControlInputStatePubSubType.Copy(other.control_input_state, control_input_state);
 
       controller_state = other.controller_state;
 
@@ -187,8 +187,8 @@ public class WholeBodyState : Halodi.CDR.DataType<WholeBodyState>
       builder.Append(this.header);      builder.Append(", ");
       builder.Append("last_received_sequence_id=");
       builder.Append(this.last_received_sequence_id);      builder.Append(", ");
-      builder.Append("accepts_commands=");
-      builder.Append(this.accepts_commands);      builder.Append(", ");
+      builder.Append("control_input_state=");
+      builder.Append(this.control_input_state);      builder.Append(", ");
       builder.Append("controller_state=");
       builder.Append(this.controller_state);      builder.Append(", ");
       builder.Append("current_balance_mode=");

@@ -70,20 +70,11 @@ For each hand, joint state
 
 Lifecycle messages can stop the controller and clear certain error states
 
-#### /eve/clear_error_state
-- Data type: [std_msgs/msg/Bool.msg](https://github.com/ros2/common_interfaces/blob/master/std_msgs/msg/Bool.msg)
+#### /eve/stop_command
+- Data type: [halodi_msgs/msg/StopCommand.idl](halodi_msgs/msg/StopCommand.idl)
 - Reliability QOS: Reliable
 
-
-When the controller is not accepting commands (accepts_commands in /eve/whole_body_state is false) due to an error, for example the e-stop being pressed, this could reset the error and allow user control.
-
-To clear the error, press the e-stop to freeze the robot in position (if not already pressed). Then release the e-stop. The robot will go to its default pose. Once the robot is in default pose, the user can request to clear the error state by sending "data: true" to this topic. If the error is resolved, the robot acccepts this command and allows user control again.
-
-#### /eve/request_controller_stop
-- Data type: [std_msgs/msg/Bool.msg](https://github.com/ros2/common_interfaces/blob/master/std_msgs/msg/Bool.msg)
-- Reliability QOS: Reliable
-
-To stop the controller, first press the e-stop to freeze the robot in its current position. In this state, the robot accepts "data: true" on this topic and stops the controller. Warning: The robot will immediatly collapse.
+Using the stop command, the user can instruct the robot to freeze, go to default pose and clear motor errors, resume normal operation and shutdown the robot.
 
 
 ## Control messages
