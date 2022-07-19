@@ -35,7 +35,7 @@ module halodi_msgs {
               * If this is not ACCEPTING_COMMANDS, commands from the API will get ignored. 
               * 
               */
-            halodi_msgs:msg:ControlInputState control_input_state;
+            halodi_msgs::msg::ControlInputState control_input_state;
             
             
             /**
