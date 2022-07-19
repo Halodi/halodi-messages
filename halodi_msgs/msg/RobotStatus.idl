@@ -40,7 +40,7 @@ module halodi_msgs {
               * 
               * Note: This is the same as control_input_state in whole_body_state and is here for convenience
               */
-            halodi_msgs:msg:ControlInputState control_input_state;
+            halodi_msgs::msg::ControlInputState control_input_state;
             
             
             /**
