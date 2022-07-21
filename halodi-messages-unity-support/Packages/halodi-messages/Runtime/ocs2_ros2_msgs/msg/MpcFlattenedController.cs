@@ -19,6 +19,7 @@ public class MpcFlattenedController : Halodi.CDR.DataType<MpcFlattenedController
    public System.Collections.Generic.List<ocs2_ros2_msgs.msg.MpcState> state_trajectory;
    public System.Collections.Generic.List<ocs2_ros2_msgs.msg.MpcInput> input_trajectory;
    public System.Collections.Generic.List<float> time_trajectory;
+   public System.Collections.Generic.List<byte> post_event_indices;
    public ocs2_ros2_msgs.msg.ModeSchedule mode_schedule;
    public System.Collections.Generic.List<ocs2_ros2_msgs.msg.ControllerData> data;
    public ocs2_ros2_msgs.msg.MpcPerformanceIndices performance_indices;
@@ -89,6 +90,19 @@ public class MpcFlattenedController : Halodi.CDR.DataType<MpcFlattenedController
          		time_trajectory.Add(other.time_trajectory[i3]);
       	}
       }
+
+      if(other.post_event_indices == null)
+      {
+      	post_event_indices = null;
+      }
+      else
+      {
+      	post_event_indices = new System.Collections.Generic.List<byte>(other.post_event_indices.Count);
+      	for(int i4 = 0; i4 < other.post_event_indices.Count; i4++)
+      	{
+         		post_event_indices.Add(other.post_event_indices[i4]);
+      	}
+      }
       ocs2_ros2_msgs.msg.ModeSchedulePubSubType.Copy(other.mode_schedule, mode_schedule);
 
 
@@ -99,16 +113,16 @@ public class MpcFlattenedController : Halodi.CDR.DataType<MpcFlattenedController
       else
       {
       	data = new System.Collections.Generic.List<ocs2_ros2_msgs.msg.ControllerData>(other.data.Count);
-      	for(int i4 = 0; i4 < other.data.Count; i4++)
+      	for(int i5 = 0; i5 < other.data.Count; i5++)
       	{
-      		if(other.data[i4] == null)
+      		if(other.data[i5] == null)
       		{
       			data.Add(null);
       		}
       		else
       		{
       			ocs2_ros2_msgs.msg.ControllerData newElement = ocs2_ros2_msgs.msg.ControllerDataPubSubType.Create();
-      	   		ocs2_ros2_msgs.msg.ControllerDataPubSubType.Copy(other.data[i4], newElement);
+      	   		ocs2_ros2_msgs.msg.ControllerDataPubSubType.Copy(other.data[i5], newElement);
       	   		data.Add(newElement);
       		}	}
       }
@@ -137,6 +151,8 @@ public class MpcFlattenedController : Halodi.CDR.DataType<MpcFlattenedController
       builder.Append(this.input_trajectory);      builder.Append(", ");
       builder.Append("time_trajectory=");
       builder.Append(this.time_trajectory);      builder.Append(", ");
+      builder.Append("post_event_indices=");
+      builder.Append(this.post_event_indices);      builder.Append(", ");
       builder.Append("mode_schedule=");
       builder.Append(this.mode_schedule);      builder.Append(", ");
       builder.Append("data=");

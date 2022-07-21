@@ -11,14 +11,11 @@ public class MpcPerformanceIndices : Halodi.CDR.DataType<MpcPerformanceIndices>
 	
    public float init_time;
    public float merit;
-   public float total_cost;
-   public float state_eq_constraint_ise;
-   public float state_eq_constraint_penalty;
-   public float state_eq_finalconstraint_sse;
-   public float state_eq_finalconstraint_penalty;
-   public float state_input_eq_constraint_ise;
-   public float inequality_constraint_ise;
-   public float inequality_constraint_penalty;
+   public float cost;
+   public float dynamics_violation_sse;
+   public float equality_constraints_sse;
+   public float equality_lagrangian;
+   public float inequality_lagrangian;
 
 
    public void Set(MpcPerformanceIndices other)
@@ -27,21 +24,15 @@ public class MpcPerformanceIndices : Halodi.CDR.DataType<MpcPerformanceIndices>
 
       merit = other.merit;
 
-      total_cost = other.total_cost;
+      cost = other.cost;
 
-      state_eq_constraint_ise = other.state_eq_constraint_ise;
+      dynamics_violation_sse = other.dynamics_violation_sse;
 
-      state_eq_constraint_penalty = other.state_eq_constraint_penalty;
+      equality_constraints_sse = other.equality_constraints_sse;
 
-      state_eq_finalconstraint_sse = other.state_eq_finalconstraint_sse;
+      equality_lagrangian = other.equality_lagrangian;
 
-      state_eq_finalconstraint_penalty = other.state_eq_finalconstraint_penalty;
-
-      state_input_eq_constraint_ise = other.state_input_eq_constraint_ise;
-
-      inequality_constraint_ise = other.inequality_constraint_ise;
-
-      inequality_constraint_penalty = other.inequality_constraint_penalty;
+      inequality_lagrangian = other.inequality_lagrangian;
 
    }
 
@@ -56,22 +47,16 @@ public class MpcPerformanceIndices : Halodi.CDR.DataType<MpcPerformanceIndices>
       builder.Append(this.init_time);      builder.Append(", ");
       builder.Append("merit=");
       builder.Append(this.merit);      builder.Append(", ");
-      builder.Append("total_cost=");
-      builder.Append(this.total_cost);      builder.Append(", ");
-      builder.Append("state_eq_constraint_ise=");
-      builder.Append(this.state_eq_constraint_ise);      builder.Append(", ");
-      builder.Append("state_eq_constraint_penalty=");
-      builder.Append(this.state_eq_constraint_penalty);      builder.Append(", ");
-      builder.Append("state_eq_finalconstraint_sse=");
-      builder.Append(this.state_eq_finalconstraint_sse);      builder.Append(", ");
-      builder.Append("state_eq_finalconstraint_penalty=");
-      builder.Append(this.state_eq_finalconstraint_penalty);      builder.Append(", ");
-      builder.Append("state_input_eq_constraint_ise=");
-      builder.Append(this.state_input_eq_constraint_ise);      builder.Append(", ");
-      builder.Append("inequality_constraint_ise=");
-      builder.Append(this.inequality_constraint_ise);      builder.Append(", ");
-      builder.Append("inequality_constraint_penalty=");
-      builder.Append(this.inequality_constraint_penalty);
+      builder.Append("cost=");
+      builder.Append(this.cost);      builder.Append(", ");
+      builder.Append("dynamics_violation_sse=");
+      builder.Append(this.dynamics_violation_sse);      builder.Append(", ");
+      builder.Append("equality_constraints_sse=");
+      builder.Append(this.equality_constraints_sse);      builder.Append(", ");
+      builder.Append("equality_lagrangian=");
+      builder.Append(this.equality_lagrangian);      builder.Append(", ");
+      builder.Append("inequality_lagrangian=");
+      builder.Append(this.inequality_lagrangian);
       builder.Append("}");
       return builder.ToString();
    }
