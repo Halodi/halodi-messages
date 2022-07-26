@@ -26,7 +26,7 @@ group = "com.halodi"
 //def inputVersion= project.hasProperty("artifactVersion") ? 
 //                project.getProperty("artifactVersion"): System.getenv('ARTIFACT_VERSION')
 //version = "$inputVersion$versionAppendix"
-version = "2.0.1"
+version = "2.1.0"
 def repoUrl = "https://artifacts.halodi.com/repository"
 
 def outputDirectory = project.file("$buildDir/java-generated")
