@@ -5,14 +5,11 @@ module ocs2_ros2_msgs {
     struct MpcPerformanceIndices {
       float init_time;
       float merit;
-      float total_cost;
-      float state_eq_constraint_ise;
-      float state_eq_constraint_penalty;
-      float state_eq_finalconstraint_sse;
-      float state_eq_finalconstraint_penalty;
-      float state_input_eq_constraint_ise;
-      float inequality_constraint_ise;
-      float inequality_constraint_penalty;
+      float cost;
+      float dynamics_violation_sse;
+      float equality_constraints_sse;
+      float equality_lagrangian;
+      float inequality_lagrangian;
     };
   };
 };

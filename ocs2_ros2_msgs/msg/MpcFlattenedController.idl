@@ -31,6 +31,8 @@ module ocs2_ros2_msgs {
 
       sequence<float> time_trajectory;
 
+      sequence<octet> post_event_indices;
+
       ocs2_ros2_msgs::msg::ModeSchedule mode_schedule;
 
       sequence<ocs2_ros2_msgs::msg::ControllerData> data;
