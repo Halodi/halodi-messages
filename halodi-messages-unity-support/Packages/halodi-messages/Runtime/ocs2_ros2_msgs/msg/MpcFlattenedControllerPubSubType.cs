@@ -68,6 +68,10 @@ public class MpcFlattenedControllerPubSubType : Halodi.CDR.TopicDataType<MpcFlat
       current_alignment += (data.time_trajectory.Count * 4) + Halodi.CDR.CDRCommon.alignment(current_alignment, 4);
 
 
+      current_alignment += 4 + Halodi.CDR.CDRCommon.alignment(current_alignment, 4);
+      current_alignment += (data.post_event_indices.Count * 1) + Halodi.CDR.CDRCommon.alignment(current_alignment, 1);
+
+
       current_alignment += ocs2_ros2_msgs.msg.ModeSchedulePubSubType.getCdrSerializedSize(data.mode_schedule, current_alignment);
 
       current_alignment += 4 + Halodi.CDR.CDRCommon.alignment(current_alignment, 4);
@@ -131,6 +135,20 @@ public class MpcFlattenedControllerPubSubType : Halodi.CDR.TopicDataType<MpcFlat
       			cdr.write_type_5(data.time_trajectory[i0]);
             }
         }
+      	if(data.post_event_indices == null)
+      	{
+      		cdr.write_type_2(0);
+      	}
+      	else
+      	{
+
+      	  int post_event_indices_length = data.post_event_indices.Count;
+            cdr.write_type_2(post_event_indices_length);
+            for (int i0 = 0; i0 < post_event_indices_length; i0++)
+            {
+      			cdr.write_type_9(data.post_event_indices[i0]);
+            }
+        }
       ocs2_ros2_msgs.msg.ModeSchedulePubSubType.write(data.mode_schedule, cdr);
 
       	if(data.data == null)
@@ -192,6 +210,17 @@ public class MpcFlattenedControllerPubSubType : Halodi.CDR.TopicDataType<MpcFlat
       for(int i = 0; i < time_trajectory_length; i++)
       {
       	data.time_trajectory.Add(cdr.read_type_5());
+      	
+      	
+      }
+
+      	
+
+      int post_event_indices_length = cdr.read_type_2();
+      data.post_event_indices = new System.Collections.Generic.List<byte>(post_event_indices_length);
+      for(int i = 0; i < post_event_indices_length; i++)
+      {
+      	data.post_event_indices.Add(cdr.read_type_9());
       	
       	
       }

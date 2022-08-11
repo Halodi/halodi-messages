@@ -11,17 +11,21 @@ endif()
 
 find_package(ament_cmake REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
+find_package(std_msgs REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-	"msg/ControllerData.idl"
-	"msg/ModeSchedule.idl"
-  "msg/MpcFlattenedController.idl"
-  "msg/MpcInput.idl"
-  "msg/MpcObservation.idl"
   "msg/MpcState.idl"
-  "msg/MpcTargetTrajectories.idl"
+  "msg/MpcInput.idl"
+	"msg/ModeSchedule.idl"
+  "msg/MpcObservation.idl"
   "msg/MpcPerformanceIndices.idl"
+  "msg/MpcTargetTrajectories.idl"
+	"msg/ControllerData.idl"
+  "msg/MpcFlattenedController.idl"
   "srv/Reset.srv"
+
+  DEPENDENCIES std_msgs
+
 )
 
 ament_package()

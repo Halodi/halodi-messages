@@ -65,15 +65,6 @@ public class MpcPerformanceIndicesPubSubType : Halodi.CDR.TopicDataType<MpcPerfo
       current_alignment += 4 + Halodi.CDR.CDRCommon.alignment(current_alignment, 4);
 
 
-      current_alignment += 4 + Halodi.CDR.CDRCommon.alignment(current_alignment, 4);
-
-
-      current_alignment += 4 + Halodi.CDR.CDRCommon.alignment(current_alignment, 4);
-
-
-      current_alignment += 4 + Halodi.CDR.CDRCommon.alignment(current_alignment, 4);
-
-
 
       return current_alignment - initial_alignment;
    }
@@ -84,21 +75,15 @@ public class MpcPerformanceIndicesPubSubType : Halodi.CDR.TopicDataType<MpcPerfo
 
       cdr.write_type_5(data.merit);
 
-      cdr.write_type_5(data.total_cost);
+      cdr.write_type_5(data.cost);
 
-      cdr.write_type_5(data.state_eq_constraint_ise);
+      cdr.write_type_5(data.dynamics_violation_sse);
 
-      cdr.write_type_5(data.state_eq_constraint_penalty);
+      cdr.write_type_5(data.equality_constraints_sse);
 
-      cdr.write_type_5(data.state_eq_finalconstraint_sse);
+      cdr.write_type_5(data.equality_lagrangian);
 
-      cdr.write_type_5(data.state_eq_finalconstraint_penalty);
-
-      cdr.write_type_5(data.state_input_eq_constraint_ise);
-
-      cdr.write_type_5(data.inequality_constraint_ise);
-
-      cdr.write_type_5(data.inequality_constraint_penalty);
+      cdr.write_type_5(data.inequality_lagrangian);
 
    }
 
@@ -108,21 +93,15 @@ public class MpcPerformanceIndicesPubSubType : Halodi.CDR.TopicDataType<MpcPerfo
       	
       data.merit=cdr.read_type_5();
       	
-      data.total_cost=cdr.read_type_5();
+      data.cost=cdr.read_type_5();
       	
-      data.state_eq_constraint_ise=cdr.read_type_5();
+      data.dynamics_violation_sse=cdr.read_type_5();
       	
-      data.state_eq_constraint_penalty=cdr.read_type_5();
+      data.equality_constraints_sse=cdr.read_type_5();
       	
-      data.state_eq_finalconstraint_sse=cdr.read_type_5();
+      data.equality_lagrangian=cdr.read_type_5();
       	
-      data.state_eq_finalconstraint_penalty=cdr.read_type_5();
-      	
-      data.state_input_eq_constraint_ise=cdr.read_type_5();
-      	
-      data.inequality_constraint_ise=cdr.read_type_5();
-      	
-      data.inequality_constraint_penalty=cdr.read_type_5();
+      data.inequality_lagrangian=cdr.read_type_5();
       	
 
    }
