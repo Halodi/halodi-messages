@@ -25,6 +25,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
     "msg/JointSpaceCommand.idl"
     "msg/WholeBodyControllerCommand.idl"
     "msg/FeedbackParameters3D.idl"
+    "msg/AutonomyMode.idl"
     "msg/BalanceMode.idl"
     "msg/ImuMeasurement.idl"
     "msg/ImuName.idl"
