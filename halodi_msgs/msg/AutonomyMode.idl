@@ -1,0 +1,17 @@
+module halodi_msgs {
+    module msg {
+        module AutonomyMode_Constants
+        {
+            const long IDLE = 0;
+            const long USER = 1;
+            const long AUTONOMOUS = 2;
+        };
+
+        @TypeCode(type="halodi_msgs::msg::dds_::AutonomyMode_")
+        struct AutonomyMode
+        {
+            long mode;
+        };
+    
+    };
+};
