@@ -15,26 +15,6 @@ public class HeaderPubSubType : Halodi.CDR.TopicDataType<Header>
    public override string Name => "std_msgs::msg::dds_::Header_";
 
 
-   
-   public override void serialize(std_msgs.msg.Header data, MemoryStream stream)
-   {
-   	  using(BinaryWriter writer = new BinaryWriter(stream))
-   	  {
-   	  	  Halodi.CDR.CDRSerializer cdr = new Halodi.CDR.CDRSerializer(writer);
-   	  	  write(data, cdr); 
-   	  }
-   }
-
-   
-   public override void deserialize(MemoryStream stream, std_msgs.msg.Header data)
-   {
-   	   using(BinaryReader reader = new BinaryReader(stream))
-   	   {
-   	   		Halodi.CDR.CDRDeserializer cdr = new Halodi.CDR.CDRDeserializer(reader);
-   	   		read(data, cdr); 
-   	   }
-   }
-
    public static int getCdrSerializedSize(std_msgs.msg.Header data)
    {
       return getCdrSerializedSize(data, 0);
@@ -70,9 +50,29 @@ public class HeaderPubSubType : Halodi.CDR.TopicDataType<Header>
    }
 
 
+	public override void Serialize(std_msgs.msg.Header data, Halodi.CDR.CDRSerializer cdr)
+   	{
+   		write(data, cdr);	
+   	}
+
+	public override void Deserialize(std_msgs.msg.Header data, Halodi.CDR.CDRDeserializer cdr)
+   	{
+   		read(data, cdr);	
+   	}
+   	
+   	public override int GetSize(std_msgs.msg.Header data)
+   	{
+   		return getCdrSerializedSize(data);
+   	}
+
     public static void Copy(std_msgs.msg.Header src, std_msgs.msg.Header target)
     {
         target.Set(src);
+    }
+    
+    public override void CopyTo(std_msgs.msg.Header src, std_msgs.msg.Header target)
+    {
+    	Copy(src, target);
     }
 
 

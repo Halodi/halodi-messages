@@ -15,26 +15,6 @@ public class GoalIDPubSubType : Halodi.CDR.TopicDataType<GoalID>
    public override string Name => "actionlib_msgs::msg::dds_::GoalID_";
 
 
-   
-   public override void serialize(actionlib_msgs.msg.GoalID data, MemoryStream stream)
-   {
-   	  using(BinaryWriter writer = new BinaryWriter(stream))
-   	  {
-   	  	  Halodi.CDR.CDRSerializer cdr = new Halodi.CDR.CDRSerializer(writer);
-   	  	  write(data, cdr); 
-   	  }
-   }
-
-   
-   public override void deserialize(MemoryStream stream, actionlib_msgs.msg.GoalID data)
-   {
-   	   using(BinaryReader reader = new BinaryReader(stream))
-   	   {
-   	   		Halodi.CDR.CDRDeserializer cdr = new Halodi.CDR.CDRDeserializer(reader);
-   	   		read(data, cdr); 
-   	   }
-   }
-
    public static int getCdrSerializedSize(actionlib_msgs.msg.GoalID data)
    {
       return getCdrSerializedSize(data, 0);
@@ -70,9 +50,29 @@ public class GoalIDPubSubType : Halodi.CDR.TopicDataType<GoalID>
    }
 
 
+	public override void Serialize(actionlib_msgs.msg.GoalID data, Halodi.CDR.CDRSerializer cdr)
+   	{
+   		write(data, cdr);	
+   	}
+
+	public override void Deserialize(actionlib_msgs.msg.GoalID data, Halodi.CDR.CDRDeserializer cdr)
+   	{
+   		read(data, cdr);	
+   	}
+   	
+   	public override int GetSize(actionlib_msgs.msg.GoalID data)
+   	{
+   		return getCdrSerializedSize(data);
+   	}
+
     public static void Copy(actionlib_msgs.msg.GoalID src, actionlib_msgs.msg.GoalID target)
     {
         target.Set(src);
+    }
+    
+    public override void CopyTo(actionlib_msgs.msg.GoalID src, actionlib_msgs.msg.GoalID target)
+    {
+    	Copy(src, target);
     }
 
 

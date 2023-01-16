@@ -15,26 +15,6 @@ public class DisparityImagePubSubType : Halodi.CDR.TopicDataType<DisparityImage>
    public override string Name => "stereo_msgs::msg::dds_::DisparityImage_";
 
 
-   
-   public override void serialize(stereo_msgs.msg.DisparityImage data, MemoryStream stream)
-   {
-   	  using(BinaryWriter writer = new BinaryWriter(stream))
-   	  {
-   	  	  Halodi.CDR.CDRSerializer cdr = new Halodi.CDR.CDRSerializer(writer);
-   	  	  write(data, cdr); 
-   	  }
-   }
-
-   
-   public override void deserialize(MemoryStream stream, stereo_msgs.msg.DisparityImage data)
-   {
-   	   using(BinaryReader reader = new BinaryReader(stream))
-   	   {
-   	   		Halodi.CDR.CDRDeserializer cdr = new Halodi.CDR.CDRDeserializer(reader);
-   	   		read(data, cdr); 
-   	   }
-   }
-
    public static int getCdrSerializedSize(stereo_msgs.msg.DisparityImage data)
    {
       return getCdrSerializedSize(data, 0);
@@ -114,9 +94,29 @@ public class DisparityImagePubSubType : Halodi.CDR.TopicDataType<DisparityImage>
    }
 
 
+	public override void Serialize(stereo_msgs.msg.DisparityImage data, Halodi.CDR.CDRSerializer cdr)
+   	{
+   		write(data, cdr);	
+   	}
+
+	public override void Deserialize(stereo_msgs.msg.DisparityImage data, Halodi.CDR.CDRDeserializer cdr)
+   	{
+   		read(data, cdr);	
+   	}
+   	
+   	public override int GetSize(stereo_msgs.msg.DisparityImage data)
+   	{
+   		return getCdrSerializedSize(data);
+   	}
+
     public static void Copy(stereo_msgs.msg.DisparityImage src, stereo_msgs.msg.DisparityImage target)
     {
         target.Set(src);
+    }
+    
+    public override void CopyTo(stereo_msgs.msg.DisparityImage src, stereo_msgs.msg.DisparityImage target)
+    {
+    	Copy(src, target);
     }
 
 

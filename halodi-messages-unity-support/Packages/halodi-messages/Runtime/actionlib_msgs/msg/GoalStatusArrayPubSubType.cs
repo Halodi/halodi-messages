@@ -15,26 +15,6 @@ public class GoalStatusArrayPubSubType : Halodi.CDR.TopicDataType<GoalStatusArra
    public override string Name => "actionlib_msgs::msg::dds_::GoalStatusArray_";
 
 
-   
-   public override void serialize(actionlib_msgs.msg.GoalStatusArray data, MemoryStream stream)
-   {
-   	  using(BinaryWriter writer = new BinaryWriter(stream))
-   	  {
-   	  	  Halodi.CDR.CDRSerializer cdr = new Halodi.CDR.CDRSerializer(writer);
-   	  	  write(data, cdr); 
-   	  }
-   }
-
-   
-   public override void deserialize(MemoryStream stream, actionlib_msgs.msg.GoalStatusArray data)
-   {
-   	   using(BinaryReader reader = new BinaryReader(stream))
-   	   {
-   	   		Halodi.CDR.CDRDeserializer cdr = new Halodi.CDR.CDRDeserializer(reader);
-   	   		read(data, cdr); 
-   	   }
-   }
-
    public static int getCdrSerializedSize(actionlib_msgs.msg.GoalStatusArray data)
    {
       return getCdrSerializedSize(data, 0);
@@ -95,9 +75,29 @@ public class GoalStatusArrayPubSubType : Halodi.CDR.TopicDataType<GoalStatusArra
    }
 
 
+	public override void Serialize(actionlib_msgs.msg.GoalStatusArray data, Halodi.CDR.CDRSerializer cdr)
+   	{
+   		write(data, cdr);	
+   	}
+
+	public override void Deserialize(actionlib_msgs.msg.GoalStatusArray data, Halodi.CDR.CDRDeserializer cdr)
+   	{
+   		read(data, cdr);	
+   	}
+   	
+   	public override int GetSize(actionlib_msgs.msg.GoalStatusArray data)
+   	{
+   		return getCdrSerializedSize(data);
+   	}
+
     public static void Copy(actionlib_msgs.msg.GoalStatusArray src, actionlib_msgs.msg.GoalStatusArray target)
     {
         target.Set(src);
+    }
+    
+    public override void CopyTo(actionlib_msgs.msg.GoalStatusArray src, actionlib_msgs.msg.GoalStatusArray target)
+    {
+    	Copy(src, target);
     }
 
 

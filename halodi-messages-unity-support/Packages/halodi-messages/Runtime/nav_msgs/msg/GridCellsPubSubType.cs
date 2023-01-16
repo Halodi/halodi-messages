@@ -15,26 +15,6 @@ public class GridCellsPubSubType : Halodi.CDR.TopicDataType<GridCells>
    public override string Name => "nav_msgs::msg::dds_::GridCells_";
 
 
-   
-   public override void serialize(nav_msgs.msg.GridCells data, MemoryStream stream)
-   {
-   	  using(BinaryWriter writer = new BinaryWriter(stream))
-   	  {
-   	  	  Halodi.CDR.CDRSerializer cdr = new Halodi.CDR.CDRSerializer(writer);
-   	  	  write(data, cdr); 
-   	  }
-   }
-
-   
-   public override void deserialize(MemoryStream stream, nav_msgs.msg.GridCells data)
-   {
-   	   using(BinaryReader reader = new BinaryReader(stream))
-   	   {
-   	   		Halodi.CDR.CDRDeserializer cdr = new Halodi.CDR.CDRDeserializer(reader);
-   	   		read(data, cdr); 
-   	   }
-   }
-
    public static int getCdrSerializedSize(nav_msgs.msg.GridCells data)
    {
       return getCdrSerializedSize(data, 0);
@@ -109,9 +89,29 @@ public class GridCellsPubSubType : Halodi.CDR.TopicDataType<GridCells>
    }
 
 
+	public override void Serialize(nav_msgs.msg.GridCells data, Halodi.CDR.CDRSerializer cdr)
+   	{
+   		write(data, cdr);	
+   	}
+
+	public override void Deserialize(nav_msgs.msg.GridCells data, Halodi.CDR.CDRDeserializer cdr)
+   	{
+   		read(data, cdr);	
+   	}
+   	
+   	public override int GetSize(nav_msgs.msg.GridCells data)
+   	{
+   		return getCdrSerializedSize(data);
+   	}
+
     public static void Copy(nav_msgs.msg.GridCells src, nav_msgs.msg.GridCells target)
     {
         target.Set(src);
+    }
+    
+    public override void CopyTo(nav_msgs.msg.GridCells src, nav_msgs.msg.GridCells target)
+    {
+    	Copy(src, target);
     }
 
 

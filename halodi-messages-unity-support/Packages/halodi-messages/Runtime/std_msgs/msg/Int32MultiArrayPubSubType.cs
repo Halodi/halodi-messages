@@ -15,26 +15,6 @@ public class Int32MultiArrayPubSubType : Halodi.CDR.TopicDataType<Int32MultiArra
    public override string Name => "std_msgs::msg::dds_::Int32MultiArray_";
 
 
-   
-   public override void serialize(std_msgs.msg.Int32MultiArray data, MemoryStream stream)
-   {
-   	  using(BinaryWriter writer = new BinaryWriter(stream))
-   	  {
-   	  	  Halodi.CDR.CDRSerializer cdr = new Halodi.CDR.CDRSerializer(writer);
-   	  	  write(data, cdr); 
-   	  }
-   }
-
-   
-   public override void deserialize(MemoryStream stream, std_msgs.msg.Int32MultiArray data)
-   {
-   	   using(BinaryReader reader = new BinaryReader(stream))
-   	   {
-   	   		Halodi.CDR.CDRDeserializer cdr = new Halodi.CDR.CDRDeserializer(reader);
-   	   		read(data, cdr); 
-   	   }
-   }
-
    public static int getCdrSerializedSize(std_msgs.msg.Int32MultiArray data)
    {
       return getCdrSerializedSize(data, 0);
@@ -94,9 +74,29 @@ public class Int32MultiArrayPubSubType : Halodi.CDR.TopicDataType<Int32MultiArra
    }
 
 
+	public override void Serialize(std_msgs.msg.Int32MultiArray data, Halodi.CDR.CDRSerializer cdr)
+   	{
+   		write(data, cdr);	
+   	}
+
+	public override void Deserialize(std_msgs.msg.Int32MultiArray data, Halodi.CDR.CDRDeserializer cdr)
+   	{
+   		read(data, cdr);	
+   	}
+   	
+   	public override int GetSize(std_msgs.msg.Int32MultiArray data)
+   	{
+   		return getCdrSerializedSize(data);
+   	}
+
     public static void Copy(std_msgs.msg.Int32MultiArray src, std_msgs.msg.Int32MultiArray target)
     {
         target.Set(src);
+    }
+    
+    public override void CopyTo(std_msgs.msg.Int32MultiArray src, std_msgs.msg.Int32MultiArray target)
+    {
+    	Copy(src, target);
     }
 
 

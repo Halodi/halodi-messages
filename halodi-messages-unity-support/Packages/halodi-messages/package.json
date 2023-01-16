@@ -1,6 +1,6 @@
 {
   "name": "com.halodi.halodi-messages",
-  "version": "2.0.0",
+  "version": "2.1.2",
   "displayName": "Halodi ROS2 Messages",
   "description": "C# compiled version of the ROS2 messages from halodi",
   "license": "Apache-2.0",
@@ -16,7 +16,7 @@
   "type": "library",
   "hideInEditor": false,
   "dependencies": {
-    "com.halodi.cdr": "0.12.6"
+    "com.halodi.cdr": "0.15.5"
   },
   "repository": {
     "type": "",

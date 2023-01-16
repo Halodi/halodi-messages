@@ -15,26 +15,6 @@ public class ParameterDescriptorPubSubType : Halodi.CDR.TopicDataType<ParameterD
    public override string Name => "rcl_interfaces::msg::dds_::ParameterDescriptor_";
 
 
-   
-   public override void serialize(rcl_interfaces.msg.ParameterDescriptor data, MemoryStream stream)
-   {
-   	  using(BinaryWriter writer = new BinaryWriter(stream))
-   	  {
-   	  	  Halodi.CDR.CDRSerializer cdr = new Halodi.CDR.CDRSerializer(writer);
-   	  	  write(data, cdr); 
-   	  }
-   }
-
-   
-   public override void deserialize(MemoryStream stream, rcl_interfaces.msg.ParameterDescriptor data)
-   {
-   	   using(BinaryReader reader = new BinaryReader(stream))
-   	   {
-   	   		Halodi.CDR.CDRDeserializer cdr = new Halodi.CDR.CDRDeserializer(reader);
-   	   		read(data, cdr); 
-   	   }
-   }
-
    public static int getCdrSerializedSize(rcl_interfaces.msg.ParameterDescriptor data)
    {
       return getCdrSerializedSize(data, 0);
@@ -147,9 +127,29 @@ public class ParameterDescriptorPubSubType : Halodi.CDR.TopicDataType<ParameterD
    }
 
 
+	public override void Serialize(rcl_interfaces.msg.ParameterDescriptor data, Halodi.CDR.CDRSerializer cdr)
+   	{
+   		write(data, cdr);	
+   	}
+
+	public override void Deserialize(rcl_interfaces.msg.ParameterDescriptor data, Halodi.CDR.CDRDeserializer cdr)
+   	{
+   		read(data, cdr);	
+   	}
+   	
+   	public override int GetSize(rcl_interfaces.msg.ParameterDescriptor data)
+   	{
+   		return getCdrSerializedSize(data);
+   	}
+
     public static void Copy(rcl_interfaces.msg.ParameterDescriptor src, rcl_interfaces.msg.ParameterDescriptor target)
     {
         target.Set(src);
+    }
+    
+    public override void CopyTo(rcl_interfaces.msg.ParameterDescriptor src, rcl_interfaces.msg.ParameterDescriptor target)
+    {
+    	Copy(src, target);
     }
 
 

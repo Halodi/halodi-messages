@@ -15,26 +15,6 @@ public class ControllerDataPubSubType : Halodi.CDR.TopicDataType<ControllerData>
    public override string Name => "ocs2_ros2_msgs::msg::dds_::ControllerData_";
 
 
-   
-   public override void serialize(ocs2_ros2_msgs.msg.ControllerData data, MemoryStream stream)
-   {
-   	  using(BinaryWriter writer = new BinaryWriter(stream))
-   	  {
-   	  	  Halodi.CDR.CDRSerializer cdr = new Halodi.CDR.CDRSerializer(writer);
-   	  	  write(data, cdr); 
-   	  }
-   }
-
-   
-   public override void deserialize(MemoryStream stream, ocs2_ros2_msgs.msg.ControllerData data)
-   {
-   	   using(BinaryReader reader = new BinaryReader(stream))
-   	   {
-   	   		Halodi.CDR.CDRDeserializer cdr = new Halodi.CDR.CDRDeserializer(reader);
-   	   		read(data, cdr); 
-   	   }
-   }
-
    public static int getCdrSerializedSize(ocs2_ros2_msgs.msg.ControllerData data)
    {
       return getCdrSerializedSize(data, 0);
@@ -85,9 +65,29 @@ public class ControllerDataPubSubType : Halodi.CDR.TopicDataType<ControllerData>
    }
 
 
+	public override void Serialize(ocs2_ros2_msgs.msg.ControllerData data, Halodi.CDR.CDRSerializer cdr)
+   	{
+   		write(data, cdr);	
+   	}
+
+	public override void Deserialize(ocs2_ros2_msgs.msg.ControllerData data, Halodi.CDR.CDRDeserializer cdr)
+   	{
+   		read(data, cdr);	
+   	}
+   	
+   	public override int GetSize(ocs2_ros2_msgs.msg.ControllerData data)
+   	{
+   		return getCdrSerializedSize(data);
+   	}
+
     public static void Copy(ocs2_ros2_msgs.msg.ControllerData src, ocs2_ros2_msgs.msg.ControllerData target)
     {
         target.Set(src);
+    }
+    
+    public override void CopyTo(ocs2_ros2_msgs.msg.ControllerData src, ocs2_ros2_msgs.msg.ControllerData target)
+    {
+    	Copy(src, target);
     }
 
 

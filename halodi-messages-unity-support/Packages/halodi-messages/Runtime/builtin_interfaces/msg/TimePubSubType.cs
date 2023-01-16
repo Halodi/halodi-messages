@@ -15,26 +15,6 @@ public class TimePubSubType : Halodi.CDR.TopicDataType<Time>
    public override string Name => "builtin_interfaces::msg::dds_::Time_";
 
 
-   
-   public override void serialize(builtin_interfaces.msg.Time data, MemoryStream stream)
-   {
-   	  using(BinaryWriter writer = new BinaryWriter(stream))
-   	  {
-   	  	  Halodi.CDR.CDRSerializer cdr = new Halodi.CDR.CDRSerializer(writer);
-   	  	  write(data, cdr); 
-   	  }
-   }
-
-   
-   public override void deserialize(MemoryStream stream, builtin_interfaces.msg.Time data)
-   {
-   	   using(BinaryReader reader = new BinaryReader(stream))
-   	   {
-   	   		Halodi.CDR.CDRDeserializer cdr = new Halodi.CDR.CDRDeserializer(reader);
-   	   		read(data, cdr); 
-   	   }
-   }
-
    public static int getCdrSerializedSize(builtin_interfaces.msg.Time data)
    {
       return getCdrSerializedSize(data, 0);
@@ -72,9 +52,29 @@ public class TimePubSubType : Halodi.CDR.TopicDataType<Time>
    }
 
 
+	public override void Serialize(builtin_interfaces.msg.Time data, Halodi.CDR.CDRSerializer cdr)
+   	{
+   		write(data, cdr);	
+   	}
+
+	public override void Deserialize(builtin_interfaces.msg.Time data, Halodi.CDR.CDRDeserializer cdr)
+   	{
+   		read(data, cdr);	
+   	}
+   	
+   	public override int GetSize(builtin_interfaces.msg.Time data)
+   	{
+   		return getCdrSerializedSize(data);
+   	}
+
     public static void Copy(builtin_interfaces.msg.Time src, builtin_interfaces.msg.Time target)
     {
         target.Set(src);
+    }
+    
+    public override void CopyTo(builtin_interfaces.msg.Time src, builtin_interfaces.msg.Time target)
+    {
+    	Copy(src, target);
     }
 
 

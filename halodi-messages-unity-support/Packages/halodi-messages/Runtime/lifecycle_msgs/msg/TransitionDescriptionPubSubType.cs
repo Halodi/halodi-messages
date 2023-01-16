@@ -15,26 +15,6 @@ public class TransitionDescriptionPubSubType : Halodi.CDR.TopicDataType<Transiti
    public override string Name => "lifecycle_msgs::msg::dds_::TransitionDescription_";
 
 
-   
-   public override void serialize(lifecycle_msgs.msg.TransitionDescription data, MemoryStream stream)
-   {
-   	  using(BinaryWriter writer = new BinaryWriter(stream))
-   	  {
-   	  	  Halodi.CDR.CDRSerializer cdr = new Halodi.CDR.CDRSerializer(writer);
-   	  	  write(data, cdr); 
-   	  }
-   }
-
-   
-   public override void deserialize(MemoryStream stream, lifecycle_msgs.msg.TransitionDescription data)
-   {
-   	   using(BinaryReader reader = new BinaryReader(stream))
-   	   {
-   	   		Halodi.CDR.CDRDeserializer cdr = new Halodi.CDR.CDRDeserializer(reader);
-   	   		read(data, cdr); 
-   	   }
-   }
-
    public static int getCdrSerializedSize(lifecycle_msgs.msg.TransitionDescription data)
    {
       return getCdrSerializedSize(data, 0);
@@ -79,9 +59,29 @@ public class TransitionDescriptionPubSubType : Halodi.CDR.TopicDataType<Transiti
    }
 
 
+	public override void Serialize(lifecycle_msgs.msg.TransitionDescription data, Halodi.CDR.CDRSerializer cdr)
+   	{
+   		write(data, cdr);	
+   	}
+
+	public override void Deserialize(lifecycle_msgs.msg.TransitionDescription data, Halodi.CDR.CDRDeserializer cdr)
+   	{
+   		read(data, cdr);	
+   	}
+   	
+   	public override int GetSize(lifecycle_msgs.msg.TransitionDescription data)
+   	{
+   		return getCdrSerializedSize(data);
+   	}
+
     public static void Copy(lifecycle_msgs.msg.TransitionDescription src, lifecycle_msgs.msg.TransitionDescription target)
     {
         target.Set(src);
+    }
+    
+    public override void CopyTo(lifecycle_msgs.msg.TransitionDescription src, lifecycle_msgs.msg.TransitionDescription target)
+    {
+    	Copy(src, target);
     }
 
 

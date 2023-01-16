@@ -15,26 +15,6 @@ public class OdometryPubSubType : Halodi.CDR.TopicDataType<Odometry>
    public override string Name => "nav_msgs::msg::dds_::Odometry_";
 
 
-   
-   public override void serialize(nav_msgs.msg.Odometry data, MemoryStream stream)
-   {
-   	  using(BinaryWriter writer = new BinaryWriter(stream))
-   	  {
-   	  	  Halodi.CDR.CDRSerializer cdr = new Halodi.CDR.CDRSerializer(writer);
-   	  	  write(data, cdr); 
-   	  }
-   }
-
-   
-   public override void deserialize(MemoryStream stream, nav_msgs.msg.Odometry data)
-   {
-   	   using(BinaryReader reader = new BinaryReader(stream))
-   	   {
-   	   		Halodi.CDR.CDRDeserializer cdr = new Halodi.CDR.CDRDeserializer(reader);
-   	   		read(data, cdr); 
-   	   }
-   }
-
    public static int getCdrSerializedSize(nav_msgs.msg.Odometry data)
    {
       return getCdrSerializedSize(data, 0);
@@ -84,9 +64,29 @@ public class OdometryPubSubType : Halodi.CDR.TopicDataType<Odometry>
    }
 
 
+	public override void Serialize(nav_msgs.msg.Odometry data, Halodi.CDR.CDRSerializer cdr)
+   	{
+   		write(data, cdr);	
+   	}
+
+	public override void Deserialize(nav_msgs.msg.Odometry data, Halodi.CDR.CDRDeserializer cdr)
+   	{
+   		read(data, cdr);	
+   	}
+   	
+   	public override int GetSize(nav_msgs.msg.Odometry data)
+   	{
+   		return getCdrSerializedSize(data);
+   	}
+
     public static void Copy(nav_msgs.msg.Odometry src, nav_msgs.msg.Odometry target)
     {
         target.Set(src);
+    }
+    
+    public override void CopyTo(nav_msgs.msg.Odometry src, nav_msgs.msg.Odometry target)
+    {
+    	Copy(src, target);
     }
 
 

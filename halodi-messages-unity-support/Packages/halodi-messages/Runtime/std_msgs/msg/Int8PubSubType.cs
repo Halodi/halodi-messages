@@ -15,26 +15,6 @@ public class Int8PubSubType : Halodi.CDR.TopicDataType<Int8>
    public override string Name => "std_msgs::msg::dds_::Int8_";
 
 
-   
-   public override void serialize(std_msgs.msg.Int8 data, MemoryStream stream)
-   {
-   	  using(BinaryWriter writer = new BinaryWriter(stream))
-   	  {
-   	  	  Halodi.CDR.CDRSerializer cdr = new Halodi.CDR.CDRSerializer(writer);
-   	  	  write(data, cdr); 
-   	  }
-   }
-
-   
-   public override void deserialize(MemoryStream stream, std_msgs.msg.Int8 data)
-   {
-   	   using(BinaryReader reader = new BinaryReader(stream))
-   	   {
-   	   		Halodi.CDR.CDRDeserializer cdr = new Halodi.CDR.CDRDeserializer(reader);
-   	   		read(data, cdr); 
-   	   }
-   }
-
    public static int getCdrSerializedSize(std_msgs.msg.Int8 data)
    {
       return getCdrSerializedSize(data, 0);
@@ -65,9 +45,29 @@ public class Int8PubSubType : Halodi.CDR.TopicDataType<Int8>
    }
 
 
+	public override void Serialize(std_msgs.msg.Int8 data, Halodi.CDR.CDRSerializer cdr)
+   	{
+   		write(data, cdr);	
+   	}
+
+	public override void Deserialize(std_msgs.msg.Int8 data, Halodi.CDR.CDRDeserializer cdr)
+   	{
+   		read(data, cdr);	
+   	}
+   	
+   	public override int GetSize(std_msgs.msg.Int8 data)
+   	{
+   		return getCdrSerializedSize(data);
+   	}
+
     public static void Copy(std_msgs.msg.Int8 src, std_msgs.msg.Int8 target)
     {
         target.Set(src);
+    }
+    
+    public override void CopyTo(std_msgs.msg.Int8 src, std_msgs.msg.Int8 target)
+    {
+    	Copy(src, target);
     }
 
 

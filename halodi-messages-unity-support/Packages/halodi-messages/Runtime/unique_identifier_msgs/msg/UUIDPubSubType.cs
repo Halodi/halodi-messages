@@ -15,26 +15,6 @@ public class UUIDPubSubType : Halodi.CDR.TopicDataType<UUID>
    public override string Name => "unique_identifier_msgs::msg::dds_::UUID_";
 
 
-   
-   public override void serialize(unique_identifier_msgs.msg.UUID data, MemoryStream stream)
-   {
-   	  using(BinaryWriter writer = new BinaryWriter(stream))
-   	  {
-   	  	  Halodi.CDR.CDRSerializer cdr = new Halodi.CDR.CDRSerializer(writer);
-   	  	  write(data, cdr); 
-   	  }
-   }
-
-   
-   public override void deserialize(MemoryStream stream, unique_identifier_msgs.msg.UUID data)
-   {
-   	   using(BinaryReader reader = new BinaryReader(stream))
-   	   {
-   	   		Halodi.CDR.CDRDeserializer cdr = new Halodi.CDR.CDRDeserializer(reader);
-   	   		read(data, cdr); 
-   	   }
-   }
-
    public static int getCdrSerializedSize(unique_identifier_msgs.msg.UUID data)
    {
       return getCdrSerializedSize(data, 0);
@@ -68,9 +48,29 @@ public class UUIDPubSubType : Halodi.CDR.TopicDataType<UUID>
    }
 
 
+	public override void Serialize(unique_identifier_msgs.msg.UUID data, Halodi.CDR.CDRSerializer cdr)
+   	{
+   		write(data, cdr);	
+   	}
+
+	public override void Deserialize(unique_identifier_msgs.msg.UUID data, Halodi.CDR.CDRDeserializer cdr)
+   	{
+   		read(data, cdr);	
+   	}
+   	
+   	public override int GetSize(unique_identifier_msgs.msg.UUID data)
+   	{
+   		return getCdrSerializedSize(data);
+   	}
+
     public static void Copy(unique_identifier_msgs.msg.UUID src, unique_identifier_msgs.msg.UUID target)
     {
         target.Set(src);
+    }
+    
+    public override void CopyTo(unique_identifier_msgs.msg.UUID src, unique_identifier_msgs.msg.UUID target)
+    {
+    	Copy(src, target);
     }
 
 

@@ -15,26 +15,6 @@ public class MultiDOFJointTrajectoryPubSubType : Halodi.CDR.TopicDataType<MultiD
    public override string Name => "trajectory_msgs::msg::dds_::MultiDOFJointTrajectory_";
 
 
-   
-   public override void serialize(trajectory_msgs.msg.MultiDOFJointTrajectory data, MemoryStream stream)
-   {
-   	  using(BinaryWriter writer = new BinaryWriter(stream))
-   	  {
-   	  	  Halodi.CDR.CDRSerializer cdr = new Halodi.CDR.CDRSerializer(writer);
-   	  	  write(data, cdr); 
-   	  }
-   }
-
-   
-   public override void deserialize(MemoryStream stream, trajectory_msgs.msg.MultiDOFJointTrajectory data)
-   {
-   	   using(BinaryReader reader = new BinaryReader(stream))
-   	   {
-   	   		Halodi.CDR.CDRDeserializer cdr = new Halodi.CDR.CDRDeserializer(reader);
-   	   		read(data, cdr); 
-   	   }
-   }
-
    public static int getCdrSerializedSize(trajectory_msgs.msg.MultiDOFJointTrajectory data)
    {
       return getCdrSerializedSize(data, 0);
@@ -124,9 +104,29 @@ public class MultiDOFJointTrajectoryPubSubType : Halodi.CDR.TopicDataType<MultiD
    }
 
 
+	public override void Serialize(trajectory_msgs.msg.MultiDOFJointTrajectory data, Halodi.CDR.CDRSerializer cdr)
+   	{
+   		write(data, cdr);	
+   	}
+
+	public override void Deserialize(trajectory_msgs.msg.MultiDOFJointTrajectory data, Halodi.CDR.CDRDeserializer cdr)
+   	{
+   		read(data, cdr);	
+   	}
+   	
+   	public override int GetSize(trajectory_msgs.msg.MultiDOFJointTrajectory data)
+   	{
+   		return getCdrSerializedSize(data);
+   	}
+
     public static void Copy(trajectory_msgs.msg.MultiDOFJointTrajectory src, trajectory_msgs.msg.MultiDOFJointTrajectory target)
     {
         target.Set(src);
+    }
+    
+    public override void CopyTo(trajectory_msgs.msg.MultiDOFJointTrajectory src, trajectory_msgs.msg.MultiDOFJointTrajectory target)
+    {
+    	Copy(src, target);
     }
 
 

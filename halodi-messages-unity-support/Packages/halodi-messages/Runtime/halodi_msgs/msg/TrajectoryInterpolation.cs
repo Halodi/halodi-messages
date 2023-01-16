@@ -42,6 +42,9 @@ public class TrajectoryInterpolation : Halodi.CDR.DataType<TrajectoryInterpolati
                  * Use a low pass filter to interpolate between points
                  * 
                  * Used to stream points at a lower rate from, for example, a VR headset.
+                 * 
+                 * NOTE: time_from_start is ignored when this filter is selected. This filter assumes targets deviates slightly 
+                 * from current pose/position and filters that target via an alpha filter derived from specified break frequency. 
                  *
                  */
    public const byte LOW_PASS_FILTERED = (byte) 3;

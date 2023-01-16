@@ -15,26 +15,6 @@ public class ImuPubSubType : Halodi.CDR.TopicDataType<Imu>
    public override string Name => "sensor_msgs::msg::dds_::Imu_";
 
 
-   
-   public override void serialize(sensor_msgs.msg.Imu data, MemoryStream stream)
-   {
-   	  using(BinaryWriter writer = new BinaryWriter(stream))
-   	  {
-   	  	  Halodi.CDR.CDRSerializer cdr = new Halodi.CDR.CDRSerializer(writer);
-   	  	  write(data, cdr); 
-   	  }
-   }
-
-   
-   public override void deserialize(MemoryStream stream, sensor_msgs.msg.Imu data)
-   {
-   	   using(BinaryReader reader = new BinaryReader(stream))
-   	   {
-   	   		Halodi.CDR.CDRDeserializer cdr = new Halodi.CDR.CDRDeserializer(reader);
-   	   		read(data, cdr); 
-   	   }
-   }
-
    public static int getCdrSerializedSize(sensor_msgs.msg.Imu data)
    {
       return getCdrSerializedSize(data, 0);
@@ -122,9 +102,29 @@ public class ImuPubSubType : Halodi.CDR.TopicDataType<Imu>
    }
 
 
+	public override void Serialize(sensor_msgs.msg.Imu data, Halodi.CDR.CDRSerializer cdr)
+   	{
+   		write(data, cdr);	
+   	}
+
+	public override void Deserialize(sensor_msgs.msg.Imu data, Halodi.CDR.CDRDeserializer cdr)
+   	{
+   		read(data, cdr);	
+   	}
+   	
+   	public override int GetSize(sensor_msgs.msg.Imu data)
+   	{
+   		return getCdrSerializedSize(data);
+   	}
+
     public static void Copy(sensor_msgs.msg.Imu src, sensor_msgs.msg.Imu target)
     {
         target.Set(src);
+    }
+    
+    public override void CopyTo(sensor_msgs.msg.Imu src, sensor_msgs.msg.Imu target)
+    {
+    	Copy(src, target);
     }
 
 

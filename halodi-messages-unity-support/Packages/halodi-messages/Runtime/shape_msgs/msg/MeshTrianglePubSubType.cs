@@ -15,26 +15,6 @@ public class MeshTrianglePubSubType : Halodi.CDR.TopicDataType<MeshTriangle>
    public override string Name => "shape_msgs::msg::dds_::MeshTriangle_";
 
 
-   
-   public override void serialize(shape_msgs.msg.MeshTriangle data, MemoryStream stream)
-   {
-   	  using(BinaryWriter writer = new BinaryWriter(stream))
-   	  {
-   	  	  Halodi.CDR.CDRSerializer cdr = new Halodi.CDR.CDRSerializer(writer);
-   	  	  write(data, cdr); 
-   	  }
-   }
-
-   
-   public override void deserialize(MemoryStream stream, shape_msgs.msg.MeshTriangle data)
-   {
-   	   using(BinaryReader reader = new BinaryReader(stream))
-   	   {
-   	   		Halodi.CDR.CDRDeserializer cdr = new Halodi.CDR.CDRDeserializer(reader);
-   	   		read(data, cdr); 
-   	   }
-   }
-
    public static int getCdrSerializedSize(shape_msgs.msg.MeshTriangle data)
    {
       return getCdrSerializedSize(data, 0);
@@ -57,9 +37,29 @@ public class MeshTrianglePubSubType : Halodi.CDR.TopicDataType<MeshTriangle>
    }
 
 
+	public override void Serialize(shape_msgs.msg.MeshTriangle data, Halodi.CDR.CDRSerializer cdr)
+   	{
+   		write(data, cdr);	
+   	}
+
+	public override void Deserialize(shape_msgs.msg.MeshTriangle data, Halodi.CDR.CDRDeserializer cdr)
+   	{
+   		read(data, cdr);	
+   	}
+   	
+   	public override int GetSize(shape_msgs.msg.MeshTriangle data)
+   	{
+   		return getCdrSerializedSize(data);
+   	}
+
     public static void Copy(shape_msgs.msg.MeshTriangle src, shape_msgs.msg.MeshTriangle target)
     {
         target.Set(src);
+    }
+    
+    public override void CopyTo(shape_msgs.msg.MeshTriangle src, shape_msgs.msg.MeshTriangle target)
+    {
+    	Copy(src, target);
     }
 
 

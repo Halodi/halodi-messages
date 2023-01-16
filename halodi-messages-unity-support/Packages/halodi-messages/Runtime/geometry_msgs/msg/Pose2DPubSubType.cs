@@ -15,26 +15,6 @@ public class Pose2DPubSubType : Halodi.CDR.TopicDataType<Pose2D>
    public override string Name => "geometry_msgs::msg::dds_::Pose2D_";
 
 
-   
-   public override void serialize(geometry_msgs.msg.Pose2D data, MemoryStream stream)
-   {
-   	  using(BinaryWriter writer = new BinaryWriter(stream))
-   	  {
-   	  	  Halodi.CDR.CDRSerializer cdr = new Halodi.CDR.CDRSerializer(writer);
-   	  	  write(data, cdr); 
-   	  }
-   }
-
-   
-   public override void deserialize(MemoryStream stream, geometry_msgs.msg.Pose2D data)
-   {
-   	   using(BinaryReader reader = new BinaryReader(stream))
-   	   {
-   	   		Halodi.CDR.CDRDeserializer cdr = new Halodi.CDR.CDRDeserializer(reader);
-   	   		read(data, cdr); 
-   	   }
-   }
-
    public static int getCdrSerializedSize(geometry_msgs.msg.Pose2D data)
    {
       return getCdrSerializedSize(data, 0);
@@ -79,9 +59,29 @@ public class Pose2DPubSubType : Halodi.CDR.TopicDataType<Pose2D>
    }
 
 
+	public override void Serialize(geometry_msgs.msg.Pose2D data, Halodi.CDR.CDRSerializer cdr)
+   	{
+   		write(data, cdr);	
+   	}
+
+	public override void Deserialize(geometry_msgs.msg.Pose2D data, Halodi.CDR.CDRDeserializer cdr)
+   	{
+   		read(data, cdr);	
+   	}
+   	
+   	public override int GetSize(geometry_msgs.msg.Pose2D data)
+   	{
+   		return getCdrSerializedSize(data);
+   	}
+
     public static void Copy(geometry_msgs.msg.Pose2D src, geometry_msgs.msg.Pose2D target)
     {
         target.Set(src);
+    }
+    
+    public override void CopyTo(geometry_msgs.msg.Pose2D src, geometry_msgs.msg.Pose2D target)
+    {
+    	Copy(src, target);
     }
 
 

@@ -15,26 +15,6 @@ public class RobotStatusPubSubType : Halodi.CDR.TopicDataType<RobotStatus>
    public override string Name => "halodi_msgs::msg::dds_::RobotStatus_";
 
 
-   
-   public override void serialize(halodi_msgs.msg.RobotStatus data, MemoryStream stream)
-   {
-   	  using(BinaryWriter writer = new BinaryWriter(stream))
-   	  {
-   	  	  Halodi.CDR.CDRSerializer cdr = new Halodi.CDR.CDRSerializer(writer);
-   	  	  write(data, cdr); 
-   	  }
-   }
-
-   
-   public override void deserialize(MemoryStream stream, halodi_msgs.msg.RobotStatus data)
-   {
-   	   using(BinaryReader reader = new BinaryReader(stream))
-   	   {
-   	   		Halodi.CDR.CDRDeserializer cdr = new Halodi.CDR.CDRDeserializer(reader);
-   	   		read(data, cdr); 
-   	   }
-   }
-
    public static int getCdrSerializedSize(halodi_msgs.msg.RobotStatus data)
    {
       return getCdrSerializedSize(data, 0);
@@ -195,9 +175,29 @@ public class RobotStatusPubSubType : Halodi.CDR.TopicDataType<RobotStatus>
    }
 
 
+	public override void Serialize(halodi_msgs.msg.RobotStatus data, Halodi.CDR.CDRSerializer cdr)
+   	{
+   		write(data, cdr);	
+   	}
+
+	public override void Deserialize(halodi_msgs.msg.RobotStatus data, Halodi.CDR.CDRDeserializer cdr)
+   	{
+   		read(data, cdr);	
+   	}
+   	
+   	public override int GetSize(halodi_msgs.msg.RobotStatus data)
+   	{
+   		return getCdrSerializedSize(data);
+   	}
+
     public static void Copy(halodi_msgs.msg.RobotStatus src, halodi_msgs.msg.RobotStatus target)
     {
         target.Set(src);
+    }
+    
+    public override void CopyTo(halodi_msgs.msg.RobotStatus src, halodi_msgs.msg.RobotStatus target)
+    {
+    	Copy(src, target);
     }
 
 

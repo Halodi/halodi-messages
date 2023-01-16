@@ -15,26 +15,6 @@ public class TFMessagePubSubType : Halodi.CDR.TopicDataType<TFMessage>
    public override string Name => "tf2_msgs::msg::dds_::TFMessage_";
 
 
-   
-   public override void serialize(tf2_msgs.msg.TFMessage data, MemoryStream stream)
-   {
-   	  using(BinaryWriter writer = new BinaryWriter(stream))
-   	  {
-   	  	  Halodi.CDR.CDRSerializer cdr = new Halodi.CDR.CDRSerializer(writer);
-   	  	  write(data, cdr); 
-   	  }
-   }
-
-   
-   public override void deserialize(MemoryStream stream, tf2_msgs.msg.TFMessage data)
-   {
-   	   using(BinaryReader reader = new BinaryReader(stream))
-   	   {
-   	   		Halodi.CDR.CDRDeserializer cdr = new Halodi.CDR.CDRDeserializer(reader);
-   	   		read(data, cdr); 
-   	   }
-   }
-
    public static int getCdrSerializedSize(tf2_msgs.msg.TFMessage data)
    {
       return getCdrSerializedSize(data, 0);
@@ -86,9 +66,29 @@ public class TFMessagePubSubType : Halodi.CDR.TopicDataType<TFMessage>
    }
 
 
+	public override void Serialize(tf2_msgs.msg.TFMessage data, Halodi.CDR.CDRSerializer cdr)
+   	{
+   		write(data, cdr);	
+   	}
+
+	public override void Deserialize(tf2_msgs.msg.TFMessage data, Halodi.CDR.CDRDeserializer cdr)
+   	{
+   		read(data, cdr);	
+   	}
+   	
+   	public override int GetSize(tf2_msgs.msg.TFMessage data)
+   	{
+   		return getCdrSerializedSize(data);
+   	}
+
     public static void Copy(tf2_msgs.msg.TFMessage src, tf2_msgs.msg.TFMessage target)
     {
         target.Set(src);
+    }
+    
+    public override void CopyTo(tf2_msgs.msg.TFMessage src, tf2_msgs.msg.TFMessage target)
+    {
+    	Copy(src, target);
     }
 
 

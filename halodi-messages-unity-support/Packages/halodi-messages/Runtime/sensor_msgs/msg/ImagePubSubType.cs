@@ -15,26 +15,6 @@ public class ImagePubSubType : Halodi.CDR.TopicDataType<Image>
    public override string Name => "sensor_msgs::msg::dds_::Image_";
 
 
-   
-   public override void serialize(sensor_msgs.msg.Image data, MemoryStream stream)
-   {
-   	  using(BinaryWriter writer = new BinaryWriter(stream))
-   	  {
-   	  	  Halodi.CDR.CDRSerializer cdr = new Halodi.CDR.CDRSerializer(writer);
-   	  	  write(data, cdr); 
-   	  }
-   }
-
-   
-   public override void deserialize(MemoryStream stream, sensor_msgs.msg.Image data)
-   {
-   	   using(BinaryReader reader = new BinaryReader(stream))
-   	   {
-   	   		Halodi.CDR.CDRDeserializer cdr = new Halodi.CDR.CDRDeserializer(reader);
-   	   		read(data, cdr); 
-   	   }
-   }
-
    public static int getCdrSerializedSize(sensor_msgs.msg.Image data)
    {
       return getCdrSerializedSize(data, 0);
@@ -127,9 +107,29 @@ public class ImagePubSubType : Halodi.CDR.TopicDataType<Image>
    }
 
 
+	public override void Serialize(sensor_msgs.msg.Image data, Halodi.CDR.CDRSerializer cdr)
+   	{
+   		write(data, cdr);	
+   	}
+
+	public override void Deserialize(sensor_msgs.msg.Image data, Halodi.CDR.CDRDeserializer cdr)
+   	{
+   		read(data, cdr);	
+   	}
+   	
+   	public override int GetSize(sensor_msgs.msg.Image data)
+   	{
+   		return getCdrSerializedSize(data);
+   	}
+
     public static void Copy(sensor_msgs.msg.Image src, sensor_msgs.msg.Image target)
     {
         target.Set(src);
+    }
+    
+    public override void CopyTo(sensor_msgs.msg.Image src, sensor_msgs.msg.Image target)
+    {
+    	Copy(src, target);
     }
 
 

@@ -15,26 +15,6 @@ public class KeyValuePubSubType : Halodi.CDR.TopicDataType<KeyValue>
    public override string Name => "diagnostic_msgs::msg::dds_::KeyValue_";
 
 
-   
-   public override void serialize(diagnostic_msgs.msg.KeyValue data, MemoryStream stream)
-   {
-   	  using(BinaryWriter writer = new BinaryWriter(stream))
-   	  {
-   	  	  Halodi.CDR.CDRSerializer cdr = new Halodi.CDR.CDRSerializer(writer);
-   	  	  write(data, cdr); 
-   	  }
-   }
-
-   
-   public override void deserialize(MemoryStream stream, diagnostic_msgs.msg.KeyValue data)
-   {
-   	   using(BinaryReader reader = new BinaryReader(stream))
-   	   {
-   	   		Halodi.CDR.CDRDeserializer cdr = new Halodi.CDR.CDRDeserializer(reader);
-   	   		read(data, cdr); 
-   	   }
-   }
-
    public static int getCdrSerializedSize(diagnostic_msgs.msg.KeyValue data)
    {
       return getCdrSerializedSize(data, 0);
@@ -68,9 +48,29 @@ public class KeyValuePubSubType : Halodi.CDR.TopicDataType<KeyValue>
    }
 
 
+	public override void Serialize(diagnostic_msgs.msg.KeyValue data, Halodi.CDR.CDRSerializer cdr)
+   	{
+   		write(data, cdr);	
+   	}
+
+	public override void Deserialize(diagnostic_msgs.msg.KeyValue data, Halodi.CDR.CDRDeserializer cdr)
+   	{
+   		read(data, cdr);	
+   	}
+   	
+   	public override int GetSize(diagnostic_msgs.msg.KeyValue data)
+   	{
+   		return getCdrSerializedSize(data);
+   	}
+
     public static void Copy(diagnostic_msgs.msg.KeyValue src, diagnostic_msgs.msg.KeyValue target)
     {
         target.Set(src);
+    }
+    
+    public override void CopyTo(diagnostic_msgs.msg.KeyValue src, diagnostic_msgs.msg.KeyValue target)
+    {
+    	Copy(src, target);
     }
 
 
